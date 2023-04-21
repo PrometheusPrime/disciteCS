@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Grid Layout</h1>
+
+    <body onload="PR.prettyPrint()">
+        <pre class="codeBlock prettyprint">container{
+   display: grid;
+}</pre>
+        <pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: column-dim column-dim column-dim column-dim;
+}</pre>
+
+    <pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: repeat(column-count, column-dim);
+}</pre>
+    <pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: repeat(column-count, column-dim);
+   grid-auto-row:;
+}</pre>
+<pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: repeat(column-count, column-dim);
+   grid-auto-column:;
+}</pre>
+Add gaps
+    <pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: repeat(column-count, column-dim);
+   row-gap:;
+   column-gap:;
+}</pre>
+Add gaps shorthand
+    <pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: repeat(column-count, column-dim);
+   gap:;
+}</pre>
+<pre class="codeBlock prettyprint">
+grid{
+    grid-column-start:;
+    grid-column-end:;
+    grid-row-start:;
+    grid-row-end:;
+}</pre>
+
+<pre class="codeBlock prettyprint">
+grid{
+    place-content:;
+}</pre>
+    <pre class="codeBlock prettyprint">container{
+   display: grid;
+   grid-template-columns: repeat(column-count, column-dim);
+   gap:;
+   grid-template-areas:;
+}</pre>
+<pre class="codeBlock prettyprint">
+grid{
+    grid-area:;
+}</pre>
+        <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+        <script type="text/javascript" src="../../JavaScript/app.js"></script>
+    </body>
+
+</html>

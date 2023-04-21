@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in C++</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+    <h1>Lists</h1>
+    A container data structure,can expand and contract
+    <pre class="codeBlock prettyprint">#include &lt;list&gt;
+list&lt;string&gt; vegetablesList = {"Cucumbers","Lettuce","Tomatoes","Mushrooms","Potatoes","Zucchini","Peppers","Broccoli"};
+</pre>
+Access and print list items using a for each loop
+<pre class="codeBlock prettyprint">
+for (string listItem : vegetablesList) {
+    cout &lt;&lt; listItem &lt;&lt; "\n";
+}
+</pre>
+<!-- <pre class="codeBlock prettyprint">
+vegetablesList.assign({"Lettuce","Mushrooms"});
+</pre> -->
+Add a value to the back of a list
+<pre class="codeBlock prettyprint">
+vegetablesList.push_back("Garlic");
+</pre>
+Add a value to the front of a list
+<pre class="codeBlock prettyprint">
+vegetablesList.push_front("Carrots");
+</pre>
+<!-- <pre class="codeBlock prettyprint">
+vegetablesList.insert("Lettuce","Mushrooms");
+</pre> -->
+<!-- 
+index -->
+Get the size of the list
+<pre class="codeBlock prettyprint">
+vegetablesList.size();
+</pre>
+ <!-- <pre class="codeBlock prettyprint">vegetablesList.erase(index);</pre> -->
+ <!-- <pre class="codeBlock prettyprint">vegetablesList.erase(start,stop);</pre> -->
+ Remove a value from the back of a list
+ <pre class="codeBlock prettyprint">
+vegetablesList.pop_back();
+</pre>
+Remove a value from the front of a list
+<pre class="codeBlock prettyprint">
+vegetablesList.pop_front();
+</pre>
+<!-- Access list item using an iterator
+<pre class="codeBlock prettyprint">vegetablesList.itr();</pre> -->
+Sort a list
+<pre class="codeBlock prettyprint">vegetablesList.sort();</pre>
+Reverse a list
+<pre class="codeBlock prettyprint">vegetable.reverse();</pre>
+Remove duplicates from a list
+<pre class="codeBlock prettyprint">vegetablesList.unique();</pre>
+Remove a specific item from a list
+<pre class="codeBlock prettyprint">vegetablesList.remove("Broccoli");</pre>
+Remove a specific item from a list if a particular condition is true
+<pre class="codeBlock prettyprint">vegetablesList.remove_if();</pre>
+Merge lists with the <code>merge()</code>, list have to be sorted first. The list that was merged into the other list will be empty.
+<pre class="codeBlock prettyprint">
+list&lt;string&gt; groceryList{"Apples","Salt","Macaroni","Vinegar","Beef","Shampoo"};
+groceryList.merge(vegetablesList);</pre>
+<h3>Forward Lists</h3>
+<pre class="codeBlock prettyprint">#include &lt;forward_list&gt;</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

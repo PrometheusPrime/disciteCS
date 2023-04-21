@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Hyperlink</h1>
+  <p>HTML links are defined with the <code class="code prettyprint">&lt;a&gt;</code> tag. The
+    <em><strong>href</strong></em> attribute defines the link's address.The text between the &lt;a&gt; tags will be
+    displayed. </p>
+  <pre class="codeBlock prettyprint">&lt;a href ="url"&gt;text&lt;/a&gt;</pre>
+  <p>The <em><strong>target</strong></em> attribute specifies where to open the linked document<br />
+    <code class="code prettyprint">_self</code> Opens the link document in the same frame as it was clicked. This is the
+    default.<br />
+    <code class="code prettyprint">_blank</code> Opens the link in a new window or tab<br />
+    <code class="code prettyprint">_parent</code> Opens the link in the parent frame
+    <br />
+    <code class="code prettyprint">_top</code> Opens the linked document in the full body of the window<br />
+    <code class="code prettyprint">frame</code> Opens the linked document in a named frame<br />
+  </p>
+  <pre class="codeBlock prettyprint">&lt;a href ="url" target ="_blank"&gt; text &lt;/a&gt;</pre>
+  <h2>Image links</h2>
+  <p>Nest an image tag in the anchor tap to create an image link</p>
+  <pre class="codeBlock prettyprint">
+&lt;a href ="" target =""&gt;  
+ &lt;img src="logo.jpg" width="100px" height="150px" border="1px" alt="site logo"&gt;
+&lt;/a&gt;
+</pre>
+<h2>Anchors</h2>
+<p>Create anchor on a destination page and use the <code class="prettyprint">&lt;a&gt;</code> tag to link to that specific place.</p>
+<pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;title&gt;Awesome Department Store&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Electronics&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique labore ex repudiandae molestiae veritatis earum delectus voluptas quas sapiente consectetur.
+  &lt;/p&gt;
+  &lt;h2&gt;Destops&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id nemo tenetur, laborum veniam laudantium iusto natus velit eligendi error et?
+  &lt;/p&gt;
+  &lt;h2&gt;Laptops&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eius aspernatur nisi impedit porro doloribus praesentium alias iste odit numquam.
+  &lt;/p&gt;
+  &lt;h2 id="PsAndTs"&gt;Phones and Tablets&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos iusto aliquam rem repudiandae illo dolores eveniet laboriosam voluptatum totam!
+  &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Awesome Department Store&lt;/title&gt;
+ &lt;/head&gt;
+  &lt;body&gt;
+   &lt;h1&gt;Funiture&lt;/h1&gt;
+    &lt;p&gt;&lt;a href ="ADS-Electronics.html#PsAndTs" target ="_blank"&gt; text &lt;/a&gt;
+    &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

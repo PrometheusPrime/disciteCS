@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables and Data Types</h1>
+    <h2>Variables</h2>
+    <p> Use the <code class="prettyprint">var</code> keyword to define a variable. If you define a variable and not use
+        it, you'll get an error.</p>
+    To declare a variable, write the <code class="prettyprint">var</code>, variable name and then the data type.
+    <pre class="codeBlock prettyprint">
+var favoriteNumber int
+</pre>
+    Assign or change variable's value.
+    <pre class="codeBlock prettyprint">
+favoriteNumber = 5
+</pre>
+    Declare and initialise a variable
+    <pre class="codeBlock prettyprint">
+var favoriteNumber int = 5
+</pre>
+    Go supports type inference. If you initialise a variable ,go will infer it's type from the value.
+    <pre class="codeBlock prettyprint">
+var favoriteNumber &equals; 5
+</pre>
+    Use <code>&colon;&equals;</code> to declare and initialise a variable in a function, the <code
+        class="prettyprint">var</code> is keyword left out.
+    <pre class="codeBlock prettyprint">
+age &colon;&equals; 25
+</pre>
+    Declare and initialise multiple variables in a single line
+    <pre class="codeBlock prettyprint">
+var firstName, lastName &equals; "Nelson","Mandela"
+</pre>
+    <pre class="codeBlock prettyprint">
+var1, var2 := value1,value2
+</pre>
+    <pre class="codeBlock prettyprint">
+var (
+    favoriteColor = "Dark Slate Gray"
+    height = 5.3
+)
+</pre>
+    <p>Use the <code class="prettyprint">const</code> keyword to define a constant. A constant's value can not be
+        changed.</p>
+    <pre class="codeBlock prettyprint">
+const pi = 3.1415
+</pre>
+    <h2>Data Types</h2>
+    <ul>
+        <li>
+            <h4>Numbers</h4>
+        </li>
+        <p><strong>Integers</strong> are negative or positive whole numbers ...int int8 int16 int32(rune) int64
+        <pre class="codeBlock prettyprint"></p>
+
+    </pre>
+        To create an <code class="prettyprint">unsigned</code> integer ,prefix the type with <code>u</code> uint
+        uint8(byte) uint16 uint32 uint64 uintptr
+        <pre class="codeBlock prettyprint">
+
+    </pre>
+        <code class="kwd">int</code>,<code class="kwd">uint</code> and </code><code class="kwd">uintptr</code> are
+        32bits or more depending on the architecture of the computer.
+        <p><strong>Floating Point (Floats) </strong> are Real Numbers with a Decimal Point..
+            <code class="prettyprint">float32 float64</code>
+        </p>
+        <pre class="codeBlock prettyprint">
+
+    </pre>
+        <p><strong>Complex </strong>: Go supports <code class="prettyprint">complex64</code> and <code
+                class="prettyprint">complex128</code> with i as the imaginery part</p>
+        <pre class="codeBlock prettyprint">
+
+    </pre>
+
+        <li>
+            <h4>Boolean</h4>
+        </li>
+        <strong>Boolean</strong> variables can have either <code class="prettyprint">true</code> or <code
+            class="prettyprint">false</code> as values..
+        <pre class="codeBlock prettyprint">
+
+    </pre>
+        <p>
+            <li>
+                <h4>String</h4>
+            </li>
+        <p>A <strong>String</strong> is a sequence of Characters, delimited by double quotes("").</p>
+        <pre class="codeBlock prettyprint">
+
+    </pre>
+        <h2>Type Conversion</h2>
+        <pre class="codeBlock prettyprint">
+fmt.Printf("%v %T",variable,variable)
+</pre>
+        <pre class="codeBlock prettyprint">
+int()
+uint()
+float64()
+complex(real,imaginary)
+</pre>
+        <h4>Variable scope</h4>
+        <p><strong>Local</strong> - variables in a block of code(eg a function) is only available in that block.</p>
+        <p><strong>Package</strong> - variables declared outside a block of code,can be accessed anywhere inside a
+            package.
+        </p>
+        <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+        <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

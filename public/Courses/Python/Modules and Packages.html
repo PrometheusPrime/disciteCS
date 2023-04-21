@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modules and Packages</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Modules and Packages</h1>
+  <h2>Modules</h2>
+  <p><strong><em>Modules</em></strong> are simply python files containing python code (classes ,functions etc). The file
+    name is the module name.
+    Use the <code class="prettyprint">import</code> keyword to import a python module.
+  </p>
+  <pre class="codeBlock prettyprint">
+import math
+x = math.pow(5,3)
+print(x)  
+</pre>
+  To import a module and give it an alias use the <code class="prettyprint">as</code> keyword, then the alias.
+  <pre class="codeBlock prettyprint">
+import math as m
+x = m.sqrt(9)
+print(x)
+</pre>
+  <p>Import specific class(es) or function(s) from a module using the <code class="prettyprint">from</code> keyword</p>
+  <pre class="codeBlock prettyprint">
+from math import pi, dist
+</pre>
+  <p>Import specific class or function from a module and give it an alias</p>
+  <pre class="codeBlock prettyprint">
+from math import fsum as sum
+x = sum([1,2,3,4,5,6,7,8,9])
+print(x)
+</pre>
+  The built-in <code><span class="kwd">dir</span>()</code> function is used to return a list of the module’s attributes.
+  <pre class="codeBlock prettyprint">
+import math
+x = dir(math)
+print(x)  
+</pre>
+  <h2>Packages</h2>
+  <p><strong><em>Packages</em></strong> are collections of Modules. package name is the folder containing all the
+    modules. __init__.py tells python that this is a package. it can be empty.</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

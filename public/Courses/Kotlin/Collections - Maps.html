@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Maps</h1>
+    <p>A collection of Key - value pairs . The key must be unique</p>
+    <pre class="codeBlock prettyprint">
+fun main(){
+    val mapName = mapOf(key to values, key to values, key to values)
+}
+</pre>
+By default a Map is immutable. To create a mutable Map, use the <code class="prettyprint">mutableMapOf()</code>
+    <pre class="codeBlock prettyprint">
+fun main(){
+      val mapName = mutableMapOf(key to values, key to values, key to values)
+}
+</pre>
+    create an empty Map
+    <pre class="codeBlock prettyprint">
+val mymap = mutableMapOf&lt;key-type, value-type&gt;()
+</pre>
+    Add or change key - value pairs in a Map
+    <pre class="codeBlock prettyprint">
+myMap[key] = value
+//or
+myMap.put(key, value)
+</pre>
+    remove an entry from a Map
+    <pre class="codeBlock prettyprint">
+myMap.remove(key)
+ </pre>
+    loop through a Map
+    <pre class="codeBlock prettyprint">
+for((key, value) in myMap){
+do something
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

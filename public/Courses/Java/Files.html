@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaces</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Interface</h1>
+<p></p>
+    <pre class="codeBlock prettyprint">
+File myFile = new File("path/to/file.somthing");
+</pre>
+create File
+<pre class="codeBlock prettyprint">
+myFile.createNewFile();
+</pre>
+write to file
+<pre class="codeBlock prettyprint">
+ PrintWriter wrtr = new PrintWriter(
+    new BufferedWriter(
+      new FileWriter("path/to/file.something")
+   )
+ );
+ wrtr.PrintLn("something");
+ wrtr.close();
+</pre>
+open file
+<pre class="codeBlock prettyprint">
+myFile
+</pre>
+rename file
+<pre class="codeBlock prettyprint">
+myFile.renameTo(new File("path/to/file.somthing"),"newName.somthing");
+</pre>
+<pre class="codeBlock prettyprint">
+myFile.delete();
+</pre>
+<h3>File IO Exceptions</h3>
+<pre class="codeBlock prettyprint">
+try{
+    //to create file
+    //to do somthing with file 
+    //or file content
+}catch(IOException err){
+    //do somthing
+    //or print error
+    err.printStackTrace();
+
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

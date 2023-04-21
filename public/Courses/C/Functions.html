@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in C</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Functions</h1>
+    <p>A <strong>Function</strong> is a code blocks that does a task. To define a function, write the type of value it will return, followed by the function’s name, a set of parentheses and a code block. If a function does not return a value, use <code class="prettyprint">void</code> as the return type.</p>
+    <pre class="codeBlock prettyprint">
+void sum(){
+    printf("5 + 5 = %i", 5 + 5);
+}
+</pre>
+  A function will only execute when called. To call(invoke) a function, write the function’s name is specified followed by a set of parentheses.
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+
+//function declaration
+void sum(){
+    printf("%i", 5 + 5);
+}
+
+int main(int argc, char const *argv[])
+{
+    sum();// function execution
+
+    return 0;
+}
+</pre>
+    <h2>Parameters and Arguments</h2>
+    <p>Functions can accept data to work with called <strong>Parameters</strong>. A function can take any number of parameters, coma seperate them. Parameters appear in function definitions, while <strong>Arguments</strong> are actual data passed into a function when calling it.</p>
+        <pre class="codeBlock prettyprint">
+//function declaration
+void sum(int x,int y){
+    printf("%i",x + y);
+}
+            
+//in main
+sum(5,4);
+
+</pre>
+A function must be called with the number of arguments it expects, otherwise you'll get an error.
+    <h3>Default parameters</h3>
+    <p>We can specify default values for parameters. If the argument for that parameter is not passed when the function is called, the default value will be used. The parameters with default values must come after those without default values.</p>
+    <pre class="codeBlock prettyprint">
+//function declaration
+void sum(int x,int y = 0){
+    printf("%i", x + y);
+}
+                    
+//in main
+sum(5);
+sum(5,4);
+</pre>
+<h2>The Return statement</h2>
+    <p>Return a value from a function with <code class="prettyprint">return</code> keyword. Statement(s) after the <code class="prettyprint">return</code> statement will not be executed.</p>
+    <pre class="codeBlock prettyprint">
+int sum(int x,int y){
+    return x + y;
+}
+
+//in main
+sum(5);
+sum(5,4);
+</pre>
+<h3>Prototyping</h3>
+    <p>Functions must be declared before they can be called. The following code will cause a compilation error.</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+
+int main(int argc, char const *argv[])
+{
+    printf("%d", sum(6, 9)); // function execution
+
+    return 0;
+}
+// function definition
+int sum(int x, int y)
+{
+    return x + y;
+}    
+</pre>
+<p>The function’s header(Prototype) needs to be specified before the point where the function is called, so that the compiler knows that the function exists. This is called <strong>Prototyping</strong>.</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+
+// prototype
+int sum(int x, int y);
+
+int main(int argc, char const *argv[])
+{
+    printf("%d", sum(6, 9)); // function execution
+
+    return 0;
+}
+// function definition
+int sum(int x, int y)
+{
+    return x + y;
+}      
+</pre>
+    <h2>Function Overloading</h2>
+    <p>A Function can be defined multiple times with different  number and or type of parameters. This is called <strong>Function Overloading</strong></p>
+    <pre class="codeBlock prettyprint">
+int sum(int x,int y){
+    return x + y;
+}
+
+int sum(int x,int y,int z){
+    return x + y + z;
+}
+
+double sum(double x,double y){
+    return x + y;
+}
+double sum(int x,double y,double z){
+    return x + y + z;
+}
+</pre>
+    <h4>Pass by reference</h4>
+    A variable's address in memory is is passed in a function. When you make changes to it, the variable's actual value is changed.
+    <pre class="codeBlock prettyprint">
+int main(int argc, char const *argv[]){
+
+    char name[] = "John";
+    printf("%s", name);
+    changeName(name);
+    printf("%s", name);
+
+    return 0;
+}
+
+const char* changeName(char name[])
+{
+    name += " Doe";
+    return name;
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+int main(int argc, char const *argv[]){
+    changeName(name);
+    return 0;    
+}
+</pre>
+    <h4>return by reference</h4>
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Conditional Statements</h1>
+    <p><strong>Control Statements </strong> are used to run code under certain conditions</p>
+    <h2>The if, else and else if Statements</h2>
+    <h4>If statement</h4>
+    <p>The code in the block will be executed if the condition is <code class="prettyprint">true</code>. The condition is either a boolean variable or expression that returns a boolean</p>
+    <pre class="codeBlock prettyprint">
+if (4 &lt; 5)
+{
+    Console.WriteLine("4 is less than 5");
+}</pre>
+    <p>If You want to execute some code if multiple conditions are <code class="prettyprint">true</code>, place it in nested <code class="prettyrpint">if</code> statements.</p>
+    <pre class="codeBlock prettyprint">
+int age = 22;
+
+if (age &gt; 18)
+{
+    if (age &lt; 25)
+    {
+        Console.WriteLine("You're between 18 and 25 years of age");
+    }
+}</pre>
+Instead of using nested if statements, we can use logical operators to combine logical expressions.
+    <pre class="codeBlock prettyprint">
+int age = 22;
+
+if (age &gt; 18 && age &lt; 25)
+{
+    Console.WriteLine("You're between 18 and 25 years of age");
+}
+</pre>
+<h4>Else statement</h4>
+    <p>The <code class="prettyprint">else</code> statement defines alternate block of code to execute if the condition
+        in the <code class="prettyprint">if</code> statement is <code class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+if (4 > 5)
+{
+    Console.WriteLine("4 is greater than 5");
+}
+else
+{
+    Console.WriteLine("4 is less than 5");
+}</pre>
+   You can nest <code class="prettyprint">if else</code> statements.
+    <h4>Else If statement</h4>
+    <p>The <code class="prettyprint">else if</code> statement is used to check additional conditions.</p>
+<pre class="codeBlock prettyprint">
+bool isRed = false;
+bool isGreen = true;
+
+if (isRed)
+{
+    Console.WriteLine("Stop !");
+}
+else if (isGreen)
+{
+    Console.WriteLine("Drive");
+}
+else
+{
+    Console.WriteLine("Drive, if it is safe to do");
+}
+</pre>
+<p>Make sure the conditions are mutually exclusive. Even if multiple conditions are <code class="prettyprint">true</code>, only the first true statement will be executed other statements will be skipped.</p>
+    <pre class="codeBlock prettyprint">
+bool isSunny = true;
+bool isRaining = true;
+
+if (isSunny)
+{
+    Console.WriteLine("It is Sunny");
+}
+else if (isRaining)
+{
+    Console.WriteLine("It is Raining");
+}
+else if (isSunny &amp;&amp; isRaining)
+{
+    Console.WriteLine("It is Sunny and Raining");
+}
+else
+{
+    Console.WriteLine("It's neither Sunny nor Raining");
+}
+</pre>
+    <h2>The Switch</h2>
+    <p>The <code class="prettyprint">switch</code> statement is used we want to do different operations depending on a
+        particular value of a variable.</p>
+    <pre class="codeBlock prettyprint">
+var gender = "Male";
+var lastName = "Smith";
+
+switch (gender)
+{
+    case "Male":
+        Console.WriteLine($"Hello, Mr {lastName}");
+        break;
+    case "Female":
+        Console.WriteLine($"Hello, Ms {lastName}");
+        break;
+    default:
+        Console.WriteLine($"Hello, {lastName}");
+        break;
+}
+</pre>
+The <code class="prettyprint">break</code> statement goes out of the switch statement after a matched case is executed. It is required.
+<p>The <code class="prettyprint">default</code> case is executed if non of the cases matched. </p>
+<pre class="codeBlock prettyprint">
+string? gender = null;
+var lastName = "Smith";
+
+switch (gender)
+{
+    case "Male":
+        Console.WriteLine($"Hello, Mr {lastName}");
+        break;
+    case "Female":
+        Console.WriteLine($"Hello, Ms {lastName}");
+        break;
+    default:
+        Console.WriteLine($"Hello, {lastName}");
+        break;
+}
+</pre>
+<p>Multiple cases can execute a single block.</p>
+<pre class="codeBlock prettyprint">
+var num = 4;
+
+switch (num)
+{
+    case 5:
+    case 4:
+    case 3:
+        Console.WriteLine("num is either 5, 4 or 3");
+        break;
+    case 2:
+        Console.WriteLine("num is 2 ");
+        break;
+    case 1:
+        Console.WriteLine("num is 1");
+        break;
+    default:
+        Console.WriteLine("num is neither 5,4 nor 3");
+        break;
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

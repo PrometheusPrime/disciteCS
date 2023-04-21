@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables</h1>
+    <p>Define variable in the <code class="prettyprint">:root</code> pseudo class</p>
+    <pre class="codeBlock prettyprint">:root {
+  --ff-codeBlock-: "Source Code Pro", "lucida console", Terminal, Consolas,
+    Courier, "courier new";
+  --ff-code-: "Cascadia Code", Inconsolata, Terminal, Consolas;
+}</pre>
+<p>Use the <code class="prettyprint">var()</code> function                                                                                                                              
+</p>
+    <pre class="codeBlock prettyprint">
+kbd,
+samp,
+code {
+  font-family: var(--ff-code-);
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions in Rust</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Functions</h1>
+    <p>use <code class="kwd">fn</code> keyword to define a function</p>
+    <pre class="codeBlock prettyprint">
+fn nyFunction{
+
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+fn myfunc(arg:type, arg:type){
+
+}
+</pre>
+    bind a variable to a function
+    <pre class="codeBlock prettyprint">let my_var = func()
+my_var()
+</pre>
+return a value from a function using <code class="prettyprint">return</code>.
+<pre class="codeBlock prettyprint">
+fn myfunc(arg:type, arg:type)-> r type{
+   return something 
+}
+</pre>
+<p>last statement of a function is implicitly returned without the <code class="prettyprint">return</code> statement
+</p>
+<h2>Closures</h2>
+<pre class="codeBlock prettyprint">
+let sqr = |arg: type| arg * arg;
+</pre>
+can use pass a variable to a closure unlike in functions, it will be passed
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

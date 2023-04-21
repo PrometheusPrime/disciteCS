@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inheritance in JavaScript</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Inheritance</h1>
+  <p>Use the <code class="prettyprint">extends</code> keyword to inherit properties and methods.</p>
+  <pre class="codeBlock prettyprint">
+class Employee extends Person{
+  constructor(firstName,lastName,age,position,positionsHeld,address,personalInfo){
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.position = position
+    this.positionsHeld = positionsHeld
+    this.address = address
+    this.personalInfo = personalInfo
+ }
+}
+</pre>
+<p><code class="prettyprint">super</code> keyword</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

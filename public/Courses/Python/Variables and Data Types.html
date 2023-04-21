@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Variables and Data Types</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h2>Variables</h2>
+  <p><strong>Variables</strong> are used to store data in computer memory. Python is dynamically typed, variable's Data
+    Type is evaluated at runtime. Python has <em>Type inference</em>; the Interpreter will figure out the variable's
+    Data Type from the Value
+    assigned to it. Since a variable's Data Type is evaluated at runtime, you can reassign a variable to a value of a
+    different data type. Variable names are case sensitive . A variable name must start with a letter or an underscore
+    and can only contain Alphanumeric characters and an underscore. Give Variables meaningful names eg <code
+      class="code prettyprint">student_height</code> instead
+    of <code class="code prettyprint">sh </code>.</p>
+  <p>
+    The <em><strong>Assignment Operator (=)</strong></em> is used to assign a value to a variable. Assignment is
+    evaluated from right to left.
+  <pre class="codeBlock prettyprint">
+character_name = 'Morpheus'
+</pre>
+  </p>
+  <h2>Data Types</h2>
+  <p>
+    <strong>Primitive Data Types</strong> are predefined types of data. They are the most basic data types provided by a
+    Programming Language. Python support the following Primitive Data Types :
+  <p>
+  <ul>
+    <li>
+      <h4>Numbers</h4>
+    </li>
+    <strong>Integers</strong> are negative or positive whole numbers ...
+    <pre class="codeBlock prettyprint">
+# integers
+student_age = 16
+</pre>
+    </p>
+    <p>
+      <strong>Floating Point (Floats) </strong> are Real Numbers with a Decimal Point..
+    </p>
+    <pre class="codeBlock prettyprint">
+# a float
+student_height = 6.24
+</pre>
+    <p>
+      <strong>Complex </strong> j as the imaginery part
+    </p>
+    <pre class="codeBlock prettyprint">
+# a complex
+student_height = 6j
+</pre>
+
+    <p>
+      <li>
+        <h4>Boolean</h4>
+      </li>
+      <strong>Boolean</strong> variables can have either <code class="prettyprint">True</code> or <code
+        class="prettyprint">False</code> as values..
+    <pre class="codeBlock prettyprint">
+# boolean
+is_raining = True
+is_sunny = False
+</pre>
+    note the values start with capital letters.
+    </p>
+    <p>
+      <li>
+        <h4>String</h4>
+      </li>
+      A <strong>String</strong> is a sequence of Characters. In Python, strings are delimited by either Single
+      quotes('')
+      or
+      Double quotes("").
+    <pre class="codeBlock prettyprint">
+# single quotes
+a_string ='spam'
+print(a_string)
+# double quotes
+another_string ="eggs"
+print(another_string)
+</pre>
+    Python does not have a Character Data Type, a character is simply a String of length 1.
+    </p>
+  </ul>
+  <h3>Check Data Type</h3>
+  <p>
+    Use the <code class="code prettyprint">type()</code>
+    function to check a variable's data type.
+  </p>
+
+  <pre class="codeBlock prettyprint">
+is_sunny = True
+type_of_is_sunny = type(is_sunny)
+print(type_of_is_sunny)
+</pre>
+  <h2>Type Conversion</h2>
+  <p> A variable can be converted from one data type to another (Type Casting) </p>
+  <p>Use the <code class="code prettyprint">float()</code> function to convert to a float. </p>
+  <pre class="codeBlock prettyprint">
+student_age = 16
+print("before converting")
+print(student_age)
+print(type(student_age))
+      
+# from integer to float
+print("after converting")
+student_age = float(student_age)
+print(student_age)
+print(type(student_age))
+</pre>
+  <p>Use the <code class="code prettyprint">int()</code> function to convert to an integer.</p>
+  <pre class="codeBlock prettyprint">
+height = 6.24
+print("before converting")
+print(height)
+print(type(height))
+      
+# from float to integer
+print("after converting")
+height = int(height)
+print(height)
+print(type(height))
+</pre>
+  Note when a <code class="code prettyprint">float</code> is converted to an <code class="code prettyprint">int</code>,
+  any fractional part will be discarded.
+  <p>Use the <code class="code prettyprint">str()</code> function to convert to a string.</p>
+  <pre class="codeBlock prettyprint">
+height = 9.24
+print("before converting")
+print(height)
+print(type(height))
+      
+# from float to string
+print("after converting")
+height = str(height)
+print(height)
+print(type(height))
+    </pre>
+  <p>To convert a string to a number, it must be numeric. Use the <code class="code prettyprint">isnumeric()</code>
+    method to
+    check wether the characters in a string are numeric.</p>
+  <pre class="codeBlock prettyprint">
+# from string to integer
+student_age = "16"
+print(student_age.isnumeric())
+print("before converting")
+print(student_age)
+print(type(student_age))
+      
+print("after converting")
+student_age = int(student_age)
+print(student_age)
+print(type(student_age))
+
+# from string to float
+student_height = "9.24"
+print(student_height.isnumeric())
+print("before converting")
+print(student_height)
+print(type(student_height))
+      
+print("after converting")
+student_height = float(student_height)
+print(student_height)
+print(type(student_height))
+</pre>
+  <p>If you convert the Boolean <code class="prettyprint">True</code> and <code class="prettyprint">False</code> to
+    Integers or Floats , you'll get 1 and 0 respectively.</p>
+  <pre class="codeBlock prettyprint">
+print('From Boolean to int')
+is_raining = True
+is_sunny = False
+true_to_int = int(is_raining)
+false_to_int = int(is_sunny)
+print(true_to_int)
+print(false_to_int)
+
+print('From Boolean to Float')
+is_raining = True
+is_sunny = False
+true_to_float = float(is_raining)
+false_to_float = float(is_sunny)
+print(true_to_float)
+print(false_to_float)
+</pre>
+  If you convert the Integers 1 and 0 to boolean, you'll get <code class="prettyprint">True</code> and <code
+    class="prettyprint">False</code>. Use the <code class="code prettyprint">bool()</code> function to convert Integers
+  or Floats to Boolean. Note that when any non-zero is converted to boolean, evaluates to <code
+    class="prettyprint">True</code>.
+  <p>In Python all datatypes are Objects by default, unlike in other Programming Languages where you have to convert
+    Primitive Datatypes to Objects in order to do operations with other Objects.</p>
+  <!-- nontype which has the value of none. like null in other programming Languages -->
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

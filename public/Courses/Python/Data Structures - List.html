@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structures - List</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>List</h1>
+  <p> A List is a Collection Data Type that ... </p>
+  <ul>
+    <li>is ordered</li>
+    <li>is mutable</li>
+    <li>can contain values of different Data Types</li>
+    <li>can contain duplicate entries</li>
+  </ul>
+  A List is created with square brackets, list items comma-seperated.
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1,'Monday']
+print(a_list)
+</pre>
+  <p>An empty list can be created with the <code class="prettyprint">list()</code>function.</p>
+  <pre class="codeBlock prettyprint">
+a_list = list()
+print(a_list)
+</pre>
+  or
+  <pre class="codeBlock prettyprint">
+empty_list = []
+print(empty_list)
+</pre>
+  <h3>Indexing</h3>
+  <p>You can access a value in a list by referring to it's position (index) in the list. Python is zero base index
+    (starts from
+    0)</p>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1,'Monday']
+print(a_list[3])
+</pre>
+  <p>negative indexing</p>
+  <pre class="codeBlock prettyprint"></pre>
+  <p>Adding or changing a value at index</p>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1,'Monday']
+a_list[1] = 'Tuesday'
+a_list[-2] = 'Wednesday'
+a_list[-3] = 'Thursday'
+print(a_list)
+</pre>
+  <h3>Slice a List</h3>
+  <p>Slicing a List returns a new List with elements from the start index upto but not including the end index</p>
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+print(list1[1:6])
+</pre>
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+print(list1[4:])
+</pre>
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+print(list1[:8])
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1,'Monday']
+print(a_list[3])
+</pre>
+  <h3>Slice a List</h3>
+  <p>Slicing a List returns a new List with elements from the start index upto but not including the end index</p>
+<pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+print(list1[1:6])
+</pre>
+<pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+print(list1[4:])
+</pre>
+<pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+print(list1[:8])
+</pre>
+  <h2>List Comprehension</h2>
+  list comprehension is a technic used to generate a list
+  <pre class="codeBlock prettyprint">
+a_list = [generator]
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = [num for num in range(1,11)]
+print(a_list)
+</pre>
+  <p><code class="prettyprint">range()</code> function. num before the for loop is what's added to the new list.</p>
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = [num for num in list1]
+print(list2)
+</pre>
+  <pre class="codeBlock prettyprint">
+#add the cube of num from list1 to list2
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = [num**3 for num in list1]
+print(list2)
+</pre>
+  if statements so that a
+  <pre class="codeBlock prettyprint">
+#add num from list1 to list2 if it is even
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = [num for num in list1 if num % 2 == 0]
+print(list2)
+</pre>
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = [[num,var] for num in list1 for var in list1]
+print(list2)
+</pre>
+  To check for an element in a list use the <code class="prettyprint">in</code> keyword.
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1,'Monday']
+if 'Monday' in a_list:
+    print('Yes')
+</pre>
+  <h2>List method</h2>
+  <p>convert a string to a List the <code class="prettyprint">split(delimmiter)</code> method </p>
+  <pre class="codeBlock prettyprint">
+a_string = 'one two three four'
+a_list = a_string.split(' ')
+print(a_list)
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1,'Monday']
+a_string = a_list.split(' ')
+print(a_string)
+</pre>
+  <p>The <code class="prettyprint">pop()</code> method removes and also returns the last element in a list.
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5]
+element = a_list.pop()
+print(element)
+print(a_list)
+</pre>
+  To remove and return a specific item, pass into the <code class="prettyprint">pop()</code> method the index of that
+  element.</p>
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5]
+element = a_list.pop(3)
+print(element)
+print(a_list)
+</pre>
+  <p>The <code class="prettyprint">remove([item])</code> method removes a specified element from a List,if an element
+    occurs multiple times the first occurance will be removed.</p>
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5,3]
+a_list.remove(3)
+print(a_list)
+</pre>
+  <p><code class="prettyprint">del()</code> method removes a specified element from a List.</p>
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5]
+del(a_list[3])
+print(a_list)
+</pre>
+  <p><code class="prettyprint">clear()</code> method removes all elements in a List</p>
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5]
+a_list.clear()
+print(a_list)
+</pre>
+  <p>Add new items at the end of the list, by using the <code class="prettyprint">append()</code> method</p>
+  <pre class="codeBlock prettyprint">
+a_list = []
+a_list.append(item)
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5]
+a_list.append(6)
+print(a_list)
+</pre>
+  <p><code class="prettyprint">insert()</code> method </p>
+  <pre class="codeBlock prettyprint">
+a_list = []
+a_list.insert(position, item)
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = [1,2,3,4,5]
+a_list.insert(5, 6)
+print(a_list)
+</pre>
+  <p><code class="prettyprint">reverse()</code> method changes the list itself</p>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1]
+a_list.reverse()
+print(a_list)</pre>
+  <p><code class="prettyprint">sort()</code> method returns a sorted list, modifies the original list</p>
+  <pre class="codeBlock prettyprint">
+a_list = [2,6,5,7,3.5,60,8,1]
+a_list.sort()
+print(a_list)</pre>
+  <p><code class="prettyprint">sorted()</code> function returns a new sorted list, does not modify the original List.
+  </p>
+  <pre class="codeBlock prettyprint">
+list1 = [2,6,5,7,3.5,60,8,1]
+list2 = sorted(list1)
+print(f'list1 {list1}')
+print(f'list2 {list2}')
+</pre>
+  <p>calculate the number of items in a List using <code class="prettyprint">len() </code> function</p>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday',True,1]
+elements_in_list = len(a_list)
+print(elements_in_list)
+</pre>
+  <h3>Joining lists</h3>
+  <p>List concatenation</p>
+  <pre class="codeBlock prettyprint">
+list1 = [2,4,6,8,10]
+list2 = [20,40,60,80,100]
+list3 = list1 + list2
+print(list3)
+</pre>
+  <p>Append a list to the end of a list using the <code class="prettyprint">extend()</code> method</p>
+  <pre class="codeBlock prettyprint">
+list1 = ['Sunday','Monday','Tuesday']
+list2 = ['Wednesday','Thursday','Friday','Saturday']
+list1.extend(list2)
+print(list1)
+</pre>
+  <h2>Copying Lists</h2>
+  <p>You can copy a list by assigning the copy to the original List. But if the copy (or original) list is modified, all
+    the lists will be modified because all the lists are pointing to the same object in memory.</p>
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = list1
+print(f'list2 {list2}')
+list2.append(11)
+print('After modifying the copy')
+print(f'list1 {list1}')
+print(f'list2 {list2}')
+</pre>
+  <p>Use the <code class="prettyprint">copy()</code> method to copy a list without pointing to the same list object.
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = list1.copy()
+print(f'list2 {list2}')
+list2.append(11)
+print('After modifying the copy')
+print(f'list1 {list1}')
+print(f'list2 {list2}')
+</pre>
+  The <code class="prettyprint">list()</code> function can also be used to safely copy a list. Pass the List you want to
+  copy as an argument to the function.
+  <pre class="codeBlock prettyprint">
+list1 =[1,2,3,4,5,6,7,8,9,10]
+list2 = list(list1)
+print(f'list2 {list2}')
+list2.append(11)
+print('After modifying the copy')
+print(f'list1 {list1}')
+print(f'list2 {list2}')
+</pre>
+  <h3>Nested lists</h3>
+  <h3>Looping through a List</h3>
+  <p></p>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday','Tuesday','Wednesday','Thursday','Friday']
+for item in a_list:
+  print(item)
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday','Tuesday','Wednesday','Thursday','Friday']
+for i in range(len(a_list)):
+  print(i, a_list[i])
+</pre>
+  <pre class="codeBlock prettyprint">
+a_list = ['Monday','Tuesday','Wednesday','Thursday','Friday']
+for index, item in enumerate(a_list):
+  print(index, item)
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

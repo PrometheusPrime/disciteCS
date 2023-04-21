@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Control Statements</h1>
+    <p><strong>Control Statements</strong> are used to run code under certain conditions.</p>
+    <h2>If, Else and Else If Statements</h2>
+    <p><strong>If Statements</strong> : if a certain condition is <code class="prettyprint">true</code>, the code in the block will execute</p>
+    <pre class="codeBlock prettyprint">
+if condition{
+    code to be executed
+}
+</pre>
+    Go uses cury brackets to delimit a block of code.
+    </p>
+    <pre class="codeBlock prettyprint">
+if true{
+    fmt.Println("That's True")
+}
+</pre>
+    <p><strong>Nested If Statements</strong>: <code class="prettyprint">if</code> statements can be nested.</p>
+    <pre class="codeBlock prettyprint">
+var age = 22
+if age &gt; 18{
+  if age &lt;= 25{
+    fmt.Println("You're between 18 and 25 years of age")
+ }
+}
+</pre>
+Use logical Operators to chain conditions instead of nesting <code class="rettyprint">if</code> statements.
+    <pre class="codeBlock prettyprint">
+var is_cloudy = true
+var is_raining = false
+if is_cloudy || is_raining{
+    fmt.Println("You'll need an Amburrella ")
+}
+
+</pre>
+    <pre class="codeBlock prettyprint">
+var age = 22
+if age > 18 && age &lt;= 25{
+    fmt.Println("You're between 18 and 25 years of age")
+}
+
+</pre>
+<!-- <pre>
+if i:= 4;condition{
+//TODO
+}</pre> -->
+    <p><strong>Else Statement</strong> : <code class="prettyprint">else</code> statement will be executed if the condition or expression in the <code class="prettyprint">if</code> Statement
+        is <code class="prettyprint">false</code>.
+    <pre class="codeBlock prettyprint">
+var is_red = false
+if is_red{
+    fmt.Println("Stop")
+}else{
+    fmt.Println("Drive")
+}
+</pre>
+    If - Else statements can be nested.
+    <p><strong>Else If Statement :</strong> <code class="prettyprint">else if</code> checks additional conditions.</p>
+    <pre class="codeBlock prettyprint">
+var name = "Johnson"
+var gender = "female"
+if gender == "male"{
+    fmt.Println("Hello Mr " + name)
+}else if gender == "female"{
+    fmt.Println("Hello Ms " + name) 
+}  
+</pre>
+    An <code class="prettyprint">if</code> statement can have any number of <code class="prettyprint">else if</code> statements, but only one optional <code class="prettyprint">else</code> statement that will handle any situations not handled by the preceding statements.
+    <pre class="codeBlock prettyprint">
+var name = "Johnson"
+var gender = "NA"
+if gender == "male"{
+    fmt.Println("Hello Mr " + name)
+}else if gender == "female"{
+    fmt.Println("Hello Ms " + name) 
+} else{
+    fmt.Println("Hello " + name)
+}
+</pre>
+    <!-- <pre class="codeBlock prettyprint">
+var = a/ do_something if expr/con else something
+</pre> -->
+    <h2>Switch</h2>
+    <p>The <code class="prettyprint">switch</code> Statement is used do different operations depending on a particular value of a variable. It replaces multiple <code class="prettyprint">if-else</code> statements. A variable is checked, if it matches a case, only that case's statement(s) is executed.</p>
+    <pre class="codeBlock prettyprint">
+var num = 1
+switch num{
+case 1:
+    fmt.Println("You're number 1!")
+case 2:
+    fmt.Println("You're number 2!")
+default:
+    fmt.Println("You're number something")
+}
+</pre>
+The <code class="prettyprint">default</code> case is optional, it run if none of the cases matched.
+    <pre class="codeBlock prettyprint">
+var num = 4
+switch num{
+case 1:
+    fmt.Println("You're number 1!")
+case 2:
+    fmt.Println("You're number 2!")
+default:
+    fmt.Printf("Sorry,You're number %v",num)
+}</pre>A variable can be left out.
+When a variable is ommited a case doesn't have to be a constant, it can be an express or a call to a function.
+<pre class="codeBlock prettyprint">
+var trafficLight &equals; "Green"
+switch {
+case trafficLight &equals;&equals; "Red":
+    fmt.Println("Stop !")
+case trafficLight &equals;&equals; "Green":
+    fmt.Println("Drive")
+default:
+    fmt.Println("Drive, if it is safe to do so")
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in C</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css">
+    <link rel="stylesheet" href="../../Styles/main.css">
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Array</h1>
+    <p>An array is a container that holds a fixed number of values of a single type, that are referred by a single identifier.</p>
+To declare an array, write data type, the array identifier and the number of element it will hold in square brackets.
+<pre class="codeBlock prettyprint">
+int evenNumbers[5];
+</pre>
+If you're declaring and initialising an array, the size can be left out.
+    <pre class="codeBlock prettyprint">
+int oddNumbers[] = {1,3,5,7,9};
+</pre>
+
+<h3>Indexing</h3>
+<p>An element in the array is accessed by writing the array identifier and it's index (position) in square brackets. The first element is at position 0.</p>
+<pre class="codeBlock prettyprint">
+printf("%i\n",oddNumbers[2]);
+</pre>
+Add or change an existing value in an array
+<pre class="codeBlock prettyprint">
+evenNumbers[0] = 2;
+evenNumbers[1] = 4;
+evenNumbers[2] = 6;
+evenNumbers[3] = 8;
+evenNumbers[4] = 10;
+</pre>
+<h3 id="arrayOfCharacters">Array of Characters(String)</h3>
+<pre class="codeBlock prettyprint">
+char alphabet[]= {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','\0'};
+</pre>
+<p>The <code>\0</code> (null terminating character) tells the compiler that the array has ended. It is required.</p>
+Another way of declaring and initialising a character array is by writing the values in double quotes. The null terminating character is automatically added by the compiler.
+<pre class="codeBlock prettyprint">
+char alphabet[]= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+</pre>
+When you create an empty character array, make sure the declared length is atleast the number of character the array will hold plus 1. 1 for the null character(\0) which will be added by the compiler.
+<pre class="codeBlock prettyprint">
+char alphabet[27];
+</pre>
+<h2>Multidimensional Arrays</h2>
+Empty multidimensional array
+<pre class="codeBlock prettyprint">
+int arrary_name[number_of_elements][number_of_elements_in_nested_array];
+</pre>
+Multidimensional array riteral.
+<pre class="codeBlock prettyprint">
+int nums[5][2] = {
+        {1, 2},
+        {3, 4},
+        {5, 6},
+        {7, 8},
+        {9, 10}
+};
+</pre>
+<h3>Loop through Arrays</h3>
+Iterate through a one dimensional array, with a <code class="prettyprint">for</code> 
+<pre class="codeBlock prettyprint">
+for (int i= 0;i &lt; 5;i++){
+    printf("%i\n",evenNumbers[i]);
+}
+</pre>
+To iterate through a multidimensional array, use nested for loops.
+<pre class="codeBlock prettyprint">
+for (int i = 0; i &lt; 5; i++)
+{
+    for (int j = 0; j &lt; 2; j++)
+    {
+        printf("%i", nums[i][j]);
+    }
+    printf("\n");
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

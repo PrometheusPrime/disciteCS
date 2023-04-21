@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Images, Audio and Videos</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Images, Audio and Videos</h1>
+  <h2>Images</h2>
+  <p>
+    The <code class="code prettyprint">&lt;img/&gt;</code> element is used to
+    add an image to a web page.The source (<em><strong>src</strong></em>) attribute defines the image location. The
+    <em><strong>width</strong></em> and
+    <em><strong>height</strong></em> attributes are used to set the width and
+    height of the image. The width and height of an image can be in pixels
+    (px) or percentages (%). The <em><strong>alt</strong></em> attribute
+    contains alternate text that describes the image if it can not be
+    displayed. If the user uses a screen reader, the alternate text will be
+    read to them.The alt attribute is required. The
+    <em><strong>border</strong></em> attribute adds a border around the image
+  </p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+&lt;head&gt;
+  &lt;title&gt;Images&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;img src="logo.jpg" width="100px" height="150px" border="1px" alt="site logo"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <p>
+    src="logo.jpg" means there is a file logo.jpg in the folder where the html
+    file is. If it is in a different folder you'll have to spacify the path to
+    the image. You can use an image from another website..
+  </p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Images&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;img src="logo.jpg" width="50%" height="50%" alt="site logo"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  The width , height and border can be set with the style attribute..
+  <br /><code class="code prettyprint">style="width:50%;height:50%;border:0;"</code><br />Using large images can slow
+  down the loading of your page.
+  <h2>Audio</h2>
+  <p>
+    The <code class="code prettyprint">&lt;audio&gt;</code> element is used to
+    embed an audio in a web page.There are three supported audio formats : OGG, WAV and MP3. The source
+    (<em><strong>src</strong></em>) attribute defines the audio location.The <em><strong>controls</strong></em>
+    attribute adds control buttons. When the <em><strong>autoplay</strong></em> attribute is defined ,the audio will
+    start playing once it is ready. When the <em><strong>loop</strong></em> attribute is defined ,the audio will replay
+    every time it is finished.</p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+  &lt;head&gt;
+      &lt;title&gt;Audio&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;audio src="audio.wav" controls autoplay loop&gt;&lt;/audio&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>You can add different file formats for the audio using the source elements nested in the audio. The first format that your browser supports will be played. If the browser doesn't support any of the files, the text will be printed.</p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+ &lt;head&gt;
+    &lt;title&gt;Audio&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;audio controls autoplay loop&gt;
+       &lt;source src="audio.ogg" type="audio/ogg"&gt;
+       &lt;source src="audio.wav" type="audio/wav"&gt;
+       &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+       Your Browser can not play this audio
+    &lt;/audio&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <h2>Videos</h2>
+  <p>
+    The <code class="code prettyprint">&lt;video&gt;</code> element is used to
+    embed a video in a web page.There are three supported video formats : OGG, WebM and MP4. The source
+    (<em><strong>src</strong></em>) attribute defines the video location.The <em><strong>controls</strong></em>
+    attribute adds control buttons. When the <em><strong>autoplay</strong></em> attribute is defined ,the video will
+    start playing once it is ready. When the <em><strong>loop</strong></em> attribute is defined ,the video will replay
+    every time it is finished.</p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+&lt;head&gt;
+  &lt;title&gt;Video&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;video src="video.webm" controls autoplay loop&gt;&lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>We can also add different video formats, just like the audio element.</p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+&lt;head&gt;
+  &lt;title&gt;Video&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;video controls autoplay loop&gt;
+    &lt;source src="video.ogg" type="video/ogg"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    &lt;source src="video.mp4" type="video/mpeg"&gt;
+    Your Browser can not play this video
+  &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+  </p>
+</body>
+
+</html>

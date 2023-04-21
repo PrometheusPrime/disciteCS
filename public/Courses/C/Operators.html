@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Operators</h1>
+    <h2>Arithmetic Operators</h2>
+    Arithematic Operators are used in basic arithematic calculations.
+    <p><em><strong>Addition Operator (+)</strong></em> : adds the operands.</p>
+    <pre class="codeBlock prettyprint">
+int x = 6;
+int y = 8;
+printf("%d",x + y);
+</pre>
+    <p><em><strong>Subtraction Operator (-)</strong></em> : subtracts one operand from another.</p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+double y = 2.5;
+printf("%f",x - y);
+</pre>
+    <p><em><strong>Multiplication Operator (*)</strong></em> : multiplies the operands.</p>
+    <pre class="codeBlock prettyprint">
+int x = 9;
+int y = 25;
+printf("%i",x * y);
+</pre>
+    <p><em><strong>Division Operator (/)</strong></em> : divides the operands. If you divide integers, an integer is returned.</p>
+    <pre class="codeBlock prettyprint">
+int x = 27;
+int y = 2;
+printf("%i",x / y);
+</pre>
+To get a floating point number, cast one of the operands to a float.
+ <pre class="codeBlock prettyprint">
+int x = 27;
+int y = 2;
+printf("%f",(double)x / y);
+</pre>
+    <p><em><strong>Modulus or Remainder Operator (%)</strong></em> : returns the remainder after dividing the given
+        operands. It can not be used with floating point numbers.</p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+int y = 3;
+printf("%d", x % y);
+</pre>
+    <h2>Unary Operators</h2>
+    <p>Unary Operator perform various operations on one operand.</p>
+    <p><em><strong>Increment Operator (++)</strong></em> increments a variable by 1 </p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+x ++;
+printf("%i",x);
+</pre>
+    <p><em><strong>Decrement Operator (--)</strong></em> decrements a variable by 1</p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+x --;
+printf("%i",x);</pre>
+When the unary operator prefixed, the operand is first changed and then the value is returned.
+If it is postfixed,the original value is returned before the operand is changed.
+    <pre class="codeBlock prettyprint">
+int x = 5;
+int y = 5;
+printf("x = %i, y = %i", ++x, y++);</pre>
+    <h2>Assignment Operators</h2>
+
+    <p><em><strong> Operator (+=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x+= 5;  //same as x = x + 5
+printf("%i",x);
+</pre>
+    <p><em><strong> Operator (-=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x-= 5;  //same as x = x - 5
+printf("%i",x);
+</pre>
+    <p><em><strong> Operator (*=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x*= 5;  //same as x = x * 5
+printf("%i",x);
+</pre>
+    <p><em><strong> Operator (/=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x/= 5;  //same as x = x / 5
+printf("%i",x);
+</pre>
+    <p><em><strong> Operator (%=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x%= 5;  //same as x = x % 5
+printf("%i",x);
+</pre>
+    <h2>Comparison Operators</h2>
+    <p>Comparison Operators are used to compare given Variables, they return a Boolean value 1(<code
+            class="prettyprint">true</code>) or 0(<code
+            class="prettyprint">false</code>).</p>
+    <p><em><strong>Greater Than Operator (&gt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x &gt; y);
+</pre>
+    <p><em><strong>Less Than Operator (&lt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x &lt; y);
+</pre>
+    <p><em><strong>Equality Operator (==)</strong></em> : compares whether the Operands are Equal.</p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i", x == y);
+</pre>
+    <p><em><strong>Greater Than or Equal To Operator (&gt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x &gt;= y);
+</pre>
+    <p><em><strong>Less Than or Equal To Operator (&lt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x &lt;= y);
+</pre>
+    <p><em><strong>Inequality Operator (!=)</strong></em> : checks whether the Operands are Not Equal.Returns True if
+        they are not equal.</p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x != y);
+</pre>
+<h2>Logical Operator</h2>
+    <p>Logical Operators are used to chain Boolean Variables, they return a boolean value (1 means <code
+            class="prettyprint">true</code> and 0 means <code class="prettyprint">false</code>)..</p>
+    <p><em><strong> And Operators </em>(&&)</strong> : Returns true if all the variables are true.</p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x &gt; 4 &amp;&amp; y &gt; 4);
+</pre>
+    <p><em><strong>Or Operator </em>(||)</strong> : Returns True if one of the conditions is true.</p>
+<pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+printf("%i",x &lt; y || y &gt; x);
+</pre>
+<h2>Ternary Operator</h2>
+    <p><strong>Ternary Operator(?:)</strong> can replace a single if - else statement. If the expression in parenthesis is true the variable is assigned the value after the question mark, else it is assigned the value after the colon.</p>
+    <pre class="codeBlock prettyprint">
+char* x = (4 &lt; 5) ? "4 is less than 5" : "4 is greater than 5";
+printf("%s",x);
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

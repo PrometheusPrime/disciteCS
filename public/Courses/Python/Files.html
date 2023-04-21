@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Working With Files</h1>
+    <code class="prettyprint">open()</code>
+    <pre class="codeBlock prettyprint">
+fl = open('dirToFile/file.ex','mode')
+//do something with File, then
+fl.close() //to close the file
+</pre>
+    <pre class="codeBlock prettyprint">
+with open('dirToFile/file.ex','mode') as fl:
+    //do something with File
+    //dont need to  close the file
+print('Done Processing the file')
+</pre>
+    <strong>modes</strong> <br>
+    <strong>methods</strong>
+    <br><strong>examples working with files</strong>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Input</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Getting Input From The User</h1>
+    <p>The <code class="prettyprint">input()</code> function is used to get input from the user.</p>
+    <pre class="codeBlock prettyprint">
+input()        
+</pre>
+    when the run, the programme will wait for the user to click <kbd>Enter</kbd>, that's when the rest of the code will
+    be executed.
+    <p>You can pass a string into the function as a prompt to the user..</p>
+    <pre class="codeBlock prettyprint">
+input('What is your name ? ')        
+</pre>
+    <p>To use the input from the user, you have to assign it to a variable.</p>
+    <pre class="codeBlock prettyprint">
+name = input('What is your name ? ')
+print(f'Nice to meet you, {name}')        
+</pre>
+    <p>
+        By default the input function returns a string.
+    </p>
+    <pre class="codeBlock prettyprint">
+num1 = input('Enter a number : ')
+num2 = input('Enter another number : ')
+print(f'{num1} + {num2} = {num1 + num2}')
+</pre>
+    In the example above, all the inputs are strings and are simply concatenated.
+    <p>Convert numbers entered by the user to numbers, to use them as numbers.</p>
+    <pre class="codeBlock prettyprint">
+num1 = int(input('Enter a number : '))
+num2 = int(input('Enter another number : '))
+print(f'{num1} + {num2} = {num1 + num2}')
+</pre>
+    In the example above, the <code class="prettyprint">input()</code> function is nested in the <code
+        class="prettyprint">int()</code> function which converts the input to integers.
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

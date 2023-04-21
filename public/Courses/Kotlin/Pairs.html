@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaces</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Pairs</h1>
+    <pre class="codeBlock prettyprint">
+val person = "President" to "Head of State"
+</pre>
+<pre class="codeBlock prettyprint">
+person.first
+</pre>
+<pre class="codeBlock prettyprint">
+person.second
+</pre>
+Destructuring
+<pre class="codeBlock prettyprint">
+val (someVar,myVar) = person
+</pre>
+Convert pair to list
+<pre class="codeBlock prettyprint">
+person.toList()
+</pre>
+Convert pair to string
+<pre class="codeBlock prettyprint">
+person.toString()
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encapsulation</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+<h1>Encapsulation</h1>
+<p>It it not recommended to directly access and modify fields in a class. Make fields <code class="prettyprint">private</code> and use setter and getter Methods to modify and access them. We are going to modify our person class with the following getters and setter.</p>
+<pre class="codeBlock prettyprint">
+// Setters
+public void setName(String name) {
+  this.name = name;
+}
+
+public void setAge(int age) {
+  this.age = age;
+}
+
+public void setGender(String gender) {
+  this.gender = gender;
+}
+
+// Getters
+public String getName() {
+  return name;
+}
+
+public int getAge() {
+  return age;
+}
+
+public String getGender() {
+  return gender;
+}
+
+public static int getNumberOfPeople() {
+  return numberOfPeople;
+}
+</pre>
+One of the uses of setter methods is to validate the value being assigned to an instance variable. For example age can not be negative.
+<pre class="codeBlock prettyprint">
+public void setAge(int age) {
+    if (age &lt; 0) {
+      this.age = 0;
+    } else {
+      this.age = age;
+    }
+}
+</pre>
+Here is our Person class fully encapsulated.
+<pre class="codeBlock prettyprint">
+public class Person {
+  private static int numberOfPeople;
+  private String name;
+  private int age;
+  private String gender;
+
+  String personalInfo() {
+    return "Name : " + this.getName() + "\n" + "Gender : " + this.getGender() + "\n" + "Age : " + this.getAge();
+  }
+
+  // Setters
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setAge(int age) {
+    if (age &lt; 0) {
+      this.age = 0;
+    } else {
+      this.age = age;
+    }
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  // Getters
+  public String getName() {
+    return name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public String getGender() {
+    return gender;
+  }
+
+  public static int getNumberOfPeople() {
+    return numberOfPeople;
+  }
+
+  // Constructors
+  public Person() {
+    numberOfPeople++;
+
+  }
+
+  public Person(String name, int age, String gender) {
+    setName(name);
+    setAge(age);
+    setGender(gender);
+    numberOfPeople++;
+
+  }
+
+}</pre>
+Modifying instance variables with setter methods.
+<pre class="codeBlock prettyprint">
+//uses the Default constructor
+Person tony = new Person();
+tony.setName("Tony Stark");
+tony.setGender("Male");
+tony.setAge(43);
+
+//uses the Secondary constructor
+Person micheal = new Person("Micheal Myers",40,"Male");
+micheal.setName("Micheal Mobius");
+</pre>
+Accessing instance and static variables with getter methods.
+<pre class="codeBlock prettyprint">
+System.out.println(tony.getGender());
+System.out.println(mike.getName());
+System.out.println(Person.getNumberOfPeople());
+</pre>
+<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+</html>

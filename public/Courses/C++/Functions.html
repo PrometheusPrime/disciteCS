@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Functions</h1>
+    <p><strong>Function</strong> are reusable code blocks that will only execute when called. To define a function,
+    write the function's return type followed by the function name, a set of  parentheses and a code block. If a function does not return a value, use <code class="prettyprint">void</code> as the return type.</p>
+    <pre class="codeBlock prettyprint">
+void greet(){
+
+    cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+        
+}
+</pre>
+    A function will only be executed when it is called. To call a function, write the function’s name followed by a set
+    of parentheses.
+    <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+void greet(){
+
+    cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+
+}
+
+int main(int argc, char const *argv[]){
+
+    greet(); //calling the function
+}
+</pre>
+    <h2>Parameters and Arguments</h2>
+    <p>Parameters appear in function definitions, while arguments appear in function
+        calls.A function can take any number of Parameters, comma seperate the parameters. A function must be called
+        with the number of arguments it expects.</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+        
+using namespace std;
+        
+void greet(string name){
+        
+    cout &lt;&lt; "Hello, " + name &lt;&lt; endl;
+        
+}
+        
+int main(int argc, char const *argv[]){
+        
+    greet("Jane"); //calling the function
+}
+</pre>
+    <h3>Default parameters</h3>
+    <p>You can specify default values for parameter(s) such that if that argument is not passsed when calling the function, the default value will be used instead. For this to work it is important that the parameters with default values are to the right of those without default values. All parameters after a parameter with a default value must have default values as well.</p>
+        <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+        
+using namespace std;
+        
+void greet(string greeting,string name = "World"){
+        
+    cout &lt;&lt; greeting + ", " + name &lt;&lt; endl;
+        
+}
+        
+int main(int argc, char const *argv[]){
+        
+    greet("Hello");
+    greet("Hi","Bob");
+
+    return 0;
+}
+</pre>
+    <h3>Return statement</h3>
+    <p>The <code class="prettyprint">return</code> keyword is used to return a Value from a function. Any statement after <code class="prettyprint">return</code> will not be executed.</p>
+    <pre class="codeBlock prettyprint">
+string greet(string greeting,string name)
+{
+    return greeting + ", " + name;
+}
+</pre>
+We can use the value returned from a function by printing it, assigning it to a variable, et cetra.
+<pre class="codeBlock prettyprint">cout &lt;&lt; greet("Hi","Bob") &lt;&lt; endl;</pre>
+<pre class="codeBlock prettyprint">string greet(string greeting,string name)
+{
+    return greeting + ", " + name;
+}
+// in main
+auto sayHello = greet;
+cout &lt;&lt; sayHello("Hello","James") &lt;&lt; endl;</pre>
+    <h3>Prototyping</h3>
+    <p>A function must be declared before it can be
+        called.</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+        
+using namespace std;
+        
+int main(int argc, char const *argv[]){
+        
+    cout &lt;&lt; greet("Hi","Bob") &lt;&lt; endl;
+
+    return 0;
+}
+        
+string greet(string greeting,string name)
+{
+    return greeting + ", " + name;
+        
+}
+</pre>
+    The function’s header needs to be specified before the point where the function is called, so that the compiler
+    knows that the function exists. This is called <strong>Prototyping</strong>. And then add the function definition
+    below.There's no need of declaring parameter names in the prototype, only the data types must
+    be specified.
+    <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+                
+using namespace std;
+
+string greet(string,string);//prototype
+                
+int main(int argc, char const *argv[]){
+        
+    cout &lt;&lt; greet("Hi","Bob") &lt;&lt; endl;
+
+    return 0;
+}
+        
+string greet(string greeting,string name)
+{
+    return greeting + ", " + name;
+        
+}
+</pre>
+    <h4>Pass by Reference</h4>
+    <p>By default arguments are passed by value to a function, the argument's value is copied.</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+string changeName(string);
+
+int main(int argc, char const *argv[])
+{
+    string name = "John";
+
+    cout &lt;&lt; name &lt;&lt; endl;
+
+    changeName(name);
+
+    cout &lt;&lt; name &lt;&lt; endl;
+
+    return 0;
+}
+
+string changeName(string x)
+{
+    x += " Doe";
+    return x;
+}
+</pre>
+    <p>To pass an arguement's reference(memory location), add the <strong>Reference operator</strong> (<code>&amp;</code>) before parameter name when defining the
+        function.</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+
+using namespace std;
+            
+string changeName(string&amp;);
+            
+int main(int argc, char const *argv[])
+{
+    string name = "John";
+
+    cout &lt;&lt; name &lt;&lt; endl;
+
+    changeName(name);
+
+    cout &lt;&lt; name &lt;&lt; endl;
+                    
+    return 0;
+}
+
+string changeName(string &amp;x)
+{
+    x += " Doe";
+    return x;
+}          
+</pre>
+    <h4>Return by Reference</h4>
+
+    <h2>Function Overloading</h2>
+    <p>Function overloading is defining a function multiple times with different number and or type of parameters.</p>
+    <pre class="codeBlock prettyprint">
+int sum(int x,int y){
+    return x + y;
+}
+
+int sum(int x,int y,int z){
+    return x + y + z;
+}
+
+double sum(double x,int y){
+    return x + y;
+}
+double sum(double x,double y,double z){
+    return x + y + z;
+}
+</pre>
+    <h2>Lambda Functions</h2>
+    <pre class="codeBlock prettyprint">
+
+</pre>
+    <h2>Recursion</h2>
+    needs a base case that will stop recursion
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

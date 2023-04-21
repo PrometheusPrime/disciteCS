@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Strings in R</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>String</h1>
+	<code class="code prettyprint">sprintf()</code>
+	<pre class="codeBlock prettyprint">my.str &lt;&hyphen; "Some random question"
+ </pre>
+	Check the number of characters in a string
+	<pre class="codeBlock prettyprint">
+ nchar(my.str)
+</pre>
+	compare strings like in python**
+	<pre class="codeBlock prettyprint">
+</pre>
+	combine strings with the <code class="code prettyprint">paste()</code> function
+	<pre class="codeBlock prettyprint">
+paste(str, another.str,sep="")
+</pre>
+	sep = a sperator<br />get a substring
+	<pre class="codeBlock prettyprint">
+substr(x=my.str,start=index,stop=index)
+</pre>
+	replace a character(s) in a string
+	<pre class="codeBlock prettyprint">
+sub(pattern = "char(s)", replacement="char(s)", x=my.str)
+</pre>
+	<pre class="codeBlock prettyprint">
+gsub(pattern = "char(s)", replacement="char(s)", x=my.str)
+</pre>
+	split a string into a vector
+	<pre class="codeBlock prettyprint">
+strsplit(my.str," ")
+</pre>
+<pre class="codeBlock prettyprint">
+toupper(str)
+</pre>
+<pre class="codeBlock prettyprint">
+tolower(str)
+</pre>
+<pre class="codeBlock prettyprint">
+substr(str,start,stop)
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

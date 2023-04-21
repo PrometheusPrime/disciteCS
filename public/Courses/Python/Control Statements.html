@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Control Statements</h1>
+    <p><strong>Control Statements</strong> are used to run code under certain conditions.</p>
+    <h2>If Statement</h2>
+    <p><strong>If Statements</strong> : if a certain condition is True, the code in the block will execute</p>
+    <pre class="codeBlock prettyprint">
+if condition:
+    code to be executed
+</pre>
+    Python uses Indentation to delimit a block of code.
+    </p>
+    Example
+    <pre class="codeBlock prettyprint">
+if True:
+    print("Thats True")
+</pre>
+<h3>Nested If Statements</h3>
+    <p><code class="prettyprint">if</code> statements can be nested if certain
+        conditions are True.</p>
+    <pre class="codeBlock prettyprint">
+is_cloudy = True
+is_raining = True
+if is_cloudy:
+  if is_raining:
+    print("It is croudy and raining ,You need an Amburrella")
+</pre>
+    <pre class="codeBlock prettyprint">
+age = 22
+if age > 18:
+  if age &lt;= 25:
+    print("You're between 18 and 25 years of age")
+</pre>
+    Logical Operators Chain conditions
+    <pre class="codeBlock prettyprint">
+is_cloudy = True
+is_raining = False
+if is_cloudy or is_raining:
+    print("You'll need an Amburrella ")
+</pre>
+    <pre class="codeBlock prettyprint">
+age = 22
+if age > 18 and age &lt;= 25:
+    print("You're between 18 and 25 years of age")
+</pre>
+<h2>Else Statement</h2>
+    <p>The <code class="prettyprint">else</code> statement will be executed if the <code
+            class="prettyprint">if</code> expression
+        is false what to do instead if the condition or expression in the <code class="prettyprint">if</code> Statement
+        is false.
+    <pre class="codeBlock prettyprint">
+is_red = False
+if is_red:
+    print("Stop")
+else:
+    print("Drive")
+</pre>
+    If - Else statements can be nested.
+    <h2>Else If Statement (ElIf)</h2>
+    <p>The <code class="prettyprint">elif</code> statement is used to check additional conditions.
+    </p>
+    <pre class="codeBlock prettyprint">
+name = input("What is your name ? ")
+gender = input("What is your gender ? ")
+if gender.lower() == "male":
+    print("Hello Mr " + name)
+elif gender.lower() == "female": 
+    print("Hello Ms " + name)   
+</pre>
+    An <code class="prettyprint">if</code> can have any number of <code class="prettyprint">elif</code> statements, but
+    only one optional <code class="prettyprint">else</code> statement that will handle any situations not handled by the
+    preceding statements.
+    <pre class="codeBlock prettyprint">
+name = input("What is your name ? ")
+gender = input("What is your gender ? ")
+if gender.lower() == "male":
+    print("Hello Mr " + name)
+elif gender.lower() == "female": 
+    print("Hello Ms " + name) 
+else:
+    print("Hello " + name)
+</pre>
+<p>
+    Assign a value to a variable based on a condition.
+</p>
+    <pre class="codeBlock prettyprint">
+myVar = '4 > 5' if 4 > 5 else '4 < 5'
+print(myVar)
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

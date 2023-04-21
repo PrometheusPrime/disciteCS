@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    Strings are sequence of characters. There are two types of strings in Rust.
+    <h3>Primitive Strings</h3>
+    primitive strings are immutable
+    <pre class="codeBlock prettyprint">
+let first_name = ""
+let last_name: &str = ""
+</pre>
+    <h3>String Objects</h3>
+    <p>When you create a string from the <code class="prettyprint">String</code> class, You can modify it</p>
+    <pre class="codeBlock prettyprint">
+fn main(){
+    let mut greet = String::from("Hello");
+    println!("{}",greet);
+}
+</pre>
+<h2>Formated Strings</h2>
+<pre class="prettyprint codeBlock">
+let (firstName,lastName) = ("Jane","Doe");
+println!("Your name is {} {} ?",firstName,lastName);
+</pre>
+can also use index
+<pre class="prettyprint codeBlock">
+let (firstName,lastName) = ("Jane","Doe");
+println!("Your name is {} {} ?",firstName,lastName);
+</pre>
+<h2>String functions</h2>
+check if a string is empty
+<pre class="prettyprint codeBlock">mystr.is_empty</pre>
+count characters in a string
+<pre class="prettyprint codeBlock">mystr.chars().count()</pre>
+check if a string is a sub-string
+<pre class="prettyprint codeBlock">myStr.contains(aStr)</pre>
+replace
+<pre class="prettyprint codeBlock">myStr.replace(something,with)</pre>
+Split a string at a specific index
+<pre class="prettyprint codeBlock">myStr.split_at(index)</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

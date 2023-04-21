@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction To C</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>C</h1>
+  <p>C is a general purpose programming language. It was created by Dennis Ritchie in the 1970s.</p>
+  <p>C is a compiled Language, source code has to be compiled to machine code to run it. That means you need a Compiler
+    to compile code.</p>
+    <h2>Installing a compiler</h2>
+  <h4>Linux and MacOs</h4>
+  <p>If you are using Linux or MacOS, you probably have everything you'll need to compile C code. Open a terminal window
+    and run <code>clang -version</code>, if don't get any errors, you are good to go.</p>
+  <h4>On Windows</h4>
+  <ol>
+    <li>Go to <span class="link">https://www.msys2.org/</span> and download the installer. Run the installer then Follow
+      all instructions on <span class="link">https://www.msys2.org/</span> carefully.</li>
+    <li>Edit the system environment variables <ol>
+        <li>Click <kbd>Windows + S</kbd> to open the <strong>Search</strong> window.Type <strong>env</strong>,Click
+          <strong>Edit the system environment variables</strong>.</li>
+        <li>Under System Variables, select <strong>Path</strong>, then click Edit.</li>
+        <li>Add new entrys <code>C:\msys64\mingw64\bin</code> and <code>C:\msys64\usr\bin</code>. Note you'll need change the paths if you installed msys64 on a different Drive. Click
+          <strong>OK</strong> to save.</li>
+        <li>On each window that was opened, click <strong>Apply</strong> or <strong>OK</strong> to dismiss it and apply
+          the changes.</li>
+      </ol>
+    </li>
+    <li>Open a terminal window and type <code>gcc --version</code> then <kbd>Enter</kbd> to check if everything was installed
+      and configured correctly.</li>
+  </ol>
+  <h3>Code Editor</h3>
+  <p> You'll need a Text editor or an IDE to write your C programs.</p>
+  <p>A simple text editor that comes with your operating system will suffice, but you can use other code editors like Visual Studio Code , Atom and Sublime text.</p>
+  <p>I recommend you use Visual Studio Code.  It's free and comes with a ton of features. You can download it
+    from <span class="link">https://code.visualstudio.com/download</span>. After installing Visual Studio Code, open it
+    and install c/c++ extention.</p>
+  <h3>Write a C program</h3>
+  <p>Create a new file in the code editor of your choice, save it with <em>.c</em> as the file extention and write the code below.</p>
+  <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("Hello, World!\n");
+
+    return 0;
+}
+</pre>
+<h3>Compile and Run a C program</h3>
+<p></p>
+  <p>In Visual Studio Code, press the play button in the top right corner of the editor to compile and run your program.
+    Choose <samp>C/C++:gcc.exe build and debug active file</samp>.</p>
+  <p>Alternatively open a terminal window in the directory where your C file is , type <code>make fileName</code>
+    without the file extention, then <kbd>Enter</kbd>. If no errors are shown it means the program compile successfully.
+    There will be an executable file with the same file name as your C source file in the directory.</p>
+  <p>To run the executable file Linux or MacOS; type <code>./fileName</code>, on Windows <code>fileName</code> then
+    click <kbd>Enter</kbd> or <kbd>return</kbd>.</p>
+    Output will be shown in the terminal.
+    <p>Everytime you make changes to the source code, You have to recompile the code.</p>
+  <h2>Sample Code Simplified</h2>
+  <p><code class="prettyprint">#include &lt;stdio.h&gt;</code> - The preprocesor directive <code class="prettyprint">#include</code> is used to add code from a header file in to our c source file before it is compiled. The <code class="prettyprint">&lt;stdio.h&gt;</code> header file contains the <code class="prettyprint">printf</code> function.</p>
+  
+  <p><code class="prettyprint">main()</code> - is a special function in C where the execution of a program starts from.</p>
+  <p><code class="prettyprint">{}</code> - Curly brackets are used to delimit a block of code.</p>
+  <p>Comments are not executed , they are mainly used to document the Code.</p>
+    <p><code class="prettyprint">//</code> Single-line comments</p>
+  <p><code class="prettyprint">/**/</code> Multi-line comments</p>
+  <p><code class="prettyprint">printf()</code> - Prints stuff passed to it to the console</p>
+  <p><code class="prettyprint">\n</code> - The new line sequence adds a new line.</p>
+  <p><code class="prettyprint">return 0</code> - The exit status <code class="prettyprint">0</code> indicates that the program executed successfully without any errors. We'll discuss the <code class="prettyprint">return</code> statement later in the functions module.</p>
+  
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

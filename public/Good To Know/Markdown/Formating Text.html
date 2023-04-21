@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formating Text in Markdown</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Formating Text</h1>
+  <h2>Headings </h2>
+  <p>
+    Like <abbr title="HyperText Markup Language">HTML</abbr>, Markdown supports 6 heading
+    levels. To create a heading, place hash sign(s) before your heading. The number of hashes placed before the heading
+    determines the header level of the heading (one for header level 1(most impoortant heading), six for header level 6
+    (least important heading)).
+  <pre class="codeBlock prettyprint">
+ # Some Heading(h1) #
+ ## Some Heading(h2) ##
+ ### Some Heading(h3)
+ #### Some Heading(h4) ###
+ ##### Some Heading(h5)
+ ###### Some Heading(h6) #
+</pre>
+  <img src="images/h1-h6.png" alt="h1 and h2 headings">
+  closing hashes are optional, they don't even have to be equal to the number of opening hashes.
+  <p>Alternatively, placing any number of <em> Equal Signs (=)</em> or <em>Hyphens (-)</em> on the line below any text, will
+    turn it into a header level 1 heading and header level 2 heading respectively.</p>
+  <pre class="codeBlock prettyprint">
+Some Heading(h1)
+================
+Some Heading(h2)
+-----------------
+</pre>
+  <img src="images/h1-h2.png" alt="h1 and h2 headings">
+  </p>
+  <h2>Paragraphs</h2>
+  <p>
+    To write a Paragraph, type the lines of text without identing and separate the paragraphs with one or more Blank
+    lines.
+  <pre class="codeBlock prettyPrint">This is a Paragraph amet consectetur adipisicing elit. Et dignissimos<br/>sapiente debitis fuga corrupti doloribus repellendus, impedit, amet ipsa <br/>facilis unde facere itaque expedita distinctio officiis atque quod maiores<br/>consequatur!
+
+This is another Paragraph amet consectetur adipisicing elit. Et dignissimos<br/>sapiente debitis fuga corrupti doloribus repellendus, impedit, amet ipsa <br/>facilis unde facere itaque expedita distinctio officiis atque quod  <br/>maiores consequatur!
+    </pre>
+  <img src="images/paragraphs.png">
+  <h2>Line Break</h2>
+  To add a <em>Line Break</em>,end a line of text with two or more spaces, then click <kbd>&#9166; Enter</kbd>.
+  </p>
+  <h2>Horizontal Rule</h2>
+  <pre class="codeBlock prettyPrint">
+This is a Paragraph amet consectetur adipisicing elit. Et dignissimos
+sapiente debitis fuga corrupti doloribus repellendus, impedit, amet ipsa 
+facilis unde facere itaque expedita distinctio officiis atque quod maiores
+consequatur!
+   
+-------  
+
+This is another Paragraph amet consectetur adipisicing elit. Et dignissimos
+sapiente debitis fuga corrupti doloribus repellendus, impedit, amet ipsa 
+facilis unde facere itaque expedita distinctio officiis atque quod  
+maiores consequatur!
+</pre>
+  <h2>Escape Characters</h2>
+  <p>Use the backslash to escape special character, characters that used for something in markdown.</p>
+  <pre class="codeBlock prettyPrint"># Hash</pre>
+  <h2>Italic and Bold Text</h2>
+  <p>
+    Text between two asterisks or underscores will be Italicised...
+  <pre class="codeBlock prettyprint">
+*Italic* text  
+_Italic_ text
+</pre>
+  <img src="images/italicText.png">
+  </p>
+  <p>
+    Text between four asterisks or underscores will be Bold...
+  <pre class="codeBlock prettyprint">
+**Bold** text
+__Bold__ text
+</pre>
+  <img src="images/boldText.png">
+  </p>
+  <p>
+    Make Bold Italic text as follows...
+  <pre class="codeBlock prettyprint">
+***Italicised Bold*** text
+**_Italicised Bold_** text 
+___Italicised Bold___ text
+__*Italicised Bold*__ text
+</pre>
+  <img src="images/italicBoldText.png">
+  </p>
+  <h2>Strikethrough</h2>
+  <p>
+    Text between four tilde(~~~~) wll be shown with a Strikethrough ...
+  <pre class="codeBlock prettyprint">Today is ~~Wensday~~ Wednesday.</pre>
+  </p>
+  <img src="images/strikeThrough.png" alt="Strikethrough">
+  
+  <h2>Block Quote</h2>
+  <p>
+    Use the <em>Greater Than Signs (>)</em> to create a Block Quote...
+  <pre class="codeBlock">
+> The nail that sticks out must be hammered down
+
+> If you think Communication is all Talk,<br/>> you haven't been Listerning
+> Ashleigh Brilliant
+</pre>
+  <p class="output">Output</p>
+  <img src="images/quotes.png">
+  <p>Nested blockquotes</p>
+  <pre class="codeBlock prettyprint">
+>We are not only our brother's keeper;
+>in countless large and small ways,
+>we are our brother's maker.
+>Bonaro Overstreet
+>>I am not what I think I am.
+>>I am not what you think I am.
+>>I am what I think You think I am.
+>>Aaron Bleiberg and Harry Leubling
+  </pre>
+  </p>
+  <img src="images/nestedQuotes.png" alt="Nested BlockQuotes">
+  <h2>Code Blocks</h2>
+  <p>To create a code block, indent every line of the code by 4 spaces (1 tab)</p>
+  <pre class="codeBlock prettyprint">
+A code block
+
+  x = 5
+  y = 6
+  print(x ** y)
+</pre>
+<img src="images/codeBlock.png" alt="">
+Or use three backticks to open and close a code block.
+  <pre class="codeBlock">
+```
+//in class
+static int sum(int...args){
+  int sum = 0;
+  for(int i: args){
+    sum += i;
+  }
+  return sum;
+}
+//in main method
+System.out.println(sum(3,2,1));
+System.out.println(sum(10,9,8,7,6,5,4,3,2,1));
+```
+</pre>
+<img src="images/codeBlock2.png" alt="">
+  <p>
+    Use back ticks(``) to display an Inline Code Block
+  <pre class="codeBlock">The `str()` function  is used  to convert a number to a string.</pre>
+  </p>
+<img src="images/inlineCode.png" alt="">
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js">
+  </script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

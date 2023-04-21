@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Lists</h1>
+    <p>must be of the same type</p>
+    <pre class="codeBlock prettyprint">
+val evenNumsList = listOf(2,4,6,8)
+</pre>
+Create an empty list
+<pre class="codeBlock prettyprint">
+val evenNumsList = listOf&lt;Int&gt;()
+//Or
+val toDoList: List&lt;String&gt; = emptyList()
+</pre>
+Initialise an empty list
+<pre class="codeBlock prettyprint">
+toDoList = listOf(
+    "Clean the House",
+    "Clean the Dishes",
+    "Shower",
+    "Eat Breakfast",
+    "Buy Groceries",
+    "Blog Post",
+    "Go on a Hike"
+)</pre>
+
+    <h3>Mutable List</h3>
+    <p>By default Lists (like all Collections) are Immutable. To create a mutable list, use the <code class="code prettyprint">mutableListOf()</code> function.</p>
+    <pre class="codeBlock prettyprint">
+val listName = mutableListOf(values,values,values)
+</pre>
+Create an empty Mutable list
+<pre class="codeBlock prettyprint">
+val listOfStudents = mutableListOf&lt;String&gt;()
+</pre>
+Use the <code>add()</code> to add an item to a mutable List
+    <pre class="codeBlock prettyprint">
+listOfStudents.add("Liam")
+listOfStudents.add("Olivia")
+listOfStudents.add("Noah")
+listOfStudents.add("Charlotte")
+listOfStudents.add("Elijah")
+listOfStudents.add("Ava")
+listOfStudents.add("William")
+listOfStudents.add("Isabella")
+listOfStudents.add("Lucas")
+listOfStudents.add("Mia")
+listOfStudents.add("Henry")
+listOfStudents.add("Harper")
+</pre>
+Alternatively you can us the following syntax to add an item to a mutable List.
+<pre class="codeBlock prettyprint">
+listOfStudents += "Grace"
+listOfStudents += "Charles"
+</pre>
+Check if  a list is empty
+    <pre class="codeBlock prettyprint">
+listOfStudents.isEmpty()
+</pre>
+Check the size of a list size property
+    <pre class="codeBlock prettyprint">
+listOfStudents.size
+</pre>
+Access a list item by referring to it's position (index) in the list. Index starts from 0, this means that the first list item  is at 0.
+    <pre class="codeBlock prettyprint">
+println(listOfStudents[6])
+println(listOfStudents.get(9))
+</pre>
+ Get the first item in a List
+    <pre class="codeBlock prettyprint">
+listOfStudents.first()
+</pre>
+    Get the last item of a List
+    <pre class="codeBlock prettyprint">
+listOfStudents.last()
+</pre>
+Check if an item is in a List
+ <pre class="codeBlock prettyprint">
+listOfStudents.contains("Isabella")
+</pre>
+Change a value at index
+    <pre class="codeBlock prettyprint">
+listOfStudents[11] = "Agness"
+</pre>
+Create a list (sublist) from a list
+    <pre class="codeBlock prettyprint">
+val topStudents = listOfStudents.subList(0,5)
+</pre>
+<code>reversed()</code> to reverse a list, it returns a new list with all the items reversed.
+<pre class="codeBlock prettyprint">
+listOfStudents.reversed()
+</pre>
+Convert a List to a String
+<pre class="codeBlock prettyprint">joinToString()</pre>
+Convert a List to a String
+<pre class="codeBlock prettyprint">joinToString()</pre>
+Remove an item from a list
+    <pre class="codeBlock prettyprint">
+listOfStudents.remove("Mia")
+</pre>
+Remove an item from a list using it's index (position)
+    <pre class="codeBlock prettyprint">
+listOfStudents.removeAt(6)
+</pre>
+Delete all items in a List
+    <pre class="codeBlock prettyprint">
+toDoList.clear()
+</pre>
+<h3> Loop through a List</h3>
+    <pre class="codeBlock prettyprint">
+var n = 1
+for(student in listOfStudents){
+    println("$student is number $n")
+    n&plus;&plus;
+}
+</pre>
+it is the default value
+<pre class="codeBlock prettyprint">
+listOfStudents.forEach{
+    println("$it is number $n")
+}
+</pre>
+<pre class="codeBlock prettyprint">
+listOfStudents.forEach{ student ->
+    println("$student is number $n")
+}
+</pre>
+<pre class="codeBlock prettyprint">
+listOfStudents.forEachIndexed{index,student -> 
+    println("$student is number $(index + 1)")
+}</pre>
+<!-- equal size, creates pairs
+<pre class="codeBlock prettyprint">myList.zip(anotherList)</pre> 
+<pre class="codeBlock prettyprint">myList zip anotherList</pre>
+<pre class="codeBlock prettyprint">myListOfPairs.unZip()</pre> -->
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

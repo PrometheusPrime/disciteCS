@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Structures - Dictionary</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Dictionary</h1>
+    <p> A Dictionary is a Collection Data Type with elements in key value pairs, that ... </p>
+    <ul>
+        <li>is unordered</li>
+        <li>is mutable</li>
+        <li>can contain elements of different Data Types</li>
+        <li>can not contain duplicate entries</li>
+    </ul>
+    Dictionary is written with curly brackets, keys and values are separated by colon. Separate key value pairs with a
+    comma.
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}</pre>
+    The keys are the first element; they must be quoted, unique, hashable and of an Immutable Data Type. Values can be
+    of any Data Type.
+    <p>You can also create a Dictionary with the <code class="prettyprint">dict()</code> function.When creating a
+        Dictionary with the <code class="prettyprint">dict()</code> function you don't have to quote the keys and the
+        equals sign is used for assignment instead of the colon.</p>
+    <pre class="codeBlock prettyprint">
+a_dict = dict(key="value",key="value")
+</pre>
+    <pre class="codeBlock prettyprint">
+a_dict = dict(first_name = 'John', last_name = 'Doe', age = 21)
+print(a_dict)</pre>
+    <h3>Dictionary comprehension</h3>
+    <pre class="codeBlock prettyprint">
+{ var: expr for var in (,,,)}
+</pre>
+    <h3>dict.fromkeys(keys,value) method</h3>
+    <h2>accessing elements</h2>
+    keys
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+print(a_dict.keys())
+</pre>
+    sorted() function returns a list of all the Keys sorted alphabetically.
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+print(sorted(a_dict))
+</pre>
+    values
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+print(a_dict.values())
+</pre>
+    Access a Value in a Dictionary by referring to it's Key in square brackets, returns an error if the key is not
+    found.
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+name = a_dict['first_name']
+print(name)
+</pre>
+    you can also use the <code class="prettyprint">get()</code> method to access an item in a Dictionary.
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+name = a_dict.get('first_name')
+print(name)
+</pre>
+    <h2>adding key values</h2>
+    Adding new Key Value pairs
+    <pre class="codeBlock prettyprint">
+a_dict['key'] = value
+</pre>
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+a_dict['height'] = 6.91
+print(a_dict)</pre>
+    <h2>modifying values</h2>
+    <pre class="codeBlock prettyprint">
+a_dict['key'] = new value
+</pre>
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+a_dict['age'] = 25
+print(a_dict)</pre>
+    <p>The <code class="prettyprint">del</code> keyword to deletes the specified entry from the Dictionary</p>
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+del a_dict['age']
+print(a_dict)</pre>
+    The <code class="prettyprint">pop()</code> method removes the specified entry from the Dictionary
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+a_dict.pop('age')
+print(a_dict)</pre>
+    The <code class="prettyprint">popitem()</code> method removes the last entry from the Dictionary
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+a_dict.popitem()
+print(a_dict)</pre>
+    The <code class="prettyprint">clear()</code> method deletes all the items in a Dictionary.
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+a_dict.clear()
+print(a_dict)</pre>
+    check for an entry in a dictionary using the <code class="prettyprint">in</code> operator.
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+if 'first_name' in a_dict:
+    print('Yes')
+</pre>
+    Use a <code class="prettyprint">for</code> loop and the <code class="prettyprint">keys()</code> method to loop
+    through all the keys in a dictionary
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+for key in a_dict.keys():
+    print(key)
+</pre>
+    Use a <code class="prettyprint">for</code> loop and the <code class="prettyprint">values()</code> method to loop
+    through all the values in a dictionary
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+for value in a_dict.values():
+    print(value)
+</pre>
+    Use a <code class="prettyprint">for</code> loop and <code class="prettyprint">items()</code> method to loop through
+    all the Key Value pairs in a dictionary
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+for key,value in a_dict.items():
+    print(key , value)
+</pre>
+    copying Dictionary
+    <p>You can copy a Dictionary by assigning the copy to the original Dictionary. But if the copy (or original)
+        Dictionary is modified, all the Dictionaries will be modified because all the Dictionaries are pointing to the
+        same object in memory.</p>
+    <pre class="codeBlock prettyprint">
+dict1 = {'first_name':'John', 'last_name':'Doe', 'age':21}
+dict2 = dict1
+print(f'dict2 {dict2}')
+dict2['height'] = 6.91
+print('After modifying the copy')
+print(f'dict1 {dict1}')
+print(f'dict2 {dict2}')
+</pre>
+    Use the <code class="prettyprint">copy()</code> method to safely copy a Dictionary.
+    <pre class="codeBlock prettyprint">
+dict1 = {'first_name':'John', 'last_name':'Doe', 'age':21}
+dict2 = dict1.copy()
+print(f'dict2 {dict2}')
+dict2['height'] = 6.91
+print('After modifying the copy')
+print(f'dict1 {dict1}')
+print(f'dict2 {dict2}')
+</pre>
+    The <code class="prettyprint">dict()</code> function can also be used to safely copy a Dictionary. Pass the
+    Dictionary you want to copy as an argument to the function.
+    <pre class="codeBlock prettyprint">
+dict1 = {'first_name':'John', 'last_name':'Doe', 'age':21}
+dict2 = dict(dict1)
+print(f'dict2 {dict2}')
+dict2['height'] = 6.91
+print('After modifying the copy')
+print(f'dict1 {dict1}')
+print(f'dict2 {dict2}')
+</pre>
+    <p><code class="prettyprint">len()</code> function count the number of key-value pairs in a Dictionary.</p>
+    <pre class="codeBlock prettyprint">
+a_dict = {'first_name':'John', 'last_name':'Doe', 'age':21}
+print(len(a_dict))
+</pre>
+    <p>convert a dict to a list you'll get a list of the keys</p>
+    <h2>Nested Dictionaries</h2>
+    <h2>parse json</h2>
+ 
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

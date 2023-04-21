@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors & Error Handling</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Errors</h1>
+<p>Errors in code will cause a program to stop execution or not compile at all.</p>
+    <h2>Syntax Errors</h2>
+    <p>Syntax Errors are a violation of Java's synstax rules.</p>
+    <pre class="codeBlock prettyprint">
+if True{ 
+    System.out.print("That's True)
+};
+</pre>
+    The compiler will not understand the instructions, therefore the program will not compile (Compile Time Errors).
+    <p>Any code editor or IDE with syntax highlighting will highlight any syntax errors in your code and suggest how to
+        fix them.</p>
+    <h2>Exceptions</h2>
+    An Exceptions is an error that occurs when running a program (Runtime Error). If an exception was not handled the program stops runnng immediately, the lest of the code will not be executed. like dividing by zero.
+    <pre class="codeBlock prettyprint">
+int a = 6;
+int b = 0;
+
+System.out.print(a/b);
+
+System.out.println("After problematic statements");
+</pre>
+    <h3>Exception Handling</h3>
+      <p>The <code class="prettyprint">try</code> Statement is used to execute code that might cause an error. The <code
+      class="prettyprint">catch</code> clause defines what to do if an error occurs. If an exception is raised in the
+    <code class="prettyprint">try</code> clause, the rest of the statements in <code class="prettyprint">try</code> will not be executed and execution goes to
+    the <code class="prettyprint">catch</code> block.
+    If no exception occurs, the <code class="prettyprint">except</code> clause is skipped and the lest of the code will be executed.
+  </p>
+    <pre class="codeBlock prettyprint">
+int a = 6;
+int b = 0;
+
+try{
+    System.out.print(a/b);
+
+}catch(Exception err){
+    System.out.print(err);
+}
+System.out.println("After problematic statements");
+</pre>
+    <pre class="codeBlock prettyprint">
+Scanner inputScanner = new Scanner(System.in);
+
+try {
+
+    System.out.print("Enter a Number : ");
+    int num1 = inputScanner.nextInt();
+
+    System.out.print("Enter another Number : ");
+    int num2 = inputScanner.nextInt();
+
+    double num3 = (double) num1 / num2;
+    System.out.println(num3);
+
+} catch (InputMismatchException e) {
+
+    System.out.println(e);
+
+} catch (Exception er) {
+
+    System.out.println(er);
+}
+</pre>
+    <p>
+      The <code class="prettyprint">finally</code> block is always executed, whether there was an exception or not. It is used for clean up. For example if created a thread to execute some code, whether that code executed successfully or not you might want to close that thread.
+    </p>
+    <pre class="codeBlock prettyprint">
+Scanner inputScanner = new Scanner(System.in);
+
+try {
+
+  System.out.print("Enter a Number : ");
+  double num1 = inputScanner.nextDouble();
+
+  System.out.print("Enter another Number : ");
+  double num2 = inputScanner.nextDouble();
+
+  double num3 = num1 / num2;
+  System.out.println(num3);
+
+} catch (InputMismatchException e) {
+
+  System.out.println(e);
+
+} catch (Exception er) {
+
+  System.out.println(er);
+
+} finally {
+
+  inputScanner.close();
+
+}
+</pre>
+    <h3>Methods and Exceptions</h3>
+    <p>If a method might cause an exception, after parenthesis add the <code class="prettyprint">throws</code> keyword
+        followed by the exception or list of exceptions. And if a method that throws an exception is
+        called in another method, that method too must throw an exception.</p>
+    <pre class="codeBlock prettyprint">
+static double divide(int a, int b) throws ArithmeticException{
+    return a / b;
+}
+</pre>
+
+    <h3>Throw Exceptions</h3>
+    <p>The <code class="prettyprint">throw</code> keyword is used to explicitly throw an exception.</p>
+    <pre class="codeBlock prettyprint">
+static double divide(int a, int b) throws ArithmeticException{
+    if(b == 0){
+        throw new ArithmeticException("Can not divide by 0");
+    }
+    return a / b;
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Structures - Tuple</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Tuple</h1>
+    <p> A Tuple is a Collection Compound Data Type that ... </p>
+    <ul>
+        <li>is ordered</li>
+        <li>is immutable</li>
+        <li>can contain elements of different Data Types</li>
+        <li>can contain duplicate entries</li>
+    </ul>
+    Tuple is create with parenthesis , comma seperate values...
+    <pre class="codeBlock prettyprint">
+a_tuple = ()
+</pre>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True)
+print(a_tuple)
+</pre>
+    <p>can also create a Tuple with the <code class="prettyprint">tuple()</code> function from an Iterable eg a List.
+    </p>
+    <pre class="codeBlock prettyprint">
+a_list = ['year', 6,True]
+a_tuple = tuple(a_list)
+print(a_tuple)
+</pre>
+    <p> to create tuple with one element add a trailing comma</p>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year',)
+print(a_tuple)
+</pre>
+    Iterate through a Tuple with the for loop
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True)
+for x in a_tuple:
+    print(x)
+</pre>
+    To check for an element in a Tuple use the <em>in</em> keyword.
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True)
+print('year' in a_tuple)
+</pre>
+    <h2>tuple unpacking</h2>
+    <h3>indexing</h3>
+    <p>access element in a Tuple using index of an element, name of the tuple followed by square brackets with the index
+        number.</h4>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True,1.1)
+print(a_tuple[0])
+</pre>
+    <p>negative indexing</p>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True,1.1)
+print(a_tuple[-1])
+</pre>
+    <h2>slicing</h2>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True,1.1)
+print(a_tuple[1:3])
+</pre>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True,1.1)
+print(a_tuple[1:])
+</pre>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True,1.1)
+print(a_tuple[:2])
+</pre>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True,1.1)
+print(a_tuple[:])
+</pre>
+    <h2>nested tuples</h2>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True)
+a_tuple[]
+print('Yes')
+</pre>
+    <code class="prettyprint"></code>
+    <h3>Tuple methods and functions</h3>
+    <p>Convert a Tuple to a List with the <code class="prettyprint">list()</code> function </p>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True)
+a_list = list(a_tuple)
+print(a_list)
+</pre>
+    <p>The <code class="prettyprint">len()</code> function is used to count the number of elements in a Tuple</p>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True, False, 6, 9)
+print(len(a_tuple))
+</pre>
+    <p><code class="prettyprint">index()</code> method is used to find the index of an element ,returns first occurance
+        the element</p>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True, False, 6, 9)
+print(a_tuple.index(6))
+</pre>
+    <p><code class="prettyprint">count()</code> method is used to count an element occurance</p>
+    <pre class="codeBlock prettyprint">
+a_tuple = ('year', 6,True, False, 6, 9)
+print(a_tuple.count(6))
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

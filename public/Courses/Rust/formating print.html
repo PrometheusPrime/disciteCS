@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1></h1>
+	<code class="code prettyprint"></code>
+	<pre class="codeBlock prettyprint">println!("{}",varX)</pre>
+	positional arguments
+	<pre class="codeBlock prettyprint">println!("{1} {0}",varX,varY)
+</pre>
+	named arguments
+	<pre class="codeBlock prettyprint">println!("{greet} {person}", 
+     person = name,
+     greet = greeting)
+</pre>
+	traits
+	<pre class="codeBlock prettyprint">
+{:b} - binary
+{:x} - hexadecimal
+{:o} - octal
+{:?} - debug
+</pre>
+	<pre class="codeBlock prettyprint">
+fn main(){
+
+    println!("x = {}",x)
+    println!("x = (varx)", varx = x)
+    println!("x = {1}, y = {0}",y,x)
+}    
+</pre>
+
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

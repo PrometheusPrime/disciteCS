@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vectors</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Vectors</h1>
+	The <code class="prettyprint">c()</code> function to create a vector. Values must be of the same type. values are separated by commas.
+	<pre class="codeBlock prettyprint">
+ myVect -> c(value,value,value)
+</pre>
+	if the values are of different types, they will be converted to a common(single) type.
+	<pre class="codeBlock prettyprint">
+ myVect -> c(values,of,different, types)
+</pre>
+	index start from 1
+	<pre class="codeBlock prettyprint">
+myVect[index]
+</pre>
+	get the number of vector items <code class="code prettyprint">length()</code>
+	<pre class="codeBlock prettyprint">
+length(myVect)
+</pre>
+	get all the items from, but not including an item at a specific index.
+	<pre class="codeBlock prettyprint">
+myVect[-index]
+</pre>
+	get multiple items from a vector
+	<pre class="codeBlock prettyprint">
+myVect[start:stop]
+</pre>
+	change a value at index
+	<pre class="codeBlock prettyprint">
+myVect[index] -> new value
+</pre>
+	change multiple values at multiple Indexes
+	<pre class="codeBlock prettyprint">
+myVect[c(index,index)] -> new values
+</pre>
+	sort a vector with the sort function <code class="code prettyprint">sort()</code>, it takes as argument the vector
+	to sort and the order
+	<pre class="codeBlock prettyprint">
+sort(my.vect, increasing)
+</pre>
+<p><code>seq()</code> function generates a vector.</p>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

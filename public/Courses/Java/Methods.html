@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methods</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Methods</h1>
+  <p>A <strong>method</strong> is a group of statements that perform a single operation. Methods are defined in a class</p> To create a method, write the type of value that will be returned follow by name of the method and parenthesis.  Use <code class="prettyprint">void</code> if the method does not return a value.
+  <pre class="codeBlock prettyprint">
+static void greet(){
+    System.out.println("Hello");
+}
+</pre>
+The method above is a <code class="prettyprint">static</code> method. A <code class="prettyprint">static</code> method belongs to the class it's declared in and not to the <code class="prettyprint">class</code>'s objects. Therefore a <code class="prettyprint">static</code> method is called on the class. <code class="prettyprint">static</code> methods can only work with <code class="prettyprint">static</code> variables.
+
+  <p>To call a method, write the name of the method followed by parenthesis() . Methods can be called as many times as needed</p>
+  <pre class="codeBlock prettyprint">
+public class Main {
+
+  static void greet(){
+    System.out.println("Hello");
+}
+
+  public static void main(String[] args) {
+    greet();
+  }
+}
+</pre>
+  <h2>Return a values from a Method</h2>
+  <p>The <code class="kwd">return</code> keyword returns a value from a method. If a method will
+    return a value, its return type must be specified when creating the method. We can assign a value returned from a
+    method to a variable to use it.</p>
+  <pre class="codeBlock prettyprint">
+public class Main {
+
+  static String greet(){
+    return "Hello";
+}
+
+  public static void main(String[] args) {
+    String sayHello = greet();
+    System.out.println(sayHello);
+  }
+}
+</pre>
+  <!-- <h3>Return Multiple values from a method</h3>
+  <pre class="codeBlock prettyprint">
+public class Main {
+  
+    static String[] multiVars(){
+      return arr;
+  }
+  
+    public static void main(String[] args) {
+      
+      System.out.println(x);
+  }
+}
+</pre>
+  <p>Return multiple values of different type as a List</p>
+  <pre class="codeBlock prettyprint">
+static List&lt;Object&gt; multiVars(){
+
+  return Arrays.asList(value,value,value);
+
+}</pre> -->
+  <h2>Parameters and Arguments</h2>
+  <p>Methods can accept data to work with ,known as <i><b>Parameters</b></i>. 
+ Parameters and their types are defined in the parenthesis
+    when creating the
+    method.<br /><i><b>Arguments</b></i> are actual data passed into a method when calling it.</p>
+  <pre class="codeBlock prettyprint">
+public class Main {
+
+  static String greet(String name){
+    return "Hello, "+ name;
+}
+        
+  public static void main(String[] args) {
+    String x = greet("John Doe");
+    System.out.println(x);
+  }
+}
+</pre>
+  <p>A method must be called with the number and type of arguments it expects. Otherwise you'll get an error, and the order of
+    arguments matters.</p>
+  <h3>Unkown Number of Arguments</h3>
+  <p>A method can accept a variable number of arguments. Add <code>...</code> before the parameter name.
+  </p>
+  <pre class="codeBlock prettyprint">
+//in class
+static int sum(int...args){
+  int sum = 0;
+  for(int i: args){
+    sum += i;
+  }
+  return sum;
+}
+//in main method
+System.out.println(sum(3,2,1));
+System.out.println(sum(10,9,8,7,6,5,4,3,2,1));
+</pre>
+  <h3>Pass by Value</h3>
+  In Java, you can not mutate a variable in a method.
+  <pre class="codeBlock prettyprint">
+//in class
+static int addTwo(int num){
+    num += 2;
+    System.out.println("num + 2 = " + num);
+    return num;
+}
+//in main method
+int num = 6;
+addTwo(num);
+System.out.println(num);
+</pre>
+  In the example above, num is not mutated because only the copy of the value is passed into the method.
+  <p> Local Variables are variables declared in a block like Methods, loops etc,not in the a class. Access Modifiers can not be used with local Variables and they must be initialized.</p>
+  <h2 id ="methodOverloading">Method overloading</h2>
+  <p>Method overloading is defing a method multiple times with  different number and / types of parameters.</p>
+  <pre class="codeBlock prettyprint">
+static String greet(){
+  return "Hello Stranger";
+}
+static String greet(String name){
+  return "Hello, " + name;
+}
+//in main method
+System.out.println(greet("Jane"));
+System.out.println(greet());
+</pre>
+  <h3>Non-Static Methods</h3>
+  <p>You can only call a Non-Static Method on an instance of a <code class="prettyprint">class</code> it's defined in or
+    sub-<span class="kwd">class</span>.</p>
+  <pre class="codeBlock prettyprint">
+public class Main {
+  void greet(){
+     System.out.println("Hello");
+  }
+
+  public static void main(String[] args) {
+    //creating an instance of Main Class
+    Main man = new Main();
+    //calling greet() on an instance
+    man.greet();
+
+  }
+}
+</pre>
+  <!-- ##Doc comments
+/**
+*@param identifier
+###Variable
+case sensitive
+start with a letter, $ or an underscore
+type identifier; declare
+identifier = value; initialise
+##Doc comments
+/**
+*@param identifier
+*
+*@return
+*/ -->
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

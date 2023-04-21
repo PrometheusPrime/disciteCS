@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deques in C++</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Deques</h1>
+    Double Ended Que (deque) dynamic arrays can expand or shrink
+    <pre class="codeBlock prettyprint">#include &lt;deque&gt;
+deque&lt;type&gt; deqName = {}
+</pre>
+<pre class="codeBlock prettyprint">#include &lt;deque&gt;
+deque&lt;type&gt; deqName = {value,value,value}
+</pre>
+<pre class="codeBlock prettyprint">
+deqName.push_back(value)
+</pre>
+<pre class="codeBlock prettyprint">
+deqName.push_front(value)
+</pre>
+index
+<pre class="codeBlock prettyprint">
+deqName[index]
+deqName.at(index)
+</pre>
+<!-- 
+    Iterators
+    ---------
+    point to a memory location of a container or collection
+    #include &lt;iterator&gt;
+    deque&lt;type&gt;::iterator itr;
+    deqName.insert(itr,value)
+ -->
+ <pre class="codeBlock prettyprint">
+#include &lt;iterator&gt;
+deque&lt;type&gt;::iterator itr;
+deqName.insert(itr,value)
+ </pre>
+ <pre class="codeBlock prettyprint">deqName.swap()</pre>
+ <pre class="codeBlock prettyprint">deqName.begin()</pre>
+ <pre class="codeBlock prettyprint">deqName.end()</pre>
+ <pre class="codeBlock prettyprint">deqName.erase(index)</pre>
+ <pre class="codeBlock prettyprint">deqName.erase(start,stop)</pre>
+ <pre class="codeBlock prettyprint">
+deqName.pop_back();
+</pre>
+<pre class="codeBlock prettyprint">
+deqName.pop_front();
+</pre>
+delete all values in a deque
+<pre class="codeBlock prettyprint">deqName.clear();</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

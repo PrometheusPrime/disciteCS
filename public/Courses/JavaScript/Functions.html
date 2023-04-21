@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Functions</h1>
+
+    <p>A Function is a group of statements that do something. To define a function, write the <code
+            class="prettyprint">function</code> keyword, function name, parenthesis and curly brackets.</p>
+    <pre class="codeBlock prettyprint">
+// function declaration
+function greet(){
+    //function body
+    console.log('Hello, World!');
+}
+</pre>
+    <p>A function is only executed when it is invoked (called). A function can be invoked as may times as needed.</p>
+    <pre class="codeBlock prettyprint">
+//calling a function
+greet();
+</pre>
+    <h3>Return a value from a Function</h3>
+    <p>The <code class="prettyprint">return</code> statement is used to return a value from a function. Statements after
+        the return statement will not be executed.</p>
+    <pre class="codeBlock prettyprint">
+function greet(){
+
+    return 'Hello, World!';
+}
+
+console.log(greet());</pre>
+    A function without the <code class="prettyprint">return</code> statement, returns a default value <code
+        class="code prettyprint">undefined</code>.
+    <h3>Parameters and Arguements</h3>
+    Functions can take data to work with called Parameters. A Parameter is a variable defined in the parenthesis when
+    defining the function. A function can take any number of Parameters, comma seperate them.
+    <pre class="codeBlock prettyprint">
+// function declaration
+function greet(name) {
+    //function body
+    return `Hello, ${name}!`;
+}
+
+function sum(a, b) {
+
+    return a + b;
+}
+</pre>
+    Arguments are actual data passed into a function when calling it. A function must be called with the number of
+    arguments it expects.
+    <pre class="codeBlock prettyprint">
+console.log(greet('Meghan'));
+
+console.log(sum(256,256));
+</pre>
+    <h4>Unknown Number of Arguments</h4>
+    <p>To get a variable number of arguments, don't add any parameters. In the function the arguments passed are
+        accessed through the predefined <code class="prettyprint">arguments</code> object.</p>
+    <pre class="codeBlock prettyprint">
+function sum() {
+    let sum = 0;
+    for (const num of arguments) {
+        sum &plus;&equals; num;
+    }
+    return sum;
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+console.log(sum());
+console.log(sum(256,256));
+console.log(sum(24, 52, 365););
+</pre>
+    <p>Alternatively we can use the <code class="prettyprint">rest parameter</code> to get unknown number of arguments
+        as an array. To create a <code class="prettyprint">rest parameter</code> prefix that parameter with three full
+        stops(<code class="prettyprint">...</code>).</p>
+    <pre class="codeBlock prettyprint">
+function sum(...args) {
+    let sum = 0;
+    for (const num of args) {
+        sum &plus;&equals; num;
+    }
+    return sum;
+}
+</pre>
+    Even if we use the <code class="prettyprint">rest parameter</code>, we can still define other parameters.
+    <pre class="codeBlock prettyprint">
+function myFunc(x, y, ...other){
+    return `${x}, ${y} and ${other} are all Musical Instruments`
+}
+
+console.log(myFunc("Organ","Ocarina","Vibraphone","Bagpipes","Shakers"));
+console.log(myFunc("Acoustic Guitar","Trumpet","Triangle"));</pre>
+    A function can only have one rest parameter and it must be the last the last parameter.
+    <h2>Other Types of Functions</h2>
+    <h4>Anonymous functions</h4>
+    <p></p>
+    <pre class="codeBlock prettyprint">
+(function (...args) {
+    let total = 0;
+    for (const num of args) {
+        total += num;
+    }
+    console.log(total);
+});    
+</pre>
+    If we want to call an annonymus function later, we have to assign it to a variable.
+    <pre class="codeBlock prettyprint">
+let sum = function (...args) {
+    let total = 0;
+    for (const num of args) {
+        total += num;
+    }
+    console.log(total);
+};
+
+
+sum(42, 3.142, 360);
+</pre>
+    <p>Annonymus functions are usually passed as arguments to other  functions.</p>
+    <pre class="codeBlock prettyprint">
+let nums = [10, 1, 2, 5, 4, 6, 7, 8, 3, 9];
+let numsSorted = nums.sort(function (a, b) {
+    return a &minus; b;
+});
+console.log(numsSorted);
+</pre>
+    <h4>Self Invoking Functions</h4>
+    <p>A Self invoking function is an annonymus function that is automatically executed once after it's definition. </p>
+    <pre class="codeBlock prettyprint">
+// function declaration
+(function(){
+    //function body
+}());
+</pre>
+    <pre class="codeBlock prettyprint">
+(function(){
+    console.log("Connecting to the server.. please wait.");
+})();
+</pre>
+    <!-- --Hoisting--
+    can call a function before it is called. Hoisting to avoid unexpected behavior :
+    declare variables before at the top of files ; declare functions at the top of the script. -->
+
+    
+        <h4>Arrow Functions</h4>
+<p>Arrow functions are a compact way of defining functions.</p>
+If an arrow function has a single expression, the result of that expression is automatically returned.
+<pre class="codeBlock prettyprint">
+(x) &equals;&gt; x * x;
+</pre>
+If an arrow function has a single parameter parenthesis can be ommited, if it has 0, multiple or any type of parameter, they must be included.
+<pre class="codeBlock prettyprint">
+(a,b) &equals;&gt; a &plus; b;</pre>
+If a function body has multiple statements put them in curly braces and you have to explicitly add a <code class="prettyprint">return</code> statement.
+<pre class="codeBlock prettyprint">
+(a, b) &equals;&gt; {
+    if (a &gt; b) {
+        return a;
+    }
+    return b;
+};
+</pre>
+<pre class="codeBlock prettyprint"></pre>
+Arrow functions are very useful as arguments to other functions, but they can be assigned to a variable. Use that variable when calling the function.
+<pre class="codeBlock prettyprint">
+let sqrd = x &equals;&gt; x * x;
+
+let total = (a,b) &equals;&gt; a &plus; b;
+
+let max = (a, b) &equals;&gt; {
+    if (a &gt; b) {
+        return a;
+    }
+    return b;
+};
+console.log(sqrd(5));
+console.log(total(24,365));
+console.log(max(4,9));
+</pre>
+    <h2>Recursion</h2>
+<p>Suppose we create a function to solve a problem, but it may not solve that problem in one go. Instead of invoking that function multiple times or adding a loop in the function, we can define it as a <strong>Recursive</strong> function. A recursive function calls itself as part of it's definition (function body).</p>
+<pre class="codeBlock prettyprint">
+function breakDown(problem) {
+    console.log(problem);
+    return breakDown(problem / 2);
+}
+breakDown(100);
+</pre>
+A recursive function needs a base case to stop execution, otherwise it will continue invoking itself until you get a Recursion error.
+<pre class="codeBlock prettyprint">
+function breakDown(problem) {
+    if (problem &lt;&equals; 1) {
+        console.log(problem);
+        return problem;
+    }
+    console.log(problem);
+    return breakDown(problem / 2);
+}
+breakDown(100);
+</pre> 
+A recursive function can call itself multiple times in the function body. Here is a simple implementation of the <strong>Collatz Conjecture</strong>. Given a positive integer, if it is even divide it by 2, if it is odd, multiply it by 3 and add 1. Our base case is 1 because : <br/>1 is odd, when multiplied by 3 + 1, we get 4..<br/> 4 is even so we divide it by 2.. <br/>we get 2 which we divide by 2 because it is even..<br/> we circle back to 1.
+    <pre class="codeBlock prettyprint">
+function collatz(x) {
+    if (x &equals;&equals; 1) {
+        console.log(x)
+        return;
+    }
+    if (x &percnt; 2 &equals;&equals; 0) {
+        console.log(x);
+        return collatz(x / 2);
+    }
+    console.log(x);
+    return collatz(3 * x + 1);
+}
+collatz(42);
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

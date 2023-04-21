@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Functions</h1>
+    <p>A <strong>Functions</strong> is a block of statement(s) that perform a specific Task. The
+        <code class="kwd">func</code> keyword is used to define a function. To create a function; write <code
+            class="kwd">func</code>, function name, followed
+        by parentheses and then followed by curly brackets. Go uses curly brackets to delimmit a block of code.
+    <pre class="codeBlock prettyprint">
+func function_name(){
+
+}
+</pre>
+    <p>A function is executed by calling it. To call a function, write the function name followed by parenthesis.
+        Functions can be called as many times as needed.</p>
+    <pre class="codeBlock prettyprint">
+package main
+import "fmt"
+        
+func main(){
+  
+    greet()//calling a function
+}
+func greet(){
+    fmt.Println("Hello World")
+}
+</pre>
+
+    <h3>Parameters and Arguments</h3>
+    <p>A <i><b>Parameter</b></i> is a variable(s) defined in the parenthes i when defining the
+        function were if it takes arguments.
+        <i><b>Arguments</b></i> are actual data passed into a function when calling it. A function can take any number
+        of Parameters, comma seperate the parameters. A function must be called with the
+        number of arguments it expects.
+    </p>
+    <pre class="codeBlock prettyprint">
+func greet(first_name string,last_name string){
+    fmt.Printf("Hello {first_name} {last_name}")
+}
+    greet('John','Doe')
+</pre>
+If the parameters are of the same data type, you can omit the type from the parameters except the last one.
+<pre class="codeBlock prettyprint">
+func greet(first_name,last_name string){
+    fmt.Printf("Hello {first_name} {last_name}")
+}
+greet('John','Doe')
+    </pre>
+    <h4>positional and keyword args</h4>
+    <pre class="codeBlock prettyprint">
+func greet(first_name,last_name string){
+    fmt.Printf("Hello {first_name} {last_name}")
+}
+greet('Doe','John')</pre>
+    when using keyword argument, the position doesn't matter...
+    <pre class="codeBlock prettyprint">
+func greet(first_name,last_name):
+    print(f'Hello {first_name} {last_name}')
+
+greet(last_name = 'Doe',first_name = 'John')</pre>
+You can call a function with both positional and keyword arguments. Positional arguments can not come after keyword arguments, default args must be defined at the end.
+    <pre class="codeBlock prettyprint">
+func greet(first_name,last_name = 'Doe'){
+    fmt.Printf("Hello {first_name} {last_name}")
+}
+    
+greet('John')</pre>
+pass any number of positional arguments
+<pre class="codeBlock prettyprint">
+func sum(args...int) int{
+
+}
+</pre>
+All args after a keyword argument must be keyword arguments
+    </p>
+    <h2>Returning a value from a function</h2>
+    <p>The <code class="prettyprint">return</code> keyword is used to return a Value from a function. The type of data
+        that will be returned from a function must be defined before the opening curly bracket. Statements after the
+        <code class="prettyprint">return</code>
+        statement will cause an error.</p>
+    <pre class="codeBlock prettyprint">
+package main
+import "fmt"
+
+
+func main(){
+    
+fmt.Println(greet())
+
+}
+func greet() string{
+    return "Hello World"
+}
+</pre>
+A function can return multiple values
+<pre class="codeBlock prettyprint">
+func sum(a , b int)(int,string){
+    return a + b,"${a} and ${b} is ${a + b}"
+}
+</pre>
+    <p>You can assign a value from a function to a variable. If you declare a function and want to access it outside it's package, you'll have to capitalise the first letter.</p>
+    <pre class="codeBlock prettyprint">
+func SomeFunc()returnType{
+    return value,value2
+}
+</pre>
+    <h2>Recursion</h2>
+    A function can be called in its body as a part of it's declaration.
+    <p>defer delays the execution of a function until the sounding functions have executed returns,used to close files, clean up resourses etc.</p>
+    <pre class="codeBlock prettyprint">defer</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

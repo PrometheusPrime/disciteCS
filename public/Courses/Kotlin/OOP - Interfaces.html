@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interfaces</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Interfaces</h1>
+	<code class="prettyprint">interface</code>
+	<pre class="codeBlock prettyprint">
+interface IntrfceN{
+var
+var
+val
+fun someFunc(): RT
+fun anotherFunc()
+}
+</pre><p>Implement an interface by writing <code class="prettyprint">:</code> and the name of the interface at the end of the class header. A class that implements an interface must provide implementation for all methods in the interface, unless it it declared <code class="prettyprint">abstract</code>.</p>
+	<pre class="codeBlock prettyprint">
+class ChildClass(proprtyA, proprtyB): IntrfceN{
+  override fun someFunc(): RT{
+  }
+  override fun anotherFunc(){
+  }
+}
+</pre>
+An interface can have properties, they too must be overriden in the class that implements the interface.
+	<pre class="codeBlock prettyprint">
+class ChildClass(proprtyA, proprtyB): IntrfceN{
+  override fun someFunc(): RT{
+  }
+  override fun anotherFunc(){
+  }
+}
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

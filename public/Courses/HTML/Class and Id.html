@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class and Id</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+
+  <h1>Class and Id Selectors</h1>
+  <h2>Class Selectors</h2>
+  <p>The <em><strong>Class Selector</strong></em> is used to style a specific element(s).A class can be used as many
+    times as needed,on any number of elements. Use the class attribute to add a class to an element.To select an
+    element(s) with a class, use the period (.) character, then follow it with the class name. A class name cannot start
+    with a number.</p>
+  <pre class="codeBlock prettyprint ">&lt;element class="className"&gt;&lt;/element&gt;</pre>
+  <p>An element can belong to multiple classes, seperate the classes with a space.</p>
+  <pre class="codeBlock prettyprint ">&lt;element class="classA classB"&gt;&lt;/element&gt;</pre>
+  <h2>Id Selectors</h2>
+  <p>The <em><strong>Id Selector</strong></em> is used to style a specific element.An id is used only once per page ,it
+    is used to select one unique element. Use the id attribute to add an id to an element. To select an element with an
+    id, use the hash (#) character, then follow it with the id name. An id name cannot start with a number.</p>
+  <pre class="codeBlock prettyprint ">&lt;element id="idName"&gt;&lt;/element&gt;</pre>
+  <h4>Class and Id Selectors Example</h4>
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;Hello HTML&lt;/title&gt;
+   &lt;style&gt;
+    .myClass{
+     text-align:center;
+     font-family:'Times New Roman';
+     color:darkcyan;}
+     #myId{
+      color:darkslategray;font-family:verdana;}
+   &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;h1 class="myClass"&gt;
+   This is a Heading with Class.
+   &lt;/h1&gt;
+   &lt;p id="myId"&gt;
+   This is a paragraph with an Id.
+   &lt;/p&gt;
+   &lt;p class="myClass"&gt;
+   This is paragraph with Class.
+   &lt;/p&gt;
+   &lt;p&gt;
+   This is another paragraph.
+   &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

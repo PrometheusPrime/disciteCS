@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Input</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Getting Input</h1>
+    <p>The <code class="prettyprint">Scanner</code> class in the <code class="prettyprint">java.util</code> package is
+        used to get input from the user. Import the <code class="prettyprint">Scanner</code> class with the <code
+            class="prettyprint">import</code> keyword and then create an object of the class. Call the method of the
+        data type you want to read on the object. To use the input from the user, you'll have to assign it to a variable.
+    </p>
+    There are different methods that read different data types :
+    <ul>
+        <li><code class="prettyprint">nextByte()</code>reads input of <strong>Byte</strong> data type.</li>
+        <li><code class="prettyprint">nextShort()</code>reads input of <strong>Short</strong> data type.</li>
+        <li><code class="prettyprint">nextInt()</code>reads input of <strong>Integer</strong> data type.</li>
+        <li><code class="prettyprint">nextLong()</code>reads input of <strong>Long</strong> data type.</li>
+        <li><code class="prettyprint">nextFloat()</code>reads input of <strong>Float</strong> data type.</li>
+        <li><code class="prettyprint">nextDouble()</code>reads input of <strong>Double</strong> data type.</li>
+        <li><code class="prettyprint">nextBoolean()</code>reads input of <strong>Boolean</strong> data type.</li>
+        <li><code class="prettyprint">nextLine()</code>reads input of <strong>String</strong> data type.</li>
+    </ul>
+    <pre class="codeBlock prettyprint">
+//outside the class
+import java.util.Scanner;
+
+//in the main method
+Scanner inputScanner = new Scanner(System.in);
+
+System.out.print("What is your Name ? ");
+
+String name = inputScanner.nextLine();
+inputScanner.close();
+
+System.out.println("Hello, "+ name);
+</pre>
+    <p>If the input is not of the data type expected, you'll get an Exception.</p>
+    <p>Alternatively, we can use the <code class="prettyprint">JOptionPane</code> class to get string input.</p>
+    <pre class="codeBlock prettyprint">
+//outside the class
+import javax.swing.JOptionPane;
+
+//in the main method
+String name = JOptionPane.showInputDialog("Enter your name");
+String age = JOptionPane.showInputDialog("Enter your age");
+System.out.println("Your name is " + name + " and you're " + age +" years old");
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

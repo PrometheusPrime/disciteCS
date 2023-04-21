@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Oriented Programming</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Object Oriented Programming</h1>
+    <h2>Classes</h2>
+    <p>A <em><strong>Class</strong></em> is a blueprint for creating objects. To create a class, write the <code class="prettyprint">class</code> keyword , name of the
+        class then colon. A class can not be empty, unless you use the <code class="prettyprint">pass</code> keyword you'll get an error.</p>
+    <pre class="codeBlock prettyprint lang-py">
+class Person:
+    pass   
+</pre>
+<h2>Attributes and Methods</h2>
+<p></p>
+<pre class="codeBlock prettyprint lang-py">
+class Person:
+    number_of_people = 0  
+</pre>
+<p>instance attributes are defined in the <code class="prettyprint">__init__()</code> method. Their values are unique to each instance of the class.</p>
+<p>Methods are function defined in a class. They are called on a class or its instance with the dot notation.</p>
+constructor it is executed every time an instance (object) of a class is created. It takes the first parameter <code class="prettyprint">self</code> which refers to the object being created.
+<pre class="codeBlock prettyprint lang-py">
+class Person:
+    number_of_people = 0
+    
+    def __init__(self,name,age,height):
+        self.name = name
+        self.age = age
+        self.height = height
+        Person.number_of_people = Person.number_of_people + 1
+
+</pre>
+<pre class="codeBlock prettyprint lang-py">
+class Person:
+    number_of_people = 0
+
+    def __init__(self,name,age,height):
+        self.name = name
+        self.age = age
+        self.height = height
+        Person.number_of_people = Person.number_of_people + 1
+
+    def personal_info(self):
+        print(f'name : {self.name} \nage : {self.age} \nheight : {self.height}')
+
+    def greet(self):
+        print(f'{self.name} says hi')
+</pre>
+    <pre class="codeBlock prettyprint">
+person_john = Person('John Wick',40,5.4)
+</pre>
+    <p>When you create an instance of a class, an object of type class (that class) is created.</p>
+    <pre class="codeBlock prettyprint">
+print(type(person_john))
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+        <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

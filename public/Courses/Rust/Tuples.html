@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Structures - Tuple</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Tuple</h1>
+    <p> A Tuple is a Collection Data Type that ... </p>
+    <ul>
+        <li>is ordered</li>
+        <li>is immutable</li>
+        <li>can contain elements of different Data Types</li>
+        <li>can contain duplicate entries</li>
+    </ul>
+    Tuple is create with parenthesis , comma seperate values...
+    <pre class="codeBlock prettyprint">
+let a_tuple = ();
+println!(a_tuple);
+</pre>
+<pre class="codeBlock prettyprint">
+let a_tuple = ("Yes", 6,True,1.1);
+println!(a_tuple);
+</pre>
+    <p>Access element in a Tuple using index of an element, write the name of the tuple followed by <code>.</code> and the index number. </p>
+    <pre class="codeBlock prettyprint">
+let a_tuple = ("Yes", 6,True,1.1);
+println!(a_tuple.0);
+println!(a_tuple[index]);
+</pre>
+tuple unpacking
+    <pre class="codeBlock prettyprint">
+let (var1,var2,var3) = (tuple);
+println!(var1);
+println!(var2);
+println!(var3);
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

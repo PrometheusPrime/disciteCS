@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Input</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+
+<body onload="PR.prettyPrint()">
+    <h1>Getting Input</h1>
+    <h3>Get a character</h3>
+To get a single character, use the <code>getchar()</code> function.
+    <pre class="codeBlock prettyprint">
+char favoriteCharacter = getchar();
+printf("Your favorite Character is %c", favoriteCharacter);
+</pre>
+<h3>Get a String</h3>
+Get a sequence of characters (string) using the <code>gets()</code> function. It takes the variable where you want to store the input as argument. Any input entered will be stored as a string.
+    <pre class="codeBlock prettyprint">
+char name[12];
+gets(name);
+</pre>
+<p>Another way of getting string input is by using the <code>fgets</code> function. Pass into the function the variable where to store, the number of characters and <code class="prettyprint">stdin</code></p>
+<pre class="codeBlock prettyprint">
+char firstName[9];
+fgets(firstName,9,stdin);
+</pre>
+<h3>Get input of any type</h3>
+To get input of different data type use <code>scanf()</code>. It scans input that matches the format specifier, and places it at a memory address. <code>scanf</code> stops reading input when it encounters a space.
+    <pre class="codeBlock prettyprint">
+float height;
+scanf("%lf",&height);
+</pre>
+Note; if the input you're getting is not a string, you have to append a <code class="prettyprint">&</code> to the identifier.
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

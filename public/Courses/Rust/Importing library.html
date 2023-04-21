@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Importing a Library in Rust</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1></h1>
+	import a Rust file
+	<code class="code prettyprint">mode RustFileName;</code>
+	 <pre class="codeBlock prettyprint">
+RustFileName::func();
+ </pre>
+ <p>Use the <code class="prettyprint">use</code> keyword to import a package
+	<pre class="codeBlock prettyprint">
+use std;
+</pre>
+single/ specific import
+<pre class="codeBlock prettyprint">
+use std::io::stdin;
+</pre>
+multiple imports from the same package.
+<pre class="codeBlock prettyprint">
+use std::{
+
+}
+</pre>
+
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

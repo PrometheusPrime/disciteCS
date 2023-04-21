@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>LinkedList</h1>
+    <p>A LinkedList is a collection  of objects of the same type. Each object it stored in a container which is linked to the cointainer holding the next and or previous object. Import the <code class="prettyprint">LinkedList</code> class from the <code class="prettyprint">java.util</code> package.</p>
+    <pre class="codeBlock prettyprint">
+import java.util.LinkedList;
+LinkedList&lt;String&gt; flowerList = new LinkedList&lt;String&gt;();
+</pre>
+<p>Add elements to a LinkedList with the <code class="prettyprint">add()</code> method, it adds element to the end of an LinkedList.</p>
+    <pre class="codeBlock prettyprint">
+flowerList.add("Snap Dragon");
+flowerList.add("Butterfly Bush");
+flowerList.add("Salvia");
+flowerList.add("Poppy");
+flowerList.add("Day Lily");
+flowerList.add("Narcissus");
+flowerList.add("Delphinium");
+</pre>
+   <p>The <code class="prettyprint">addFirst()</code> method adds element to the front of a LinkedList.</p>
+  <pre class="codeBlock prettyprint">
+flowerList.addFirst("Clematis");
+flowerList.addLast("Bleeding Heart");
+</pre>
+ <p>The <code class="prettyprint">addLast()</code> method adds element to the end of a LinkedList.</p>
+  <pre class="codeBlock prettyprint">
+flowerList.addFirst("Clematis");
+flowerList.addLast("Bleeding Heart");
+</pre>
+    <p>To add multiple elements use the <code class="prettyprint">addAll()</code> method, pass a list.</p>
+    <pre class="codeBlock prettyprint">
+flowerList.addAll(Arrays.asList("Grape Hyacinth","Scilla","Kerria"));
+</pre>
+<p>Get the size of a Linked list</p>
+<pre class="codeBlock prettyprint">
+System.out.println(flowerList.size());
+</pre>
+<p>The <code class="prettyprint">indexOf()</code> method returns the index of an element if it is in the Linked, else returns -1.</p>
+    <pre class="codeBlock prettyprint">
+flowerList.indexOf("Bleeding Heart");
+</pre>
+<p>Check if a Linked list contains a certain value<code class="prettyprint">contains()</code></p>
+    <pre class="codeBlock prettyprint">
+flowerList.contains("Snap Dragon");
+</pre>
+    <p>Get the item at an index</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(flowerList.get(5)); 
+</pre>
+  <p>The <code class="prettyprint">getFirst()</code> returns the first item in a LinkedList</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(flowerList.getFirst()); 
+</pre>
+ <p>The <code class="prettyprint">getLast()</code> returns the last item in a LinkedList</p>
+<pre class="codeBlock prettyprint">
+System.out.println(flowerList.getLast());  
+</pre>
+    <p>Replace a value in a Linked list with the <code class="prettyprint">set(index, newValue)</code> method.</p>
+<pre class="codeBlock prettyprint">
+flowerList.set(2, "Cosmos");
+</pre>
+<p>You can sort a Linked list using the <code class="prettyprint">sort</code> method from <code class="prettyprint">Collections</code> class in the <code class="prettyprint">java.util</code> package.</p>
+   <pre class="codeBlock prettyprint">
+//top of the file, outside of the class
+import java.util.Collections;
+
+//in main
+Collections.sort(flowerList);</pre>
+    <p>The <code class="prettyprint">remove()</code> method removes an element from an Linked list, you can either pass into the method the element or it's index. <br/> <code class="prettyprint">remove(element)</code>, removes the first instance of the element if there are duplicates.</p>
+    <pre class="codeBlock prettyprint">
+flowerList.remove(3);
+//or
+flowerList.remove("Day Lily");
+</pre>
+The <code class="prettyprint">removeFirst()</code> method removes the first element while the <code class="prettyprint">removeLast()</code> method  removes the last element from an Linked list.</p>
+    <pre class="codeBlock prettyprint">
+flowerList.removeFirst();
+flowerList.removeLast();     
+</pre>
+    <p>Clear all items in a Linked list <code class="prettyprint">clear()</code></p>
+    <pre class="codeBlock prettyprint">
+flowerList.clear();    
+</pre>
+<h2>Loop through an Linked List</h2>
+    <p><code class="prettyprint">for</code></p>
+    <pre class="codeBlock prettyprint">
+for(int i = 0; i &lt; flowerList.size(); i++){
+
+    System.out.println(flowerList.get(i));
+}    
+</pre>
+    <p><code class="prettyprint">for each</code></p>
+    <pre class="codeBlock prettyprint">
+for(String flower : flowerList){
+    System.out.println(flower);
+}</pre>
+    <pre class="codeBlock prettyprint">
+flowerList.forEach(
+    flower -> System.out.println(flower)
+    
+);    
+</pre>
+
+<!-- <h3>convert a linked list to an array and other types</h3> -->
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Operators</h1>
+    <h2>Arithmetic Operators</h2>
+    Arithematic Operators are used in basic arithematic calculations.
+    <p><em><strong>Addition Operator (+)</strong></em> : adds the operands.</p>
+    <pre class="codeBlock prettyprint">
+let x = 6;
+let y = 8;
+println!({},x + y);
+</pre>
+    <p><em><strong>Subtraction Operator (-)</strong></em> : subtracts one operand from another.</p>
+    <pre class="codeBlock prettyprint">
+let x = 5;
+let y = 2.5;
+println!({},x + y);
+</pre>
+    <p><em><strong>Multiplication Operator (*)</strong></em> : multiplies the operands.</p>
+    <pre class="codeBlock prettyprint">
+let x = 9;
+let y = 25;
+println!({},x + y);
+</pre>
+    <p><em><strong>Division Operator (/)</strong></em> : divides the operands and returns a floating point number.</p>
+    <pre class="codeBlock prettyprint">
+let x = 26;
+let y = 2;
+println!({},x + y);
+</pre>
+    <p><em><strong>Modulus or Remainder Operator (%)</strong></em> : returns the remainder of dividing the given
+        operands.</p>
+    <pre class="codeBlock prettyprint">
+let x = 5;
+let y = 3;
+println!({},x + y);
+</pre>
+    <h2>Unary Operators</h2>
+    <p>Unary Operator perform various operations on one operand.</p>
+    <p><em><strong>Increment Operator (++)</strong></em> increments a variable by 1 </p>
+    <pre class="codeBlock prettyprint">
+let mut x = 5;
+x ++;
+println!({},x);
+</pre>
+    <p><em><strong>Decrement Operator (--)</strong></em> decrements a variable by 1</p>
+    <pre class="codeBlock prettyprint">
+let mut x = 5;
+x --;
+println!({},x);</pre>
+    prefix vs postfix the post operator
+    returns the original value before it changes the variable, while the pre-operator
+    changes the variable first and then returns the value.
+    <pre class="codeBlock prettyprint">
+let mut x = 5;
+let mut y = 5;
+println!({},++x);
+println!({},y++);</pre>
+    <h2>Compound Assignment Operators</h2>
+
+    <p><em><strong> Operator (+=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let mut x = 8;
+x+= 5;  //same as x = x + 5
+println!({},x);
+</pre>
+    <p><em><strong> Operator (-=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let mut x = 8;
+x-= 5;  //same as x = x - 5
+println!({},x);
+</pre>
+    <p><em><strong> Operator (*=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let mut x = 8;
+x*= 5;  //same as x = x * 5
+println!({},x);
+</pre>
+    <p><em><strong> Operator (/=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let mut x = 8;
+x/= 5;  //same as x = x / 5
+println!({},x);
+</pre>
+    <p><em><strong> Operator (%=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let mut x = 8;
+x%= 5;  //same as x = x % 5
+println!({},x);
+</pre>
+    <h2>Comparison Operators</h2>
+    <p>Comparison Operators are used to compare given Variables, they return a Boolean value (<code
+            class="prettyprint">true or false</code>).</p>
+    <p><em><strong>Greater Than Operator (&gt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let x = 8;
+let y = 5;
+println!({},x &gt; y);
+</pre>
+    <p><em><strong>Less Than Operator (&lt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let x = 8;
+let y = 5;
+println!({},x &lt; y);
+</pre>
+    <p><em><strong>Equality Operator (==)</strong></em> : compares whether the Operands are Equal.</p>
+    <pre class="codeBlock prettyprint">
+let x = 8;
+let y = 5;
+println!({}, x == y);
+</pre>
+    <p><em><strong>Greater Than or Equal To Operator (&gt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let x = 8;
+let y = 5;
+println!({},x &gt;= y);
+</pre>
+    <p><em><strong>Less Than or Equal To Operator (&lt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let x = 8;
+let y = 5;
+println!({},x &lt;= y);
+</pre>
+    <p><em><strong>Inequality Operator (!=)</strong></em> : checks whether the Operands are Not Equal.Returns True if
+        they are not equal.</p>
+    <pre class="codeBlock prettyprint">
+let x = 8;
+let y = 5;
+println!({},x != y);
+</pre>
+    <p>Rust does not have a Ternary Operator, but you can use <code class="prettyprint">if</code> and <code
+            class="prettyprint">else</code> statements to assign a value to a variable based on a condition.</p>
+    <pre class="codeBlock prettyprint">
+let varX = if(condition) {value} else {anotherValue};
+</pre>
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

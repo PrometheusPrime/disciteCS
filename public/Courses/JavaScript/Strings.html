@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    <p>Strings are ordered sequence of characters delimited with single or double quotes</P>
+    <pre class="codeBlock prettyprint">
+let greet = 'hi there !'
+console.log(greet);
+</pre>
+The backslash (\) is used to escape special characters in a string.
+<pre class="codeBlock prettyprint">
+let directory = "C:\\Users\\CSf\\.bash_history";
+console.log(directory);</pre>
+    <p>Accessing character at index</p>
+    <pre class="codeBlock prettyprint">
+let greet = 'hi there !';
+console.log(greet[0]);
+</pre>
+Strings are immutable, You can not change individual characters in a string.
+<pre class="codeBlock prettyprint">
+let greet = 'hi there !'
+greet[0] = 'H'
+console.log(greet);
+</pre>
+<p>Template strings are delimited by back ticks
+    <em><strong>``</strong></em>, they are use to interpolate a variable's value or result from an expression into a string. Add the variable or expression in curly brackets prececeded by a <code class="prettyrpint">$</code>.</p>
+    <pre class="codeBlock prettyprint">
+let a = 5;
+let myStr = `${a} &times; ${a} = ${a * a}`;
+console.log(myStr);
+</pre>
+<p>The addition operator is used to concatenate strings.</p>
+<pre class="codeBlock prettyprint">
+let x = 'Java';
+let y = 'Script';
+let language = x + y;
+console.log(language);
+</pre>
+If you add a string and a number, you'll get a string. The number is implicitly converted to a string and then concatenated with the other string.
+<pre class="codeBlock prettyprint">
+let a = 10;
+let b = '24';
+let c = a + b;
+console.log(c);
+</pre>
+<h2>String Properties and Methods</h2>
+Use the <code class="prettyprint">length</code> property to get the length of a string
+<pre class="codeBlock prettyprint">
+let greet = 'hi there !';
+console.log(greet.length);
+</pre>
+<pre class="codeBlock prettyprint">
+console.log(greet.toUpperCase());
+</pre>
+        <pre class="codeBlock prettyprint">
+let greet = 'HI THERE!';
+console.log(greet.toLowerCase());
+</pre>
+Get start index of a substring, returns -1 is a string is not found.
+<pre class="codeBlock prettyprint">
+console.log(greet.indexOf('there'));
+</pre>
+Get a character at a specified index.
+<pre class="codeBlock prettyprint">
+console.log(greet.charAt(9));
+</pre>
+Get a substring from specified index to the end of a string. You can add an optional stop index.
+<pre class="codeBlock prettyprint">
+console.log(greet.substring(3));
+</pre>
+Slice a string from the start index upto but not including the end index. The end index is optional.
+<pre class="codeBlock prettyprint">
+console.log(greet.slice(0,3));
+</pre>
+Replace a character in a string
+<pre class="codeBlock prettyprint">
+console.log(greet.replace('h','H'));
+</pre>
+Convert a string to an Array, specify where to split the string.
+<pre class="codeBlock prettyprint">
+let greet = 'hi there !';
+console.log(greet.split(' '));
+</pre>
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

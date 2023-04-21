@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    <p><em><strong>Loops</strong></em> are used to repeatedly execute a block of code. Instead of writing n lines of the same
+        code, use loops to repeatedly execute that code n times.</p>
+    <h2>for loop</h2>
+    <p><code class="prettyprint">for</code>  block of statements to be executed, as long as a condition is true. <code class="prettyprint">for</code> loop is used when</p>
+    <pre class="codeBlock prettyprint">
+for(looping variable; expression; updatation){
+    //Todo
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+for (let i = 1; i &lt;= 10; i++) {
+    console.log(i);
+}
+</pre>
+The <code class="prettyprint">for</code> loop with <code class="prettyprint">in</code> is used through all individual elements in an Iterable or a Collection. It stops execution when it reaches the last one.
+<pre class="codeBlock prettyprint">
+let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+for(let index in alphabet){
+    console.log(alphabet[index]);
+}
+</pre>
+<pre class="codeBlock prettyprint">
+let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+for (const letter of alphabet) {
+    console.log(letter);
+}
+</pre>
+    <h2>While loop</h2>
+    <p><code class="prettyprint">while</code> loop executes a block of statements, and repeats the block, while a
+        condition is <code class="kwd">true</code>. In a <code class="prettyprint">while</code> loop, the condition is first checked so the loop will not be executed if the condition is <code class="kwd">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+while(conditon){
+    to do
+}
+</pre>
+<h2>Do ... while loop</h2>
+    <p><code class="prettyprint">do while</code> loop executes a block of statements, and repeats the block, while a
+        condition is <code class="kwd">true</code>. In a <code class="prettyprint">do while</code>  loop, the condition is checked last so the loop will be executed atleast once even if the condition is <code class="kwd">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+do{
+    to do
+}while(conditon);
+</pre>
+<h2>Break and Continue</h2>
+<p><code class="prettyprint">break</code> exits the loop and execution goes to the first statement after the loop.</p>
+<p><code class="prettyprint">continue</code> skips execution of the rest of the code in the loop in the current interation and proceeds to the next interation.</p>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

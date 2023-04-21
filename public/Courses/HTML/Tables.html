@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Tables</h1>
+  <p>Tables are used to present Tabular Data, they are defined with the <code class="prettyprint">&lt;table&gt;</code> tag.
+
+    Tables are divided into table rows with the <code class="prettyprint">&lt;tr&gt;</code> tag.
+
+    Table rows are divided into table data with the <code class="prettyprint">&lt;td&gt;</code> tag.
+
+    A table row can also be divided into table headings with the <code class="prettyprint">&lt;th&gt;</code> tag.</p>
+  <pre class="codeBlock prettyprint">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+    &lt;th&gt;Independence&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Angola&lt;/td&gt;
+    &lt;td&gt;11/11/1975&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Botswana&lt;/td&gt;
+    &lt;td&gt;30/09/1966&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Zambia&lt;/td&gt;
+    &lt;td&gt;24/10/1964&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Zimbabwe&lt;/td&gt;
+    &lt;td&gt;18/04/1980&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<h2>Border</h2>
+  <p>Add a border with the <code>border</code> attribute. The size of the border is defined in pixels.</p>
+  <pre class="codeBlock prettyprint">
+&lt;table border="2px"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+    &lt;th&gt;Independence&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Angola&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Botswana&lt;/td&gt;
+    &lt;td&gt;30/09/1966&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Zambia&lt;/td&gt;
+    &lt;td&gt;24/10/1964&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Zimbabwe&lt;/td&gt;
+    &lt;td&gt;18/04/1980&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<h2>Width and Height</h2>
+<p>By default a table's width and height depends on the data it contains. You can define custom widths and heights with the <code>width</code> and <code>height</code> attributes. Values can be in pixels or percentages.</p>
+<pre class="codeBlock prettyprint">
+&lt;table border="2px" width="100%" height="50%"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+    &lt;th&gt;Independence&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Angola&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Botswana&lt;/td&gt;
+    &lt;td&gt;30/09/1966&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Zambia&lt;/td&gt;
+    &lt;td&gt;24/10/1964&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Zimbabwe&lt;/td&gt;
+    &lt;td&gt;18/04/1980&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+You can also change the width and height of a table row.
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

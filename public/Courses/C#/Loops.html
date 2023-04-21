@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    <p><em><strong>Loops</strong></em> are used to repeatedly execute code if a certain condition or an expression is
+        True.</p>
+    <p><em><strong>While Loop</strong></em> : is used to continually execute a block of statement(s) while a particular
+        condition is true.</p>
+
+    The expression is checked, if it evaluates to <code class="prettyprint">true</code>; the statements in the while block will be executed.The
+    while statement will continue checking the expression and executing its block of statements until the expression
+    evaluates to <code class="prettyprint">false</code>
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15)
+{
+    Console.WriteLine(num);
+}
+</pre>
+    If the condition does not evaluate to false, the Loop runs indefinitely (infinite Loop). Press Ctrl + C to stop
+    execution.A condition or an expression can be updated inside the Loop so that it eventually evaluates to false.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15)
+{
+    Console.WriteLine(num);
+    num++;
+}
+</pre>
+Explicitly create an infinte loop by adding <code class="prettyprint">true</code> as the condition.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (true)
+{
+    Console.WriteLine(num);
+    num++;
+}
+</pre>
+    <h2>Do... While Loop</h2>
+    <p>The <code class="prettyprint">do... while</code> loop is the same as the regular <code
+            class="prettyprint">while</code>, except in the <code class="prettyprint">do... while</code> loop The
+        condition is checked at the end. So it's block is executed at least once, even if the condition is <code
+            class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+do
+{
+    Console.WriteLine("4 is greater than 5");
+
+} while (4 &gt; 5);
+</pre>
+    <h2>For Loop</h2>
+    <p>The <code class="prettyprint">for</code> loop is used to repeatedly execute a block of code a known number of times.</p>
+    <pre class="codeBlock prettyprint">
+for (int num = 0; num &lt;&equals; 10; num++)
+{
+    Console.WriteLine(num);
+}
+</pre>
+    <h3>break and continue</h3>
+    <p><code class="prettyprint">break</code> exits the loop and execution goes to the first statement after the loop.
+    </p>
+    <pre class="codeBlock prettyprint">
+for (int num &equals; 0; num &lt;&equals; 10; num++)
+{
+    if (num &equals;&equals; 6)
+    {
+        break;
+    }
+    Console.WriteLine(num);
+}</pre>
+    <p><code class="prettyprint">continue</code> skips execution of the rest of the code in the loop in the current
+        interation and proceeds to the next interation.</p>
+    <pre class="codeBlock prettyprint">
+for (int num &equals; 0; num &lt;&equals; 10; num++)
+{
+    if (num % 2 &excl;&equals; 0)
+    {
+        continue;
+    }
+    Console.WriteLine(num);
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

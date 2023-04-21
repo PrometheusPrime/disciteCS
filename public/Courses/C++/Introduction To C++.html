@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction To C++</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>C++</h1>
+  <p>General Purpose, Compiled  programming language , created by Bjarne Stroustrup. C ++ is heavyly based on The C Programming language, C code is valid C++ code.</p>
+  <p>To write a C++ program you need a text editor and a C++ compiler. Source code must be compiled into machine code
+    inorder to run it. Note that each time you make changes ,you'll have to recompile it.</p>
+    <h3>Linux and MacOs</h3>
+    <p>If you are using Linux or MacOS, you probably have everything you'll need to compile and run C
+      ++ code programs. Open a terminal window
+      and run <code>clang -version</code>, if don't get any errors, you are good to go.</p>
+      <p>If you are on Windows, go to <span class="link">https://visualstudio.com/download</span> and download  Visual Studio Community Edition, Visual Studio installer selet .NET Desktop Development. </p>
+  <p><em>.cpp</em> as the extention</p>
+  <pre class="codeBlock prettyprint">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  /* code */
+  cout &lt;&lt; "Hello, World" &lt;&lt; endl;
+  
+  return 0;
+}
+</pre>
+  <p><code class="prettyprint">#include</code> directive is used to add header files(libraries) needed by the program.</p>
+  <p><code class="prettyprint">&lt;iostream&gt; </code> header file with input output operation</p>
+  <p><code class="prettyprint">int main(){}</code>function is the program execution starting point entry point of a cpp
+    .C++ uses curry brackets {} to delimmit a block of code, all the statements between the {} are part of the main method.
+  </p>
+  <p><code class="prettyprint">std</code> C++ Standard library namespace</p>
+  <!-- <code class="prettyprint">::</code> The scope resolution operator. -->
+  <p><code class="prettyprint">;</code> semi colon is used to terminate a statement. It is required.</p>
+  <p><code class="prettyprint">cout</code> is the stream object used to output something to the screen.</p>
+  <p><code class="prettyprint">&lt;&lt;</code> stream insertion operator</p>
+  <p><code class="prettyprint">\n</code> new line character add anything after in the new lin</p>
+  <p><code class="prettyprint">//</code> comments compiler ignores until the end of the line</p>
+  <code class="prettyprint">/**/</code> multi-line comments
+  <p>namespace -
+    scope to the identifiers</p>
+  <p>C++ </p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

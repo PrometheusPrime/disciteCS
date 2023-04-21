@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operators</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Operators</h1>
+  <h3>Arithematic Operators</h3>
+  <p>Arithematic Operators are used in basic arithematic
+    calculations
+  </p>
+  <p><strong><em>Addition Operator (+)</em> </strong> : adds the operands.</p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 5
+fmt.Print(a + b)
+</pre>
+  <p><strong><em>Subtraction Operator (-)</em> </strong> : subtracts one operand from another.</p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 5
+fmt.Print(a - b)
+</pre>
+  <p><strong><em>Multiplication Operator (*)</em></strong> : multiplies the operands.</p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 5
+fmt.Print(a * b)
+</pre>
+  <p><strong><em>Division Operator (/)</em></strong> : divides the operands. Dividing integers returns an integer, any remainder will be dicarded.</p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 5
+fmt.Print(a / b)
+</pre>
+  <strong><em>Modulo or Remainder Operator (%):</em></strong> returns the remainder of dividing the given operands.
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 5
+fmt.Print(a % b)
+</pre>
+You can not do arithematic operations on mismatched types
+<pre class="codeBlock prettyprint">
+var age int = 25
+var years int8 = 2 
+fmt.Println(age + years)
+</pre>
+  <p>Order of operation like in mathematics(Parenthesis,Exponetiation,Multiplication, Division,Addition,Subtraction)</p>
+  <h3>Assignment Operators</h3>
+  <p>
+    Assignment Operators are used to assign values to
+    variables...
+  </p>
+  <p>
+    <em>Plus Equals (+=)</em> adds the number on the right side of the equal
+    sign to the value of the variable on left side of the equal sign and then
+    assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+a += 6 // same as a = a + 6
+fmt.Print(a)
+</pre>
+  <p>
+    <strong><em>Minus Equals (-=)</em></strong> subtracts the number on the right side of the
+    equal sign from the value of the variable on left side of the equal sign
+    and then assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+a -= 6 // same as a = a - 6
+fmt.Print(a)
+</pre>
+  <p>
+    <strong><em>Multiplication Equals (*=)</em></strong> multiplies the number on the right
+    side of the equal sign to the value of the variable on left side of the
+    equal sign and then assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+a *= 6 // same as a = a * 6
+fmt.Print(a)
+</pre>
+  <p>
+    <strong><em>Division Equals (/=)</em></strong> divides the variable on left side of the
+    equal sign by the number on the right side of the equal sign and then
+    assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+a /= 6 // same as a = a / 6
+fmt.Print(a)
+</pre>
+  <p><strong><em>Remainder Equals (%=)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a := 8
+a %= 6 // same as a = a % 6
+fmt.Print(a)
+</pre>
+  <h3>Comparison Operators</h3>
+  <p>
+    Comparison Operators are used to compare given
+    Variables, they return a Boolean value .
+  </p>
+  <p><strong><em>Greater Than Operator (>)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 6
+fmt.Print(a > b)
+</pre>
+  <p><strong><em>Less Than Operator (&lt;)</strong></em>
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 6
+fmt.Print(a &lt; b)
+</pre>
+  <p><strong><em>Greater Than or Equal To Operator (>=)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 6
+fmt.Print(a >= b)
+</pre>
+  <p><strong><em>Less Than or Equal To Operator (&lt;=)</em></strong>
+  </p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 6
+fmt.Print(a >= b)
+</pre>
+  <p><strong><em>Equality Operator (==)</em></strong>: checks whether the Operands are Equal.</p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 6
+fmt.Print(a == b)
+</pre>
+  <p><strong><em>Inequality Operator (!=)</em></strong>: checks whether the Operands are Not Equal.Returns <code
+      class="prettyprint">True</code> if they are not equal.</p>
+  <pre class="codeBlock prettyprint">
+a := 8
+b := 6
+fmt.Print(a != b)
+</pre>
+  <p>
+    <em>Comparison Operators</em> can be used to compare strings. Strings are compared according to the Alphabetical
+    Order of their component Letters.
+  </p>
+  <pre class="codeBlock prettyprint">
+fmt.Printf("bar &lt; bus - %v\n","bar" &lt; "bus")
+fmt.Printf("bar &lt;&equals; bus - %v\n","bar" &lt;&equals; "bus")
+fmt.Printf("bar &gt; bus - %v\n","bar" &gt; "bus")
+fmt.Printf("bar &gt;&equals; bus - %v\n","bar" &gt;&equals; "bus")
+fmt.Printf("bar &equals;&equals; bus - %v\n","bar" &equals;&equals; "bus")
+fmt.Printf("bar &excl;&equals; bus - %v\n","bar" &excl;&equals; "bus")
+</pre>
+  Z is greater than A , lowercase letters are greater than Uppercase letters and
+  letters are greater than Numbers.
+  <h3>Logical Operators</h3>
+  <p>
+    Logical Operators are used to chain Boolean variables or Boolean expressions,
+    they return a Boolean value.
+  </p>
+  <p><strong><em>and (&amp;&amp;)Operator</em></strong> : Returns <code class="prettyprint">true</code> if all the
+    variables are true.</p>
+  <pre class="codeBlock prettyprint">
+is_raining := true
+is_sunny := false
+fmt.Print(is_raining &amp;&amp; is_sunny)
+</pre>
+  <p><strong><em>or (||) Operator</em></strong> : Returns <code class="prettyprint">true</code> if one of the conditions
+    is true.</p>
+  <pre class="codeBlock prettyprint">
+is_raining := true
+is_sunny := false
+fmt.Print(is_raining || is_sunny)
+</pre>
+  <p>
+    <strong><em>not (!)Operator :</em></strong> Inverts a boolean value . If it was <code
+      class="prettyprint">true</code>, it becomes
+    <code class="prettyprint">false</code>.
+  </p>
+  <pre class="codeBlock prettyprint">
+is_raining := true
+fmt.Print(&excl;is_raining)
+</pre>
+  <p>
+    Logical Operators can be chained and are evaluated according to Their order of precedence.
+  </p>
+  <pre class="codeBlock prettyprint">
+
+  </pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

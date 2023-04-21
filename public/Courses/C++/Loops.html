@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    <p><em><strong>Loops</strong></em> are used to repeatedly execute code if a certain condition or an expression is
+        True.</p>
+    <h2>While Loop</h2>
+    <p><strong>While Loop</strong> is used to continually execute a block of statement(s) while a particular condition
+        is true.</p>
+    <pre class="codeBlock prettyprint">
+while(condition/expression){
+    //TODO
+}</pre>
+    The expression will be checked, if it evaluates to true; the statements in the while block will be executed.The
+    while statement will continue checking the expression and executing its block of statements until the expression
+    evaluates to false. The while loop runs through the code block only if its condition is true, and will continue
+    looping for as long as the condition remains true.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15)
+{
+    std::cout &lt;&lt; num &lt;&lt; std::endl;
+}
+</pre>
+    If the condition does not evaluate to false, the Loop runs indefinitely (infinite Loop). Press Ctrl + C to stop
+    execution.A condition or an expression can be updated inside the Loop so that it eventually evaluates to false.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15)
+{
+    std::cout &lt;&lt; num &lt;&lt; std::endl;
+    num++;
+}
+</pre>
+    explicitly create an infinte loop
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (true){
+
+    std::cout &lt;&lt; num &lt;&lt; std::endl;
+    num++;
+}
+</pre>
+    <h2>Do... While Loop</h2>
+    <p><strong>Do... While Loop</strong> is used to continually execute a block of statement(s) while a particular
+        condition is true.It checks the condition after the code block. Therefore, the statement(s) in the block are
+        executed at least once.</p>
+    <pre class="codeBlock prettyprint">
+do {
+
+    //TODO
+        
+} while (expr/condition);
+ </pre>
+    <pre class="codeBlock prettyprint">
+int num = 20;
+
+do {
+
+    std::cout &lt;&lt; num &lt;&lt; std::endl;
+    num++;
+
+} while (num &lt; 15);
+</pre>
+    <h2>For Loop</h2>
+    <p><strong>For Loop</strong> is used to run through a code block a specific number of times.</p>
+    <pre class="codeBlock prettyprint">
+for (initialisation; condition; updatation){
+ //TODO
+}
+</pre>
+    The first one initializes a counter and is always executed once before the loop. The
+    second parameter holds the condition for the loop and is checked before each iteration. The
+    third parameter contains the increment of the counter and is executed at the end of each loop.
+    <pre class="codeBlock prettyprint">
+for (int num = 0;num &lt;= 10;num++){
+    std::cout &lt;&lt; num &lt;&lt; std::endl;
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+for (;;) {
+
+   cout &lt;&lt; "infinite for-loop\n";
+}
+</pre>
+    <h2>For Each Loop</h2>
+    <p><strong>For Each Loop</strong> iterating through arrays and other
+        container types.</p>
+    <pre class="codeBlock prettyprint">for (int &i : a) {}</pre>
+    <h3>break</h3>
+    The break keyword ends the loop structure
+    <h3>continue</h3>
+    continue skips the rest of the
+    current iteration and continues at the beginning of the next iteration.
+    <h3>return</h3>
+    Return ends loop execution
+    <h3>Nested Loops</h3>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance and Specificity</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+<h1>Inheritance and Specificity</h1>
+<h2>Inheritance</h2>
+<p>A child element will inherit styles from its parent(an element in which the child element is nested in).
+<pre class="codeBlock prettyprint "></pre> 
+Applying styles to a child element will overwrite the inherited ones,the most specific style rule will be applied to an
+  element.</p>
+<pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Hello HTML&lt;/title&gt;
+  &lt;style&gt;
+    body{
+     color:#7f7f7f;}
+   h1{
+     text-align:center;
+     font-family:'Times New Roman';
+     color:darkcyan;}
+    #myId{
+     color:darkseagreen;font-family:verdana;}
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;
+  This is a Heading with specific styles.
+  &lt;/h1&gt;
+  &lt;p&gt;
+  This paragraph is inheriting from parent.
+  &lt;/p&gt;
+  &lt;h2&gt;
+  This Heading is inheriting from parent.
+  &lt;/h2&gt;
+  &lt;p id="myId"&gt;
+  This is a paragraph with specific styles.
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Child elements usually don't inherit certain properties from the parent. To force a child to inherit a property from the parent add <code class="kwd">inherit</code> as that property's value.</p>
+
+<pre class="codeBlock prettyprint">
+button{
+  font-style : inherit;
+}</pre> 
+<h2>Specificity</h2>
+if a Selector is defined multiple times, the last ruleset will be applied. The most specific rule applies<br/>
+element -> class -> id
+<pre class="codeBlock prettyprint">
+{
+ !important;
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+</html>

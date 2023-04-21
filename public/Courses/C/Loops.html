@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    <p><em><strong>Loops</strong></em> are used to repeatedly execute code if a certain condition or an expression is
+        True.</p>
+    <h2>While Loop</h2>
+    <p>The <code class="prettyprint">while</code> loop is used to continually execute a block of statement(s) while a
+        particular condition is true.</p>
+    <pre class="codeBlock prettyprint">
+while(condition/expression){
+    //TODO
+}</pre>
+    <p>The expression will be checked, if it evaluates to true; the statements in the while block will be executed.
+    The while loop runs through the code block only if its condition is true, and will continue looping for as long as the condition remains true.</p>
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15){
+    printf("%i\n",num);
+}
+</pre>
+    If the condition does not evaluate to false, the Loop runs indefinitely (infinite Loop). Press Ctrl + C to stop
+    execution. A condition or an expression can be updated inside the Loop so that it eventually evaluates to false.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15){
+    printf("%i\n",num);
+    num++;
+}
+</pre>
+    <h2>Do While Loop</h2>
+    <p>The <code class="prettyprint">do while</code> is the same as the <code class="prettyprint">while</code>, except the condition is checked after each iteration. Therefore the statement(s) in the block are executed at least once, even if the condition
+        is <code class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+int i = 10;
+do{
+    printf("i is less than 5");
+    num++;   
+}while(i &lt; 5);
+</pre>
+    <h2>For Loop</h2>
+    <p>The <code class="prettyprint">for</code> Loop is used to run through a code block a specific number of times.
+    </p>
+    <pre class="codeBlock prettyprint">
+for (initialisation; condition; updatation){
+ //TODO
+}
+</pre>
+    First an iteration variable is initialised and is always executed once before the loop. The second parameter holds
+    the condition for the loop and is checked before each iteration. The third parameter contains the updatation of the
+    iteration variable and is executed at the end of each loop.
+    <pre class="codeBlock prettyprint">
+for (int num = 0;num &lt;= 10;num++){
+    printf("%i\n",num);
+}
+</pre>Explicitly create an infinte <code class="prettyprint">for</code> loop
+    <pre class="codeBlock prettyprint">
+for (;;) {
+     printf("infinite loop ");
+}   
+</pre>
+    <h4>Break</h4>
+    The <code class="prettyprint">break</code> keyword ends execution of a loop.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (1==1){
+    if(num &gt; 100) break;
+    printf("%i\n",num);
+    num++;
+}
+</pre>
+    <h4>Continue</h4>
+    Continue skips the rest of the current iteration and continues at the beginning of the next iteration.
+    <pre class="codeBlock prettyprint">
+for(int num = 1;num &lt;&equals; 100;num++){
+    if(num &percnt; 2 &excl;&equals; 0) continue;
+    printf("%i\n",num);
+}   
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

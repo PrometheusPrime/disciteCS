@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Arrays</h1>
+    <p>Arrays are ordered collection of multiple values referred by a single identifier. Array value can be of different data types. Arrays are objects, there is no array type in javascript.</p>
+    Create an Empty Array
+    <pre class="codeBlock prettyprint">
+let scores = new Array();
+//Or
+let anotherArr = [];
+</pre>
+Create and initialise an Array
+    <pre class="codeBlock prettyprint">
+const scores = new Array(3,6,87,3,2,1,9);
+console.log(scores);
+//Or
+let anotherArr = [true,false,'Hello',5];
+console.log(anotherArr);
+</pre>
+Access an element using its index(position). The first element of an array is at 0.
+<pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+console.log(scores[0]);
+</pre>
+Add or change a value in an array
+<pre class="codeBlock prettyprint">
+scores[0] = 77;
+scores[7] = 69;
+console.log(scores);
+</pre>
+length(number of Elements) of an Array with the <code>length</code> property
+<pre class="codeBlock prettyprint">
+console.log(scores.length)
+</pre>
+Delete an element from an array
+<pre class="codeBlock prettyprint">
+delete scores[2];
+console.log(scores);
+</pre>
+Delete all the elements of an array by setting it's length to 0.
+<pre class="codeBlock prettyprint">
+scores.length = 0;
+console.log(scores);
+</pre>
+<h3>Nested Arrays</h3>
+A multi dimensional array an array containing other arrays (it's elements are arrays).
+<pre class="codeBlock prettyprint">
+let myArr = [
+    [2, 4, 8, 16],
+    [3, 9, 27, 81],
+    [4, 16, 64, 256]
+];
+console.log(myArr[2][3]);</pre>
+When indexing a 2 dimensional array, the first square brackets is seleting a nested array and the second brackets holds the index of an element in that array.
+    <h3>Methods</h3>
+Add element(s) at the beginning of an array with the <code class="prettyprint">unshift()</code> method.
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+scores.unshift(false);
+console.log(scores);
+</pre>
+The <code class="prettyprint">push()</code> add element(s) at the end of an array.
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+scores.push(true);
+console.log(scores);
+</pre>
+<p>The <code>pop()</code> function removes and returns the last value in an array</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+const lastValue = scores.pop();
+console.log(lastValue);
+console.log(scores);
+</pre>
+    <p>The <code>shift()</code> function removes and returns the first value in an array</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+const firstValue = scores.shift();
+console.log(firstValue);
+console.log(scores);
+</pre>
+    <p>To check whether something is an array use the <code class="prettyprint">isArray()</code> method from the <code class="prettyprint">Array</code> object.</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+console.log(Array.isArray(scores));
+</pre>
+    <p>Get an index of a value <code>indexOf()</code>. If a value is not in an Array, <code>indexOf()</code> returns -1.</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+console.log(scores.indexOf(87));
+</pre>
+    <p>The <code>reverse()</code> method reverses the elements in an array.</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+scores.reverse();
+console.log(scores);
+</pre>
+    <p>The <code>sort()</code> method sorts the elements in an array in ascending order.</p>
+    <pre class="codeBlock prettyprint">
+const instruments = [
+    "Saxophone",
+    "Organ",
+    "Ocarina",
+    "Acoustic Guitar",
+    "Trumpet",
+    "Triangle",
+    "Shakers",
+    "Vibraphone",
+    "Bagpipes",
+    "Keyboard"
+];
+instruments.sort();
+console.log(instruments);
+</pre>
+From the example below, we can see that sorting numbers can produce unexpected results. This is because the method converts any element that is not <code class="prettyprint">undefined</code> to string and sorts them according to their unicode number.<pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+scores.sort();
+console.log(scores);
+</pre> We must pass a sorting function into the method, that returns 0 if the numbers being compared are the same (and therefore sorted), a negative number (also sorted if we are sorting in ascending order) and a positive number (first number is less than the second, they must be swaped if we are sorting in ascending order)
+
+<pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+
+scores.sort((a, b) &equals;&gt;  
+    a - b
+);
+
+console.log(scores);
+</pre>
+    <p>The <code>splice()</code> method removes elements from an array and returns array of the ramoved elements. Pass into the method an index where to start deleting. You can also pass a second arguement the number of elements you wish to remove.</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3,6,87,3,2,1,9];
+const invalidScores = scores.splice(2,3);
+console.log(invalidScores);
+</pre>
+The <code>toString()</code> method returns a string representation of an array, with the elements comma-separated.
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+console.log(scores.toString());
+</pre>
+The <code>join()</code> method returns a string representation of an array. Pass a string to use to separate elements of the array.
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+console.log(scores.join(":"));
+</pre>
+<p>Use the <code>concat()</code> method to join arrays.</p>
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+let anotherArr = [true,false,'Hello',5];
+console.log(scores.concat(anotherArr));
+</pre>
+    <p> The <code class="prettyprint">.forEach(function)</code> method executes the function on each element of the Array.</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+scores.forEach((score) &equals;&gt; {
+    console.log(score)
+});
+</pre>
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+scores.forEach((score, index) &equals;&gt; {
+    console.log(`${score} is at ${index}`)
+});
+</pre>
+    <p>The <code class="prettyprint">.map(function)</code> method executes the function on each element of the Array and returns a new Array.</p>
+    <pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+const standardisedScores = scores.map((score) &equals;&gt; score / 100);
+console.log(standardisedScores);
+</pre>
+<p><code class="prettyprint">values()</code></p>
+<pre class="codeBlock prettyprint">const scores = [3, 6, 87, 3, 2, 1, 9];
+const itr = scores.values();
+console.log(itr.next().value);
+console.log(itr.next().value);</pre>
+<p>The <code class="prettyprint">includes()</code> method checks if an element in the array.</p>
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+console.log(scores.includes(5));
+</pre>
+<p>The <code class="prettyprint">find()</code> method returns the first element that passes the test by the provided function. If no element passes the test, <code class="prettyprint">undefined</code> is returned.</p>
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+const evenScore = scores.find((score) => score % 2 == 0);
+console.log(evenScore);
+</pre>
+<p>The <code class="prettyprint">.filter()</code> method returns an array with elements that passes the test by the provided function, if no element passes the test an empty array is returned.</p>
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+const oddScores = scores.filter((score) &equals;&gt; score &percnt; 2 &excl;&equals;&equals; 0)
+console.log(oddScores);
+</pre>
+<p>The <code class="prettyprint">reduce()</code> method executes the function on each element of the array, passing the return value from the previous calculation. It returns a single value resulting from reducing the array.</p>
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+const totalScore = scores.reduce((total,currentScore) &equals;&gt; total &plus; currentScore);
+console.log(totalScore);
+</pre>
+<h3>loop through Arrays</h3>
+<p>We can use different looping structures to transverse through an array.</p>
+Regular <code class="prettyprint">for</code> loop
+<pre class="codeBlock prettyprint">
+const scores = [3, 6, 87, 3, 2, 1, 9];
+for (let index = 0; index &lt; scores.length; index++) {
+    delete scores[index];
+}
+console.log(scores);</pre>
+When you're transversing through an array's elements using their index, it is easy to get the index with the <code class="prettyprint">for ..in</code> loop.
+    <pre class="codeBlock prettyprint">
+const instruments = [
+    "Saxophone",
+    "Organ",
+    "Ocarina",
+    "Acoustic Guitar",
+    "Trumpet",
+    "Triangle",
+    "Shakers",
+    "Vibraphone",
+    "Bagpipes",
+    "Keyboard"
+];
+for (const index in instruments) {
+    console.log(instruments[index]);
+}
+</pre>
+<code class="prettyprint">for ..of</code> loop
+    <pre class="codeBlock prettyprint">const week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wensday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
+for (const day of week) {
+    console.log(`Today is ${day}`);
+}
+</pre>
+
+    <!-- <h2>Copying Arrays (spread operator)</h2>
+    <h2>Typed Arrays</h2> -->
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

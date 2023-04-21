@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayList</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>ArrayList</h1>
+    <p>An arrayList is just like an array ,except it doesn't have a fixed length and can only store objects. Import the <code class="prettyprint">ArrayList</code> class from the <code class="prettyprint">java.util</code> package.</p>
+    <pre class="codeBlock prettyprint">
+//top of the file, outside of the class
+import java.util.ArrayList;
+
+//in main
+ArrayList&lt;String&gt; bucketList = new ArrayList&lt;String&gt;();
+</pre>
+    <p>Add elements to an arrayList with the<code class="prettyprint">add()</code> method, it adds element to the end of an ArrayList.</p>
+    <pre class="codeBlock prettyprint">
+bucketList.add("Learn to Surf");
+bucketList.add("Go Skydiving");
+bucketList.add("Learn to play a Piano");
+bucketList.add("Ride a horse");
+bucketList.add("Start a Charity");
+</pre>
+ You can specify where to add an element, pass the index as the first arguement.
+<pre class="codeBlock prettyprint">
+bucketList.add(0,"Reconnect with an Old Friend");
+bucketList.add(1,"Meet Someone Famous");
+bucketList.add(2,"Go on a blind date");
+System.out.println(bucketList);
+</pre>
+<p>Declare and initialise an ArrayList</p>
+<pre class="codeBlock prettyprint">
+ArrayList<String> bucketList = new ArrayList<String>(Arrays.asList(
+    "Learn to Surf",
+    "Go Skydiving",
+    "Learn to play a Piano",
+    "Ride a horse",
+    "Start a Charity",
+    "Go on a blind date",
+    "Reconnect with an Old Friend",
+    "Meet Someone Famous",
+    "Go on a blind date")
+);
+</pre>
+    <p>The <code class="prettyprint">get()</code> method returns an element from an ArrayList, pass into the method the index of the element.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(bucketList.get(3));
+</pre>
+<p>The <code class="prettyprint">size()</code> method returns the size or length of an array list</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(bucketList.size());
+</pre>
+    <p>The <code class="prettyprint">set()</code> method replaces an element at the specified position in the Arraylist with the specified value.</p>
+    <pre class="codeBlock prettyprint">
+bucketList.set(3, "Own Horses");
+System.out.println(bucketList);
+</pre>
+<p><code class="prettyprint">forEach()</code></p>
+<pre class="codeBlock prettyprint">
+bucketList.forEach(listItem &hyphen;&gt; {
+    System.out.println(listItem
+  }
+);
+</pre>
+<p> Easily sort an ArrayList using the <code class="prettyprint">sort</code> method from <code class="prettyprint">Collections</code> class in the <code class="prettyprint">java.util</code> package.</p>
+   <pre class="codeBlock prettyprint">
+//top of the file, outside of the class
+import java.util.Collections;
+
+//in main
+Collections.sort(bucketList);
+System.out.println(bucketList);</pre>
+    <p>The <code class="prettyprint">remove()</code> method removes an element from an Arraylist, you can either pass into the method the element or it's index. <br/> <code class="prettyprint">remove(element)</code> removes the first instance of the element if there are duplicates.</p>
+    <pre class="codeBlock prettyprint">
+bucketList.remove("Go on a blind date");
+System.out.println(bucketList);
+</pre>
+    <p>The <code class="prettyprint">clear()</code> methods delete all elements in an ArrayList</p>
+    <pre class="codeBlock prettyprint">
+bucketList.clear();</pre>
+    <p>The <code class="prettyprint">isEmpty()</code> method checks whether an array ArrayList is empty, returns a boolean value.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(bucketList.isEmpty());
+</pre>
+<h2>Loop through an ArrayList</h2>
+    <p><code class="prettyprint">for</code></p>
+    <pre class="codeBlock prettyprint">
+for (int i = 0; i &lt; bucketList.size(); i++){
+
+    System.out.println(bucketList.get(i));
+}
+</pre>
+    <p><code class="prettyprint">for each</code></p>
+    <pre class="codeBlock prettyprint">
+for (String item : bucketList) {
+    System.out.println(item);
+}</pre>
+using an iterator
+<pre class="codeBlock prettyprint">
+//top of the file, outside of the class
+import java.util.Iterator;
+
+//in main
+Iterator itr = bucketList.iterator();
+
+while (itr.hasNext()) {
+    System.out.println(itr.next());
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

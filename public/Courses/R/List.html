@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lists in R</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>List</h1>
+	<p>Collection of R Objects. A list can store different R objects.
+	Use the <code class="prettyprint">list()</code> function to create a list</p>
+	<pre class="codeBlock prettyprint">
+mylist &lt;&hyphen; list(value,value, value)
+</pre>
+	check the types of values of a list using the <code class="code prettyprint">str()</code> function
+	<pre class="codeBlock prettyprint">
+print(str(mylist))
+</pre>
+	using a reference
+	<pre class="codeBlock prettyprint">top3 &lt;&hyphen; list(
+ first = whale,
+ second = elephant,
+ third = hippopotamus
+)
+</pre>
+	<pre class="codeBlock prettyprint">
+top3[first]
+top3$third
+</pre>
+a list can contain items of different types, other lists and even functions.
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

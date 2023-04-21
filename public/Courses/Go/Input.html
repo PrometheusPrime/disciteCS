@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working With Input</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+<h1>Getting Input</h1>
+<code class="prettyprint"></code>
+The <code>Scanln()</code> function from the <strong>fmt</strong> package is used to take input. Pass into the function the memory address of the variable where you want to store the input.
+<pre class="codeBlock prettyprint">
+var x,y int
+fmt.Println("Enter a number :")
+fmt.Scanln(&x)
+fmt.Println("Enter another number :")
+fmt.Scanln(&y)
+fmt.Printf("sum of %v and %v is %v",x,y,x+y)
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

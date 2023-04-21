@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+<h1>Sets</h1>
+A collection of unique values. A set can contain values of any type.
+<pre class="codeBlock prettyprint">
+const mySet = new Set();</pre>
+<p>The <code class="prettyprint">add</code> method adds a new element if it's not already in the set.</p>
+<pre class="codeBlock prettyprint">
+mySet.add(3.142);
+mySet.add(42);
+mySet.add(true);
+mySet.add('False');
+mySet.add(true);
+console.log(mySet);</pre>
+<p>The <code class="prettyprint">size</code> property returns the number of elements in the set.</p>
+<pre class="codeBlock prettyprint">console.log(mySet.size);</pre>
+<p>You can check if an item is in a set with the <code class="prettyprint">has()</code> method.</p>
+<pre class="codeBlock prettyprint">
+console.log(mySet.has(false));</pre>
+<p>The <code class="prettyprint">.forEach(function)</code> method calls the function on each element of the set.</p>
+<pre class="codeBlock prettyprint">
+mySet.forEach(element &equals;&gt; {
+    console.log(element)
+});</pre>
+<p>The <code class="prettyprint">delete</code> method deletes an element from the set.</p>
+<pre class="codeBlock prettyprint">
+mySet.delete();</pre>
+<p>The <code class="prettyprint">clear</code> method deletes all elements from the set.</p>
+<pre class="codeBlock prettyprint">
+mySet.clear();</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

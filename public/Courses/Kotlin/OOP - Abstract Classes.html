@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Classes in Kotlin</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+      <h1>Abstract classes</h1>
+  a class that can not be instantiated.
+  <pre class="codeBlock prettyprint">
+abstract class Bird() {
+
+}
+
+class Palaeognathae() : Bird() {
+
+}
+
+class Neognathae() : Bird() {
+    
+}
+</pre>
+  <h3>Abstract Function</h3>
+  <p>All abstract functions must be implemented in the derived classes.</p>
+    <pre class="codeBlock prettyprint">
+abstract class Bird() {
+    abstract fun canFly(): Boolean
+
+}
+
+class Palaeognathae() : Bird() {
+    override fun canFly(): Boolean {
+        return false
+    }
+}
+
+class Neognathae() : Bird() {
+    override fun canFly(): Boolean {
+        return true
+    }
+}
+</pre>
+<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

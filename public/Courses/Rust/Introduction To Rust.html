@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction To Rust</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <header>
+    <h1>Rust</h1>
+  </header>
+  <p>Rust is a C-like compiled programming language released by Mozilla in 2015. Rust is not Object
+    Orientented.</p>
+  <h3>Why Rust</h3>
+  <ul>
+    <li>
+      <p><strong>Memory Safe</strong></p>
+    </li>
+    <li>
+      <p><strong>Free and Open Source</strong> You can use it freely.</p>
+    </li>
+    <li>
+      <p><strong>Fast concurrency </strong></p>
+    </li>
+    <li>
+      <p><strong>Popular </strong></p>
+    </li>
+    <li>
+      <p><strong>Platform Independent </strong></p>
+    </li>
+  </ul>
+  WebAssembly
+  <h3>Installation</h3>
+  <p>Go to <span class="link" href="https://rust-lang.org/tools/intall">https://rust-lang.org/tools/intall</span> to install Rust on Windows.</p>
+  <p>On MacOS, Linux or WSL (Windows Subsystem for Linux) run <code>curl --proto 'https' --tls</code> in the Terminal to install Rust. </p>
+  <p>Alternatively run Rust online without installing anything at <span class="link">https://play.rust-lang.org</span>
+  </p>
+  <pre class="codeBlock prettyprint">
+fn main(){
+  println!("Hello, World");
+}
+</pre>
+<p>Open a terminal in the directory where your rust file is and type <kbd>rustc rustFile.rs</kbd> to</p>
+  <code class="code prettyprint">fn</code> keyword lets you define a function in Rust.<br /><code
+    class="code prettyprint">main(){}</code> function is the programme execution starting point.<br /><code
+    class="code prettyprint">println!()</code>
+  <code class="code prettyprint">{}</code> need a placeholder to print something.<code class="code prettyprint">;</code>
+  statements are terminated with a
+  semi colon
+  <h3>Create a Rust Project</h3>
+  <p>Rust has a build system/package manager called Cargo.
+ In the terminal run <kbd>cargo init</kbd> to create and initialise a Rust Project in the current directory.</p>
+ <p><kbd>cargo new ProjectName</kbd> to creates a new folder ProjectName and initialises a new project in it.
+  write source files in ProjectName/src folder.</p>
+  <p><kbd> cargo run</kbd> builds and runs the project,
+    <kbd>cargo build</kbd> just builds the project and
+    <kbd>cargo build --release</kbd> builds a release version of the project.</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

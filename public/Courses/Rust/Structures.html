@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structures in Rust</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Structures</h1>
+    <p><code class="kwd">struct</code></p>
+    <pre class="codeBlock prettyprint">
+struct Mystruct{
+    property:type,
+    property:type,
+    property:type,
+
+};
+</pre>
+<pre class="codeBlock prettyprint">let mut myS =  Mystruct{
+    property:value,
+    property:value,
+    property:value,
+
+};</pre>
+access member value
+<pre class="codeBlock prettyprint">myS.property</pre>
+change member / property value use <code>.</code> notation
+<pre class="codeBlock prettyprint">myS.property = new value</pre>
+<h2>Tuple Structures</h2>
+<pre class="codeBlock prettyprint">struct Mystruct(type,type,type);
+</pre>
+<pre class="codeBlock prettyprint">let mut myS =  Mystruct(value,value,value);</pre>
+<pre class="codeBlock prettyprint">myS.index</pre>
+<h2>Struct traits</h2>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

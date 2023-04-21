@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Objects</h1>
+    <p>An Object is a collection of related properties in key(or name) - value pairs.</p>
+    <p>Don't use numbers as first characters of the name, names that are not strings are automatically converted to string. A value can be any type, other objects or even a function. A property whose value is a function is called a <strong>method</strong></p>
+    <p>Create empty Object by assigning the identifier to an empty set of curly brackets or using the Object constructor.</p>
+    <pre class="codeBlock prettyprint">
+const employee = {};
+//Or
+const employee = new Object();
+</pre>
+Add or change object properties.
+<pre class="codeBlock prettyprint">
+employee.name = 'John';
+employee.age = 45;
+employee.position = "CEO";
+employee.positionsHeld = ["CFO","President","Board Chairperson"];
+employee.greets = function(){
+    console.log(`${this.name} says Hi`);
+};
+console.log(employee);
+</pre>
+Access the properties of an object with the dot-notation
+<pre class="codeBlock prettyprint">
+console.log(employee.name);
+employee.greets();
+</pre>
+If a property name has a special character like a hypen or space, use bracket notation to set or access it.
+<pre class="codeBlock prettyprint">
+employee['Personal Info'] = `Name : ${employee.name}\nAge: ${employee.age}`;
+
+console.log(employee['Personal Info']);
+</pre>
+Delete a property from the object
+<pre class="codeBlock prettyprint">
+delete person.age;
+</pre>
+Declare and initialise an Object. You can still create additional properties later.
+    <pre class="codeBlock prettyprint">
+const employee = {
+    name: 'John',
+    age: 45,
+    position: "CEO",
+    positionsHeld: ["CFO", "President", "Board Chairperson"], address: {
+
+    },
+    greets: function () {
+        console.log(`${this.name} says Hi`);
+    },
+
+    personalInfo: function () {
+        console.log(`Name : ${this.name}\nAge: {this.age}`);
+    }
+};
+//OR
+const employee = new Object(
+    name = 'John',
+    age = 45,
+    position = "CEO",
+    positionsHeld = ["CFO", "President", "Board Chairperson"], address = {
+
+    },
+    greets = function () {
+        console.log(`${this.name} says Hi`);
+    },
+
+    'Personal Info' = `Name : ${this.name}\nAge: ${this.age}`;
+);
+</pre>
+<p>Another way of creating an object from an existing object with the <code class="prettyprint">Object.create(ExistingObject)</code></p>
+<pre class="codeBlock prettyprint">
+</pre>
+<h2>Constructor function</h2>
+<P>We've looked at diferrent ways of creating an object and working with it's properties. Suppose we want to create another employee object, we'll have to use a different identifier like employee2 and copy and paste the code from our initial employee object. Instead we can define an object type (<strong>prototype</strong>) employee by creating a constructor function and use it to create employee objects. It is a common convention to capitalise the first letter of the Constructor function.
+<pre class="codeBlock prettyprint">
+function Employee(name, age, position, positionsHeld, address) {
+    this.name = name;
+    this.age = age;
+    this.position = position;
+    this.positionsHeld = positionsHeld
+    this.address = address
+    this.personalInfo = function () {
+        return `${this.name} ${this.age}`;
+    }
+}
+</pre>
+<p>Create a new object from the prototype with the <code class="prettyprint">new</code> keyword.</p>
+    <pre class="codeBlock prettyprint">let employee = new Employee('John','Doe',45,[]);
+let employee2 = new Employee('John','Doe',45,[])</pre>
+    <p>We can still add new properties later to individual objects and not to the <strong>prototype</strong>.</p>
+<h3>Objects in arrays</h3>
+<pre class="codeBlock prettyprint">
+const flowers = [
+    {
+      name : "Clematis",
+      family : "Ranunculaceae",
+      kingdom : "Plantae"
+    },
+    {
+      name : "Bleeding Heart",
+      family : "Papaveraceae",
+      kingdom : "Plantae"
+    },
+    {
+      name : "Butterfly Bush",
+      family : "Scrophulariaceae",
+      kingdom : "Plantae"
+    }
+];
+</pre>
+<pre class="codeBlock prettyprint">
+console.log(flowers)
+</pre>
+<pre class="codeBlock prettyprint">
+console.log(flowers[0])
+</pre>
+<pre class="codeBlock prettyprint">
+console.log(flowers[0].name)
+</pre>
+<h3>Frozen Objects</h3>
+<p>Freezing an object makes it immutable. New properties can not be added and existing properties' values can not be modified unless they are un frozen objects.</p>
+Check if an object is frozen.
+<pre class="codeBlock prettyprint">
+Object.isFrozen(myObject)
+</pre>
+Freeze an object
+<pre class="codeBlock prettyprint">
+Object.freeze(myObject)
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

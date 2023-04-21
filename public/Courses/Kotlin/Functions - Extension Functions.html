@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Extension Functions</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Extension Functions</h1>
+	Functions defined outside a class but can be called as a member function on the class. Extends the functionality of
+	already existing Types.
+	<pre class="codeBlock prettyprint">
+fun type.funcName():RT{
+//do something
+ return this.something
+}
+</pre>
+Extension functions can not access private properties
+<p></p>
+can also create extension properties too 
+<pre class="codeBlock prettyprint">
+type.propertyName
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

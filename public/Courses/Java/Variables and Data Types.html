@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables and Data Types</h1>
+    <h2>Variables</h2>
+    <p> A Variable is a container for storing data. Java is statically typed.</p>
+An variable name(identifier) can only start with a letter, $ or an underscore and can not be a reserved keyword.
+</p>
+    <p>To Create a Variable in Java , you'll have to write Data Type, Variable name = and then the Value; The
+        <em><strong>Equals (=)</strong></em> sign is used to assign a value to a variable.</p>
+    <pre class="codeBlock prettyprint">short age = 18 ;</pre>
+    <p>You can also declare a variable and assign it a value later:</p>
+    <pre class="codeBlock prettyprint">
+String name ;
+name = "Jane";
+</pre>
+The value of a variable can be changed as many times as needed, but the type of that value must equal the type that variable can store.
+<pre class="codeBlock prettyprint">short age = 18;
+age = 19;
+age = 22;
+age = 30;</pre>
+<p>Multiple variables can be declared on a single line if they are of the same type.</p>
+<pre class="codeBlock prettyprint">float weight, height;
+</pre>
+    <p>Us the <code class="code prettyprint">final</code> keyword to define a constant 
+    </p> <pre class="codeBlock prettyprint">final String NAME = "John Doe";
+</pre>
+<p>You cannot use a variable before it is declared or outside it's scope (block of code it's declared in).
+</p>
+<p> Variables declared in a <code class="prettyprint">class</code> are given default values, therefore they can be used without being initialised.</p>
+<p>Variables declared in a block (method,loop etc) don't have default values, they can not be used before they are initialised.</p>
+    <h2>Data Types</h2>
+    <h3>Primitive Data Types</h3>
+    <p>
+        <strong>Primitive Data Types</strong> are predefined types of data. They are the most basic data types provided
+        by a
+        Programming Language. Java support the following primitive data types :
+    </p>
+    <h4>Byte</h4>
+    <p>
+        A <code class="prettyprint">byte</code> can store integers from -128 to 127 (8-bit) and are 1 byte in size.
+    </p>
+    <pre class="codeBlock prettyprint">
+byte daysInAWeek = 7;
+</pre>
+<h4>Short</h4>
+    <p>
+      A <code class="prettyprint">short</code> can store integers from -32768 to 32767 (16-bit). A <code class="prettyprint">short</code> is 2 bytes in size.
+    </p>
+    <pre class="codeBlock prettyprint">
+# integers
+short studentAge = 16;
+</pre>
+    <h4>Integer</h4>
+    <p>
+       An <code class="prettyprint">int</code> can hold a value ranging from -2147483648 to 2147483647 (32-bit). An <code class="prettyprint">int</code> is 4 bytes in size.
+    </p>
+    <pre class="codeBlock prettyprint">
+int secondsInAYear = 31536000;
+</pre>
+<h4>Long</h4>
+    <p>
+        A <code class="prettyprint">long</code> can hold a integer values from -9223372036854775808 to 9223372036854775807 (64-bit). A <code class="prettyprint">long</code> is 8 bytes in size. The letter l (or L ) must be appended to the end of the value.
+    </p>
+    <pre class="codeBlock prettyprint">long milliSecondsInAYear = 31536000000l;
+</pre>
+<h4>Float</h4>
+    <p>
+       A <code class="prettyprint">float</code> is 32-bit floating point numbers. A <code class="prettyprint">float</code> is 4 bytes in size and have up to 6 decimal places precision. To create a float you must append the value with an f (or F), otherwise you'll get an error because it will be interpreted as a <code class="code prettyprint">double</code>.
+    </p>
+    <pre class="codeBlock prettyprint">float  height = 6.4f ;
+</pre>
+    alternitively cast it to float.
+    <pre class="codeBlock prettyprint">float  height = (float) 6.4;
+</pre>
+<h4>Double</h4>
+    <p>
+    A <code class="prettyprint">double</code> is a 64-bit double-precision numbers and is 8 bytes in size. Up to 15 decimal places precision.
+    </p>
+    <pre class="codeBlock prettyprint">
+# integers
+double pi = 3.141592653589793;
+</pre>
+<h4>Character</h4>
+    <p>
+       A <code class="prettyprint">char</code> is a single 16-bit Unicode character ranging from '\u0000' or 0 to '\uffff' or 65,535. A
+        char is 2 bytes in size. Char values are surrounded by single quotes ('').
+    </p>
+    <pre class="codeBlock prettyprint">
+char grade = 'A';
+</pre>
+<h4>Boolean</h4>
+    <p>
+        A <code class="prettyprint">boolean</code> can only take the values <code class="prettyprint">true</code> or <code class="prettyprint">false</code>. A <code class="prettyprint">boolean</code> is 1 byte in size.
+    </p>
+    <pre class="codeBlock prettyprint">
+boolean isRaining = false ;
+</pre>
+    <h2>Wrapper Classes</h2>
+    - Integer ,Byte ,Double, Float,Long,Char
+    Non-primitive data types are called reference types because they refer to objects.
+    <h2>Type Conversion</h2>
+A value can be converted from one data type to another. In Java, there are two types of casting:
+   <p>Implicit Conversion - converting automatically from a small size data type to a large data type.</p>
+<pre class="codeBlock prettyprint">short years = 25;
+int age = years;</pre>
+  <p>Explicit Conversion - manually converting a larger type to a smaller size type.</p>
+  <pre class="codeBlock prettyprint">int pay = 20000;
+short salary = (short) pay;</pre>
+Make sure the type you're converting to can hold the value, and even if it can some information may be lost.
+<pre class="codeBlock prettyprint">
+double pi = 3.141592653589793;
+int num = (int)pi;
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

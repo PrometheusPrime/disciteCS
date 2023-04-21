@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables and Data Types</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Variables and Data Types</h1>
+  <h2>Variables</h2>
+  <p>Variable are defined with the <code class="prettyprint">let</code> keyword. Rust is Statically typed,everything has a type.
+  </p>
+  <p>An identifier must start with a letter and can only contain letters, numbers and an underscore.</p>
+  <pre class="codeBlock prettyprint">
+let greet: &str = "Hello";
+ println!({},greet);
+</pre>
+  You need a placeholder (<code>{}</code>) to print a variable.
+  <p>
+    Rust supports type inference, The Rust Compiler will figure out the data type of a variable at compile time based on the
+    value assigned to the variable.
+  </p>
+  <pre class="codeBlock prettyprint">
+let greet = "Hello";
+println!({},greet);
+</pre>
+  In Rust all variables are immutable by default. If you try reassigning a variable, I'll get an error (compile error).
+  <pre class="prettyprint codeBlock">
+let greet = "Hello";
+greet = "Hi";
+println!({},greet);
+</pre>
+  Use the <code><span class="kwd">mut</span></code> keyword to define a mutable variable.
+  <pre class="prettyprint codeBlock">
+let mut greet = "Hello";
+greet = "Hi";
+println!({},greet);
+</pre>
+  Alternatively you can redefine a variable. Since the variable has been redefined, you can assign it a value of a
+  different data type.
+  <pre class="prettyprint codeBlock">
+let greet = "Hello";
+let greet = 3110;
+println!({},greet);
+</pre>
+declare and assign multiple variables in a single line
+<pre class="prettyprint codeBlock">
+let (first_name,last_name) = ("Jane","Doe");
+println!("Your name is {} {} ?",first_name,last_name);
+</pre>
+  <p>Define a constant variable with the <code class="prettyprint">const</code> keyword.</p>
+  <pre class="prettyprint codeBlock">
+const NAME : &str = "";
+println!({},NAME);
+</pre>
+  Note when defining a Constant, you have to explicitly state the type of data it'll hold.
+  <h2>Data Types</h2>
+  <p>
+  <ul>
+    <li>
+      <h4>Numbers</h4>
+    </li>
+    <strong>Integers</strong> are negative or positive whole numbers. signed(<code class="kwd">i8,i16,i32,i64</code>) and unsigned(<code class="kwd">u8,u16,u32,u64</code>) integers.<code class="kwd">isize</code>,<code class="kwd">usize</code> space in memory is based on the buffer size of the computer.
+    <pre class="codeBlock prettyprint">
+// integers
+let student_age: i8 = 16;
+</pre>
+    </p>
+    <p>
+      <strong>Floating Point (Floats) </strong> are Real Numbers with a Decimal Point. Rust supports 32(<code class="kwd">f32</code>) and 64(<code class="kwd">f64</code>) bit floats.
+    </p>
+    <pre class="codeBlock prettyprint">
+// a float
+let student_height = 6.24;
+</pre>
+    <p>
+      <li>
+        <h4>Boolean</h4>
+      </li>
+      <strong>Boolean</strong> variables can have either <code class="prettyprint">true</code> or <code
+        class="prettyprint">false</code> as values..
+    <pre class="codeBlock prettyprint">
+//explicitly state the type
+let is_raining : bool = true;
+//or
+let is_sunny = false;
+</pre>
+    </p>
+    <p>
+      <li>
+        <h4>Characters</h4> Unicode characters
+      </li>
+    <pre class="codeBlock prettyprint">
+ let grade = 'A'
+</pre>
+    <pre class="codeBlock prettyprint">
+let char_var = '\u{code}';
+</pre>
+    are delimited by single quotes.
+    </p>
+  </ul>
+  <h3>Check Data Type</h3>
+  <p>
+    Use the <code class="code prettyprint"></code>
+    function to check a variable's data type.
+  </p>
+
+  <pre class="codeBlock prettyprint">
+//
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

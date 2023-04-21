@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction To Go</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Go</h1>
+  <p><strong>Go</strong> (Golang) is a statically typed, general purpose, compiled programming language. <strong>Go</strong> was made by a team at Google.
+  <h3>Installation</h3>
+  <p>Go to <span class="link">go.dev/dl/</span> and download a Go installer for the <abbr title="Operating System">OS</abbr> you're using.</p>
+      
+  <h3>Write and Run Go programs</h3>
+    <p>If you don't have Visual Studio Code installed you can download it from <span class="link">code.visualstudio.com/download</span>. </p>
+    <p>Create a new file, name the it whatever you prefer with <strong>.go</strong> as the file extention and then write the code below. If you get pop ups requesting you to install go extension and any additional tools, click install.</p>
+  <p>If you're using a different editor and it support extentions, search and install go extension.</p>
+  <p>Alternatively, you can run go programs without installing go by going to <span class="link">go.dev/play/</span>.</p>
+  <pre class="codeBlock prettyprint">
+package main
+
+import "fmt"
+
+func main(){
+  //print "Hello, world"
+  fmt.Print("Hello, world")
+}
+</pre>
+<br/>
+<p>To run the program, open a new Terminal window in the directory where your go file is located and type '<code class="prettyprint">go run file.go</code>' then click <kbd>Enter</kbd> .</p>
+<p><code class="prettyprint">package main</code> : A go program is made up of packages. Go program execution starts in the <code class="prettyprint">main</code> package.</p>
+  <p><code class="prettyprint">import "fmt"</code> : importing the <strong>format</strong> package which provides input and output functions</p>
+<p><code class="prettyprint">func main(){}</code> : is the program execution starting point. Main runs automatically when the program is run.</p>
+<p><code class="prettyprint">//</code> : comments starts with two forward slashes.</p>
+<p><code class="prettyprint">fmt.Print()</code> : the print function in the format package is used to print text</p>
+  <p>To compile an executable file, <code>go build package/path</code> it  needs a <code>main</code> package and <code>main()</code> function to be compiled as an executable.</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

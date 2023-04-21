@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Null</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Null Safety</h1>
+	<p>When you declare a variable's type explicitly, it's value can not be <code class="prettyprint">null</code>. All types in Kotlin are nun-null by default.
+	<pre class="codeBlock prettyprint">
+var userName: String  = null
+</pre>
+	</p>
+	<p>Add a <code class="prettyprint">?</code> after the type to declare a <code class="prettyprint">nullable</code> variable, a variable that can store <code class="prettyprint">null</code> as value.</p>
+	<pre class="codeBlock prettyprint">
+var userName: String? = null
+</pre>
+<p>You can not call a method or access a property on a nullable variable.</p>
+<pre class="codeBlock prettyprint">
+var userName: String? = null
+val startsWithJ = userName.startsWith('J', true)
+println(startsWithJ)
+</pre>
+<p>Use the <code class="prettyprint">!!</code> (not-<code class="prettyprint">null</code> assertion operator) to forcebly call a method on a nullable variable, a <code class="prettyprint">NullPointerException</code> will be raised if it is <code class="prettyprint">null</code>.</p>
+	<pre class="codeBlock prettyprint">
+var userName: String? = null
+val startsWithJ = userName!!.startsWith('J', true)
+println(startsWithJ)
+</pre>
+<p>Use the <code class="prettyprint">?.</code> (safe call operator) to only call a method on a nullable variable if it isn't <code
+			class="prettyprint">null</code>. If it is <code
+			class="prettyprint">null</code>, <code
+			class="prettyprint">null</code> is returned.</p>
+	<pre class="codeBlock prettyprint">
+var userName: String? = null
+var startsWithJ = userName?.startsWith('J', true)
+println(startsWithJ)
+
+userName = "John"
+startsWithJ = userName?.startsWith('J', true)
+println(startsWithJ)
+</pre>
+<p>Use the <code class="prettyprint">?:</code> (Elvis operator) to only use a nullable's value if it is not <code class="prettyprint">null</code>, define an alternate value after the operator to use if it's value  is <code class="prettyprint">null</code>.</p>
+<pre class="codeBlock prettyprint">
+var userName: String? = null
+var numberOfCharacters = userName?.length ?: 0
+println(numberOfCharacters)
+
+userName = "John"
+numberOfCharacters = userName?.length ?: 0
+println(numberOfCharacters)</pre>
+<p>If a function you're defining might return <code class="prettyprint">null</code>, add a <code class="prettyprint">?</code> after the return type.</p>
+	<pre class="codeBlock prettyprint">
+fun userInput(): String? {
+    var someTxt = readLine()
+    return someTxt
+}
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

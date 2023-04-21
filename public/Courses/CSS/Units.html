@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Units in HTML and CSS</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Units</h1>
+  <h2>Absolute Units</h2>
+  <p>Absolute units are based on actual physical units, and are ussally the same across devices</p>
+  <dl>
+    <dt><strong>Pixel</strong></dt>
+    <dd>Based on device pixels. Pixels vary depending on pixel density of the device
+      <pre class="codeBlock prettyprint">p {
+    text-indent: 10px;
+}</pre>
+    </dd>
+    <dt><strong>Milimeters</strong></dt>
+    <dd>One millimeters is 1/10th of a centimeter
+      <pre class="codeBlock prettyprint">
+@page {
+  margin: 5mm;
+}
+</pre>
+    </dd>
+    <dt><strong>Centimeters</strong></dt>
+    <dd>One centimeter is 37.8px
+      <pre class="codeBlock prettyprint">
+@page {
+  margin: 0.5cm;
+}
+</pre>
+    </dd>
+    <dt><strong>Inches</strong></dt>
+    <dd>One inch is 96px
+      <pre class="codeBlock prettyprint">
+h1{
+  font-size: 0.7in;
+}
+</pre>
+    </dd>
+    <dt><strong>Points</strong></dt>
+    <dd>One point is 1/72 of an inch
+      <pre class="codeBlock prettyprint">
+h1{
+  font-size: 24pt;
+}
+</pre>
+    </dd>
+    <dt><strong>Picas</strong></dt>
+    <dd>One pica is 1/6 of an inch
+      <pre class="codeBlock prettyprint">
+h2{
+  font-size: 3pc;
+}
+</pre>
+    </dd>
+  </dl>
+  <p>Except pixels, absolute units are mostly suitable for print.</p>
+  <h2>Relative Units</h2>
+  <p>Relative units base their dimensions on something else. They are great for Responsive Web Design.</p>
+  <dl>
+    <dt><strong>Percentage</strong></dt>
+    <dd>relative to the parent
+      <pre class="codeBlock prettyprint">
+.main{
+  max-width: 75%
+}
+</pre>
+    </dd>
+    <dt><strong>Viewport Height</strong></dt>
+    <dd>One viewport height is 1% of the Viewport's Height
+      <pre class="codeBlock prettyprint">
+body {
+  min-height: 100vh;
+}    
+</pre>
+    </dd>
+    <dt><strong>Viewport Width</strong></dt>
+    <dd>One viewport width is 1% of the Viewport's Width
+      <pre class="codeBlock prettyprint">
+.main{
+  width: 75vw;
+}
+</pre>
+    </dd>
+    <dt>vmin</dt>
+    <dd>One vmin is 1% of whichever is smaller, viewport height or viewport width.
+      <pre class="codeBlock prettyprint">
+div{
+  height: 20vmin;
+}
+</pre>
+    </dd>
+    <dt>vmax</dt>
+    <dd>One vmax is 1% of whichever is larger, viewport height or viewport width.
+      <pre class="codeBlock prettyprint">
+div{
+  width: 25vmax;
+}
+</pre>
+    </dd>
+    <dt><strong>ex</strong></dt>
+    <dd>based on the height of x of the declared font
+      <pre class="codeBlock prettyprint">
+p{
+  line-height: 3ex;
+}
+</pre>
+    </dd>
+    <dt><strong>em</strong></dt>
+    <dd>based on the font size of the parent element.
+      <pre class="codeBlock prettyprint">
+h1{
+  font-size: 2em;
+}
+</pre>
+    </dd>
+    <dt><strong>rem</strong></dt>
+    <dd>based on the font size of the root element
+      <pre class="codeBlock prettyprint">
+.main{
+  font-size: 2rem;
+}
+</pre>
+    </dd>
+    <dt><strong>ch</strong></dt>
+    <dd>relative to the width of the 0
+      <pre class="codeBlock prettyprint">
+p{
+  font-size: 3ch;
+}
+</pre>
+    </dd>
+  </dl>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+<h1>Arrays</h1>
+    <p>An array is a container object that holds a fixed number of values of a single Data Type , referred by a single name. Elements in an array are ordered. The first element is at index( or position) 0.</p>
+    <pre class="codeBlock prettyprint">
+short[] numArray = new short[4];
+</pre>
+    <p>To add or change a value in an array, write the name of the array followed by the index (position) in square brackets, assignment operator then the value.</p>
+    <pre class="codeBlock prettyprint">
+numArray[0] = 3;
+numArray[1] = 1;
+numArray[2] = 4;
+numArray[3] = 2;
+</pre>
+<p>To access a value in an array, write the name of the array followed by the index (position) in square brackets. The first element is at 0, so the last element is at <code>numberOfElement - 1</code></p>
+    <pre class="codeBlock prettyprint">
+Console.WriteLine(arr[2]);
+</pre>
+    <h3>Array literal</h3>
+    <p>To create an array literal, place the value in cury bracket, comma separated</p>
+    <pre class="codeBlock prettyprint">
+String[] movies = {"Top Gun: Maverick",	
+    "Jurassic World Dominion",
+    "Doctor Strange in the Multiverse of Madness",
+    "Minions: The Rise of Gru",
+    "The Batman",
+    "Thor: Love and Thunder",	
+    "Water Gate Bridge",	
+    "Fantastic Beasts: The Secrets of Dumbledore",	
+    "Sonic the Hedgehog 2",	
+    "Uncharted"
+};
+
+Console.WriteLine(movies[5]);
+</pre>
+    <h2>Array Properties and Methods</h2>
+    Array Methods and Properties
+check the size or length of an Array with the <code>Length</code> property.
+    <pre class="codeBlock prettyprint">
+Console.WriteLine(movies.Length);
+</pre>
+Copy an array using the <code>Copy()</code> method in the Array class, pass in the method the source array, the array to copy to and number of elements to copy.
+<pre class="codeBlock prettyprint">
+String[] watchList = new String[5];
+Array.Copy(movies,watchList,5);</pre>
+Get the index of an element
+<pre class="codeBlock prettyprint">
+Array.IndexOf(movies, "Sonic the Hedgehog 2");</pre>
+The <code class="prettyprint">Sort()</code> method in the <code class="prettyprint">Array</code> class sorts the elements in an array in ascending order.
+<pre class="codeBlock prettyprint">
+Array.Sort(movies);
+</pre>
+The <code class="prettyprint">Join()</code> method in the <code class="prettyprint">String</code> class returns a string representation of an array. Pass a character to use to separate elements of the array. 
+<pre class="codeBlock prettyprint">String str = String.Join(',',numArray);
+</pre>
+Convert a string to an array with the <code class="prettyprint">Split()</code> method. Pass into the method a character where to split the string into elements.
+<pre class="codeBlock prettyprint">
+string myStr = "The Batman";
+String[] myStrArray = myStr.Split(' ');</pre>
+    <h2>Iterate through an Array</h2>
+ <p>Iterate directly through an array's element use the <code class="prettyprint">for</code> loop</p>
+    <pre class="codeBlock prettyprint">
+for(int i = 0; i &lt; movies.Length; i&plus;&plus;){
+
+    Console.WriteLine(movies[i]);
+}
+</pre>
+    <p>To iterate directly through each element in an array, use the <code class="prettyprint">foreach</code> loop.</p>
+    <pre class="codeBlock prettyprint">
+foreach (string movie in movies)
+{
+
+    Console.WriteLine(movie);
+}
+</pre>
+<!-- Binary Search
+<pre class="codeBlock prettyprint">
+Array.BinarySearch(movies, value);
+</pre>
+returns the index of value -->
+<h2>Multidimensional Arrays</h2>
+<p>A multidimensional array is an array whose elements are also arrarys. The Array and the nested arrays must be of the same type.</p>
+<pre class="codeBlock prettyprint">
+//multidimensional array riteral
+int[,] nums = {
+    {2, 4, 8, 16},
+    {3, 9, 27, 81},
+    {4, 16, 64, 256}
+};
+
+//multidimensional array declaration
+int[,] numsII = new int[3,4];
+
+//multidimensional array initialisation
+numsII[0,0] =  5;
+numsII[0,1] =  25;
+numsII[0,2] =  125;
+numsII[0,3] =  625;
+
+
+numsII[1,0] =  6;
+numsII[1,1] =  36;
+numsII[1,2] =  216;
+numsII[1,3] =  1296;
+
+numsII[2,0] =  7;
+numsII[2,1] =  49;
+numsII[2,2] =  343;
+numsII[2,3] =  2401;
+
+Console.WriteLine(nums[2,0]);
+Console.WriteLine(numsII[0,0]);
+</pre>
+<p>To traverse a multidimensional array, use nested <code class="prettyprint">for</code> loops.</p>
+<pre class="codeBlock prettyprint">
+for (int i = 0; i &lt; 3; i++)
+{
+    for (int j = 0; j &lt;&equals; 3; j++)
+    {
+        Console.Write(numsII[i, j]);
+        Console.Write(" ");
+    }
+    Console.WriteLine();
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

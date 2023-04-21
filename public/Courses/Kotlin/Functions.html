@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Functions</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Functions</h1>
+	<p>
+		A Function is a group of related statement that perform a task. Functions in Kotlin are
+		defined with the <code class="prettyprint">fun</code> keyword.
+	</p>
+
+	<pre class="codeBlock prettyprint">
+fun greet(){
+   println("Hello, Person")
+}</pre>
+If a function has a single statement, it can be writen as a single expression without cury brackets.
+	<pre class="codeBlock prettyprint">
+fun greet() =  println("Hello, Person")
+</pre>
+<p>A function is executed by calling it. To call a function, write the function name followed by parenthesis. Functions can be called as many times as needed.</p>
+	<pre class="codeBlock prettyprint">
+fun main() {
+//Function execution
+  greet()
+
+}
+//Function definition
+fun greet() {
+    println("Hello, Person")
+}	
+</pre>
+<h3>Return a value</h3>
+	<p>The <code class="prettyprint">return</code> keyword is used to return a value from a function. The type of data the function will return must be declared when defining the Function. Statements after the <code class="prettyprint">return</code> statement will not be executed.
+	<pre class="codeBlock prettyprint">
+fun greet(): String {
+   return "Hello, Person"
+
+}
+println(greet())</pre>
+A single expression function does not require a <code class="prettyprint">return</code> statement, and it's return
+	type will be infered.
+	<pre class="codeBlock prettyprint">
+fun greet() = "Hello, Person"
+</pre>
+<p>A Function returns a default value <code class="prettyprint">Unit</code>,
+	even if it doesn't have the <code class="prettyprint">return</code> keyword.</p>
+	<!-- = Return multiple values from a function. -->
+	<h3>Parameters</h3>
+	<strong>Parameters</strong>  are declared in parethesis when defining a function. A function can take any number of Parameters, comma seperate the parameters. Parameters are <code class="prettyprint">val</code> by default, they can not be mutated in the function.
+	<pre class="codeBlock prettyprint">
+fun greet(greeting: String, name: String): String {
+   return "&dollar;greeting, &dollar;name"
+}
+</pre>
+	<pre class="codeBlock prettyprint">
+fun isGreaterThan5(num:Int) = num &gt; 5
+</pre>
+Arguments are actual data passed into a function when calling it.
+	A function must be called with the number and type of arguments it expects otherwise you'll get an error.
+		<pre class="codeBlock prettyprint">
+println(greet("Good morning","Chris"))
+
+println(isGreaterThan5(4))
+</pre>
+	<h4>Unknown Number Of Arguments</h4>
+	Use <code class="prettyprint">vararg</code> to accept a variable number of arguments, even 0. Only one parameter can be <code class="prettyprint">vararg</code>.
+	<pre class="codeBlock prettyprint">
+fun sum(vararg numbers: Int): Int {
+    var sum = 0
+    numbers.forEach { number ->
+        sum += number
+    }
+    return sum
+}
+
+println(sum())
+println(sum(3, 6, 9))
+println(sum(2, 4, 6, 8))
+println(sum(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+</pre>
+Spread operator. can not pass an array directly, even though the <code class="prettyprint">vararg</code> argument are passed as an array.
+	<pre class="codeBlock prettyprint">
+val numbersArray = arrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+println(sum(numbersArray))
+</pre>
+Use the <em>Spread Operator</em> <code class="prettyprint">*</code>
+<pre class="codeBlock prettyprint">
+val numbersArray = arrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+println(sum(*numbersArray))
+</pre>
+	<h4>Default Parameter value</h4>
+	A parameter can be given a default value. When calling the function, passing an argument for that parameter is optional.
+	<pre class="codeBlock prettyprint">
+fun greet(greeting: String, name: String = "Person"): String {
+    return "&dollar;greeting, &dollar;name"
+}
+
+greet("Jane")</pre>
+	<h4>Named args</h4>
+	<p>When you call a function, you're expected to pass arguments passed to a function in the order the parameters are defined in.</p>
+	<pre class="codeBlock prettyprint">
+fun personalInfo(name: String, gender: String, age: Int): String {
+    return "&dollar;name \n$gender\n$age"
+}
+personalInfo("Bob",27,"Male")</pre>
+To pass arguments in any order, when calling a function specify which parameter the argument is for.
+	<pre class="codeBlock prettyprint">
+personalInfo(name = "Bob",age = 27, gender = "Male")</pre>
+When you pass in a Named argument, any argument passed after must be named.
+<h3>Function Overloading</h3>
+<p>Function overloading is defining a function multiple times with different number and or types of parameters. </p>
+<pre class="codeBlock prettyprint">
+fun greet(): String {
+    return "Hello, Person"
+}
+
+fun greet(name: String): String {
+    return "Hello, $name"
+}
+
+fun greet(greeting: String, name: String): String {
+    return "$greeting, $name"
+}
+</pre>
+The version of the function that will be called is the one with parameters that matches the arguments passed.
+<pre class="codeBlock prettyprint">
+println(greet())
+println(greet("Jane"))
+println(greet("Hi", "Bob"))
+</pre>
+<h3>Local functions</h3>
+A local function is a function defined in another function. The local function has access to the outer function's local variables.
+<pre class="codeBlock prettyprint">
+fun clossure(): String {
+    val item = "Kotlin"
+    val description = "Programming Language"
+	
+    fun inner(): String {
+        return "$item - $description"
+    }
+    return inner()
+}</pre>
+	<h3>Private function</h3>
+	private function can not be accessed from other Classes.
+	<pre class="codeBlock prettyprint">
+private fun function_name(){
+
+}</pre>
+	<!-- ---tailrec -->
+	<h3>Lambda Functions</h3>
+	<p>Lambda Functions are usually passed as arguments to other  Functions. Lambda Functions always returns the last line.
+	</p>
+	<pre class="codeBlock prettyprint">
+{println("Hello, World")}()
+</pre>
+	<pre class="codeBlock prettyprint">
+{greeting : String,name : String &hyphen;&gt; "$greeting, $name"}
+</pre>
+	<pre class="codeBlock prettyprint">
+val exponentiation = {num:int, power:int -> to do }
+exponentiation(2,3)
+</pre>
+	<!-- <h3>Anonymous Functions</h3>
+	<pre class="codeBlock prettyprint">
+val anon : object =
+</pre>
+	<pre class="codeBlock prettyprint">
+val func: (argType)->Rtype = {arg -> todo}
+</pre> -->
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

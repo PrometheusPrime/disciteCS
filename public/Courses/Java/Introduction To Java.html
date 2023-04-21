@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction To Java</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Java</h1>
+  <p>
+    Java is a General Purpose, Object Oriented Programming Language. Java was originally developed by a Team lead by James Gosling at
+    Sun Microsystems (which was acquired by Oracle Inc).
+  </p>
+  <h4>Benefits of using Java</h4>
+  <ul>
+    <li>Platform independent</li>
+    <li>WORA dot have to rewrite code to run on different platform makes it portable</li>
+    <li>Fast- Java is multi threaded</li>
+    <li>popular thousands of libraries hugge developer ecosystem Huge community of Developers</li>
+  </ul>
+  <h4>Uses</h4>
+  <p>Here is some of the uses of Java.</p>
+  <ul>
+    <li>Mobile application</li>
+    <li>Web application</li>
+    <li>Desktop applications</li>
+    <li>Servers</li>
+    <li>Big data</li>
+  </ul>
+  <h2>Installation</h2>
+  <p>To develop and run Java programs locally on your computer, you'll need to install the Java  Development Kit (JDK). Download the JDK for the OS you're using from <span class="link">www.oracle.com/java/technologies/downloads/</span>
+  </p>
+  <p>On Windows, after Installation you'll need to add the JDK to the Environment Variables. Click <kbd>Windows + S</kbd> to open the <strong>Search</strong> window.Type env,Click <strong>Edit the
+      system environment variables</strong></p>
+  <img src="images/environmentVariables.png" alt="environmentVariables">
+  Click <strong>Environment Variables</strong>. On System variables add a new variable with variable name = JAVA_HOME
+  and variable value = path/to/jdk-version folder. Click <strong>OK</strong>.</p>
+  <img src="images/javaHome.png" alt="">
+  <p>Under System Variables, select <strong>Path</strong>, then click Edit.</p>
+  <img src="images/path.png" alt="">
+  <p>Add a new entry %JAVA_HOME%\bin. Click <strong>OK</strong> to save.</p>
+  <img src="images/pathEnviromentVar.png" alt="">
+  <p>On each window that was opened, click <strong>Apply</strong> or <strong>OK</strong> to dismiss it and apply the
+    changes.</p>
+  <p>In a terminal window, type <code>java -version</code> then <kbd>Enter</kbd> to check if Java was installed and
+    configured correctly.</p>
+  <h2>Write and Run a Java console program</h2>
+  <pre class="codeBlock prettyprint">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
+</pre>
+  <p>Using simple text or code editor, create a file with <strong>.java</strong> as the file extention and write the
+    sample code. The class name must match the file name.</p>
+
+  <p>We need to compile the source code file to a <strong>.class</strong> file which is then run.</p>
+  <p>Open a terminal window in the directory where the source file is and run <sample>javac Main.java</sample>. A class
+    file will be generated in the same directory.</p>
+  <p>To run the program, run <sample>java Main</sample>
+  </p>
+  <p>Everytime you make changes to the source code file, remember to recompile your code.</p>
+  Alternatively, you can use an IDE like Eclipse or IntelliJ
+  <ul>
+    <li><code class="prettyprint">package</code></li>
+    <li><code class="prettyprint">public</code></li>
+    <li><code class="prettyprint">class</code> Java is srictly object orinted, every application begins with a class.
+    </li>
+    <li><code class="prettyprint">{}</code> The curly brackets marks the beginning and the end of a block of code.</li>
+    <li><code class="prettyprint">public static void main(String[] args)</code> - The main method is the program execution
+      starting point, it takes an array of strings as its argument.</li>
+    <li>
+      Comments are used to explain the logic and /reason of written Java code
+      <ul>
+        <li><code class="prettyprint">// single line comments</code></li>
+        <li>
+          <pre class="prettyprint">
+/*
+*multi-line comments
+*/</pre>
+        </li>
+        <!-- <li>Generate external documentation of the code
+          <pre class="codeBlock prettyprint">
+/**
+*documentation comments
+*/</pre>
+        </li> -->
+      </ul>
+    </li>
+    <li><code class="prettyprint">System.out.println()</code> - prints anything passed to it to the console.</li>
+    <li><code class="prettyprint">;</code> semi colon are required statement terminator.</li>
+  </ul>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

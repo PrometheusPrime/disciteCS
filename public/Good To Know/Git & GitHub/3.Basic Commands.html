@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git & GitHub - Basic Git Commands</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Basic Git Commands To Get You Started</h1>
+  <hr />
+  <p>
+    This is not a complete list of git commands, but a list of command mostly
+    used..
+  </p>
+  <ul>
+    <li>
+      <code class="code prettyprint lang-scm">git init </code> creates a
+      repository in the current directory.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git status </code> shows the
+      status of the repository.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git add </code> adds a file in
+      the working directory to the staging area.<br /><code
+        class="code prettyprint lang-scm">git add Hello.java </code>.<br />To add multiple files in the working
+      directory to the staging
+      area ...<br />
+      <code class="code prettyprint lang-scm">git add fileA fileB fileC</code><br /><code
+        class="code prettyprint lang-scm">git add * </code> adds
+      all the files in the working directory to the staging area.<br /><code class="code prettyprint lang-scm">git add *.java
+        </code>
+      adds all the files with a specified file extention in the working
+      directory to the staging area.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git reset </code> removes all
+      files (changes) from the staging area, but will remain in the working
+      directory with all the changes made.<br />
+      <code class="code prettyprint lang-scm">git reset file </code>
+      removes a file from the staging area, but it will remain in the working
+      directory with all the changes made to it. You can also unstage multiple
+      files(changes)...<br />
+      <code class="code prettyprint lang-scm">git reset fileA fileB </code>
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git commit </code> adds a
+      file(s) from the Staging area to the Repository. Each commit is given a
+      unique 40 character ID. To add a commit message in the command-line use
+      ...<br /><code class="code prettyprint lang-scm">
+          git commit -m "your commit message"
+        </code>
+      If you have commited the files before, you can directly commit any
+      changes without first adding to the staging area with the
+      <em>-a</em> option .. <br /><code class="code prettyprint lang-scm">git commit -a </code><br />
+      <code class="code prettyprint lang-scm">git commit -am "your commit message"</code>
+      To add a commit message in the command-line .
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git log </code> shows commit
+      history.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git diff </code> compares
+      changes in the Working Directory and the Staging Area. If there are no
+      differences the command will not return anything.<br /><code class="code prettyprint lang-scm">git diff --staged
+        </code>
+      compares changes in the Staging Area and the Index<br />
+      <code class="code prettyprint lang-scm">git diff commitID anotherCommitID
+        </code>
+      compares changes between commits.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git checkout </code> When you
+      checkout a commit, every thing in the working tree/working directory
+      will be restored to how they were at that point in time..<br />
+      <code class="code prettyprint lang-scm">git checkout commitID </code>
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git branch </code> without any
+      argument
+      <code class="code prettyprint lang-scm">git branch </code> shows a list
+      of existing branches ,current branch will be marked with an asterisk
+      (*).<br />To create a branch run
+      <code class="code prettyprint lang-scm">git branch </code> with an
+      argument being the name of the branch you wish to create....
+      <code class="code prettyprint lang-scm">git branch branchName </code>
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git switch </code> used to
+      switch between branches...<br />
+      <code class="code prettyprint lang-scm">git switch branchName </code><br /><code
+        class="code prettyprint lang-scm">git checkout </code> is
+      also
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git show </code> shows the most
+      recent commit on the current branch.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git merge</code>
+      combines changes from the named branch into the current one..<br /><code
+        class="code prettyprint lang-scm">git merge branchName</code>.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git rebase</code> combines
+      changes between branchescombines changes from the named branch into the
+      current one in a linear sequence..
+    </li>
+    <p>
+      When you make changes in the same file(s), on the same line(s) in
+      different branches and try to merge them, a <em>Merge Conflict</em> will
+      occur. A <em>Merge Conflict</em> will also occur when you try to merge
+      branches, where a file(s) was deleted and updated in another.
+    </p>
+    <p>
+      To resolve Merge Conflicts ,open the affected file(s) ,look for conflict
+      markers ,leave the version you wish to keep and delete the conflict
+      markers and the other version ,and then add and commit the changes..
+    </p>
+    <p>
+      To avoid Merge Conflicts ,before merging branches run
+      <code class="code prettyprint lang-scm">git diff branchA branchB </code>
+      to compare Changes between the tips of the branches. If there are
+      Changes on the tips of the branches that may result in Merge Conflicts
+      if you try merging them,fix them , commit changes ,and then you can
+      merge the branches...
+    </p>
+    <li>
+      <code class="code prettyprint lang-scm">git remote add remoteRepositoryUrl
+        </code>
+      Adds a remote repository.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git clone remoteRepositoryUrl </code>Clones a remote repository into the
+      current directory..
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git push
+        </code>
+      Pushes changes from the local to the remote repository. If the remote repository was not added, you will need to
+      specify the repository url ...<br /><code>git push remoteRepositoryUrl</code>
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git fetch </code> Fetches
+      changes from a remote repository.
+    </li>
+    <li>
+      <code class="code prettyprint lang-scm">git pull </code> Fetches changes
+      from a remote repository and integrates them into the current branch.
+    </li>
+  </ul>
+  <div class="tip">
+    <p>Git commands have options</p>
+    Git tracks content not files
+    <p>Git commands have options</p>
+  </div>
+
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

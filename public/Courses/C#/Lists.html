@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lists in C#</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>List</h1>
+	<code class="code prettyprint"></code>
+	<pre class="codeBlock prettyprint">
+using System.Collections.Generic;
+List&lt;string&gt; opposites = new List&lt;string&gt;();
+</pre>
+	Add an item to a list
+	<pre class="codeBlock prettyprint">
+opposites.Add("contradictory");
+opposites.Add("antagonistic");
+opposites.Add("antithetical");
+opposites.Add("contrary");
+opposites.Add("polar");
+</pre>
+	Add multiple items to a list with the <code>AddRange()</code>, pass an array or a list. The items will be added at
+	the end of the list.
+	<pre class="codeBlock prettyprint">
+string[] oppositeWords = {
+  "paradoxical",
+  "contraindicate",
+  "countermand",
+  "irreconcilable",
+  "u-turn",
+  "diametrically",
+  "opposite",
+  "antonym"
+ };
+
+ opposites.AddRange(oppositeWords);
+</pre>
+	Insert an item at a specific index
+	<pre class="codeBlock prettyprint">
+opposites.Insert(5, "inverse");
+</pre>
+	Get the number of items in a List <code>Count</code> property
+	<pre class="codeBlock prettyprint">
+opposites.Count;
+</pre>
+	Check if an item is in a List
+	<pre class="codeBlock prettyprint">
+opposites.Contains("paradoxical");
+</pre>
+	Get the index of a list item, returns a negative number is the item is not in the list.
+	<pre class="codeBlock prettyprint">
+opposites.IndexOf("inverse");
+</pre>
+	Sort a List, the actual list is modified.
+	<pre class="codeBlock prettyprint">
+opposites.Sort();
+</pre>
+	Copy an Array into a List
+	<pre class="codeBlock prettyprint">
+list&lt;type&gt; myList = new list&lt;type&gt;(new type[]{value,value});
+</pre>
+or
+	<pre class="codeBlock prettyprint">
+list&lt;type&gt; myList = new list&lt;type&gt;(anArray);
+</pre>
+	Remove an item from a list
+	<pre class="codeBlock prettyprint">
+opposites.Remove("opposite");
+</pre>
+	<code>RemoveAt()</code> removes an item at the specified index from the list.
+	<pre class="codeBlock prettyprint">
+opposites.RemoveAt(9);
+</pre>
+	Remove all items in a list
+	<pre class="codeBlock prettyprint">
+opposites.Clear();
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

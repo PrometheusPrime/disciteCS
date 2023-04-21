@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inheritance</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h2>Inheritance</h2>
+  <p>Suppose you have instead of redefining all those properties, we can simply inherit them</p>
+  <pre class="codeBlock prettyprint">
+public class Person {
+  private static int numberOfPeople;
+  private String name;
+  private int age;
+  private String gender;
+
+  String personalInfo() {
+    return "Name : " + this.getName() + "\n" + "Gender : " + this.getGender() + "\n" + "Age : " + this.getAge();
+  }
+
+  // Setters
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setAge(int age) {
+    if (age &lt; 0) {
+      this.age = 0;
+    } else {
+      this.age = age;
+    }
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  // Getters
+  public String getName() {
+    return name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public String getGender() {
+    return gender;
+  }
+
+  public static int getNumberOfPeople() {
+    return numberOfPeople;
+  }
+
+  // Constructors
+  public Person() {
+    numberOfPeople++;
+
+  }
+
+  public Person(String name, int age, String gender) {
+    setName(name);
+    setAge(age);
+    setGender(gender);
+    numberOfPeople++;
+
+  }
+
+}</pre>
+  Use the <code class="prettyprint">extends</code> keyword to inherit from a class. A class can only inherit from one
+    class, multiple classes can inherit from one class.</p>
+    <pre class="codeBlock prettyprint">
+public class Student extends Person{
+
+}
+public class Employee extends Person{
+
+}
+
+</pre>
+All the properties in the Super class,as long as they are not <code class="prettyprint">private</code>, will be available in the Derived class.
+  <pre class="codeBlock prettyprint">
+public class Employee extends Person {
+  private String position;
+  private double salary;
+
+  // Getters
+  public String getPosition() {
+    return position;
+  }
+
+  public double getSalary() {
+    return salary;
+  }
+
+  // Setters
+  public void setPosition(String position) {
+    this.position = position;
+  }
+
+  public void setSalary(double salary) {
+    if (salary &lt; 0.0) {
+      this.salary = 0.0;
+    } else {
+      this.salary = salary;
+    }
+  }
+
+  // Constructors
+  public Employee() {
+
+  }
+
+  public Employee(String name, int age, String gender, String position, double salary) {
+    super(name, age, gender);
+    setPosition(position);
+    setSalary(salary);
+  }
+}
+</pre>
+<p>With <code class="prettyprint">super()</code>, we're calling the parent Constructor to handle the initialisation of name and age properties.</p>
+  <pre class="codeBlock prettyprint">
+public class Main{
+  public static void main(String[] args){
+
+  Employee emp1 = new Employee("John Doe", 38, "Male", "Lead Developer", 125000.0);
+
+  }
+}
+</pre>
+  <h2>Method Overiding</h2>
+  <p>We can provide a different implementation of an inherited method in the Sub<code class="prettyprint">class</code>, this is known as <strong>Method Overiding</strong>. <code class="prettyprint">static</code> and <code class="prettyprint">final</code> methods can not be overriden</p>
+  <pre class="codeBlock prettyprint"></pre>
+  <p>We overriden the <code class="prettyprint">personalInfo()</code> method so that it shows the <code class="prettyprint">position</code> and <code class="prettyprint">salary</code> properties.</p>
+  <pre class="codeBlock prettyprint">
+public class Employee extends Person {
+  private String position;
+  private double salary;
+
+  String personalInfo() {
+    return "Name : " + this.getName() + "\n" + "Gender : " + this.getGender() + "\n" + "Age : " + this.getAge() + "\n"
+        + "Position : " + this.getPosition() + "\n" + "Salary : " + this.getSalary();
+  }
+
+  // Getters
+  public String getPosition() {
+    return position;
+  }
+
+  public double getSalary() {
+    return salary;
+  }
+
+  // Setters
+  public void setPosition(String position) {
+    this.position = position;
+  }
+
+  public void setSalary(double salary) {
+    if (salary &lt; 0.0) {
+      this.salary = 0.0;
+    } else {
+      this.salary = salary;
+    }
+  }
+
+  // Constructors
+  public Employee() {
+
+  }
+
+  public Employee(String name, int age, String gender, String position, double salary) {
+    super(name, age, gender);
+    setPosition(position);
+    setSalary(salary);
+  }
+}
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

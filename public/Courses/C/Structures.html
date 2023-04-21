@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Structures</h1>
+    <p>A structure is used to define a custom data type . To create a structure, write the <code class="prettyprint">struct</code> keyword followed by the name of the structure and curly bracket.</p>
+    group related data.
+    <pre class="codeBlock prettyprint">
+struct Person{
+    char name[20];
+    int age;
+    char hobbies[5][1];
+
+
+};
+</pre>
+
+<pre class="codeBlock prettyprint">
+struct Person jake;
+</pre>
+<pre class="codeBlock prettyprint">
+strcpy(jake.name, "hhfgh" );
+jake.age = ;
+jake.hobbies 
+</pre>
+<pre class="codeBlock prettyprint">
+struct Person st1 = {,,};
+</pre>
+    <p> type cast</p>
+    <pre class="codeBlock prettyprint">
+struct Person{
+    
+};
+    
+struct Student st1;
+st2 = (struct Student) {,,};
+</pre>
+    <p>names of members</p>
+    <pre class="codeBlock prettyprint">
+struct Student{
+    
+};
+    
+struct Student st1 = {.memberName,.memberName};
+</pre>
+    <p>accessing members of a structure</p>
+    <pre class="codeBlock prettyprint">
+variableName.member;
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

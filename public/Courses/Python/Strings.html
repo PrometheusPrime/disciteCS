@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strings</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>String</h1>
+  <p>
+    A <em>String</em> is an ordered, immutable sequence or collection of characters (numbers , letters , spaces,
+    et cetra).
+
+  </p>
+  <pre class="codeBlock prettyprint">
+print("Hello World")
+</pre>
+  <p>
+    To display single quotes, use double quotes as delimiters and vice versa.
+  </p>
+  <pre class="codeBlock prettyprint">
+print("'Monty Python's Flying Circus'")
+</pre>
+  <p>
+    Using the same quotes in a string as the ones you're using as delimiters
+    will give you an error.
+  </p>
+  <pre class="codeBlock prettyprint">
+#syntax error
+print(''Monty Python's Flying Circus'')
+</pre>
+  <p>Use the Backslash (\) to escape quotes or any special Characters.</p>
+  <pre class="codeBlock prettyprint">
+print('\'Monty Python\'s Flying Circus\'')
+</pre>
+  <p>Use (\n) to add a newline in a string. Any characters after (\n) will be pushed to a new line.</p>
+  <pre class="codeBlock prettyprint">
+print("3\n2\n1\n0")
+</pre>
+  <p> Prefix <code>r</code> before the opening quotes to create a Raw string, any special Characters in a Raw string are treated like ordinary characters.</p>
+  <pre class="codeBlock prettyprint">
+print(r"3\n2\n1\n0")
+</pre>
+  <p>
+    To Display preformated or multiline strings, use three single (''') or
+    Double (""") quotes. he output will be exactly the way it was formated in
+    the code.
+  </p>
+  <pre class="codeBlock prettyprint">
+print('''The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.''')
+</pre>
+  <h2>Operating On Strings</h2>
+  <p>
+    The Addition Operator (+) is used to join (concatenate) strings together.
+    Numbers can not be added or combined with strings.
+  </p>
+  <pre class="codeBlock prettyprint">
+first_name = "Jane"
+last_name = "Doe"
+name = first_name +" "+ last_name
+print(name)
+</pre>
+  <p>
+    Strings can be multiplied by an integer, the result is that string repeated
+    n times . A string can not be multiplied by another string.
+  </p>
+  <pre class="codeBlock prettyprint">
+i = "I"
+i_times_three = i * 3
+print(i_times_three)
+</pre>
+  <h3>Indexing</h3>
+  <p>Remember strings are ordered sequences of characters, we can get individual characters by writing the the name of a string followed by the position of the character in square brackets.</p>
+  <p>Index starts from 0, so the last character is at <code>number_of_characters_in_a_string - 1</code>.</p>
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet[0])
+</pre>
+  <pre class="codeBlock prettyprint">
+print(greet[-1])
+</pre>
+  <h3>slicing</h3>
+  <p>Slice a String to obtain substring. All the characters from the start index upto but not including the end index
+    will be returned.</p>
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet[1:5])
+</pre>
+  the characters from the start index upto the end of the string will be returned.
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet[2:])
+</pre>
+  the characters from the start of the string upto the end index will be returned
+  <pre class="codeBlock prettyprint">
+greet = 'Hello World'
+print(greet[:5])
+</pre>
+  <h3>String Methods and Functions</h3>
+  <p>
+    The <code class="prettyprint">len()</code> function returns the length
+    (number of characters) of a string.
+  </p>
+  <pre class="codeBlock prettyprint">
+first_name = "Jane"
+print(len(first_name))
+</pre>
+  <p>
+    The <code class="prettyprint">strip()</code> method removes whitespace
+    from the beginning and / the end of a string.
+  </p>
+  <pre class="codeBlock prettyprint">
+first_name = " Jane "
+print("Number of characters before striping whitespace")
+print(len(first_name))
+first_name = first_name.strip()
+print("Number of characters after striping whitespace")
+print(len(first_name))
+</pre>
+  Strings are immutable, so <code class="prettyprint">replace()</code> returns a new string
+  <pre class="codeBlock prettyprint">
+greet = 'Hello World'
+greet2 = greet.replace('H','Y')
+print(greet)
+print(greet2)
+</pre>
+  <code class="prettyprint">startswith()</code> method
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet.startswith('H'))
+</pre>
+  <code class="prettyprint">endswith()</code> method
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet.endswith('l'))
+</pre>
+  <p> The <code class="prettyprint">find("C")</code> method returns the index of a character in a String.</p>
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet.find('e'))
+</pre>
+  <code class="prettyprint">count()</code> method
+  <pre class="codeBlock prettyprint">
+greet = 'Hello'
+print(greet.count('l'))
+</pre>
+  The <code class="prettyprint">lower()</code> method return a copy of the string with all the letters converted to
+  lowercase.
+  <pre class="codeBlock prettyprint">
+greet = 'HELLO WORLD'
+print(greet.lower())
+</pre>
+  <h2>String Formating</h2>
+  <pre class="codeBlock prettyprint">
+age = 20
+print('You are ' + age + 'years old')
+</pre>
+  <pre class="codeBlock prettyprint">
+age = 20
+print('You are ' + str(age) +' years old')
+</pre>
+  add curly brackets as placeholder in a string and place the variables in the <code class="prettyprint">format()</code>
+  method.
+  <pre class="codeBlock prettyprint">
+age = 20
+print('You are {} years old'.format(age))</pre>
+  </pre>
+  <pre class="codeBlock prettyprint">
+name = 'Jane Doe'
+age = 20
+print('{} is {} years old'.format(name,age))
+</pre>
+  <pre class="codeBlock prettyprint">
+name = 'Jane Doe'
+age = 20
+print('{} is {} years old'.format(name,age))
+</pre>
+  kwargs
+  <pre class="codeBlock prettyprint">
+name = 'Jane Doe'
+age = 20
+print('{n} is {a} years old'.format(a = age,n = name))
+</pre>
+  <h3>Formated Strings (f-string)</h3>
+  <pre class="codeBlock prettyprint">
+name = 'Jane Doe'
+age = 20
+print(f'You are {age} years old')
+print(f'{name} is {age} years old')
+</pre>
+an expression that will evaluated at run time
+  <pre class="codeBlock prettyprint">
+print(f'There are {60 * 60 * 24} seconds in a day')
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+      <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

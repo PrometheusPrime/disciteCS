@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranges</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Ranges</h1>
+  <h2>Number</h2>
+  <pre class="codeBlock prettyprint">
+var numVar = 1 .. 10
+ </pre>
+  <pre class="codeBlock prettyprint">
+var nums = 5.downTo(3)
+ </pre>
+  <pre class="codeBlock prettyprint">
+var nums = 7.rangeTo(25)
+ </pre>
+  <pre class="codeBlock prettyprint">
+var nums = numVar.step(5)
+ </pre>
+
+  <h2>Letters</h2>
+  <pre class="codeBlock prettyprint">
+var myRange = 'V' .. 'Y'
+ </pre>
+  loop through ranges with the <code class="code prettyprint">for</code> loop
+  <pre class="codeBlock prettyprint">
+for(num in 1..10){
+  println(num)  
+}
+</pre>
+upto but not including the upper limit
+  <pre class="codeBlock prettyprint">
+for(num in 10 until 100){
+  println(num)  
+}
+</pre>
+  <pre class="codeBlock prettyprint">
+for(letter in 'V'..'Y'){
+  println(letter)
+        
+}
+</pre>
+  <pre class="codeBlock prettyprint">
+for(num in 'Y' downTo 'V'){
+  println(num)  
+        
+}
+</pre>
+  <pre class="codeBlock prettyprint">
+for(num in 10..100 step 10){
+  println(num)  
+}
+</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>plots and Charts</h1>
+	<h2>Basic plotting</h2>
+	<code class="code prettyprint">plot()</code>
+	<pre class="codeBlock prettyprint">
+plot(matrix)
+ </pre>
+	plot a line
+	<pre class="codeBlock prettyprint">
+plot(vector, vector,type=L)
+</pre>
+	L - to draw a line<br />
+	<pre class="codeBlock prettyprint">
+plot(vector.x, vector.y,type="",
+      main="main title",
+      xlab="x title",
+      ylab="y title",
+      col="colour"
+     )
+</pre>
+	<!--
+-to get a list of supported colours, type Colors() in the console
+-sample()
+-->
+	<code class="code prettyprint">abline()</code><br />
+	<code class="code prettyprint">text()</code>
+	<h2>Charts</h2>
+	barcharts
+	<pre class="codeBlock prettyprint">
+barplot()
+</pre>
+	3D pie Charts install.package("plotrix")
+	<pre class="codeBlock prettyprint">
+pie3D()
+</pre>
+	--Regression analysis- relationship between two separate pieces of data<br />--relationship model
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Errors & Exceptions</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Errors</h1>
+  <p>An <strong>error</strong> will cause a program to stop execution or not run at all.</p>
+  <h2>Syntax Errors</h2>
+  <p>Every programming language has rules on how a piece of code is supposed to be written. If a line of code does not
+    conform to Python's syntax rules, it will cause a <strong>Syntax Error</strong>.</p>
+
+  <pre class="codeBlock prettyprint">
+if True
+    print("Thats True")
+</pre>
+  The interpreter will not understand the instructions, therefore the program will not run.
+  <h3>How to fix Syntax Errors</h3>
+  <ul>
+    <li>If you're using a code editor or IDE with syntax highlighting, it will highlight any syntax errors in your code.
+    </li>
+    <li>If you run code with syntax errors, the error message will show where the error(s) is and suggest how to fix it.
+    </li>
+  </ul>
+  <h2>Exceptions</h2>
+  <p>An <strong>Exceptions</strong> is an error that occurs when running a program (<em><strong>Runtime
+        Error</strong></em>). A Statement's syntax might be correct, but it may
+    still cause an Exception.</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+c = a/b
+print(c)
+</pre>
+  <p>
+    The line of code where the error occured will be shown, this is called a <strong>traceback</strong>. The last line
+    of the error message shows the type of error encountered.</p>
+  <p>If an exception was not handled the program stop runing immediately, the lest of the code will not be executed.</p>
+  <h3>Exception Handling</h3>
+  <p>The <code class="prettyprint">try</code> Statement is used to execute code that might cause an error. The <code
+      class="prettyprint">except</code> clause defines what to do if an error occurs. If an exception is raised in the
+    <code class="prettyprint">try</code> clause, the rest of the statements will not be executed and execution goes to
+    the <code class="prettyprint">except </code> block.
+    If no exception occurs, the <code class="prettyprint">except</code> clause is skipped.
+  </p>
+  <pre class="codeBlock prettyprint">
+try:
+    code that might be problematic
+except:
+    what to do if an error occurs
+</pre>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+try:
+    c = a/b
+    print(c)
+except:
+    print("Something went wrong")
+</pre>
+  <p>Pyton has different types of Exceptions built-in Exception Class
+    .</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+try:
+  c = a/b
+  print(c)
+except Exception:
+  print("Something went wrong")
+</pre>
+  <p>We use an alias to get the description of the error raised from the Exception class.</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+try:
+  c = a/b
+  print(c)
+except Exception as err:
+  print(f'A {err} error occured')
+</pre>
+  <p>If we know the type of error that might occur, we can handle that specific error.</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+try:
+  c = a/b
+  print(c)
+except ZeroDivisionError:
+  print("can not divide by 0")
+</pre>
+  You can still use an alias to get the description of the error raised.
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+try:
+    c = a/b
+    print(c)
+except ZeroDivisionError as err:
+    print(f"{err} error")
+</pre>
+  <p>catch multiple errors</p>
+  <pre class="codeBlock prettyprint">
+try:
+    a = int(input('Enter a number : '))
+    b = int(input('Enter another number : '))
+    c = a/b
+    print(c)
+except ValueError as e:
+    print(err)
+except ZeroDivisionError as e:
+    print(err)
+except Exception:
+  print("Something went wrong")
+</pre>
+  <p>
+    The <code class="prettyprint">else</code> Statement will run if no exceptions were raised in the in the <code
+      class="prettyprint">try</code> block.
+  </p>
+  <pre class="codeBlock prettyprint">
+try:
+    a = int(input('Enter a number : '))
+    b = int(input('Enter another number : '))
+
+except (ValueError,ZeroDivisionError):
+    print('Please enter only numbers and the second number can not be 0')
+except Exception:
+    print("Something went wrong")
+else:
+    print(f'{a} / {b} = {a/b}')
+</pre>
+  <p>
+    The <code class="prettyprint">raise</code> statement is used to manually raise (force) an exception.
+  </p>
+  <code class="prettyprint">raise Exception('Custom description')</code>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 0
+if b == 0:
+  raise Exception("can not divide by Zero")
+else:
+  c = a/b
+  print(c)
+</pre>
+  <p>
+    The <code class="prettyprint">finally</code> clause is always executed, whether there was an exception or not. It is
+    used to clean up (release resources, close files ,etc).
+  </p>
+  <pre class="codeBlock prettyprint">
+try:
+    code that might be problematic
+except:
+    what to do if an error occured
+else:
+    what to do if no error occured in try block
+finally:
+    what to do, whether there was an error or not
+</pre>
+  <!-- <p>create own errors by subclassing the Exceptions class,</p> -->
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

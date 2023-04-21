@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables and Data Types</h1>
+    <h2>Variables</h2>
+    <p> A Variable is a container for storing data. C# is statically-typed ,once a variable's type is defined it can not
+        change.</p>
+    <p>To Create a Variable in C# , you'll have to write the type of Data, variable name = and then the value; The
+        <em><strong>Equals (=)</strong></em> sign is used to assign a value to a variable.
+    </p>
+An identifier(variable name) can not start with a number, contain space or be a reserved keyword.
+    <pre class="codeBlock prettyprint">short age = 18 ;</pre>
+        Another way of defining a variable is by using the <code class="code prettyprint">var</code> keyword. When defining a variable using the <code class="code prettyprint">var</code> you don't have to specify the data type.
+    <pre class="codeBlock prettyprint">
+var characterName = "John Wick";
+Console.WriteLine(charactername);
+</pre>
+    
+    <p>You can also declare a variable and assign it a value later.</p>
+    <pre class="codeBlock prettyprint">
+String name ;
+name = "Jane";
+</pre>
+Before a variable is used, it must be initialised.
+    <p>The value of a variable can be changed as many times as needed.</p>
+<pre class="codeBlock prettyprint">
+String name  = "Jane";
+name = "John Wick";
+name = "John Wick";
+</pre>
+    <h4>Constants</h4>
+    Use the <code class="code prettyprint">const</code> keyword to define a constant. A constant must be initialised.
+    <pre class="codeBlock prettyprint">
+const double PI = 3.1415;
+</pre>
+    <h2>Data Types</h2>
+    <h3>Primitive Data Types</h3>
+    <p>Primitive data types are the most basic data types provided by a Programming Language. C# has 5 Primitive Data Types :
+        <strong><em>int</em></strong>,
+        <strong><em>long</em></strong>,
+        <strong><em>decimal</em></strong>,
+        <strong><em>float</em></strong>, <strong><em>double</em></strong>, <strong><em>character</em></strong> and
+        <strong><em>boolean</em></strong>.
+    </p>
+    <p><strong><em>int</em></strong></p>
+    <pre class="codeBlock prettyprint">
+int</pre>
+    <p>
+        <strong>long</strong> ranges from -9223372036854775808 to 9223372036854775807 (64-bit) and are 8 bytes in size
+    </p>
+    <pre class="codeBlock prettyprint">decimal milliSecondsInAYear = 31536000000;
+</pre>
+    <p>
+        <strong>decimal</strong> 128 bit , accurate up to 28 digits, append M to the value.
+    </p>
+    <pre class="codeBlock prettyprint">
+decimal
+</pre>
+    <p>
+        <strong>float</strong> are 32-bit single-precision floating point numbers, are 4 bytes in size and have a
+        default value of 0.0 . To create a float you must end the value with an f, otherwise you'll get an error because
+        it will be interpreted as a double.
+    </p>
+    <pre class="codeBlock prettyprint">float  height = 6.4f ;
+</pre>
+Alternitively, cast it to float.
+    <pre class="codeBlock prettyprint">float  height = (float) 6.4;
+</pre>
+    <p>
+        <strong>double</strong> is a 64-bit double-precision numbers and is 8 bytes in size.
+    </p>
+    <pre class="codeBlock prettyprint">
+# integers
+double pi = 3.1415;
+</pre>
+    <p>
+        <strong>char</strong> is a single 16-bit Unicode character ranging from '\u0000' or 0 to '\uffff' or 65,535. A
+        char is 2 bytes in size. Char values are surrounded by single quotes ('').
+    </p>
+    <pre class="codeBlock prettyprint">
+char grade = 'A';
+</pre>
+    <p>
+        <strong>Boolean</strong> can only take the values true or false and are 1 byte in size.
+    </p>
+    <pre class="codeBlock prettyprint">
+bool isRaining = false;
+</pre>
+    <h2>Type Conversion</h2>
+    Variable can be converted from one data type to another.
+    Implicit Conversion
+    Explicit Conversion
+    <p>From double to int</p>
+    Type casting is when you assign a value of one primitive data type to another type. --implicit from small to large,
+    --explicit from large to small
+    <pre class="codeBlock prettyprint">
+int intVar = (int) doubleVarOrNum;
+</pre>
+    to double
+    <pre class="codeBlock prettyprint">
+double.Parse();
+</pre>
+    to float
+    <pre class="codeBlock prettyprint">
+float.parse();
+</pre>
+    to bool
+    <pre class="codeBlock prettyprint">
+bool.Parse()
+</pre>
+    To String
+    <pre class="codeBlock prettyprint">
+.ToString()
+</pre>
+    convert from a string to a number
+    <pre class="codeBlock prettyprint">
+var age = Convert.ToByte("104");
+int.parse(numerical str);
+var score = Convert.ToInt32("");
+var population = Convert.ToInt64("");
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Data Types</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables & Data Types</h1>
+   <h2>Variables</h2>
+    <p>A variable is a container for storing data in memory. An identifier (variable name) can consist of letters, numbers and underscores, but it cannot start with a number, contain a space or special characters and must not be a reserved keyword. Variable names are case sensitive.</p>
+    <p>When declaring a variable, you have to specify the type of data it'll hold. The assignment operator <code class="prettyprint">=</code> is used to assign a value to a variable.</p>
+    <pre class="codeBlock prettyprint">char* firstName = "Jake";</pre>
+    Declare variable and then assign it a value later.
+    <pre class="codeBlock prettyprint">char* lastName;
+lastName = "Jones";
+</pre>
+Declare multiple variables on a single line if they are of the same data type.
+    <pre class="codeBlock prettyprint">float weight,height;</pre>
+    The value of a variable can be changed as many times as needed, but the type of that value must equal the type that variable can store.
+    <pre class="codeBlock prettyprint">
+short age = 5;
+age = 15;
+age = 27;
+</pre>
+    <p>Declare a constant variable with the <code class="prettyprint">const</code> keyword, constants must be initialised.</p>
+    <pre class="codeBlock prettyprint">const int DAYS_IN_A_WEEK = 7;</pre>
+<h2>Data Types</h2>
+<p>There are four primitive data types in C; <code class="prettyprint">int</code>, <code class="prettyprint">float</code>, <code class="prettyprint">double</code> and <code class="prettyprint">char</code>.</p>
+<p>
+<code class="prettyprint">int</code> - Is used to store itegers (negative or positive whole numbers). The size of <code class="prettyprint">int</code> depends on the architecture of the computer. If it is a 32 bit machine, then an <code class="prettyprint">int</code> can store values from -2147483648 to 2147483647.
+</p>
+<pre class="codeBlock prettyprint">int salary = 250000;</pre>
+<!-- <p>
+long</p>
+<pre class="codeBlock prettyprint">long milliSecondsInAYear = 31536000000l;</pre> -->
+By default integers are <code class="prettyprint">signed</code>, they store negative and positive numbers. If you only need to store
+    positive values you can declare integer types as <code class="prettyprint">unsigned</code>,
+    their upper range will be doubled .
+<pre class="codeBlock prettyprint">unsigned int </pre>
+
+<p><code class="prettyprint">float</code> (floating point number) -  real numbers with a decimal point. A <code class="prettyprint">float</code> has an accuracy of up to 6 decimal places.</p>
+<pre class="codeBlock prettyprint">float height;</pre>
+<p><code class="prettyprint">double</code> - stores floating point numbers same as a <code class="prettyprint">float</code>, but it is more precise. It has an accuracy of up to 15 decimal places</p>
+<pre class="codeBlock prettyprint">double pi = 3.141592653589793;</pre>
+
+<p><code class="prettyprint">char</code> - is used to store a single character. The value is enclosed between single quotes ('')</p>
+<pre class="codeBlock prettyprint">char questionMark = '?';</pre>
+Alternatively, you can assign an ASCII code of the character.
+<pre class="codeBlock prettyprint">char hyphen = ;</pre>
+<h3>Type conversion</h3>
+Explicit cast is performed by placing the desired data type in parentheses before the variable or
+value that is to be converted.
+<pre class="codeBlock prettyprint">
+int num = 42;
+double int_to_double = (double)num;
+char int_to_char = (char)num;
+</pre>
+When you convert a char to a number, you'll get an ASCII code of that character.
+<pre class="codeBlock prettyprint">
+int char_to_int = (int)'P';</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

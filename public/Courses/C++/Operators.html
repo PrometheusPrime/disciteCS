@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Operators</h1>
+    <h2>Arithmetic Operators</h2>
+    Arithematic Operators are used in basic arithematic calculations.
+    <p><em><strong>Addition Operator (+)</strong></em> : adds the operands.</p>
+    <pre class="codeBlock prettyprint">
+int x = 6;
+int y = 8;
+std::cout &lt;&lt; x + y;
+</pre>
+    <p><em><strong>Subtraction Operator (-)</strong></em> : subtracts one operand from another.</p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+double y = 2.5;
+std::cout &lt;&lt; x - y;
+</pre>
+    <p><em><strong>Multiplication Operator (*)</strong></em> : multiplies the operands.</p>
+    <pre class="codeBlock prettyprint">
+int x = 9;
+int y = 25;
+std::cout &lt;&lt; x * y;
+</pre>
+    <p><em><strong>Division Operator (/)</strong></em> : divides the operands. returns a floating point number if
+        atleast on operand is a float.</p>
+    <pre class="codeBlock prettyprint">
+int x = 26;
+int y = 2;
+std::cout &lt;&lt; x / y;
+</pre>
+    <p><em><strong>Modulus or Remainder Operator (%)</strong></em> : returns the remainder of dividing the given
+        operands.</p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+int y = 3;
+std::cout &lt;&lt; x % y;
+</pre>
+    <h2>Unary Operators</h2>
+    <p>Unary Operator perform various operations on one operand.</p>
+    <p><em><strong>Increment Operator (++)</strong></em> increments a variable by 1 </p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+x ++;
+std::cout &lt;&lt; x;
+</pre>
+    <p><em><strong>Decrement Operator (--)</strong></em> decrements a variable by 1</p>
+    <pre class="codeBlock prettyprint">
+int x = 5;
+x --;
+std::cout &lt;&lt; x;</pre>
+    prefix vs postfix the post operator
+    returns the original value before it changes the variable, while the pre-operator
+    changes the variable first and then returns the value.
+    <pre class="codeBlock prettyprint">
+int x = 5;
+int y = 5;
+std::cout &lt;&lt; ++x &lt;&lt; std::endl;
+std::cout &lt;&lt; y++ &lt;&lt; std::endl;</pre>
+    <h2>Compound Assignment Operators</h2>
+
+    <p><em><strong> Operator (+=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x+= 5;  //same as x = x + 5
+std::cout &lt;&lt; x;
+</pre>
+    <p><em><strong> Operator (-=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x-= 5;  //same as x = x - 5
+std::cout &lt;&lt; x;
+</pre>
+    <p><em><strong> Operator (*=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x*= 5;  //same as x = x * 5
+std::cout &lt;&lt; x;
+</pre>
+    <p><em><strong> Operator (/=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x/= 5;  //same as x = x / 5
+std::cout &lt;&lt; x;
+</pre>
+    <p><em><strong> Operator (%=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+x%= 5;  //same as x = x % 5
+std::cout &lt;&lt; x;
+</pre>
+    <h2>Comparison Operators</h2>
+    <p>Comparison (or Relational) Operators are used to compare given Variables, they return a Boolean value (1 means
+        <code class="prettyprint">true</code> and 0 means <code class="prettyprint">false</code>).</p>
+    <p><em><strong>Greater Than Operator (>)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+std::cout &lt;&lt; (x &gt; y);
+</pre>
+    <p><em><strong>Less Than Operator (&lt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+std::cout &lt;&lt; (x &lt; y);
+</pre>
+    <p><em><strong>Equality Operator (==)</strong></em> : compares whether the Operands are Equal.</p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+std::cout &lt;&lt; (x == y);
+</pre>
+    <p><em><strong>Greater Than or Equal To Operator (&gt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+std::cout &lt;&lt; (x &gt;= y);
+</pre>
+    <p><em><strong>Less Than or Equal To Operator (&lt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+std::cout &lt;&lt; (x &lt;= y);
+</pre>
+    <p><em><strong>Inequality Operator (!=)</strong></em> : checks whether the Operands are Not Equal.Returns True if
+        they are not equal.</p>
+    <pre class="codeBlock prettyprint">
+int x = 8;
+int y = 5;
+std::cout &lt;&lt; (x != y);
+</pre>
+    <h2>Logical Operator</h2>
+    <p>Logical Operators are used to chain Boolean Variables, they return a boolean value (1 means <code
+            class="prettyprint">true</code> and 0 means <code class="prettyprint">false</code>)..</p>
+    <p><em><strong> And Operators </em>(&&)</strong> : Returns true if all the variables are true.</p>
+    <pre class="codeBlock prettyprint">
+bool isRaining = true;
+bool isSunny = false;
+std::cout &lt;&lt; (isRaining && isSunny);
+</pre>
+    <p><em><strong>Or Operator </em>(||)</strong> : Returns True if one of the conditions is true.</p>
+    <pre class="codeBlock prettyprint">
+bool isRaining = true;
+bool isSunny = false;
+std::cout &lt;&lt; (isRaining || isSunny);
+</pre>
+    <p><em><strong>Not Operator </em>(!)</strong> : inverts a boolean value . If it was True , it becomes False.</p>
+    <pre class="codeBlock prettyprint">
+bool isRaining = true;
+std::cout &lt;&lt; (!isRaining);
+</pre>
+    <p>Logical Operators can be chained and are evaluated according to Their order of precedence.</p>
+    <p><strong>Ternary Operator(?:)</strong>Perfom assignment based on a condition. Ternary operator can replace a single if - else statement</p>
+    <pre class="codeBlock prettyprint">
+std::string x = (4 &lt; 5) ? "4 is less than 5" : "4 is greater than 5";
+std::cout &lt;&lt; x;
+</pre>
+    arith,relational,logical precedence
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

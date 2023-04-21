@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaces</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Interface</h1>
+    <p>Another way of achieving <strong>Abstraction</strong> in Java is with interfaces. An <code class="prettyprint">interface</code> is a fully <code class="prettyprint">abstract</code> type.Interfaces help us achieve multiple inheritance.</p>
+    <pre class="codeBlock prettyprint">
+interface Animal{
+
+}</pre>
+    <p>An <code class="prettyprint">interface</code> cannot be instantiated, it is implemented by a class. Use the <code class="prettyprint">implements</code> keyword to implement an <code class="prettyprint">interface</code>.</p>
+    <pre class="codeBlock prettyprint">
+interface Animal{
+    
+}
+Abstract class Bird implements Animal{
+
+}
+class Person extends Human implements Animal{
+
+}
+</pre>
+    <p>A class can implement any number of interfaces but can only inherit from one class. A class that implements an <code class="prettyprint">interface</code> must provide implementation for  all <code class="prettyprint">abstract</code> methods in the interface, unless it is an <code class="prettyprint">abstract</code> class.</p>
+    <pre class="codeBlock prettyprint">
+interface Animal{
+    
+}
+Abstract class Bird implements Animal{
+
+}
+class Person extends Human implements Animal{
+
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+interface nam = new interface
+interface nam = new class
+</pre>
+<p><code class="prettyprint">default</code> methods have implementation, but can still be overriden.</p>
+<pre class="codeBlock prettyprint"></pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

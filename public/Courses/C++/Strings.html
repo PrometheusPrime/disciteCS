@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in C++</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    <p>A <strong>String</strong> is an ordered, mutable sequence of characters. String is not a primitive type in C++, so to work with strings include the
+        <strong>string</strong> library or any library with
+        string . Strings are delimited by double quotes ("").</p>
+    <pre class="codeBlock prettyprint">
+string sayHello = "Hello World";
+cout &lt;&lt; sayHello;
+</pre>
+    <h2>Operating on Strings</h2>
+    <p>The addition operator is used to concatenate strings</p>
+
+    <pre class="codeBlock prettyprint">
+string firstName = "John";
+string lastName = "Doe";
+string name = firstName + " " + lastName;
+cout &lt;&lt; name;
+</pre>
+    You can not concatenate string literals.
+    <pre class="codeBlock prettyprint">
+string sayHello = "Hello " + "World";
+cout &lt;&lt; sayHello;
+</pre>
+To do this, one of the values has to be explicitly cast to a string.
+<pre class="codeBlock prettyprint">
+string sayHello = "Hello " + (string)"World";
+cout &lt;&lt; sayHello;
+</pre>
+String literals will only be concatenated if the addition operator is left out.
+    <pre class="codeBlock prettyprint">
+string sayHello = "Hello "  "World";
+cout &lt;&lt; sayHello;
+</pre>
+<p>The characters in a string are ordered, the first character is at position(index) 0. To get a character, write the name of the string followed by the index in square brackets.</p>
+<pre class="codeBlock prettyprint">
+string sayHello = "Hello World";
+cout &lt;&lt; sayHello[0];
+</pre>
+We can change individual characters in a string.
+<pre class="codeBlock prettyprint">
+string myStr = "They";
+myStr[3] = 'e';
+cout &lt;&lt; myStr &lt;&lt; endl;
+</pre>
+Copy a string
+<pre class="codeBlock prettyprint">
+string anotherStr = myStr;
+</pre>
+<p>Comparison Operators can be used to compare strings. Strings are compared according to the Alphabetical Order of their component Letters.</p>
+<pre class="codeBlock prettyprint">
+string bus = "Bus";
+string bar = "Bar";
+cout &lt;&lt; (bar &lt; bus) &lt;&lt; endl;
+cout &lt;&lt; (bar &lt;= bus) &lt;&lt; endl;
+cout &lt;&lt; (bar &gt; bus) &lt;&lt; endl;
+cout &lt;&lt; (bar &gt;= bus) &lt;&lt; endl;
+cout &lt;&lt; (bar == bus) &lt;&lt; endl;
+cout &lt;&lt; (bar != bus) &lt;&lt; endl;
+</pre>
+Z is greater than A , lowercase letters are greater than Uppercase letters and letters are greater than Numbers.
+<!-- ---raw strings---
+    ---special characters--- -->
+    <h3>String functions</h3>
+    <pre class="codeBlock prettyprint">
+string myQuote = "The Nail that sticks out must be Hammered down";
+</pre>
+Check if a string is an empty string using the <code>empty()</code>, it returns 1 if it is.
+<pre class="codeBlock prettyprint">
+myQuote.empty();
+</pre>
+get the number of characters in a string <code>.length()</code> or <code>.size()</code>
+<pre class="codeBlock prettyprint">
+myQuote.length();
+myQuote.size();
+</pre>
+Get first character in a string
+    <pre class="codeBlock prettyprint">
+myQuote.front();
+</pre>
+Get last character in a string
+    <pre class="codeBlock prettyprint">
+myQuote.back();
+</pre>
+Add a string to the end of a string
+<pre class="codeBlock prettyprint">
+myQuote.append(" immediately.");
+</pre>
+Insert character in a string at a specific position.
+<pre class="codeBlock prettyprint">
+myQuote.insert(24,",");
+</pre>
+Replace characters in a string, pass the index,number of characters, and the actual characters.
+<pre class="codeBlock prettyprint">
+string sayHello = "Hello World";
+sayHello.replace(6, 7, "Everyone");
+cout &lt;&lt; sayHello;
+</pre>
+Delete characters from a specific index to a certain index.
+<pre class="codeBlock prettyprint">
+string sayHello = "Hello WorldWorld";
+sayHello.erase(11,15);
+cout &lt;&lt; sayHello;
+</pre>
+Get the start index of a sub-string
+<pre class="codeBlock prettyprint">
+myQuote.find("Nail");
+</pre>
+Get a sub-string from a string, pass the start index and number of characters.
+<pre class="codeBlock prettyprint">
+string anotherStr = myQuote.substr(4,4);
+</pre>
+compare strings
+<pre class="codeBlock prettyprint">
+mystr.compare(anotherStr);
+</pre>
+Assign a new value to a string
+<pre class="codeBlock prettyprint">
+string greet = "Hi";
+string sayHello = "Hello World";
+greet.assign(sayHello);
+</pre>
+convert to a string
+<pre class="codeBlock prettyprint">
+string numStr = to_string(42);
+</pre>
+convert from a string to integer
+<pre class="codeBlock prettyprint">
+string myStr = "3.143";
+int myInt = myStr.stoi();
+</pre>
+convert from a string to double
+<pre class="codeBlock prettyprint">
+string myStr = "3.143";
+double myDouble = myStr.stod();
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

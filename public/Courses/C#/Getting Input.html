@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Getting Input in C#</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Getting Input</h1>
+	<p>We can get input with the <code class="code prettyprint">ReadLine()</code> method from the <code class="prettyptint">Console</code> class.</p>
+	<pre class="codeBlock prettyprint">
+Console.ReadLine();
+</pre>
+To use the input from the user, you have to assign it to a variable.
+<pre class="codeBlock prettyprint">
+Console.Write("What is your name ? ");
+string name = Console.ReadLine();
+
+Console.WriteLine($"Nice to meet you, {name}");
+</pre>
+By default the <code class="code prettyprint">ReadLine()</code> method returns a string. Convert numbers entered by the user to numbers, to use them as numbers.
+<p>getting command line arguments</p>
+<pre class="codeBlock prettyprint">
+Environment.GetCommandLineArgs();
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

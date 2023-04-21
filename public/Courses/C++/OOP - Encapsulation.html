@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encapsulation</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+<h1>Encapsulation</h1>
+<p>It it not recommended to directly access and modify fields in a class. Make fields <code class="prettyprint">private</code> and use setter and getter Methods to modify and access them.</p>
+<pre class="codeBlock prettyprint">
+class Planet {
+private:
+    string name;
+    double surfaceArea;
+    int numberOfSatellites;
+    double distanceFromTheSun;
+public:
+// setters used to set values to the fields
+    void setName(string pName)
+    {
+        name = pName;
+    }
+    void setSurfaceArea(double pSurfaceArea)
+    {
+        surfaceArea = pSurfaceArea;
+    }
+    void setNumberOfSatellites(int pNumberOfSatellites)
+    {
+        numberOfSatellites = pNumberOfSatellites;
+    }
+    void setDistanceFromTheSun(double pDistanceFromTheSun)
+    {
+        distanceFromTheSun = pDistanceFromTheSun;
+    }
+// getters used to get values of the fields
+    string getName()
+    {
+        return name;
+    }
+    double getSurfaceArea()
+    {
+        return surfaceArea;
+    }
+    int getNumberOfSatellites()
+    {
+        return numberOfSatellites;
+    }
+    double getDistanceFromTheSun()
+    {
+        return distanceFromTheSun;
+    }
+// Constructors
+    Planet()
+    {
+    }
+
+    Planet(string name, double surfaceArea, int numberOfSatellites, double distanceFromTheSun)
+    {
+
+        setName(name);
+        setSurfaceArea(surfaceArea);
+        setNumberOfSatellites(numberOfSatellites);
+        setDistanceFromTheSun(distanceFromTheSun);
+    }
+};
+</pre>
+<pre class="codeBlock prettyprint">
+int main(int argc, char const *argv[])
+{
+    Planet uranus("Uranus", 8115600000, 27, 2870972200);
+    cout &lt;&lt; uranus.getName();
+
+  return 0;
+}
+</pre>
+<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

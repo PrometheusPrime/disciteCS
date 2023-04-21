@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Data Frames in R</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Data Frames</h1>
+	tabular Data objects
+	<p>can store values of a different type</p>
+	equal amount of data in columns
+	<pre class="codeBlock prettyprint">
+myDf -> data.frame(
+   nar(labels) =c(v,v,v)
+   values = c(v,v,v)
+)
+</pre>
+	read from a <abbr title="Coma Separated Values">CSV</abbr> file to a Data Frame.
+	<pre class="codeBlock prettyprint">
+myDf -> read.csv("path/to/file.csv")
+</pre>
+	if the file in the same folder,<code class="code prettyprint">read.csv("file.csv")</code>
+	get the dimension of a data frame with the <code class="code prettyprint">dim()</code>
+	<pre class="codeBlock prettyprint">
+</pre>
+	add new entries
+	<pre class="codeBlock prettyprint">
+my.dataF -> rbind(my.dataF, another.df)
+</pre>
+	add a new column with the
+	<pre class="codeBlock prettyprint">
+my.data.frame -> cbind(my.data.frame, my.vect)
+</pre>
+	index like matrix
+	<pre class="codeBlock prettyprint">
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

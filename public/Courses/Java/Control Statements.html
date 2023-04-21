@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Conditional Statements</h1>
+    <p><strong>Control Statements</strong> are used to run code under certain conditions</p>
+    <h2>The if, else and else if Statements</h2>
+    <h4>If statement</h4>
+    <p>The code in the block will be executed if the condition is <code class="prettyprint">true</code>.
+        The condition is either a boolean variable or an expression which evaluates to <code
+            class="prettyprint">true</code>
+        or <code class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+//write the code in main method
+if(4 &lt; 5){
+    System.out.println("4 is less than 5");
+}</pre>
+    <p><code class="prettyprint">if</code> statements can be nested inorder to only execute a block if multiple conditions are <code class="prettyprint">true</code>.</p>
+    <pre class="codeBlock prettyprint">
+int age = 22;
+if(age > 18){
+  if(age &lt;= 25){
+      System.out.println("You're between 18 and 25 years of age");
+  }
+}</pre>
+    Instead of nesting if statements to check multiple conditions,we can combine logical expressions using logical
+    operators.
+    <pre class="codeBlock prettyprint">
+int age = 22;
+if (age > 18 && age &lt;= 25){
+    System.out.println("You're between 18 and 25 years of age");
+}
+</pre>
+    <h4>The Else statement</h4>
+    <p>The <code class="prettyprint">else</code> statement defines alternate block to execute if the condition in the
+        <code class="prettyprint">if</code> statement is <code class="prettyprint">false</code>.
+    </p>
+    <pre class="codeBlock prettyprint">
+if(4 &gt; 5){
+    System.out.println("4 is greater than 5");
+}else{
+    System.out.println("4 is less than 5");
+}</pre>
+<h4>Else if statement</h4>
+    <p>The <code class="prettyprint">else if</code> statement is used to check additional conditions.</p>
+    <pre class="codeBlock prettyprint">
+boolean isRed = false;
+boolean isGreen = true;
+
+if (isRed){
+    System.out.println("Stop !");
+}else if(isGreen){
+    System.out.println("Drive");
+}else{
+    System.out.println("Drive, if it is safe to do");
+}
+</pre>
+If a Statement's condition is <code class="prettyprint">true</code>, that Statement's block will be executed and no other conditions will be evaluated.
+    <pre class="codeBlock prettyprint">
+//write the code in main method
+int age = 22;
+if (age > 18){
+    System.out.println("You're older than 18");
+}else if(age &lt; 25){
+    System.out.println("You're less than 25 years of age");
+}else{
+    System.out.println("You're either less than 18 and older than 25");
+}
+</pre>
+    The <code class="prettyprint">else if</code> is skipped, even though its expression evaluates to <code
+        class="prettyprint">true</code>.
+    <h2>Switch</h2>
+    <p>The <code class="prettyprint">switch</code> statement is used to do different operations depending on a value of
+        a variable.</p>
+    <pre class="codeBlock prettyprint">
+String trafficLight = "Yellow";
+
+switch(trafficLight){
+case "Red":
+    System.out.println("Stop !");
+    break;
+case "Yellow":
+    System.out.println("Drive, with caution");
+    break;
+default:
+    System.out.println("Drive");
+}
+</pre>
+The <code class="prettyprint">default</code> case is executed if non of the cases matched.
+<pre class="codeBlock prettyprint">
+String trafficLight = "Green";
+
+switch(trafficLight){
+case "Red":
+    System.out.println("Stop !");
+    break;
+case "Yellow":
+    System.out.println("Drive, with caution");
+    break;
+default:
+    System.out.println("Drive");
+}
+</pre>
+    The <code class="prettyprint">break</code> statement moves program execution out of the <code class="prettyprint">switch</code> statement after a matched case is executed. If there isn't any <code class="prettyprint">break</code> statement, all cases after the true case will be executed until a <code class="prettyprint">break</code> statement is found.
+    <pre class="codeBlock prettyprint">
+//fall  through
+int num = 3;
+switch(num){
+case 4:
+    System.out.println("4 !");
+case 3:
+    System.out.println("3 !");
+case 2:
+    System.out.println("2 !");
+case 1:
+    System.out.println("1 !");
+default:
+    System.out.println("Blast Off !");
+}
+</pre>
+Multiple cases can execute a single block.
+<pre class="codeBlock prettyprint">
+int num = 4;
+
+switch (num)
+{
+    case 5:
+    case 4:
+    case 3:
+        System.out.println("num is either 5, 4 or 3");
+        break;
+    case 2:
+        System.out.println("num is 2 ");
+        break;
+    case 1:
+        System.out.println("num is 1");
+        break;
+    default:
+        System.out.println("num is neither 5,4 nor 3");
+        break;
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

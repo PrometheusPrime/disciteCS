@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operators in Python</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Operators</h1>
+  <h3>Arithematic Operators</h3>
+  <p>Arithematic Operators are used in basic arithematic
+    calculations
+  </p>
+  <p><strong><em>Addition Operator (+)</em> </strong> : adds the operands.</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 8
+print(a + b)
+</pre>
+  <p><strong><em>Subtraction Operator (-)</em> </strong> : subtracts one operand from another.</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 8
+print(a - b)
+</pre>
+  <p><strong><em>Multiplication Operator (*)</em></strong> : multiplies the operands.</p>
+  <pre class="codeBlock prettyprint">
+a = 5
+b = 8
+print(a * b)
+</pre>
+  <p><strong><em>Division Operator (/)</em></strong> : divides the operands and returns a floating point number</p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a / b)
+</pre>
+  <p>
+    <strong><em>Floor Division Operator (//):</em></strong> divides the operands and returns an integer, any remainder
+    will be dicarded .
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a &sol;&sol; b)
+</pre>
+  <p>
+    <strong><em>Exponetial Operator (**):</em></strong> is used to raise one number to the
+    power of another (Exponentiation) ...
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a ** b) # 8<sup>5</sup>
+</pre>
+  A number can be raised to multiple powers, the powers will be evaluated
+  first
+  <pre class="codeBlock prettyprint">
+a = 2
+b = 3
+c = 4
+d = a ** b ** c  # <sub>a</sub>b<sup>c</sup>
+# b<sup>c</sup> will be evaluated first,
+# then a will be raised to the result of  b<sup>c</sup>
+print(d)
+</pre>
+  <p>
+    <strong><em>Modulo or Remainder Operator (%):</em></strong> returns the remainder of
+    dividing the given operands.
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a % b)
+</pre>
+  <p>Order of operation like in mathematics,parenthesis,divisio,Multiplication</p>
+  <h3>Assignment Operators</h3>
+  <p>
+    Assignment Operators are used to assign values to
+    variables...
+  </p>
+  <p>
+    <em>Plus Equals (+=)</em> adds the number on the right side of the equal
+    sign to the value of the variable on left side of the equal sign and then
+    assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a += 5 # same as a = a + 5
+print(a)
+</pre>
+  <p>
+    <strong><em>Minus Equals (-=)</em></strong> subtracts the number on the right side of the
+    equal sign from the value of the variable on left side of the equal sign
+    and then assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a -= 5 # same as a = a - 5
+print(a)
+</pre>
+  <p>
+    <strong><em>Multiplication Equals (*=)</em></strong> multiplies the number on the right
+    side of the equal sign to the value of the variable on left side of the
+    equal sign and then assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a *= 5 # same as a = a * 5
+print(a)
+</pre>
+  <p>
+    <strong><em>Division Equals (/=)</em></strong> divides the variable on left side of the
+    equal sign by the number on the right side of the equal sign and then
+    assigns the result to that variable...
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a /= 5 # same as a = a / 5
+print(a)
+</pre>
+  <p><strong><em>Floor Division Equals (//=)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a //= 5 # same as a = a // 5
+print(a)
+</pre>
+  <p><strong><em>Exponentiation Equals (**=)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a **= 5 # same as a = a ** 5
+print(a)
+</pre>
+  <p><strong><em>Remainder Equals (%=)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a = 8
+a %= 5 # same as a = a % 5
+print(a)
+</pre>
+  <h3>Comparison Operators</h3>
+  <p>
+    Comparison Operators are used to compare given
+    Variables, they return a Boolean value .
+  </p>
+  <p><strong><em>Greater Than Operator (>)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a > b)
+</pre>
+  <p><strong><em>Less Than Operator (&lt;)</strong></em>
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a &lt; b)
+</pre>
+  <p><strong><em>Greater Than or Equal To Operator (>=)</em></strong></p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a >= b)
+</pre>
+  <p><strong><em>Less Than or Equal To Operator (&lt;=)</em></strong>
+  </p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a >= b)
+</pre>
+  <p><strong><em>Equality Operator (==)</em></strong>: checks whether the Operands are Equal.</p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a == b)
+</pre>
+  <p><strong><em>Inequality Operator (!=)</em></strong>: checks whether the Operands are Not Equal.Returns <code
+      class="prettyprint">True</code> if they are not equal.</p>
+  <pre class="codeBlock prettyprint">
+a = 8
+b = 5
+print(a != b)
+</pre>
+  <p>
+    <em>Comparison Operators</em> can be used to compare strings. Strings are compared according to the Alphabetical
+    Order of their component Letters.
+  </p>
+  <pre class="codeBlock prettyprint">
+print("bar" &lt; "bus")
+print("bar" &lt;= "bus")
+print("bar" &gt; "bus")
+print("bar" &gt;= "bus")
+print("bar" == "bus")
+print("bar" != "bus")
+</pre>
+  Z is greater than A , lowercase letters are greater than Uppercase letters and
+  letters are greater than Numbers.
+  <h3>Logical Operators</h3>
+  <p>
+    Logical Operators are used to chain Boolean variables or Boolean expressions,
+    they return a Boolean value.
+  </p>
+  <p><strong><em>and Operator</em></strong> : Returns <code class="prettyprint">True</code> if all the variables are
+    true.</p>
+  <pre class="codeBlock prettyprint">
+is_raining = True
+is_sunny = False
+print(is_raining and is_sunny)
+</pre>
+  <p><strong><em>or Operator</em></strong> : Returns <code class="prettyprint">True</code> if one of the conditions is
+    true.</p>
+  <pre class="codeBlock prettyprint">
+is_raining = True
+is_sunny = False
+print(is_raining or is_sunny) 
+</pre>
+  <p>
+    <strong><em>not Operator :</em></strong> Inverts a boolean value . If it was <code class="prettyprint">True</code>,
+    it becomes
+    <code class="prettyprint">False</code>.
+  </p>
+  <pre class="codeBlock prettyprint">
+is_raining = True
+print(not is_raining)
+</pre>
+  <p>
+    Logical Operators can be chained and are evaluated according to Their order of precedence.
+  </p>
+  <h3>Identity Operators</h3>
+  <p>
+    Identity Operators are used to compare if the operands are the same objects, with the same memory location</p>
+  <p>
+    <strong><em>is Operator :</em></strong>
+  </p>
+  <pre class="codeBlock prettyprint">
+x = 54
+y = x
+print(y is x)
+</pre>
+  <p>
+    <strong><em>is not Operator :</em></strong>
+  </p>
+  <pre class="codeBlock prettyprint">
+x = 54
+y = '54'
+print(y is not x)</pre>
+  <h3>Membership Operators</h3>
+  <p>
+    <strong>Membership Operators </strong> are used to check if an item is part of a collection.
+  </p>
+  <p>
+    <strong><em>in Operator :</em> </strong>
+  </p>
+  <pre class="codeBlock prettyprint">
+numbers = [1,2,3,4,5]
+print(5 in numbers)
+</pre>
+  <!-- <h3>Operator Precedence</h3>
+  <p></p> -->
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+      <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

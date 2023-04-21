@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    <p><strong>String</strong> are sequence  of characters. Unlike chars, strings are delimited by Double
+        quotes(""). A string is not a primitive type, it is an objects.</p>
+    <pre class="codeBlock prettyprint">
+String greet = "Hello, World";
+Console.WriteLine(greet);
+</pre>
+<p>Note that you can use <code class="prettyprint">String</code> or <code class="prettyprint">string</code> to create a string. <code class="prettyprint">string</code> is an alias for the <code class="prettyprint">String</code> class.</p>
+<h3>Escape Sequences</h3>
+<p>There are characters that have a special usage in strings. If we want to use them like ordinary characters, we have to escape them. Use the Backslash (\) to escape any special Characters in a string</p>
+<pre class="codeBlock prettyprint">
+string directory = "C:\\Users\\CSf\\.bash_history";
+Console.WriteLine(directory);</pre>
+<h2>String operations</h2>
+Use the <code class="prettyprint">Length</code> property to get the number of characters in a string.
+<pre class="codeBlock prettyprint">
+string name = "Jane";
+Console.WriteLine(name.Length);
+</pre>
+Characters in string are ordered, a get a character at an index
+<pre class="codeBlock prettyprint">
+string name = "Jane";
+Console.WriteLine(name[2]);
+</pre>
+Strings in C# are immutable, individual characters in a string can not changed. 
+<pre class="codeBlock prettyprint">
+string name = "Jane";
+name[2] = 'k';
+Console.WriteLine(name);
+</pre>
+    <p>The addition operator is used to join strings</p>
+    <pre class="codeBlock prettyprint">
+string firstName = "John";
+string lastName = "Wick";
+string fullName = firstName + " " + lastName;
+</pre>
+when you concatenate a string and a number, you'll get a string.
+<h3>String Interpolation</h3>
+You can substitute values of variables or expression into a string. Add a dollar sign before the opening quote and place the variable or expression in curly brackets.
+<pre class="codeBlock prettyprint">
+string person = "John Wick";
+string greet = $"Hello, {person}";
+
+Console.WriteLine(greet);
+
+var num = 5;
+
+Console.WriteLine($"{num} × {num} = {num * num}");
+</pre>
+    <h3>String Methods</h3>
+Remember strings are immutable, so any method or operation that appear to change the string returns a new string.
+    <pre class="codeBlock prettyprint">
+string quote = "Everything has Beauty, but not Everyone Sees It - Confucius";
+</pre>
+<p>Use the <code>.IsNullOrEmpty()</code> method in the string class to check if a string is an empty string, it returns <code class="prettyprint">true</code> if it is.</p>
+<pre class="codeBlock prettyprint">
+string.IsNullOrEmpty(quote);
+</pre>
+Use the <code class="prettyprint">Contains()</code> method to check if a string is a substring of the string or if the string contains a certain character, it returns a boolean.
+    <pre class="codeBlock prettyprint">
+Console.WriteLine(quote.Contains("Beauty"));
+Console.WriteLine(quote.Contains('Y'));
+</pre>
+Get start start index of a substring in a string with the <code class="prettyprint">IndexOf()</code> method, it returns <code class="prettyprint">-1</code> if a string is not part of the string.
+    <pre class="codeBlock prettyprint">
+quote.IndexOf("Beauty");
+</pre>
+Use the <code class="code prettyprint">equals()</code> in the <code class="code prettyprint">String</code> class to compare strings instead of the equality operator. if the strings you're comparing are the same but in different Cases
+the returns <code class="prettyprint">false</code>.
+<pre class="codeBlock prettyprint">
+string aQuote = "everything has beauty, but not everyone sees it - confucius";
+String.Equals(quote,aQuote);
+</pre>
+<!-- The <code class="prettyprint">Compare()</code> method compares the given strings, it returns <code class="prettyprint">0</code> and <code class="prettyprint">1</code> if they are not.
+<pre class="codeBlock prettyprint">
+String.Compare(quote,anotherStr)
+</pre> -->
+Check if a string starts with a certain character or string.
+<pre class="codeBlock prettyprint">
+quote.StartsWith('E');
+quote.StartsWith("Beauty");
+</pre>
+Check if a string ends with a certain character or string.
+<pre class="codeBlock prettyprint">
+quote.EndsWith('e');
+quote.EndsWith("Confucius");
+</pre>
+Replace a character or substring with the <code class="prettprint">Replace()</code> method
+<pre class="codeBlock prettyprint">
+quote.Replace('e', ' ');
+quote.Replace("Beauty", "it's Ending");
+</pre>
+The <code class="prettyprint">Remove()</code> method removes characters from a string. Pass into the method the index where to start removing, it will remove the characters upto the end of the string. 
+<pre class="codeBlock prettyprint">
+Console.WriteLine(quote.Remove(47));
+</pre>
+You can pass the number of characters you wish to remove as a second arguement.
+<pre class="codeBlock prettyprint">
+Console.WriteLine(quote.Remove(47,4));
+</pre>
+Get a substring from specified index to the end of a string.
+<pre class="codeBlock prettyprint">
+quote.Substring(50);
+</pre>
+ You can specify the number of characters the method should return as a second arguement.
+<pre class="codeBlock prettyprint">
+quote.Substring(0,21);
+</pre>
+The <code>ToLower()</code> method return a copy of the string with all the letters converted to lowercase. 
+<pre class="codeBlock prettyprint">
+quote.ToLower();
+</pre>
+The <code>ToUpper()</code> method return a copy of the string with all the letters converted to uppercase.
+<pre class="codeBlock prettyprint">
+str.ToUpper();
+</pre>
+Remove whitespace from the start and end of a string.
+<pre class="codeBlock prettyprint">
+quote.Trim();
+</pre>
+Removes whitespace atm the start a string.
+<pre class="codeBlock prettyprint">
+str.TrimStart();
+</pre>
+Removes whitespace at the end of a string.
+<pre class="codeBlock prettyprint">
+str.TrimEnd();
+</pre>
+    <!-- <h2>String Classes</h2>
+    <h3>StringBuilder</h3>
+    <pre class="codeBlock prettyprint">
+StringBuilder strName = new StringBuilder("");
+</pre>
+<pre class="codeBlock prettyprint">
+strName.append()
+strName.appendFormat()
+</pre>
+Convert a StringBuilder string to a regular string.
+<pre class="codeBlock prettyprint">
+str = strBuilder.ToString();
+</pre>
+use StringBuilder if you're going to make changes to a string and don't care about thread safety. -->
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

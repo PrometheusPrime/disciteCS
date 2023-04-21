@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashSet</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>HashSet</h1>
+    <p>A HashSet is a collection  of unique values. Import the <code class="prettyprint">HashSet</code> class from the <code class="prettyprint">java.util</code> package.</p>
+    <pre class="codeBlock prettyprint">
+HashSet&lt;String&gt; instrumentSet = new HashSet&lt;String&gt;();
+</pre>
+<p>The <code class="prettyprint">add()</code> method adds a value a HashSet.</p>
+    <pre class="codeBlock prettyprint">
+instrumentSet.add("Saxophone");
+instrumentSet.add("Organ");
+instrumentSet.add("Ocarina");
+instrumentSet.add("Acoustic Guitar");
+instrumentSet.add("Trumpet");
+instrumentSet.add("Triangle");
+instrumentSet.add("Shakers");
+instrumentSet.add("Vibraphone");
+instrumentSet.add("Bagpipes");
+instrumentSet.add("Keyboard");
+
+System.out.println(instrumentSet);
+</pre>
+    <p>Check whether a HashSet contains a certain value with the <code class="prettyprint">contains()</code> method.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(instrumentSet.contains("Vibraphone"));
+</pre>
+    <p>Remove a value from the HashSet.</p>
+    <pre class="codeBlock prettyprint">
+instrumentSet.remove("Keyboard");
+
+System.out.println(instrumentSet);
+</pre>
+<p>Check the size of a HashSet with the <code class="prettyprint">size()</code> method.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(instrumentSet.size());
+</pre>
+<p>The <code class="prettyprint">clear()</code> methods deletes all values in a HashSet, returns an empty HashSet.</p>
+    <pre class="codeBlock prettyprint">
+instrumentSet.clear();
+</pre>
+<h2>Iterate through a HashSet</h2>
+    <p>Iterate through a HashSet using the <code class="prettyprint">forEach()</code> method.</p>
+<pre class="codeBlock prettyprint">
+instrumentSet.forEach(
+    instrument -> System.out.println(instrument)
+); 
+</pre>
+<p>Iterate through a HashMap's keys or values using an enhanced <code class="prettyprint">for</code> loop.</p>
+    <pre class="codeBlock prettyprint">
+for (String instrument : instrumentSet) {
+    System.out.println(instrument);
+}  
+</pre>
+    
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Arrays</h1>
+    <p>An Array is a container object that holds a fixed number of values of a single Data Type , referred by a single
+        identifier. elements in an array are ordered.</p>
+    To create an array, write the type of elements it'll hold, identifier, then the size of the array in square brackets.
+    <pre class="codeBlock prettyprint">
+string fruitList[3];
+</pre>
+You can assign values at the same time as the array is declared by enclosing them
+    in curly brackets.
+    The length of an array can be left out if you are declaring an array and adding element to it.
+    <pre class="codeBlock prettyprint">
+string fruitList[] = {"Lime","Berries","Grapes"};
+</pre>
+<h3>Indexing</h3>
+Elements in an array can be accessed by referencing the element’s index inside square brackets. First element is at index zero.
+    <pre class="codeBlock prettyprint">
+cout &lt;&lt; fruitList[1] &lt;&lt; endl;
+</pre>
+Add or change an element at a specific index.
+    <pre class="codeBlock prettyprint">
+fruitList[0] = "Apples";
+</pre>
+ Get the size of an array using the <code>size()</code> function.
+    <pre class="codeBlock prettyprint">
+cout &lt;&lt; size(fruitList) &lt;&lt; endl;
+</pre>
+    <h3>Looping through arrays</h3>
+Iterate through an array using a <code class="prettyprint">for</code> loop 
+    <pre class="codeBlock prettyprint">
+int arrLength = size(fruitList);
+
+for (int i = 0; i &lt; arrLength; i++)
+{
+    cout &lt;&lt; fruitList[i] &lt;&lt; endl;
+}
+</pre>
+Or a for each loop 
+    <pre class="codeBlock prettyprint">
+for (string &amp;fruit : fruitList)
+{
+    cout &lt;&lt; fruit &lt;&lt; endl;
+}   
+</pre>
+    <h2>Multi-Dimensional Arrays</h2>
+    <pre class="codeBlock prettyprint">
+string groceryList[4][3] = {
+    {"Sugar","Flour","Baking Soda"},
+    {"Spinach","Tomatoes","Carrots"},
+    {"Lime","Berries","Grapes"},
+    {"Beef","Pork","Fish"}
+};
+cout &lt;&lt;groceryList[1][2]&lt;&lt; endl;
+</pre>
+Iterate through a Multi-Dimensional array using nested <code class="prettyprint">for</code> loops 
+
+<pre class="codeBlock prettyprint">
+int arraySize = size(groceryList);
+
+for (int i = 0; i &lt;= arraySize; i++)
+{
+    for (int j = 0; j &lt;= i; j++)
+    {
+        cout &lt;&lt; groceryList[i][j] &lt;&lt; endl;
+    }
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

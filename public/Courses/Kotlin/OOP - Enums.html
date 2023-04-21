@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Enums in Kotlin</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+<h1>Enums</h1>
+	<pre class="codeBlock prettyprint">
+enum class TrafficLight{
+    RED,
+    GREEN,
+    AMBER
+}
+</pre>
+Get individual values
+<pre class="codeBlock prettyprint">
+println(TrafficLight.RED)
+</pre>
+Get all values,<code class="prettyprint">values()</code> returns an array containing the enum objects
+<pre class="codeBlock prettyprint">
+println(TrafficLight.values().contentToString())
+</pre>
+<pre class="codeBlock prettyprint">
+enum class TrafficLight(var action: String){
+    RED("Stop !"),
+    GREEN("Drive"),
+    AMBER("Drive, if it is safe to do")
+}
+</pre>
+<pre class="codeBlock prettyprint">
+TrafficLight.RED.action
+</pre>
+an Enum can also have functions
+<pre class="codeBlock prettyprint">
+enum class TrafficLight(var action: String) {
+    RED("Stop !"),
+    GREEN("Drive"),
+    AMBER("Drive, if it is safe to do");
+
+    fun info(): String {
+        return "The Traffic Light is $name, $action"
+    }
+}
+</pre>
+<pre class="codeBlock prettyprint">
+ println(TrafficLight.RED.info())
+</pre>
+builtin method valueOf()
+<pre class="codeBlock prettyprint">
+val trafficLight = TrafficLight.valueOf("RED")
+
+when(trafficLight){
+  TrafficLight.RED-> println(TrafficLight.RED.action)
+  TrafficLight.AMBER -> println(TrafficLight.AMBER.action)
+  TrafficLight.GREEN -> println(TrafficLight.GREEN.action)
+
+}</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

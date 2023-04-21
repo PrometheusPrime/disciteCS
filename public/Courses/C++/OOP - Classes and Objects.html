@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Class</h1>
+    <p><code class="prettyprint">class</code> keyword is used
+        followed by a name, a code block and a semicolon. Fields(members or attributes) are variables defined in a class.</p>
+    <pre class="codeBlock prettyprint">class Planet{
+string name;
+double surfaceArea;
+int numberOfSatellites;
+double distanceFromTheSun;
+
+};
+</pre> 
+<h3>Create an Object</h3>
+<p>Classes, just like functions, must be declared before they can be referenced. Even with a prototype, you still
+    cannot create an object of a class before it has been
+    defined.</p>
+<p>To create an object of the class, also called an instance; write the class name followed by the name of the object.</p>
+<pre class="codeBlock prettyprint">
+Planet earth;
+</pre>
+<h3>Access modifiers</h3>
+<p>Access modifiers are used to control how the members of a class are accessed.</p>
+   <p> Class attributes are <code class="prettyprint">private</code>  by default, they can not be accessed outside the class. Other access modifiers include ; <code class="prettyprint">protected</code> - accesible in the class and it's sub-classes, and <code class="prettyprint">public</code> - accesible anywhere.</p>
+   Write Access modifiers on a separate line, all fields and methods that follow will use that access modifier.
+    <pre class="codeBlock prettyprint">class Planet{
+public:
+  string name;
+  double surfaceArea;
+  int numberOfSatellites;
+  double distanceFromTheSun;
+};
+</pre>
+<pre class="codeBlock prettyprint">
+Planet earth;
+earth.name = "Earth";
+earth.surfaceArea = 510072000;
+earth.numberOfSatellites = 1;
+earth.distanceFromTheSun = 149600000;
+</pre>
+    <h2>Constructors</h2>
+    <p>Constructors are special Methods called when instatiating an Object of a Class. Constructors have the same name as the class name and have no return type.We can initialise the members when an object is created with a constructor.
+    </p>
+    <pre class="codeBlock prettyprint">class Planet{
+public:
+  string name;
+  double surfaceArea;
+  int numberOfSatellites;
+  double distanceFromTheSun;
+
+  Planet(string name,double surfaceArea,int numberOfSatellites,double distanceFromTheSun){
+
+  name = name;
+  surfaceArea = surfaceArea;
+  numberOfSatellites = numberOfSatellites;
+  distanceFromTheSun = distanceFromTheSun;
+
+  }
+};
+</pre>
+Since we've overiden the default constructor, we can not create an instance without passing arguments to the constructor.
+<pre class="codeBlock prettyprint">
+Planet uranus("Uranus",8115600000,27,2870972200);
+</pre>
+We can add the default constructor back. The constructor can be overloaded as many times as needed.
+<pre class="codeBlock prettyprint">class Planet{
+public:
+    string name;
+    double surfaceArea;
+    int numberOfSatellites;
+    double distanceFromTheSun;
+    
+    Planet(){
+
+    }
+    
+    Planet(string name,double surfaceArea,int numberOfSatellite double distanceFromTheSun){
+    
+    name = name;
+    surfaceArea = surfaceArea;
+    numberOfSatellites = numberOfSatellites;
+    distanceFromTheSun = distanceFromTheSun;
+    
+  }
+};
+</pre>
+<h2> Class Methods</h2>
+<p>A method is a function defined in a class. 
+<!-- 
+    The method’s name outside the class needs to be prefixed with the class name and the scope resolution operator in order to designate to which class the method definition belongs. -->
+</p>
+<pre class="codeBlock prettyprint">
+string info(){
+    
+}
+</pre>
+<!-- 
+    static method - can only access static fields
+    <h2>Destructors</h2> 
+    virtual memory
+    polymorphism
+    Abstract data types
+-->
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

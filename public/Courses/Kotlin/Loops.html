@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    Loops are used to repeatedly execute a block of code.
+    <h2>while Loop</h2>
+    <p>The <code class="prettyprint">while</code> loop is used to repeat a block while a given condition or expression is <code class="prettyprint">true</code>.</p>
+    <pre class="codeBlock prettyprint">
+var num = 0
+
+while(num &lt;&equals; 10){
+    println(num)
+    num&plus;&plus;
+}
+</pre>
+Note we are updating the variable inside the Loop so that the condition eventually evaluates to <code class="prettyprint">false</code>. If the condition does not evaluate to <code class="prettyprint">false</code>, the Loop runs indefinitely (infinite Loop).
+    <pre class="codeBlock prettyprint">
+var num = 0
+
+while(num &lt;&equals; 10){
+    println(num)
+}
+</pre>
+We can easily create an infinte loop by adding <code class="prettyprint">true</code> as the condition.
+<pre class="codeBlock prettyprint">
+var num = 0
+
+while(true){
+    println(num)
+    num&plus;&plus;
+}
+</pre>
+    <h2>Do... While Loop</h2>
+    <p>The <code class="prettyprint">do... while</code> loop is the same as the regular <code class="prettyprint">while</code>, except in the <code class="prettyprint">do... while</code> loop the condition is checked at the end. So it's block is executed at least once, even if the condition is <code
+            class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+do {
+    println("4 is greater than 5")
+} while (4 > 5)
+</pre>
+    <h2>for loop</h2>
+    <p>The <code class="prettyprint">for</code> loop is used to loop through an iterable.</p>
+    <pre class="codeBlock prettyprint">
+val myStr = "Whosoever Holds This Hammer, If They Be Worthy,Shall Posses The Power Of THOR"
+for(character in myStr){
+    println(character)
+}
+</pre>
+
+    <h3>break and continue</h3>
+<p><code class="prettyprint">continue</code> skips execution of the rest of the code in the loop in the current interation and proceeds to the next interation.</p>
+<pre class="codeBlock prettyprint">
+val myStr = "Whosoever Holds This Hammer, If They Be Worthy,Shall Posses The Power Of THOR"
+for(character in myStr){
+    if(character == 'o' || character == 'O') continue
+    print(character)
+}
+</pre>
+<p><code class="prettyprint">break</code> exits the loop and execution goes to the first statement after the loop.</p>
+<pre class="codeBlock prettyprint">
+var num = 0
+while(true){
+    println(num)
+    if (num == 100) break
+    num++
+}
+</pre>
+<!-- 
+
+    labeled Breaks
+ -->
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

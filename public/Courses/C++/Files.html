@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File IO in C++</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>File IO </h1>
+    <pre class="codeBlock prettyprint">#include &lt;fstream&gt;</pre>
+    
+    <p>ofstream - write to file</p>
+    <pre class="codeBlock prettyprint">
+ofstream writer("file",mode);
+writer &lt;&lt; str &lt;&lt;endl;
+writer.close();
+</pre>
+<p>ifstream - read a file</p>
+<pre class="codeBlock prettyprint">
+ifstream writer("file");
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

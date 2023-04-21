@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes and Objects in Kotlin</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Class</h1>
+  <p>A class is a blueprint for an object. Classes are declared using the <code class="prettyprint">class</code> keyword.<!--  class name, the class header (specifying its type parameters, the primary constructor etc.) and the class body, surrounded by curly braces.</p> -->
+  <pre class="codeBlock prettyprint">
+class Planet {
+    var name = ""
+    var distanceFromTheSun = 0.0
+    var surfaceArea = 0.0
+    var numberOfSatelites = 0
+
+
+    fun info(): String {
+        return "Name : $name\nDistance From The Sun : $distanceFromTheSun\nSurface Area : $surfaceArea\nNumber Of Moons : $numberOfSatelites"
+
+    }
+}
+</pre>
+<p>We've defined a class Planet with four properties and on function. A method in Kotlin is a function defined in a class.</p>
+We can define our Planet class in the Main.kt outside the main function or in a seperate Planet.kt file, in the same folder as Main.kt.
+<h2>Objects</h2>
+  A Object is the actual thing created from the blueprint(<code class="prettyprint">class</code>). Create an instance of a class using the following syntax.
+  <pre class="codeBlock prettyprint">
+// in the main function
+val earth = Planet()
+</pre>
+<p>We access the properties and methods of an object using the dot notation.</p>
+  <pre class="codeBlock prettyprint">
+earth.name = "Earth"
+earth.numberOfSatelites = 1
+earth.surfaceArea = 
+earth.distanceFromTheSun = 
+println(earth.info())
+</pre>
+<p>We can define a Primary Constructor by adding parenthesis after the class name. Then we define parameters in the constructor for each property so that we can initialise the properties when an object is created. </p>
+<pre class="codeBlock prettyprint">
+class Planet(name:String,distanceFromTheSun: Double,surfaceArea: Double,numberOfSatelites: Int) {
+    var name = name
+    var distanceFromTheSun = distanceFromTheSun
+    var surfaceArea = surfaceArea
+    var numberOfSatelites = numberOfSatelites
+
+
+    fun info(): String {
+        return "Name : $name\nDistance From The Sun : $distanceFromTheSun\nSurface Area : $surfaceArea\nNumber Of Moons : $numberOfSatelites"
+
+    }
+}
+</pre>
+<p>If you're not doing anything with properties in the class body, they can be defined directly in the primary constructor.</p>
+<pre class="codeBlock prettyprint">
+class Planet(var name: String,var distanceFromTheSun: Double,var surfaceArea: Double,var numberOfSatelites: Int) {
+
+    fun info(): String {
+        return "Name : $name\nDistance From The Sun : $distanceFromTheSun\nSurface Area : $surfaceArea\nNumber Of Moons : $numberOfSatelites"
+
+    }
+}
+</pre>
+We can give properties default values, so that an instance of the class can be created without passing arguments to the constructor.
+<pre class="codeBlock prettyprint">
+class Planet(
+    var name: String = "",
+    var distanceFromTheSun: Double = 0.0,
+    var surfaceArea: Double = 0.0,
+    var numberOfSatelites: Int = 0
+) {
+
+    fun info(): String {
+        return "Name : $name\nDistance From The Sun : $distanceFromTheSun\nSurface Area : $surfaceArea\nNumber Of Moons : $numberOfSatelites"
+
+    }
+}
+</pre>
+<h4>Initialiser Block</h4>
+  <code class="code prettyprint">init{}</code> is executed everytime an instance(object) of a class is created. we can use it to initialise the properties when an object is created. 
+  <pre class="codeBlock prettyprint">
+class Planet(var name: String, distanceFromTheSun: Double, surfaceArea: Double, numberOfSatelites: Int) {
+    var distanceFromTheSun: Double
+    var surfaceArea: Double
+    var numberOfSatelites: Int
+
+
+    init {
+        if (distanceFromTheSun &lt; 0) {
+            this.distanceFromTheSun = 0.0;
+        } else {
+            this.distanceFromTheSun = distanceFromTheSun;
+        }
+        if (surfaceArea &lt; 0) {
+            this.surfaceArea = 0.0;
+        } else {
+            this.surfaceArea = surfaceArea;
+        }
+        if (numberOfSatelites &lt; 0) {
+            this.numberOfSatelites = 0;
+        } else {
+            this.numberOfSatelites = numberOfSatelites;
+        }
+    }
+
+    fun info(): String {
+        return "Name : $name\nDistance From The Sun : $distanceFromTheSun\nSurface Area : $surfaceArea\nNumber Of Moons : $numberOfSatelites"
+
+    }
+} 
+</pre>
+A class can have multiple init blocks, all of them will be executed in the order their defined in when a class is instantiated.
+<h3>Secondary constructors</h3>
+  <p>Add secondary constructors in the class body with the <code class="prettyprint">constructor</code> keyword</p>
+<pre class="codeBlock prettyprint">
+class Planet(var name: String, distanceFromTheSun: Double, surfaceArea: Double, numberOfSatelites: Int) {
+    var distanceFromTheSun: Double
+    var surfaceArea: Double
+    var numberOfSatelites: Int
+
+    init {
+        if (distanceFromTheSun &lt; 0) {
+            this.distanceFromTheSun = 0.0
+        } else {
+            this.distanceFromTheSun = distanceFromTheSun
+        }
+        if (surfaceArea &lt; 0) {
+            this.surfaceArea = 0.0
+        } else {
+            this.surfaceArea = surfaceArea
+        }
+        if (numberOfSatelites &lt; 0) {
+            this.numberOfSatelites = 0
+        } else {
+            this.numberOfSatelites = numberOfSatelites
+        }
+    }
+
+    fun info(): String {
+        return "Name : $name\nDistance From The Sun : $distanceFromTheSun\nSurface Area : $surfaceArea\nNumber Of Moons : $numberOfSatelites"
+
+    }
+//Secondary Constructors
+    constructor() : this("", 0.0, 0.0, 0)
+    constructor(name: String, numberOfSatelites: Int) : this(name, 0.0, 0.0, numberOfSatelites)
+
+}
+</pre>
+With <code class="prettyprint">this()</code>, we are calling the primary constructor. Instead of defining secondary constructor(s) we can give properties default values like before, then the class can be instatiated in different ways.
+<p>A Secondary <code class="prettyprint">constructor</code> can have a body</p>
+  <pre class="codeBlock prettyprint">
+constructor() : this("", 0.0, 0.0, 0){
+
+}
+</pre>
+<!-- <p>The <code class="prettyprint">lateinit</code> keyword.</p>
+<pre class="codeBlock prettyprint"></pre>
+If the property is not initialised, a <code class="prettyprint"></code> is raised. -->
+
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

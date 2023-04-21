@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inheritance</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+<h2>Inheritance</h2>
+<pre class="codeBlock prettyprint">
+class Person{
+private:
+  String  name;
+  int  age;
+public:
+  //setters
+  void setName(string name){
+    name = name;
+  }
+  void setAge(int age){
+    age = age;
+  }
+  //getters
+  string getName(){
+    return name;
+  }
+  int getAge(){
+    return age;
+  }
+  //Constructors
+  Person(){
+
+  }
+  Person(string name,int age){
+      setName(name);
+      setAge(age);
+  }
+};
+</pre>
+<pre class="codeBlock prettyprint">
+class Employee : public Person
+{
+private:
+    string position;
+    double salary;
+
+    // setters
+public:
+    void setPosition(string position)
+    {
+        position = position;
+    }
+    void setSalary(int salary)
+    {
+        salary = salary;
+    }
+    // getters
+    string getPosition()
+    {
+        return position;
+    }
+    double getSalary()
+    {
+        return salary;
+    }
+    Employee(string name, int age, string position, double salary) : Person(name, age)
+    {
+        setPosition(position);
+        setSalary(salary);
+    }
+};
+</pre>
+<pre class="codeBlock prettyprint">
+int main(){
+
+  Employee emp1 = new Employee("John Doe",58,"CEO",125000.0);
+
+  return 0;
+}
+</pre>
+<h2>Method Overiding</h2>
+<!-- 
+  polymorphism
+  classes and pointers
+ -->
+<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

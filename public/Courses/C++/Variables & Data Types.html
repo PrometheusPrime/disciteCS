@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Data Types</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables & Data Types</h1>
+    <h2>Variables</h2>
+    <p>Variables are used to store data in computer memory.</p>
+    <p>A variable name can consist of letters, numbers and underscores, but it cannot start with a number. It also
+        cannot contain spaces or special characters and must not be a reserved keyword. Use PascalCase or camelCase if a
+        variable name has multiple words. Variable names are case sensitive.</p>
+    <p> When definig a variable, you need to specify the data type it will hold</p>
+    <pre class="codeBlock prettyprint">char* firstName = "Peter";</pre>
+    You can declare a variable and then assign it a value later.
+    <pre class="codeBlock prettyprint">char* lastName;
+lastName = "Pan";
+</pre>
+Multiple variables can be declared on a single line if they are of the same data type.
+    <pre class="codeBlock prettyprint">char* firstName,lastName;</pre>
+    Use <code class="kwd">auto</code> to let the compiler infer the data type of a variable based on the value assigned
+    to it. The variable must be initialised.
+    <pre class="codeBlock prettyprint">auto age = 25;</pre>
+    A Variable's value can as many times as needed.
+    <pre class="codeBlock prettyprint">
+char* fullName = "Peter Pan";
+fullName = "Peter Parker";
+</pre>
+    <p>To declare a constant variable, use the <code class="prettyprint">const</code> keyword</p>
+    <pre class="codeBlock prettyprint">const int DAYS_IN_A_WEEK = 7;</pre>
+    <h2>Data Types</h2>
+    <strong>Integers</strong>
+    <p>integers negative or positive whole numbers</p>
+    <p>int</p>
+    <pre class="codeBlock prettyprint">
+int age = 25;
+</pre>
+        long</p>
+    <pre class="codeBlock prettyprint">long</pre>
+    <p>By default integers are <code class="prettyprint">signed</code>, they store negative and positive numbers. If you only need to store
+        positive values you can declare integer types as <code class="prettyprint">unsigned</code>,
+        their upper range will be doubled .</p>
+    <pre class="codeBlock prettyprint">unsigned</pre>
+    <strong>floating point numbers</strong>
+    <p>floating point numbers real numbers with a decimal point with an accuracy of up to 6 decimal places</p>
+    <pre class="codeBlock prettyprint">float</pre>
+    <p>Double real numbers with a decimal point with an accuracy of up to 15 decimal places</p>
+    <pre class="codeBlock prettyprint">double</pre>
+    <p>boolean -has only two possible values <code class="prettyprint">true</code> or <code
+            class="prettyprint">false</code></p>
+    <pre class="codeBlock prettyprint">bool isRaining = false;</pre>
+    <p>Character type- is used to store a single character. The value is enclosed between single quotes ('')</p>
+    <pre class="codeBlock prettyprint">char</pre>
+    <h4>Check Type</h4>
+    check if a character is numeric(a numbers)
+<pre class="codeBlock prettyprint">
+cout &lt;&lt; isdigit('a');
+</pre>
+check if a character is a lettter
+<pre class="codeBlock prettyprint">
+cout &lt;&lt; isalpha('a');
+</pre>
+check if a character is a lettter or number
+<pre class="codeBlock prettyprint">
+cout &lt;&lt; isalnum('a');
+</pre>
+    <p><code class="prettyprint">sizeof()</code> operator.</p>
+    <pre class="codeBlock prettyprint">sizeof()</pre>
+    <h2>Type conversion</h2>
+Explicit cast is performed by placing the desired data type in parentheses before the variable or
+    value that is to be converted.
+    <pre class="codeBlock prettyprint">
+int num = 42;
+cout &lt;&lt;(float)num &lt;&lt; endl;
+cout &lt;&lt;(double)num &lt;&lt; endl;
+cout &lt;&lt;(bool)num &lt;&lt; endl;
+cout &lt;&lt;(char)num &lt;&lt; endl;
+</pre>
+use functions
+<pre class="codeBlock prettyprint">cout &lt;&lt; int(3.14159265);</pre>
+    <pre class="codeBlock prettyprint">cout &lt;&lt; float(3.14159265);</pre>
+    <pre class="codeBlock prettyprint">cout &lt;&lt; double(3.14159265);</pre>
+When you convert a char to a number, you'll get an ASCII code of that character.
+    <pre class="codeBlock prettyprint">
+cout &lt;&lt; int('P');</pre>
+When you convert a number to char, you'll get a character thats represented by that number in ASCII.
+<pre class="codeBlock prettyprint">
+cout &lt;&lt; char(126);</pre>
+If you convert any number other than 0 to Boolean, you'll get 1(<code class="prettyprint">true</code>). 0 is <code class="prettyprint">false</code>.
+    <pre class="codeBlock prettyprint">
+cout &lt;&lt; bool(42);</pre>
+    <h2>Variable Scope</h2>
+    <p>A global variable is
+        declared outside of any code blocks and is accessible from anywhere after it has been declared.
+        A local variable, on the other hand, is declared inside a code block and will only be accessible
+        within that block. </p>
+    <p>A Global variable will remain allocated for the duration of the program, while a local variable will
+        be destroyed when its block of code has finished executing.</p>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

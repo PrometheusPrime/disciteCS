@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Operators</h1>
+    <h2>Arithmetic Operators</h2>
+    <p><em><strong>Addition Operators (+)</strong></em> : adds the operands.</p>
+    <pre class="codeBlock prettyprint">
+let a = 6;
+let b = 4.76;
+console.log(a + b);
+</pre>
+    <p><em><strong>Subtraction Operators (-)</strong></em> : subtracts one operand from another.</p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 45;
+console.log(a - b)
+</pre>
+    <p><em><strong>multiplication Operators (*)</strong></em> : multiplies the operands.</p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 6;
+console.log(a * b)
+</pre>
+    <p><em><strong>Division Operators (/)</strong></em> : divides the operands.</p>
+    <pre class="codeBlock prettyprint">
+let a = 126;
+let b = 9.0;
+console.log(a / b)
+</pre>
+    <p><em><strong>Modulus or Remainder Operators (%)</strong></em> : returns the remainder of dividing the given
+        operands.</p>
+    <pre class="codeBlock prettyprint">
+let a = 6;
+let b = 4;
+console.log(a % b)
+</pre>
+    <p><em><strong> increment Operators (++)</strong></em> : increments a variable by 1. </p>
+    <pre class="codeBlock prettyprint">
+let a = 6;
+a++; // same as a = a + 1
+console.log(a);
+</pre>
+    <p><em><strong>decrement Operators (--)</strong></em> : decrements a variable by 1.</p>
+    <pre class="codeBlock prettyprint">
+let a = 7;
+a--; // same as a = a - 1
+console.log(a);
+</pre>
+Postfix returns the original value and then updates it after,while  prefix - the operator changes the variable first and then returns the value. 
+<pre class="codeBlock prettyprint">
+let a = 5;
+let b = 5;
+console.log(a++);
+console.log(++b);
+</pre>
+    <h2>Assignment Operators</h2>
+    <p> do operations on a variable and other operand(s) and then assign the result of the operation to that variable.
+    </p>
+    <p><em><strong> Operators (+=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 6;
+a += 7; // same as a = a + 7
+console.log(a)
+</pre>
+    <p><em><strong> Operators (-=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 5;
+a -= 9; // same as a = a - 9
+console.log(a)
+</pre>
+    <p><em><strong> Operators (*=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+a*= 6; // same as a = a * 6
+console.log(a)
+</pre>
+    <p><em><strong> Operators (/=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 125;
+a/= 2.5; // same as a = a / 2.5
+console.log(a)
+</pre>
+    <p><em><strong> Operators (%=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 15;
+a %= 2; // same as a = a % 1
+console.log(a)
+</pre>
+    <h2>Comparison Operators</h2>
+    <p>Comparison Operators are used to compare given Variables, they return a Boolean value .</p>
+    <p><em><strong>Greater Than Operators (>)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 6;
+console.log(a > b)
+</pre>
+    <p><em><strong>Less Than Operators (&lt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 6;
+console.log(a &lt; b)
+</pre>
+    <p><em><strong>Equality Operators (==)</strong></em> equal converts operands to a common type and then checks if the
+        operands are equal.</p>
+    <pre class="codeBlock prettyprint">
+let a = "8";
+let b = 8;
+console.log(a == b)
+</pre>
+    <p><em><strong>Strict Equality Operators (===)</strong></em>Checks if the operands are equal and of the same data
+        type. Does not convert the operands to a common type.</p>
+    <pre class="codeBlock prettyprint">
+let a = "8";
+let b = 8;
+console.log(a === b)
+</pre>
+    <p><em><strong>Greater Than or Equal To Operators (>=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 6;
+console.log(a &gt;= b)
+</pre>
+    <p><em><strong>Less Than or Equal To Operators (&lt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 6;
+console.log(a &lt;= b)
+</pre>
+    <p><em><strong>Inequlity Operators (!=)</strong></em> : checks whether the Operands are Not Equal.Returns True if
+        they are not equal.</p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = 6;
+console.log(a != b)
+</pre>
+    <p><em><strong> Operators (!==)</strong></em> Checks if the operands are Not equal and or Not of the same data type.
+    </p>
+    <pre class="codeBlock prettyprint">
+let a = 8;
+let b = "8";
+console.log(a !== b)
+</pre>
+    <h2>Logical Operators</h2>
+    <p><em><strong> And Operators (&&)</strong></em> : Returns True if all the variables are true.</p>
+    <pre class="codeBlock prettyprint">
+let isRaining = true
+let isSunny = false
+console.log(isRaining && isSunny)
+</pre>
+    <p><em><strong>Or Operators (||)</strong></em> : Returns True if one of the conditions is true.</p>
+    <pre class="codeBlock prettyprint">
+let isRaining = true
+let isSunny = false
+console.log(isRaining || isSunny)
+</pre>
+    <p><em><strong>Not Operators (!)</strong></em> : inverts a boolean value . If it was True , it becomes False.</p>
+    <pre class="codeBlock prettyprint">
+let isRaining = true
+console.log(!isRaining)
+</pre>
+    <h2>Ternary operator</h2>
+    <pre class="codeBlock prettyprint">
+let a = 4 > 5 ? true : false;
+console.log(a)
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

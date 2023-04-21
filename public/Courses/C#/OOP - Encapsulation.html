@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulations in C#</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Encapsulations</h1>
+    <p>Allowing direct access to properties can lead to problems, therefore it is not recommended.</p>
+    <pre class="codeBlock prettyprint">
+class Person
+{
+    public static int numberOfPeople;
+    public String name;
+    public String gender;
+    public int age;
+
+    public string GetPersonalInfo()
+    {
+        return $"Name : {name}\nGender : {gender}\nAge : {age}";
+    }
+
+    //Default Constructor
+    public Person()
+    {
+        numberOfPeople++;
+
+    }
+    // Secondary Constructor
+    public Person(string name, string gender, int age)
+    {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        numberOfPeople++;
+    }
+} 
+</pre>
+For example the <code class="prettyprint">numberOfPeople</code> property can be modified outside the class and the <code class="prettyprint">age</code> can be assigned a negative number.
+    <pre class="codeBlock prettyprint">
+Person fury = new Person();
+Person mike = new Person("Micheal Myers","Male", &hyphen;40);
+Person.numberOfPeople = 6;
+
+
+fury.name = "Nick Fury";
+fury.gender = "male";
+fury.age = &hyphen;100;
+
+Console.WriteLine(fury.GetPersonalInfo());
+Console.WriteLine(mike.age);
+Console.WriteLine(Person.numberOfPeople);
+</pre>
+    <h3>Getters and Setters</h3>
+<p>To encapsulate a property, set it's access modifier to <code class="prettyprint">private</code> and create a field for it.</p>
+<pre class="codeBlock prettyprint">
+//Property
+private string name;
+
+//Field
+public string Name
+{
+    get => name;
+    set => name = value;
+}
+</pre>
+The <code class="prettyprint">set</code> accessor handles how a property's value is modified, and <code class="prettyprint">get</code> accessor handles access to the property's value. The <code class="prettyprint">value</code> keyword refers to the value being assigned to the property.
+    <pre class="codeBlock prettyprint">
+class Person
+{
+    private static int numberOfPeople;
+    private String name;
+    private String gender;
+    private int age;
+
+    //Getters and Setters Accessors
+    public string Name
+    {
+        get => name;
+        set => name = value;
+    }
+    public string Gender
+    {
+        get => gender;
+        set => gender = value;
+    }
+    public int Age
+    {
+        get => age;
+        set
+        {
+            if (!(value &lt; 0))
+            {
+                age = value;
+            }
+            else
+            {
+                age = 0;
+            }
+        }
+    }
+
+    public string GetPersonalInfo()
+    {
+        return $"Name : {Name}\nGender : {Gender}\nAge : {Age}";
+    }
+
+    public static int GetnumberOfPeople()
+    {
+        return numberOfPeople;
+    }
+
+    //Default Constructor
+    public Person()
+    {
+        numberOfPeople++;
+
+    }
+    // Secondary Constructor
+    public Person(string name, string gender, int age)
+    {
+        this.Name = name;
+        this.Gender = gender;
+        this.Age = age;
+        numberOfPeople++;
+    }
+}
+</pre>
+<pre class="codeBlock prettyprint">
+Person fury = new Person();
+Person mike = new Person("Micheal Myers", "Male", -40);
+ 
+fury.Name = "Nick Fury";
+fury.Gender = "Male";
+fury.Age = -100;
+
+Console.WriteLine(fury.GetPersonalInfo());
+Console.WriteLine(mike.GetPersonalInfo());
+Console.WriteLine(Person.GetnumberOfPeople());</pre>
+<p> If you're not adding any logic to get and set and you're not using the property in the class. you can delete he property
+        and shorten the field to <code class="code prettyprint">Field{get;set;}</code> is used to generate Getter and Setter methods.
+    </p>
+    <pre class="codeBlock prettyprint">
+class Person
+{
+    private static int numberOfPeople;
+
+    private int age;
+
+    //Getters and Setters Accessors
+    public string Name{get;set;}
+    public string Gender{get;set;}
+    public int Age
+    {
+        get => age;
+        set
+        {
+            if (!(value &lt; 0))
+            {
+                age = value;
+            }
+            else
+            {
+                age = 0;
+            }
+        }
+    }
+
+    public string GetPersonalInfo()
+    {
+        return $"Name : {Name}\nGender : {Gender}\nAge : {Age}";
+    }
+
+    public static int GetnumberOfPeople()
+    {
+        return numberOfPeople;
+    }
+
+    //Default Constructor
+    public Person()
+    {
+        numberOfPeople++;
+
+    }
+    // Secondary Constructor
+    public Person(string name, string gender, int age)
+    {
+        this.Name = name;
+        this.Gender = gender;
+        this.Age = age;
+        numberOfPeople++;
+    }
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

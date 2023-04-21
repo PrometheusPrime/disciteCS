@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract classes</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Abstract Class</h1>
+    <p>An abstract class is created with the <code class="prettyprint">abstract</code> keyword. Abstract classes are similar to ordinary classes except they can not be instantiated and can contain <code class="prettyprint">abstract</code> methods.</p>
+Abstract methods are also defined with the <code class="prettyprint">abstract</code> keyword. Abstract methods have no implementation, they must be implementated by the sub-class.
+    <pre class="codeBlock prettyprint">
+abstract class MusicalInstrument {
+    String nameOfInstrument;
+
+    // Getter and Setters
+    public String getNameOfInstrument() {
+        return nameOfInstrument;
+    }
+
+    public void setNameOfInstrument(String nameOfInstrument) {
+        this.nameOfInstrument = nameOfInstrument;
+    }
+
+    // Non-abstract method
+    String play() {
+        return nameOfInstrument + " is making music";
+
+    }
+
+    // Abstract method
+    abstract String info();
+
+    // Constructors
+    public MusicalInstrument() {
+
+    }
+
+    public MusicalInstrument(String nameOfInstrument) {
+        setNameOfInstrument(nameOfInstrument);
+    }
+}</pre>
+<p>Abstract classes can not be instantiated, they are inherited. A class that inherits from an abstract class with abstract methods,must provide implementation for all the abstract methods. If not then it should also be declared <code class="prettyprint">abstract</code>.</p>
+<pre class="codeBlock prettyprint">
+class Idiophone extends MusicalInstrument {
+
+    public Idiophone() {
+    }
+
+    public Idiophone(String nameOfInstrument) {
+        super(nameOfInstrument);
+    }
+
+    String info() {
+
+        return nameOfInstrument + " produce sound by the vibration of the instrument's body";
+
+    }
+
+}
+
+class Membranophone extends MusicalInstrument {
+    public Membranophone() {
+    }
+
+    public Membranophone(String nameOfInstrument) {
+        super(nameOfInstrument);
+    }
+
+    String info() {
+
+        return nameOfInstrument + " produce sound by the vibration of a tightly stretched Membrane";
+    }
+
+}
+</pre>
+<pre class="codeBlock prettyprint">
+Idiophone thumbPiano = new Idiophone("African Thumb Piano");
+Membranophone drum = new Membranophone("Drums");
+</pre>
+<p>If an abstract class' sub-class is <code class="prettyprint">abstract</code>, it doesn't have to override the abstract methods.</p>
+<pre class="codeBlock prettyprint">
+abstract class PercussionInstrument extends MusicalInstrument {
+ 
+}</pre>
+<p>Abstract classes are used to achieve <strong>Abstraction</strong>, hiding unnessary details and only showing what is needed.</p>
+    <script type="text/javascript" src="../../Styles/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+</body>
+
+</html>

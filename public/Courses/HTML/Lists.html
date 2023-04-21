@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Lists</h1>
+  <p>There are three kinds of lists in HTML.</p>
+  <h2>Ordered List</h2>
+  <p>The <code class="code prettyprint">&lt;ol&gt;</code> tag defines an Ordered List. It is used when the order of the
+    items matters. Each list item is placed between the <code class="code prettyprint">&lt;li&gt;</code> tags</p>
+  </p>
+  <pre class="codeBlock prettyprint">&lt;ol&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</pre>
+  Use the <code class="code prettyprint">start</code> attribute to change where the list starts counting from.
+  <pre class="codeBlock prettyprint">&lt;ol start="6"&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</pre>
+  <p>The type of the list item marker can be changed with the <code class="code prettyprint">type</code> attribute. It
+    has the default value of <strong><em>1</em></strong> (list items will be numbered with numbers), other values
+    include <strong><em>A</em></strong>(list items will be numbered with uppercase letters),
+    <strong><em>a</em></strong>(list items will be numbered with lowercase letters), <strong><em>i</em></strong>(list
+    items will be numbered with lowercase roman numbers) and <strong><em>I</em></strong>(list items will be numbered
+    with uppercase roman numbers)
+  </p>
+  <pre class="codeBlock prettyprint">&lt;ol type="I"&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</pre>
+  <h2>Unordered List</h2>
+  <p>The <code class="code prettyprint">&lt;ul&gt;</code> tag defines an Unordered List. It is used when the order of
+    the items doesn't matters.</p>
+  <pre class="codeBlock prettyprint">&lt;ul&gt;
+  &lt;li&gt;Java&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;</pre>
+  <p>The style of the list item marker can be changed with the <code>list-style-type</code>
+    property. It has the default value of <strong><em>disc</em></strong>, other values include
+    <strong><em>none</em></strong> (the list items will not be marked), <strong><em>square</em></strong> and
+    <strong><em>circle</em></strong>
+  </p>
+  <pre class="codeBlock prettyprint">&lt;ul style="list-style-type:square;"&gt;
+  &lt;li&gt;Java&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;</pre>
+  <p>You can add an image as a list item marker with the <code>list-style-image</code>
+    property.</p>
+  <pre class="codeBlock prettyprint">&lt;ul style="list-style-image: url('images/HTML5_Logo.svg')"&gt;
+  &lt;li&gt;Java&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;</pre>
+  <h2>Description list</h2>
+  <p>A description list is a list of terms, with their descriptions. <code class="code prettyprint">&lt;dl&gt;</code>
+    tag defines the description
+    list, <code class="code prettyprint">&lt;dt&gt;</code> description term defines the term and <code
+      class="code prettyprint">&lt;dd&gt;</code> description data that describes each term.</p>
+  <pre class="codeBlock prettyprint">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Markup Language used to describe the content of a Web page and how it's structured.&lt;/dd&gt;
+  &lt;dt&gt;Python&lt;/dt&gt;
+    &lt;dd&gt;Python is a High-Level, General purpose, Interpreted programming language.&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Style stylesheet used to control the way an HTML Document is presented or rendered.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+  <h2>Nested Lists</h2>
+  <p>Lists can be nested, the nested list element must be within a list item element.</p>
+  <pre class="codeBlock prettyprint">&lt;ul&gt;
+  &lt;li&gt;Web Development
+    &lt;ol&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Android App Development
+    &lt;ol&gt;
+      &lt;li&gt;Java or Kotlin&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

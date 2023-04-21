@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in Kotlin</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Inheritance</h1>
+  <p>By default all classes are <code class="prettyprint">final</code> and do not allow inheriting from them. Use the <code
+      class="prettyprint">open</code> keyword to make a class inheritable. All classes inherit from the top level class <code class="prettyprint">Any</code>.</p>
+  <pre class="prettyprint codeBlock">
+open class Parent(firstName: String,familyName : String){
+  var name : String
+  init {
+      name = "$firstName $familyName"
+  }
+  fun info(): String {
+        return "Name : $name"
+
+    }
+  
+}
+class Child(firstName: String, familyName: String, parent: Parent) : Parent(firstName, familyName){
+
+}
+</pre>
+<pre class="prettyprint codeBlock">
+//in main
+val john = Parent("John", "Mwanza")
+val moses = Child("Moses", "Mwanza",john)
+println(moses.info())
+</pre>
+<h3>Method Overriding</h3>
+<p>Methods and properties must</p>
+  <pre class="prettyprint codeBlock">
+open class Parent(firstName: String, familyName: String) {
+    var name: String
+
+    init {
+        name = "$firstName $familyName"
+    }
+
+    open fun info(): String {
+        return "Name : $name"
+
+    }
+
+}
+
+class Child(firstName: String, familyName: String, val parent: Parent) : Parent(firstName, familyName) {
+    override fun info(): String {
+        return "Name : $name\nParent : ${parent.name}"
+
+    }
+}
+</pre>
+<pre class="prettyprint codeBlock">
+//in main
+val john = Parent("John", "Mwanza")
+val moses = Child("Moses", "Mwanza",john)
+
+println(john.info())
+println()
+println(moses.info())
+</pre>
+An Overriden method is <code class="prettyprint">open</code> by default, it can be Overriden in subclasses.
+<p></p>
+<pre class="prettyprint codeBlock">
+open class Polygon {
+    open val numberOfSides: Int = 0
+}
+
+class SomethingGon : Polygon() {
+    override val numberOfSides = 4
+
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

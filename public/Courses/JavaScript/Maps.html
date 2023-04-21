@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps in JavaScript</title>
+</head>
+<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+   <h1>Maps</h1>
+    <p>A map is a collection of key-value pairs. The key must be unique but any thing can be used as a key (or value).</p>
+    <pre class="codeBlock prettyprint">
+const independenceDay = new Map();
+</pre>
+<p>Add a new key-value entry to a map with the  <code class="prettyprint">set()</code> method. If an entry with the same key exists, that entry is updated.</p>
+    <pre class="codeBlock prettyprint">
+independenceDay.set('Angola', '11/11/1975');
+independenceDay.set('Botswana', '30/09/1966');
+independenceDay.set('Zambia', '24/10/1964');
+independenceDay.set('Zimbabwe', '18/04/1980');
+console.log(independenceDay);
+</pre>
+<p>The <code class="prettyprint">size</code> property returns the size of the map.</p>
+<pre class="codeBlock prettyprint">console.log(independenceDay.size);</pre>
+<p>The <code class="prettyprint">get()</code> method returns the value associated with that key, if theres no entry with that key, <code class="prettyprint">undefined</code> is returned.</p>
+    <pre class="codeBlock prettyprint">
+console.log(independenceDay.get('Angola'));</pre>
+<p>The <code class="prettyprint">has()</code> method checks if there is an entry with the specified key.</p>
+    <pre class="codeBlock prettyprint">console.log(independenceDay.has('Angola'));</pre>
+    <p>The <code class="prettyprint">entries()</code> method returns an iterable of all key-value pairs in the map.</p>
+    <pre class="codeBlock prettyprint">console.log(independenceDay.entries());</pre>
+    <p>The <code class="prettyprint">keys()</code> method returns an iterable of all keys in the map</p>
+    <pre class="codeBlock prettyprint">console.log(independenceDay.keys());</pre>
+        <p>The <code class="prettyprint">values()</code> method returns an iterable of all values in the map</p>
+    <pre class="codeBlock prettyprint">console.log(independenceDay.values());</pre>
+    <p>We can execute a function on each map entry with the <code class="prettyprint">forEach()</code> method.</p>
+    <pre class="codeBlock prettyprint">independenceDay.forEach((date, country) =>
+    console.log(`${country} got it's independence on ${date}`)
+);</pre>
+    <p>Use the <code class="prettyprint">delete()</code> method to delete a key-value pair from the map. If the entry was in the Map and has been deleted the method returns <code class="prettyprint">true</code> else it returns <code class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">independenceDay.delete('Zimbabwe');
+</pre>
+<p>The <code class="prettyprint">clear()</code> method deletes all key-value entries from the map.</p>
+    <pre class="codeBlock prettyprint">independenceDay.clear();</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

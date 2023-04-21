@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formating Printf</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Formating Printf</h1>
+    <p>You can not directly print data that is not of type <code class="prettyprint">string</code> (<code
+            class="prettyprint">char*</code>).</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+            
+int main(int argc, char const *argv[])
+{
+    /* code */
+    int age = 42;
+    printf(age);
+                
+    return 0;
+}
+</pre>
+    <p>If you want to print data of any other type, <code class="prettyprint">printf()</code> function expects the first
+        argument to be of type <code class="prettyprint">char *</code> (a formating string), then the data.</p>
+    <h2>Format Specifier</h2>
+    <p>Format specifiers are placeholders and will be replaced by the by the corresponding argument after the formating
+        string:
+    </p>
+    <table>
+        <tr>
+            <th>Format specifiers</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td><code>%d</code> or <code>%i</code></td>
+            <td>Integers</td>
+        </tr>
+        <tr>
+            <td><code>%ld</code> or <code>%li</code></td>
+            <td>Long integers</td>
+        </tr>
+        <tr>
+            <td><code>%f</code></td>
+            <td>Double or Float</td>
+        </tr>
+        <tr>
+            <td><code>%lf</code></td>
+            <td>Double</td>
+        </tr>
+        <tr>
+            <td>%x</td>
+            <td>Hexadecimal</td>
+        </tr>
+        <tr>
+            <td><code> %s </code></td>
+            <td>Strings</td>
+        </tr>
+        <tr>
+            <td><code>%c</code></td>
+            <td>Character</td>
+        </tr>
+    </table>
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+                
+int main(int argc, char const *argv[])
+{
+    /* code */
+    int age = 42;
+    printf("%i",age);
+                    
+    return 0;
+}
+</pre>
+    When formating multiple variables, the order of variables must match the order of the Format specifiers.
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+            
+int main(int argc, char const *argv[])
+{
+    /* code */
+    int age = 42;
+    char name[] = "Morpheus";
+    float height = 6.7 ;
+    printf("My name is %s, i am %i years old and my height is %f",name,age,height);
+
+    return 0;
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+printf("My name is %s, i am %i years old and my height is %.2f",name,age,height);
+</pre>
+    <h2>Other Output functions</h2>
+    <h3>putchar()</h3>
+    <p>The <code class="prettyprint">putchar()</code> function prints a single character.</p>
+    <pre class="codeBlock prettyprint">
+char x =  '?';
+putchar(x);
+</pre>
+    <h3>puts()</h3>
+    <p>The <code class="prettyprint">puts()</code> function is used to print a string. It automatically adds a new line.
+    </p>
+    <pre class="codeBlock prettyprint">
+char *quote = "Life is really simple, but we insist on making it complicated - Confucius";
+puts(quote);
+</pre>
+    It returns a positive integer if the string was successfully printed, else it returns a negative integer.
+    <pre class="codeBlock prettyprint">
+char *quote = "Life is really simple, but we insist on making it complicated - Confucius";
+
+int returnedValue = puts(quote);
+printf("%d", returnedValue);
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

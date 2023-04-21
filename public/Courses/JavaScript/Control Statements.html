@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>control Statements</h1>
+    <h3>If</h3>
+    <p>The <code class="prettyprint">if</code> statement's block will be executed if the condition is <code class="prettyprint">true</code>.</p>
+    <pre class="codeBlock prettyprint">
+if(4 &lt; 5){
+    console.log("4 is less than 5");
+}
+</pre>
+<h3>Else</h3>
+    <p>The <code class="prettyprint">else</code> statement defines an alternate block to execute if the conditon in the <code class="prettyprint">if</code> statement is <code class="prettyprint">false</code></p>
+    <pre class="codeBlock prettyprint">
+if(4 &gt; 5){
+    console.log("4 is greater than 5");
+}else{
+    console.log("4 is less than 5");
+}
+</pre>
+<h4>Else if</h4>
+    <p>The <code class="prettyprint">else if</code> statement is used to check additional conditions.</p>
+    <pre class="codeBlock prettyprint">
+if(4 &gt; 5){
+    console.log("4 is greater than 5");
+}else if(4 &lt; 5){
+    console.log("4 is less than 5");
+}else{
+    console.log("4 and 5 are equal");
+}
+</pre>
+<p>If a Statement's condition is true that Statement's block will be executed, no other conditions will be evaluated and program execution go to the next line after the if elif else Statements. So be care when ordering the conditions.</p>
+    <p>We can only have one <code class="prettyprint">if</code> statement; any number of <code class="prettyprint">else if</code> statements; and one optional <code class="prettyprint">else</code> statement that will handle any situations not handled by the preceding statements.</p>
+    <h2>Switch Statement</h2>
+    <p>The <code class="prettyprint">switch</code> statement is used to do some operation depending on a value of a variable. The variable is compared to a <code class="prettyprint">case</code>, if they match that <code class="prettyprint">case</code>'s statement(s) is executed. A <code class="prettyprint">case</code> can only be a number, string or boolean.</p>
+    <pre class="codeBlock prettyprint">
+const gender = "Male";
+const lastName = "Smith";
+switch (gender) {
+  case "Male":
+    console.log(`Hello Mr ${lastName}`);
+    break;
+  case "Female":
+    console.log(`Hello Ms ${lastName}`);
+    break;
+  default:
+    console.log(`Hello ${lastName}`);
+    break;
+}
+</pre>
+The <code class="prettyprint">default</code> case is executed if non of the cases matched.
+<p>if there isn't any <code class="prettyprint">break</code> statement, all cases that follow will be executed until a <code class="prettyprint">break</code> statement is found.</p>
+    <pre class="codeBlock prettyprint">
+let num = 4;
+
+switch (num) {
+    case 5:
+        console.log("5 !");
+    case 4:
+        console.log("4 !");
+    case 3:
+        console.log("3 !");
+    case 2:
+        console.log("2 !");
+    case 1:
+        console.log("1 !");
+    default:
+        console.log("Blast off!");
+}</pre>
+<p>We can have multiple cases execute a single block.</p>
+<pre class="codeBlock prettyprint">
+let age = 30;
+
+switch (age) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+        baby
+        break;
+    case something:
+    case something:
+        teen
+        break;
+    default:
+        adult
+        break;
+}
+</pre>
+    
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

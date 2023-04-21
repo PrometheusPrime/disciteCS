@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css"/>
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+<body onload="PR.prettyPrint()">
+<h1></h1>
+<h3>Universal Selector</h3>
+It selects every thing on the document.
+<pre class="codeBlock prettyprint">
+*{
+}</pre>
+<pre class="codeBlock prettyprint">
+*{
+}</pre>
+<h2>Element Selectors</h2>
+Element Selectors selects all the  specified Elements on the document
+<pre class="codeBlock prettyprint">
+
+</pre>
+select a nested element
+<pre class="codeBlock prettyprint">
+
+</pre>
+  <h2>Class and Id Selectors</h2>
+  <p>The <em><strong>Class Selector</strong></em> is used to style a specific element(s).A class can be used as many
+    times as needed,on any number of elements. Use the class attribute to add a class to an element.To select an
+    element(s) with a class, use the period (.) character, then follow it with the class name. A class name cannot start
+    with a number.</p>
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 class = "heading"&gt;
+  This is a paragraph.
+    &lt;/h1&gt;
+    &lt;p class = "paragraph"&gt;
+      This is a paragraph.
+    &lt;/p&gt;
+    &lt;p&gt;
+      This is another paragraph.
+    &lt;/p&gt;
+    &lt;p class = "paragraph"&gt;
+    This is also a paragraph.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <pre class="codeBlock prettyprint">
+.paragraph{ 
+  color:aquamarine;
+  background-color:darkslategrey;
+}
+.heading{
+  color:cadetblue;
+}
+</pre>
+  <p>An element can belong to multiple classes, seperate the classes with a space.</p>
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 class = "heading italicText"&gt;
+    This is a paragraph.
+    &lt;/h1&gt;
+    &lt;p class = "paragraph"&gt;
+      This is a paragraph.
+    &lt;/p&gt;
+    &lt;p class = "paragraph italicText"&gt;
+      This is another paragraph.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <pre class="codeBlock prettyprint">
+.paragraph{ 
+  color:aquamarine;
+      background-color:darkslategrey;
+}
+.heading{
+  color:cadetblue;
+}
+.italicText{
+  font-style: italic;
+}
+</pre>
+  <p>The <em><strong>Id Selector</strong></em> is used to style a specific element.An id is used only once per page ,it
+    is used to select one unique element. Use the id attribute to add an id to an element. To select an element with an
+    id, use the hash (#) character, then follow it with the id name. An id name cannot start with a number.</p>
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p class = "paragraph"&gt;
+      This is a paragraph.
+    &lt;/p&gt;
+    &lt;p id = "paragraph"&gt;
+      This is another paragraph.
+    &lt;/p&gt;
+    &lt;p class = "paragraph"&gt;
+    This is also a paragraph.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <pre class="codeBlock prettyprint">
+.paragraph{
+  color:aquamarine;
+}
+#paragraph{
+  color:cadetblue;
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+</html>

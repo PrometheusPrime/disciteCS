@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Variables and Data Types</h1>
+    <h2>variables</h2>
+    <p>Variables are used to store data in a computer memory variable names to access that data</p>
+    <p>A variable name can not be a reserved keyword, start with a number, contain a space or
+        hyphen. Variable names are case sensitive . The <em>equals sign (=)</em> is used to assign a value to a
+        variable. Assignment is evaluated from right to left.</p>
+    <p>Variables can be defined using three keywords; <code class="prettyprint">var</code>, <code class="prettyprint">const</code> and <code class="prettyprint">let</code>.</p>
+    <p><code class="prettyprint">var</code> keyword is used to create a variable that has a Global Scope. Global variables
+        are mutated in functions(other blocks), to avoid this behavior redefine that variable in the function(or block).</p>
+    <pre class="codeBlock prettyprint">
+var name = 'Morpheus';
+</pre>
+    <p><code class="prettyprint">const</code> keyword is used to create a constant variable. You have to initialise (give it a
+        value) a constant variable otherwise you'll get an error.</p>
+    <pre class="codeBlock prettyprint">
+const PI = 3.141592;
+</pre>
+    <p><code class="prettyprint">let</code> keyword is used to create a variable that has a local scope(accessible within the block it declared in).</p>
+    <pre class="codeBlock prettyprint">
+let num = 5;
+</pre>
+Declare a variable and assign it a value later.
+<pre class="codeBlock prettyprint">
+let num;
+num = 5;
+</pre>
+    <h2>Data Types</h2>
+    JavaScript is Dynamically typed, the data type of a variable can change thought the program.
+There are 7 data types in JavaScript :<em><strong>undefined</strong></em>, <em><strong>null</strong></em>
+    ,<em><strong>boolean</strong></em> , <em><strong>String</strong></em> , <em><strong>symbol</strong></em> ,
+    <em><strong>number</strong></em> and <em><strong>Object</strong></em>.
+    <p><em><strong>Strings</strong></em> is a sequence of Characters.In JavaScript, strings are delimited by either
+        Single quotes('') or Double quotes(""). </p>
+    <pre class="codeBlock prettyprint">
+let name = 'John';
+console.log(name)
+</pre>
+    <p><em><strong>Numbers</strong></em> Integers (negative or positive whole numbers) or Floats (Real Numbers with a
+        Decimal Point) </p>
+    <pre class="codeBlock prettyprint">
+const grade = 5;
+let height = 6.4;
+console.log(grade)
+console.log(height)
+</pre>
+    <p><em><strong>Boolean</strong></em> variables can have either <code class="kwd">true</code> or <code class="kwd">false</code> as values</p>
+    <pre class="codeBlock prettyprint">
+let isTall = true;
+console.log(isTall)
+</pre>
+    note the values start with lowercase letters
+    <p><em><strong>Null</strong></em> value of nothing empty variable </p>
+    <pre class="codeBlock prettyprint">
+let name = null;
+console.log(name)
+</pre>
+    <p><em><strong>Undefined</strong></em> without a value. have not set a value the variable is not defined
+    <pre class="codeBlock prettyprint">
+let name = undefined;
+let age;
+console.log(name)
+console.log(age)
+</pre>variables declared with the <em><strong>let</strong></em> keyword are undefined by default.</p>
+    <p><em><strong>Symbols</strong></em> immutable primitive type. </p>
+    <p>Use the <code class="prettyprint">typeof</code> operator to check the data type of a variable.</p>
+    <pre class="codeBlock prettyprint">
+var name = 'Morpheus';
+console.log(typeof name);
+</pre>
+    <h2>Type Conversion</h2>
+    <p><em><strong>Explicit Conversion</strong></em> explicitly convert to string</p>
+    <p>parseInt() parseFloat()</p>
+    Convert from a string to a Number
+    <pre class="codeBlock prettyprint">
+let  num = number("42");
+</pre>
+Convert from a string to an Integer
+    <pre class="codeBlock prettyprint">
+let  myInt = parseInt("42");
+</pre>
+Convert from a string to Float
+    <pre class="codeBlock prettyprint">
+const PI = parseFloat("3.1415");
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

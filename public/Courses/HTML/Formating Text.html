@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formating Text</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Working With Text</h1>
+  <h2>Headings</h2>
+  <p>HTML has 6 levels of headings (h1-h6),h1 is the most
+    important(largest) heading and h6 the least important(smallest).
+  </p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;title&gt;Hello HTML&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;h1&gt;Hello There !!&lt;/h1&gt;
+   &lt;h2&gt;Hello There !!&lt;/h2&gt;
+   &lt;h3&gt;Hello There !!&lt;/h3&gt;
+   &lt;h4&gt;Hello There !!&lt;/h4&gt;
+   &lt;h5&gt;Hello There !!&lt;/h5&gt;
+   &lt;h6&gt;Hello There !!&lt;/h6&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <img src="images/h1-h6.png" alt="h1 to h6 demo" />
+  <h2>Paragraphs</h2>
+  <p>
+The p element is used to create
+    paragraphs.
+  </p>
+  <pre class="codeBlock prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+    &lt;title&gt;Hello HTML&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ This is not a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, error!
+    &lt;p&gt;This is a paragraph lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, magnam, temporibus, impedit fugiat obcaecati sit earum nesciunt libero ab nam explicabo saepe culpa eaque! Ipsa sed accusamus dolorem incidunt maxime vitae rem sint corrupti pariatur voluptatibus itaque delectus nisi autem, tempore, sit veniam distinctio temporibus. Obcaecati cumque esse voluptatem sit
+    &lt;/p&gt;
+  This is not a paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, quod.
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <img src="images/p1.png" alt=" paragraph demo" />
+  <p>
+    Empty lines are automatically added before and after the paragraph and extra white space between the text is ignored
+    by the browser.
+  </p>
+  <h2>Quotes</h2>
+  <p><code class="code prettyprint"> &lt;q&gt;</code> create inline quotation</p>
+  <pre class="codeBlock prettyprint">WWF &lt;q&gt;the world's leading conservation organization&lt;/q&gt;</pre>
+</pre>
+  <p><code class="code prettyprint"> &lt;blockquote&gt;</code> create a block quote</p>
+  <pre class="codeBlock prettyprint">
+&lt;blockquote&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quaerat. Rerum est tenetur provident quidem perferendis possimus? Error itaque, soluta molestiae quibusdam ratione hic saepe!&lt;/blockquote&gt;</pre>
+  <h2>Other Text Formating Elements</h2>
+  <code class="code prettyprint"> &lt;i&gt;</code>Italic text<br />
+  <code class="code prettyprint"> &lt;strong&gt;</code>Important text<br />
+  <code class="code prettyprint"> &lt;em&gt;</code> used to stress emphasis, text is rendered in italics<br />
+  <code class="code prettyprint"> &lt;mark&gt;</code> Marked or highlighted text<br />
+  <code class="code prettyprint"> &lt;bdo&gt;</code>
+  Bi-Directional Override overrides the current text direction.<br />
+  <code class="code prettyprint"> &lt;abbr&gt;</code> Abbreviation or Acronym<br />
+  <code class="code prettyprint"> &lt;small&gt;</code> Small
+  text<br />
+    <code class="code prettyprint"> &lt;big&gt;</code> big
+  text<br />
+  <code class="code prettyprint"> &lt;ins&gt;</code> Inserted
+  text<br />
+  <code class="code prettyprint"> &lt;del&gt;</code>Deleted
+  text<br />
+  <code class="code prettyprint"> &lt;sub&gt;</code>Subscripted text<br />
+  <code class="code prettyprint"> &lt;sup&gt;</code>Superscripted text<br />
+  <code class="code prettyprint"> &lt;b&gt;</code> Bold text<br />
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;i&gt;Italic&lt;/i&gt; text&lt;br/&gt;
+   &lt;strong&gt;Important&lt;/strong&gt; text&lt;br/&gt;
+   &lt;em&gt;Emphasized&lt;/em&gt; text&lt;br/&gt;
+   &lt;mark&gt;Marked&lt;/mark&gt; text&lt;br/&gt;
+   &lt;bdo&gt;Hello HTM&lt;/bdo&gt;&lt;br/&gt;
+   The &lt;abbr title="World Wildlife Fund"&gt;WWF&lt;/abbr&gt; is the world's leading conservation organization.&lt;br/&gt;
+   &lt;small&gt;SMALL&lt;/small&gt; text&lt;br/&gt;
+   &lt;ins&gt;&lt;/ins&gt;Inserted text&lt;br/&gt;
+   &lt;del&gt;Deleted&lt;/del&gt;text&lt;br/&gt;
+   H&lt;sub&gt;2&lt;/sub&gt;O&lt;br/&gt;
+   2&lt;sup&gt;3&lt;/sup&gt; = 8&lt;br/&gt;
+   This is &lt;b&gt;Bold&lt;/b&gt; text&lt;br/&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  <code class="code prettyprint"> &lt;kbd&gt;</code> keystrokes on a keyboard<br />
+  <code class="code prettyprint"> &lt;samp&gt;</code> computer output<br />
+  <code class="code prettyprint"> &lt;code&gt;</code> Code snipet
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    click &lt;kbd&gt;Windows + S&lt;/kbd&gt; to open the Search window.&lt;br/&gt;
+    &lt;samp&gt;'java' is not recognized as an internal or external command, operable program or batch file.&lt;/samp&gt;&lt;br/&gt;
+    &lt;code&gt;print("Hello World")&lt;/code&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+  <code class="code prettyprint"> &lt;pre&gt;</code>defines preformatted text, it preserves both spaces
+  and line breaks<br />
+  <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;pre&gt;The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

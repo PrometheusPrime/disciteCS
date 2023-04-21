@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Classes and Objects in C#</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Classes and Objects</h1>
+	<p><code class="code prettyprint">class</code>
+    Classes enable us to create a custom type to represent complex things in code.</p>
+    	 <pre class="codeBlock prettyprint">
+class Person
+{
+    public String name;
+    public String gender;
+    public int age;
+
+    public string GetPersonalInfo()
+    {
+        return $"Name : {name}\nGender : {gender}\nAge : {age}";
+    }
+
+
+}
+</pre>
+<h2>Object</h2>
+Create an instance(object) of a class with the new keyword. You can create any number of objects from a class.
+<pre class="codeBlock prettyprint">
+Person fury = new Person();</pre>
+<p>An object's members (variables and methods) are accessed using the dot (.) notation. </p>
+<pre class="codeBlock prettyprint">
+fury.name = "Nick Fury";
+fury.gender = "male";
+fury.age = 30;
+
+Console.WriteLine(fury.GetPersonalInfo());</pre>
+<h3>Constructor</h3>
+<p>A Constructor is a special method that is called when an instance of a <code class="code prettyprint">class</code> is created. The Default Constructor is automatically generated, hence there's no need to include. Unless you add another constructor and still want to be able to create objects without passing arguments to the constructor. In fact you can overload the constructor method as many times as you need.</p>
+	 <pre class="codeBlock prettyprint">
+class Person
+{
+    public String name;
+    public String gender;
+    public int age;
+
+    public string GetPersonalInfo()
+    {
+        return $"Name : {name}\nGender : {gender}\nAge : {age}";
+    }
+
+    //Default Constructor
+    public Person()
+    {
+
+    }
+    // Secondary Constructor
+    public Person(string name, string gender, int age)
+    {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+}
+</pre>
+<pre class="codeBlock prettyprint">
+</pre>
+
+<code class="code prettyprint">static</code> Fields and methods are shared between the Objects of the class. Call <code class="code prettyprint">static</code> on the class instead of on the objects.
+
+<pre class="codeBlock prettyprint">
+class Person
+{
+    public static int numberOfPeople;
+    public String name;
+    public String gender;
+    public int age;
+
+    public string GetPersonalInfo()
+    {
+        return $"Name : {name}\nGender : {gender}\nAge : {age}";
+    }
+
+    //Default Constructor
+    public Person()
+    {
+        numberOfPeople++;
+
+    }
+    // Secondary Constructor
+    public Person(string name, string gender, int age)
+    {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        numberOfPeople++;
+    }
+}
+</pre>
+
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+</html>

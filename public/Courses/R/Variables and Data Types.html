@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables and Data Types</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Variables and Data Types</h1>
+  <h2>Variables</h2>
+  we can store data using variables. When defining a variable, it's name must start with a letter and can contain numbers, periods and underscores. Do not use Object names used in R as identifiers.
+  There are several ways you can assign a value to a variable.
+  <pre class="codeBlock prettyprint">
+x = 24
+#Or
+y &lt;- 25
+#Or
+26 &hyphen;&gt; z
+</pre>
+It is not reccommended to use <code class="prettyprint">&equals;</code> for assignment.
+  <h2>Data Types</h2>
+Everything in R is an R Object. There are six R Objects; Vector, List, Matrix, Array, Factor and Data Frame. All of these will be looked at in details later.
+<h3>Vectors (atomic Vectors)</h3>
+  <p>There are six basic atomic Vector types, vectors with single values.</p>
+  <ul>
+    <li>
+      <h4>Numeric</h4>
+    </li>
+
+  <strong>Numeric</strong> any number; negative or positive, whole numbers or number with a decimal point. <pre class="codeBlock prettyprint">
+# integers
+student_age &lt;&hyphen; 16
+student_height &lt;&hyphen; 6.24
+</pre>
+    <li>
+      <h4>Integers</h4>
+    </li>
+
+    <strong>Integers</strong> are negative or positive whole numbers. Append an L to the value.
+
+    <pre class="codeBlock prettyprint">
+# integers
+student_age &lt;&hyphen; 16L
+</pre>
+    <li>
+      <h4>Complex</h4>
+    </li>
+
+      <strong>Complex</strong> with i as the imaginery part
+
+    <pre class="codeBlock prettyprint">
+# a complex
+some_num &lt;&hyphen; 5+6i
+</pre>
+
+
+      <li>
+        <h4>Logical</h4>
+      </li>
+      <strong>logical</strong> variables can have either <code class="prettyprint">TRUE</code> or <code
+        class="prettyprint">FALSE</code> / <code class="code prettyprint">T</code> or <code
+        class="code prettyprint">F</code> as values.
+    <pre class="codeBlock prettyprint">
+# boolean
+is_raining &lt;&hyphen; TRUE
+is_sunny &lt;&hyphen; FALSE
+</pre>
+
+      <li>
+        <h4>Character</h4>
+      </li>
+     In R, a Character is a character or sequence of characters. Characters are delimited by either
+      Single or Double quotes.
+    <pre class="codeBlock prettyprint">
+# single quotes
+name &lt;&hyphen; 'John Doe'
+# double quotes
+grade &lt;&hyphen; "A"
+</pre>
+  Raw Character <code class="code prettyprint">my_var &lt;- charToRaw("OMG")</code>
+  </ul>
+  <h3>Check Data Type</h3>
+  <p>
+    Use the <code class="code prettyprint">class()</code> function to check a variable's data type.
+  </p>
+  <pre class="codeBlock prettyprint">
+student.height &lt;&hyphen; 18
+class(student.height)
+</pre>
+Check if a variable is of a specific type, returns a boolean.
+  <pre class="codeBlock prettyprint">
+is.integer(student.height)
+is.numeric(student.height)
+is.character(student.height)
+is.data.frame(student.height)
+</pre>
+  <h3>Convert Types</h3>
+  <pre class="codeBlock prettyprint">
+pi = 3.1415
+as.integer(pi)
+as.character(pi)
+</pre>
+<p>All types descussed are Vectors of length 1. Vectors will be discussed in details later.</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

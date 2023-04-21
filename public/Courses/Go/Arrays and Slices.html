@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arrays and Slices</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Arrays and Slices</h1>
+	<h2>Array</h2>
+fixed length Derived Data type,same type
+<pre class="codeBlock prettyprint">
+var flowers[8] string
+</pre>
+<h4>assign values</h4>
+<pre class="codeBlock prettyprint">
+flowers[0] = "Clematis"
+flowers[1] = "Snap Dragon"
+flowers[2] = "Butterfly Bush"
+flowers[3] = "Salvia"
+flowers[4] = "Poppy"
+flowers[5] = "Day Lily"
+flowers[6] = "Peony"
+flowers[7] = "Narcissus"
+</pre>
+<h4>Declare and assign</h4>
+<p>You can declare and add elements to an array with the following syntax.</p>
+<pre class="codeBlock prettyprint">
+flowers := [...] string {
+	"Clematis",
+	"Snap Dragon",
+	"Butterfly Bush",
+	"Salvia",
+	"Poppy",
+	"Day Lily",
+	"Peony",
+	"Narcissus"
+}
+</pre>
+If youre declaring and adding values to an array, the length can be left out
+<pre class="codeBlock prettyprint">
+flowers := [...] string {
+	"Clematis",
+	"Snap Dragon",
+	"Butterfly Bush",
+	"Salvia",
+	"Poppy",
+	"Day Lily",
+	"Peony",
+	"Narcissus"
+}
+</pre>
+<h3>Operating on arrays</h3>
+<h4>Array Slicing</h4>
+<pre class="codeBlock prettyprint">
+flowers[3:7]
+flowers[5:]
+flowers[:4]
+</pre>
+<h4>looping through Arrays</h4>
+	<pre class="codeBlock prettyprint">
+for index,value:= arrar
+</pre>
+<pre class="codeBlock prettyprint">
+for i,x:= range arrar{
+
+}
+</pre>
+<pre class="codeBlock prettyprint">
+for _,x:= range arrar{
+		
+}
+</pre>
+<h4>Copy an Array</h4>
+<pre class="codeBlock prettyprint">
+copyArray := make([]type,stat,stop)
+</pre>
+<pre class="codeBlock prettyprint">
+copy(myArray,copyArray)
+</pre>
+<h3>Array functions</h3>
+<pre class="codeBlock prettyprint">
+len()
+</pre>
+<h2>Slices</h2>
+<p><strong>Slices</strong> same as Arrays but doesn't have a fixed length. They are references</p>
+Create a slice from an array
+<pre class="codeBlock prettyprint"></pre>
+<h3>Slice riteral</h3>
+<pre class="codeBlock prettyprint">
+var students[] string
+</pre>
+<pre class="codeBlock prettyprint">
+students := [] string {
+	"Isabella",
+	"Lucas",
+	"Mia",
+	"Henry",
+	"Harper",
+	"Mary",
+	"John",
+	"Joseph",
+	"Agness",
+	"Peter"
+}
+</pre>
+append() returns a new slice
+<pre class="codeBlock prettyprint">
+append(sliceName,value)
+</pre>
+length
+<pre class="codeBlock prettyprint">
+len(students)
+</pre>
+capacity of a slice
+<pre class="codeBlock prettyprint">
+cap(slice)
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

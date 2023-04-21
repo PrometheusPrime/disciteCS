@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structures - Set</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Set</h1>
+  <p>A <strong>Set</strong> is a Collection Type that ...</p>
+  <ul>
+    <li>is unordered</li>
+    <li>is mutable</li>
+    <li>can contain elements of different Data Types</li>
+    <li>can only contain unique elements.</li>
+  </ul>
+  <p>A Set defined with curly brackets.</p>
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+print(a_set)
+</pre>
+  <p>You can also create a Set from an Iterable with the <code class="prettyprint">set()</code> function.</p>
+  <pre class="codeBlock prettyprint">
+a_set = set(iterable)
+</pre>
+  <pre class="codeBlock prettyprint">
+a_set = set("Hello")
+print(a_set)
+</pre>
+  <p>You can check if an item is in a set with the <code class="prettyprint">in</code> operator.</p>
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+print(0 in a_set)
+</pre>
+  <p>You can not access individual items in a set because they are not ordered. Use a <code
+      class="prettyprint">for</code> loop with the <code class="prettyprint">in</code> operator to loop through all the
+    elements in a Set.</p>
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+for element in a_set:
+    print(element)
+</pre>
+
+  <h2>set comprehension</h2>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,'p',0,3,4}
+set2 = {element for element in set1}
+print(set2)
+</pre>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,'p',0,3,4}
+set2 = {element expr for element in set1}
+print(set2)
+</pre>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,'p',0,3,4}
+set2 = {element for element in set1 if type(element) == int}
+print(set2)
+</pre>
+  <h2>Set operations</h2>
+  <p>in a but not in b</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+print(set1 - set2)</pre>
+  <p>in a or b but not both</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+print(set1 ^ set2)</pre>
+  <p>in both intersection of the sets</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+print(set1 &amp; set2)</pre>
+  <p>in a or b or both</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+print(set1 | set2)</pre>
+  <h2>Set Functions and Methods</h2>
+  <p>The <code class="prettyprint">len()</code> function return the number of elements in a set.</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+print(len(set1))
+</pre>
+
+  <p>Add an element to a Set with the the <code class="prettyprint">add()</code> method</p>
+  <pre class="codeBlock prettyprint">
+a_set = set()
+a_set.add('z')
+a_set.add('a')
+a_set.add(2)
+print(a_set)
+</pre>
+  Add multiple elements to a Set using the <code class="prettyprint">update()</code> method.
+  <pre class="codeBlock prettyprint">
+a_set = set()
+a_set.update(['z','a',2])
+print(a_set)
+</pre>
+  <p>The <code class="prettyprint">pop()</code> method removes and also returns an element from a Set.</p>
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+poped = a_set.pop()
+print(poped)
+</pre>
+  <p>Remove an element from a Set with the <code class="prettyprint">discard()</code> method .
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+a_set.discard(0)
+print(a_set)
+</pre>
+  <p>You can also remove an element from a Set with the <code class="prettyprint">remove()</code> method . The <code
+      class="prettyprint">remove()</code> method will raise an error if the element is not a member of a Set.</p>
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+a_set.remove('p')
+print(a_set)
+</pre>
+  <p>Remove all elements from a Set with the <code class="prettyprint">clear()</code> method .</p>
+  <pre class="codeBlock prettyprint">
+a_set = {5,8,'p',0,3,4}
+a_set.clear()
+print(a_set)
+</pre>
+  <p>The <code class="prettyprint">isdisjoint()</code> method checks if the intersection of the sets is an empty set.
+    Return <code class="prettyprint">True</code> if the sets have no elements in common.</p>
+  <p>Use the <code class="prettyprint">issuperset()</code> method to check whether a set is a superset of another set.
+  </p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,10,3,4,1,7,9}
+set2 = {8,6,10,4,2}
+print(set1.issuperset(set2))
+</pre>
+  <p>Use the <code class="prettyprint">issubset()</code> method to check whether a set is a subset of another set.</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,10,3,4,1,7,9}
+set2 = {8,6,10,4,2}
+print(set1.issubset(set2))
+</pre>
+  <p><code class="prettyprint">update()</code> method updates the set with its union with other set(s).</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set1.update(set2)
+print(set1)</pre>
+  <p><code class="prettyprint">union()</code> method returns a set containing the union of the sets.</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set3 = set1.union(set2)
+print(set3)</pre>
+  <p><code class="prettyprint">intersection()</code> method returns a set that is the intersection of the sets .</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set3 = set1.intersection(set2)
+print(set3)</pre>
+  <p><code class="prettyprint">difference()</code> method returns a set containing the difference of the other sets.</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set3 = set1.difference(set2)
+print(set3)</pre>
+  <p><code class="prettyprint">difference_update()</code> method .</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set1.difference_update(set2)
+print(set1)</pre>
+  <p><code class="prettyprint">symmetric_difference()</code> method returns a set with the symmetric difference of the
+    sets.</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set3 = set1.symmetric_difference(set2)
+print(set3)</pre>
+  <p><code class="prettyprint">symmetric_difference_update()</code> method update the set with its symmetric difference
+    and another.</p>
+  <pre class="codeBlock prettyprint">
+set1 = {5,8,6,2,0,3,4,'s'}
+set2 = {9,0,6,50,3,2}
+set1.symmetric_difference_update(set2)
+print(set1)</pre>
+  <h3>copying Sets</h3>
+  <p>You can copy a Set by assigning the copy to the original Set. But if the copy (or original) is modified, all the
+    Sets will be modified because they point to the same set object in memory.</p>
+  <pre class="codeBlock prettyprint">
+set1 ={5,8,'p',0,3,4}
+set2 = set1
+print(f'set2 {set2}')
+set2.add(101)
+print('After modifying the copy')
+print(f'set1 {set1}')
+print(f'set2 {set2}')
+</pre>
+  Use the <code class="prettyprint">copy()</code> method to copy a Set without pointing to the same Set object.
+  <pre class="codeBlock prettyprint">
+set1 ={5,8,'p',0,3,4}
+set2 = set1.copy()
+print(f'set2 {set2}')
+set2.add(101)
+print('After modifying the copy')
+print(f'set1 {set1}')
+print(f'set2 {set2}')
+</pre>
+  The <code class="prettyprint">set()</code> function can also be used to safely copy a Set. Pass the Set you want to
+  copy as an argument to the function.
+  <pre class="codeBlock prettyprint">
+set1 ={5,8,'p',0,3,4}
+set2 = set(set1)
+print(f'set2 {set2}')
+set2.add(101)
+print('After modifying the copy')
+print(f'set1 {set1}')
+print(f'set2 {set2}')
+</pre>
+  <p>The <code class="prettyprint">frozenset()</code> function is used to create a frozenset. A frozenset is immutable
+    and hashable.</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+</ht

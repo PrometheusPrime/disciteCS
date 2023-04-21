@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance - Dart</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+<h1>Inheritance</h1>
+Suppose we want to create a <code class="prettyprint">class</code> but already have a <code class="prettyprint">class</code> with the same properties that our new class will have. we can simply inherit those properties and add properties unique to that class. The <code class="prettyprint">extends</code> keyword is used to inherit from a class.
+<pre class="codeBlock prettyprint">
+class Person{
+  string firstName
+  string lastName
+  int age
+
+  Person(this.firstName,this.lastName,this.age){
+  
+  }
+}
+</pre>
+<pre class="codeBlock prettyprint">
+class Employee extends Person{
+
+    static numberOfEmployees = 0
+    int Id
+    string position
+
+    Employee(){
+    Employee.numberOfEmployees ++;
+  }
+
+}
+</pre>
+ <h2>Method Override</h2>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

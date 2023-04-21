@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Maps</h1>
+    <p>
+        A Map is a Derived Data Type with elements in key value pairs. A Map is defined with the following syntax.
+    </p>
+    <pre class="codeBlock prettyprint">
+map := make(map[keyDataType] valueDataType)
+</pre>
+<pre  class="codeBlock prettyprint">
+daysInAWeek:= make(map[int8] string)
+</pre>
+Add key value pairs to a map
+<pre class="codeBlock prettyprint">
+daysInAWeek[1] = "Sunday"
+daysInAWeek[2] = "Monday"
+daysInAWeek[3] = "Tuesday"
+daysInAWeek[4] = "Wensday"
+daysInAWeek[5] = "Thursday"
+daysInAWeek[6] = "Friday"
+daysInAWeek[7] = "Saturday"
+</pre>
+Declare and initialise a map
+<pre class="codeBlock prettyprint">
+daysInAWeek := map[int8] string{
+    1 : "Sunday",
+    2 : "Monday",
+    3 : "Tuesday",
+    4 : "Wensday",
+    5 : "Thursday",
+    6 : "Friday",
+    7 : "Saturday"
+}
+</pre>
+Get length of a map
+<pre class="codeBlock prettyprint">
+len(daysInAWeek)
+</pre>
+Delete an entry <code>delete()</code>
+<pre class="codeBlock prettyprint">
+delete(daysInAWeek,1)
+</pre>
+Map in a map
+<pre class="codeBlock prettyprint">
+programmingLanguages := map[string] map[string] string{
+  "Python" := map[string] string{
+    "released" : "",
+    "by" : "",
+    }
+  "Go" := map[string] string{
+    "released" : "",
+    "by" : "",
+    }
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

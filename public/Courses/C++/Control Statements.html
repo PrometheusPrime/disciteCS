@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Conditional Statements</h1>
+    <p><strong>Control Statements </strong>are used to run code under certain conditions execute a block of coode under
+        a certain condition</p>
+    <p><strong><em>if statement</em></strong></p>
+    <pre class="codeBlock prettyprint">
+if(condition){
+    //TODO
+}</pre>
+    <pre class="codeBlock prettyprint">
+if(4 &lt; 5){
+
+    std::cout &lt;&lt; "4 is less than 5\n";
+}</pre>
+    <p><strong>Nested if statements</strong></p>
+    <pre class="codeBlock prettyprint">
+int age = 22;
+if(age > 18){
+  if(age &lt;= 25){
+    std::cout &lt;&lt; "You're between 18 and 25 years of age\n";
+  }
+}</pre>
+    <pre class="codeBlock prettyprint">
+int age = 22;
+if (age > 18 && age &lt;= 25){
+    std::cout &lt;&lt; "You're between 18 and 25 years of age\n";
+}
+</pre>
+    <p><strong><em>if...else statement</em></strong></p>
+    <pre class="codeBlock prettyprint">
+if(condition){
+    //TODO
+}else{
+    //TODO
+}</pre>
+    <pre class="codeBlock prettyprint">
+if(4 &gt; 5){
+
+    std::cout &lt;&lt; "4 is greater than 5\n";
+
+}else{
+
+    std::cout &lt;&lt; "4 is less than 5\n";
+
+}</pre>
+    <p><strong>Nested if...else statement</strong></p>
+    <p><strong><em>else if statement</em></strong>To test for other conditions,</p>
+    <pre class="codeBlock prettyprint">
+if(condition){
+    //TODO
+}else if (condition){
+    //TODO
+}else{
+    //TODO
+}</pre>
+    <pre class="codeBlock prettyprint">
+bool isRed = false;
+bool isGreen = true;
+
+if (isRed)
+{
+    std::cout &lt;&lt; "Stop !\n";
+}
+else if (isGreen)
+{
+    std::cout &lt;&lt; "Drive\n";
+}
+else
+{
+    std::cout &lt;&lt; "Drive, if it is safe to do\n";
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+bool isRed = false;
+bool isGreen = false;
+
+if (isRed){
+
+    std::cout &lt;&lt; "Stop !\n";
+}
+else if (isGreen){
+
+    std::cout &lt;&lt; "Drive\n";
+}
+else{
+        
+    std::cout &lt;&lt; "Drive, if it is safe to do\n";
+}
+</pre>
+    if else if else - can ommit curly braces
+    <pre class="codeBlock prettyprint">
+if (expr)
+    //TODO;
+</pre>
+    <h2>Switch</h2>
+    <p>a variable that can have different value.</p>
+<pre class="codeBlock prettyprint">
+int temperature = 30;
+
+switch (temperature) {
+case  0:
+    cout &lt;&lt; "cold !";
+    break;
+case 30:
+    cout &lt;&lt; "warm";
+    break;
+default:
+    cout &lt;&lt; "hot !";
+}
+</pre>
+If the matching case has no break statement, all the cases that follow will be executed until a break statement is
+encountered, this is called <strong>Fall Through</strong>.
+<pre class="codeBlock prettyprint">
+int num = 4;
+
+switch (num) {
+case 5:
+    cout &lt;&lt; "5 !" &lt;&lt; endl;
+case 4:
+    cout &lt;&lt; "4 !" &lt;&lt; endl;
+case 3:
+    cout &lt;&lt; "3 !" &lt;&lt; endl;
+case 2:
+    cout&lt;&lt; "2 !" &lt;&lt; endl;
+case 1:
+    cout &lt;&lt; "1 !" &lt;&lt; endl;
+default:
+    cout &lt;&lt; "Blast off!" &lt;&lt; endl;
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

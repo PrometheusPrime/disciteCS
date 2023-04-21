@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashMap</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>HashMap</h1>
+    <p>A HashMap is a collection of objects in key - value pairs. Import the <code class="prettyprint">HashMap</code> class from the <code class="prettyprint">java.util</code> package.</p>
+<pre class="codeBlock prettyprint">
+HashMap&lt;String,String&gt; independenceDay = new HashMap&lt;&gt;();
+</pre>
+    <p>The <code>put(key,value)</code> method adds a key - value entry to a HashMap.</p>
+    <pre class="codeBlock prettyprint">
+independenceDay.put("Angola","11/11/1975");
+independenceDay.put("Botswana","30/09/1966");
+independenceDay.put("Namibia", "21/3/1990");
+independenceDay.put("Malawi", "6/7/1964");
+independenceDay.put("Zambia","18/04/1980");
+independenceDay.put("Zimbabwe","18/04/1980");
+
+System.out.println(independenceDay);
+</pre>
+<p>The <code class="prettyprint">put</code> method modifies<code class="prettyprint">putIfAbsent()</code></p>
+<pre class="codeBlock prettyprint">
+independenceDay.putIfAbsent("Zambia", "18/04/2000");</pre>
+    <p>Use the <code class="prettyprint">get(key)</code> method to get a value.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(independenceDay.get("Zambia"));
+</pre>
+<p>Use the <code class="prettyprint">replace()</code> method to change a value. Pass into the method the key and the new value.</p>
+<pre class="codeBlock prettyprint">
+independenceDay.replace("Zambia", "24/10/1964");
+System.out.println(independenceDay);
+</pre>
+    <p>Use the <code class="prettyprint">containsKey()</code> and <code class="prettyprint">containsValue()</code> methods to check whether a key or value is present in a HashMap respectively</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(independenceDay.containsKey("Angola"));
+System.out.println(independenceDay.containsValue("El Aaiun"));
+</pre>
+    <p>Check the size of a HashMap with the <code class="prettyprint">size()</code> method.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(independenceDay.size());
+</pre>
+    <p><code class="prettyprint">keySet()</code> returns a collection with all the keys contained in the map.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(independenceDay.keySet());
+</pre>
+    <p><code class="prettyprint">values()</code> returns a collection with all the values contained in the map.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(independenceDay.values());
+</pre>
+    <p>The <code class="prettyprint">remove()</code> method delete a key - value pair from the HashMap.</p>
+    <pre class="codeBlock prettyprint">
+independenceDay.remove("Namibia");
+
+System.out.println(independenceDay);
+</pre>
+    <p>The <code class="prettyprint">clear()</code> methods deletes all key - value pairs  in a HashMap, returns an empty HashMap.</p>
+    <pre class="codeBlock prettyprint">
+independenceDay.clear();</pre>
+<h2>Iterate through a HashMap</h2>
+    <p>Iterate through a HashMap using the <code class="prettyprint">forEach()</code> method.</p>
+    <pre class="codeBlock prettyprint">
+independenceDay.forEach(
+    (country, day) -> System.out.println(country + " : " + day)
+);  
+</pre>
+    <p>Iterate through a HashMap's keys or values using an enhanced <code class="prettyprint">for</code> loop.</p>
+<pre class="codeBlock prettyprint">
+for (String key : independenceDay.keySet()) {
+    System.out.println(key);
+}
+
+for (String value : independenceDay.values()) {
+    System.out.println(value);
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

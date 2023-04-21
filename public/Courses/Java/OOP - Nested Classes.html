@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Classes</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Nested Classes</h1>
+    <p>A Class can be defined in another class. Unlike regular classes, nested classes can be <code
+            class="prettyprint">private</code> or <code class="prettyprint">protected</code>. A nested class can be
+        either <code class="prettyprint">static</code> or non-<code class="prettyprint">static</code>. A non-<code
+            class="prettyprint">static</code> nested class is also known as Inner Class.</p>
+    <h2>Inner Class</h2>
+    <p>An inner class can access all members of the enclosing class.</p>
+    <pre class="codeBlock prettyprint">
+class Outer {
+
+    protected class Inner {
+        void sayHello() {
+            System.out.println("Hello world!");
+        }
+    }
+}
+</pre>
+    <p>To create an object of the inner class, we have to instantiate the outer class first. </p>
+    <pre class="codeBlock prettyprint">
+public class Main {
+
+  public static void main(String[] args) {
+  
+    Outer outerObj = new Outer();
+
+    Outer.Inner innerObj = outerObj.new Inner();
+
+    innerObj.sayHello();
+  }
+
+}
+</pre>
+    We can use the following syntax to easily instantiate an inner class.
+    <pre class="codeBlock prettyprint">
+Outer.Inner innerObj = new Outer().new Inner();
+
+innerObj.sayHello();
+</pre>
+<p>If a nested class is declared <code class="prettyprint">private</code>, it can not be accessed outside it's enclosing class.</p>
+
+</pre>
+    <h2>Static Nested Class</h2>
+    <p>A <code class="prettyprint">static</code> nested class can not access non-<code class="prettyprint">static</code>
+        members of the outer class.</p>
+    <pre class="codeBlock prettyprint">
+class Outer{
+
+    protected static class Nested{
+        void sayHello() {
+            System.out.println("Hello world!");
+        }
+    }
+}    
+</pre>
+<p>A <code class="prettyprint">static</code> nested class can be accessed without instantiating the enclosing class.</p>
+<pre class="codeBlock prettyprint">
+Outer.Nested nestedObj = new Outer.Nested();
+nestedObj.sayHello();
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

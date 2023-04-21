@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction To Kotlin</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Kotlin</h1>
+    Kotlin is a statically-typed, general-purpose programming language developed by JetBrain in 2011.
+    <ul><strong>Uses</strong>
+        <li>Android App Development</li>
+        <li>Server side</li>
+        <li>Client side</li>
+    </ul>
+    <p>You need a JDK (Java Development Kit) and IntelliJ to write and run a Kotlin program. IntelliJ comes bundled with
+        Kotlin.</p>
+        <p>If you haven't already, download JDK from <span class="link">www.oracle.com/java/technologies/downloads/</span>, install it and then <a href="">add it to the enviroment variables</a></p>
+    <p>Download IntelliJ IDEA from <span class="link">https://www.jetbrains.com/idea/download/</span>, the Community Edition will suffice.</p>
+    <p>Open IntelliJ and click <code>NEW PROJECT</code>. Write the project name. Make sure the language selected is
+        <code>Kotlin</code>, the build system is <code>Intellij</code> and <code>Add sample code</code> is checked. Click <code>CREATE</code>.
+    </p>
+    <img src="images/project creation.png" alt="">
+    <p>Click the <code>src</code> folder and select
+        <code>Main.kt </code> file, its where you'll be writing most of the code snipets in this course.</p>
+    <pre class="codeBlock prettyprint">
+fun main(args: Array&lt;String>){
+
+    //print Hello world
+    println("Hello World")
+
+}
+</pre>
+    <p><code class="prettyprint">fun main()</code> function is execution starting point of every kotlin program. Unless stated otherwise, it's where you'll be writing most of the code in this course.</p>
+    <p><code class="prettyprint">//</code> single-line comment in Kotlin</p>
+    <p><code class="prettyprint">println()</code> prints the argument passed to the Console.</p>
+
+    <p>Alternatively, you can write and execute Kotlin code snipets in the Kotlin REPL in IntelliJ. Click
+        <code>Tools</code>, <code>Kotlin</code>, then <code>Kotlin REPL</code>.
+    </p>
+    <p>Kotlin is interoperable with java, that means you can use Java code in Kotlin. So if you have  you don't have to migrate everything to Kotlin.</p>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

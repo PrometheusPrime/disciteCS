@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in C</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    <p>A <strong>String</strong> is an ordered, mutable sequence of characters. There no string type in C, string is an <a class="link" href="Arrays.html#arrayOfCharacters">array of charaters</a>. Strings are delimited by double
+        quotes ("").</p>
+    <pre class="codeBlock prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main(){
+            
+char name[] = "Jane";
+printf("%s",name);
+            
+return 0;
+}
+</pre>
+    <h3>Indexing</h3>
+    <p>The characters in a string are ordered, the first character is at position(index) 0. To get a character, write the name of the string followed by the index in square brackets.</p>
+    <pre class="codeBlock prettyprint">
+printf("%c",name[2]);
+</pre>
+<p>We can change individual characters in a string. </p>
+<pre class="codeBlock prettyprint">
+name[2] = 'k';
+printf("%s",name);
+</pre>
+    <h3>Special characters</h3>
+    Use the Backslash (\) to escape any special Characters. For example \ has special function in a string, to display
+    it we have to escape it.
+    <pre class="codeBlock prettyprint">
+char path[] = "C:\\msys64\\clang64\\bin";
+printf("%s",path);
+</pre>
+    Use (\n) to add a newline in a string. Any characters after (\n) will be pushed to a new line.
+    <pre class="codeBlock prettyprint">
+char countDown[] = "3\n2\n1\n0";
+printf("%s",countDown);
+</pre>
+<h3>Strings and Comparison Operators</h3>
+    Comparison Operators can be used to compare strings. Strings are compared according to the Alphabetical Order of
+    their component Letters.
+    <pre class="codeBlock prettyprint">
+printf("%d\n","bar" &lt; "bus");
+printf("%d\n","bar" &lt;&equals; "bus");
+printf("%d\n","bar" &gt; "bus");
+printf("%d\n","bar" &gt;&equals; "bus");
+printf("%d\n","bar" &equals;&equals; "bus");
+printf("%d\n","bar" &excl;&equals; "bus");
+</pre>
+    Z is greater than A , lowercase letters are greater than Uppercase letters and letters are greater than Numbers.
+    <h2>String functions</h2>
+    <pre class="codeBlock prettyprint">
+char name[] = "Jane";
+</pre>
+    The <code>strlen()</code> function returns the length (number of characters) of a string
+    <pre class="codeBlock prettyprint">
+printf("%d",strlen(name));
+</pre>
+    Change all the letters in a string to uppercase.
+    <pre class="codeBlock prettyprint">
+strupr(name);
+printf("%s",name);
+</pre>
+    Change all the letters in a string to lowercase.
+    <pre class="codeBlock prettyprint">
+strlwr(name);
+printf("%s",name);
+</pre>
+    Reverse a string
+    <pre class="codeBlock prettyprint">
+strrev(name);
+printf("%s",name);
+</pre>
+    Copy a string
+    <pre class="codeBlock prettyprint">
+char copy[] = "qwerty";
+strcpy(copy,name);
+printf("%s",copy);
+</pre>
+    <code>strcmp()</code> is used to compare strings. If the strings are the same, zero is returned. If the first string
+    is greater than the second string, a positive number is returned. If the first string is less than the second
+    string, a negative number is returned.
+    <pre class="codeBlock prettyprint">
+printf("%i",strcmp("Hello","Hi"));
+</pre>
+    Merge strings
+    <pre class="codeBlock prettyprint">
+char surName[] = " Doe";
+strcat(name,surName);
+printf("%s",name);
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

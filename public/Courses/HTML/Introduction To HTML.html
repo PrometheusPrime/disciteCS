@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction To HTML</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css">
+    <link rel="stylesheet" href="../../Styles/main.css">
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>HTML</h1>
+  <p><strong>HTML</strong> (Hyper Text Markup Language ) is the language used to describe the structure and content of a Web page. HTML is not a Programming Language, it is a Markup Language which uses Tags to discribe how content should be rendered by a programme( like a Browser).
+    </p>
+    <p>
+        <strong>Tags</strong> usually come in Opening and Closing Tag pairs with the content in the middle.Tag names are
+        surrounded by angle brackets, the Closing Tag has a forward slash before the tag name.<br /><br />
+    <pre class="codeBlock prettyprint">&lt;OpeningTag&gt; Content &lt;/ClosingTag&gt;</pre>
+    </p>
+    <p>
+        <strong>HTML Element</strong> are made up of the Opening Tag, Content and the Closing Tag.
+    </p><p>Empty Elements do not have Closing
+    Tags. The forward Slash (/) is optional, it comes after the
+    element's name .</p>
+    <pre class="codeBlock prettyprint">&lt;br/&gt;</pre>
+    The <code class="prettyprint">&lt;br/&gt;</code> element adds a line break in text.
+    <h3>Types of Elements</h3>
+    <p> Elements are either Block Level Elements (displayed with line breaks) or Inline Elements( displayed without line
+        breaks).
+    </p>
+    <h2>How to create a Web page</h2>
+    <p>
+        HTML Documents can be created using a simple Text Editor.
+    </p>
+    <h3>Sample Code</h3>
+    <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Hello HTML&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;!-- My first HTML file --&gt;
+  Hello There !!
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <p>Write the code above into your Text Editor. Name the
+        file whatever you prefer with <strong><i>.htm</i></strong> or <strong><i>.html</i></strong> as the file extention and then save it. When saving the file, if the Text Editor you're using has an option to set
+        character encoding, set it to <strong>UTF-8</strong>.</p>
+    <img src="images/hiThereEditorScreenshot.png" />
+    <p>Go to the directory where you saved the file and double click it to open it.</p>
+    <img src="images/hiThereEditorSaveAsScreenshot.png" />
+    <p>The file will open in your default
+        Browser.</p>
+    <img src="images/hiThereBrowserScreenshot.png" />
+    <h3>Sample Code Simplified</h3>
+    <p>
+        <code class="code prettyprint ">&lt;!DOCTYPE html&gt; </code> : Browsers can open different types of documents
+        (like pdf et cetra). This declaration tells the browser that the Document type is HTML (and the version of HTML
+        used), so that the document can be rendered correctly.
+    </p>
+    <p>
+        <code class="code prettyprint ">&lt;html&gt; </code> : Is the root element, it marks the beginning
+        and end of an HTML Document.
+    </p>
+    <p>
+        <code class="code prettyprint ">&lt;head&gt; </code> : The head's content is not displayed on the
+        page, it contains metadata which provides more information about the document which is important to search
+        engines and browsers.
+        Head also contains links to other resources (CSS, Javascript etc). More on this later.
+    </p>
+    <p>
+        <code class="code prettyprint ">&lt;title&gt;</code> : Contains the title of the document which
+        is shown in the browser's title bar or the page's tab, not on the page.
+    </p>
+    <p>
+        <code class="code prettyprint ">&lt;body&gt;</code> : Contains all the visible content ( text,
+        images, video, links et cetra) on the web page.
+    </p>
+    <p>
+        <code class="code prettyprint "> &lt;!--  --&gt;</code> : Anything placed between these tags is a comment.
+        Comments are not displayed by the Browser,they are mainly used to document the HTML Document. Note the
+        exclamation point (!) in the opening, but not in the closing tag.</p>
+        <p> <code class="code prettyprint ">&lt;!--[if IE 9]&gt; HTML here &lt;![endif]--&gt;</code> : Conditional comments defines HTML tags to be
+        executed by Internet Explorer.
+    </p>
+    <!-- add tips-->
+    <h2>Attributes</h2>
+    <p>Attributes are specified in the opening tag ,they provide additional information about HTML elements. Attributes
+        come in <strong><i> name - value</i> </strong> pairs.The value of the attribute is surrounded by either double quotes ("") or
+        single quotes ('').<br /> <br /><code
+            class="code prettyprint">&lt;html lang ="eng&gt; Content &lt;/html&gt;</code>
+            <p>The html element has a lang attribute which defines the language of the Document.</p>
+            <pre class="codeBlock prettyprint ">&lt;!DOCTYPE html&gt;
+&lt;html lang ="eng"&gt;
+    &lt;head&gt;
+        &lt;title&gt;HTML Attributes&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Attributes&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p> If the value has double quotes, use single quotes as delimiters and vice versa.<br/><br/><code
+            class="code prettyprint">&lt;OpeningTag attribute='some "quoted" value'&gt; Content &lt;/ClosingTag&gt;</code><br/><br/><code
+            class="code prettyprint">&lt;OpeningTag attribute="some 'quoted' value"&gt; Content &lt;/ClosingTag&gt;</code>
+    </p>
+    <br/>
+    <p class="tip">
+        While a simple text editor that comes with your operating system will suffice, other great options include
+        Visual Studio Code , Atom and Sublime text..<br />You can follow along the tutorial on mobile, search in your
+        OS's app store for any text editor...<br />Don't forget to save your file with <em>.htm</em> or <em>.html</em>
+        as the file extension...
+    </p>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and Objects in Java</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Class</h1>
+   <p>A Class is a template for creating objects, it defines how an object will be. Java is an Object Oriented  programming language. To create a class use the <code class="prettyprint">class</code> keyword followed by the name of the class.</p>
+    <pre class="codeBlock prettyprint">
+public class Person{
+    String name;
+    int age;
+    String gender;
+
+    String personalInfo() {
+    return "Name : " + this.name + "\n" + "Gender : " + this.gender + "\n" + "Age : " + this.age;
+  }
+}
+</pre>
+    <p>A file.java can have multiple Classes, but must contain one that matches the file name. Our Person class can be written in Main.java but outside of the main class. When compiled, separate <em><code class="prettyprint">.class</code></em> files for each class will be generated.</p>
+    <p>Alternativelly, we can define our Person class in Person.java file, in the same folder as Main.java.</p>
+    <h2>Object</h2>
+    <p>Create an instance(object) of a class with the <code class="kwd">new</code> keyword. You can create any
+        number of objects from a class.</p>
+    <pre class="codeBlock prettyprint">
+//in Main class, main method
+Person jane = new Person();
+</pre>
+<h3>Instance Variables</h3>
+ <p>Instance Variables are variables declared in a class, their values are unique to each instance of a class. in our Person class  <code>name</code>, <code>age</code> and <code>gender</code> are all instance variables.</p>
+ Members (variables and methods) are accessed using the dot notation(<code class="prettyprint">.</code>).
+    <pre class="codeBlock prettyprint">  
+jane.name = "Jane Smith";
+jane.age = 34;
+jane.gender = "Female";
+System.out.println(jane.personalInfo());
+</pre>
+
+    <h3>Constructors</h3>
+    <p>A Constructor is a method on a Class that is called when a new instance of the class is created. Constructors must have the public access modifier and same name as the class. </p>
+<pre class="codeBlock prettyprint">
+public class Person{
+    String name;
+    int age;
+    String gender;
+
+    String personalInfo() {
+    return "Name : " + this.name + "\n" + "Gender : " + this.gender + "\n" + "Age : " + this.age;
+  }
+    //Constructor
+    public Person(String name,int age,String gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+
+    }
+            
+}
+</pre>
+The <code class="prettyprint">this</code> keyword refers to the object the method is called on or whose instance variable being accessed.
+<p>Since we've overiden the default constructor, every time we create an instance, we have to pass arguments to the constructor.</p>
+    <pre class="codeBlock prettyprint">
+//in Main class, main method
+Person john = new Person("John Banda",58,"Male");
+</pre>
+ We can add the default constructor back, so that we can also just create an object and then initialise it instance variables later. 
+ In fact you can <span class="link"><a href="Methods.html#methodOverloading">overload</a></span> the constructor method as many times as you need.
+    <pre class="codeBlock prettyprint">
+public class Person {
+  String name;
+  int age;
+  String gender;
+
+  String personalInfo() {
+    return "Name : " + this.name + "\n" + "Gender : " + this.gender + "\n" + "Age : " + this.age;
+  }
+
+  // Default Constructor
+  public Person() {
+
+  }
+
+  // Secondary Constructor
+  public Person(String name, int age, String gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+
+  }
+
+}
+</pre>
+<pre class="codeBlock prettyprint">
+//uses the Default constructor
+Person tony = new Person();
+//uses the Secondary constructor
+Person mike = new Person("Micheal Myers",40,"Male");
+</pre>
+<h3>Static Variables</h3>
+<p>A <code class="prettyprint">static</code> or class variable belong to the <code class="prettyprint">class</code>, not to it's instances. There's one copy of this variable per Class,no matter how many times the class has been instantiated. All instances of the <code class="prettyprint">class</code> share the same <code class="prettyprint">static</code> variable.</p>
+We've modified the Person class so that we can track the number of Person objects we've created. The <code class="prettyprint">numberOfPeople</code> variable is declared <code class="prettyprint">static</code> because we don't want it to change on every instance of the class. The variable is being updated in the constructors.
+<pre class="codeBlock prettyprint">
+public class Person {
+  static int numberOfPeople;
+  String name;
+  int age;
+  String gender;
+
+  String personalInfo() {
+    return "Name : " + this.name + "\n" + "Gender : " + this.gender + "\n" + "Age : " + this.age;
+  }
+
+  // Default Constructor
+  public Person() {
+    numberOfPeople++;
+  }
+
+  // Secondary Constructor
+  public Person(String name, int age, String gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    numberOfPeople++;
+
+  }
+
+}
+</pre>
+A <code class="prettyprint">static</code> variable can be accessed on the object or the <code class="prettyprint">class</code> itself.
+<pre class="codeBlock prettyprint">
+Person jane = new Person();
+Person john = new Person("John Banda",58,"Male");
+Person tony = new Person();
+Person mike = new Person("Micheal Myers",40,"Male");
+
+System.out.println(jane.numberOfPeople);
+System.out.println(Person.numberOfPeople);</pre>
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

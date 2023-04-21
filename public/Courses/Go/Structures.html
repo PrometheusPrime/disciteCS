@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structures</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Structures</h1>
+    <p>A Structure is a collection of fields. To create a Structure write the <code class="kwd">type</code> keyword, name of the structure, <code
+            class="prettyprint">struct</code> followed by curly brackets. A structure's properties are defined in the
+        curly brackets.</p>
+    <pre class="codeBlock prettyprint">type Employee struct {
+    id        uint
+    full_name, position  string
+    salary    float32
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+manager := Employee{
+    id:2022,
+    full_name:"Jane Doe",
+    position:"manager",
+    salary:2500.0}
+</pre>
+    Alternatively, fields can be left out but you have pass the values in the order the properties are defined in the <code
+    class="prettyprint">struct</code>.
+    <pre class="codeBlock prettyprint">
+doctor := Employee{2004,
+    "Johnson Doe",
+    "doctor",
+    15000.0}
+</pre>
+<h3>Struct riterals</h3>
+<pre class="codeBlock prettyprint">
+var driver = Employee{}
+</pre>
+<pre class="codeBlock prettyprint">
+var (
+    secretary = Employee{}
+)
+</pre>
+Access struct fields by using the <code>.</code> notation
+<pre class="codeBlock prettyprint">
+fmt.Println(doctor.name)
+doctor.name = "Gregory House"
+fmt.Println(doctor.name)
+</pre>
+    <h2>Methods</h2>
+    <h3>Value Recievers</h3>
+    <pre class="codeBlock prettyprint">
+func (identifier StructName) methodName returntype{
+    //todo identifier.property
+}
+</pre>
+    <h3>Pointer Recievers</h3>
+    <pre class="codeBlock prettyprint">
+func (identifier *StructName) methodName{
+    //todo identifier.property
+}
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

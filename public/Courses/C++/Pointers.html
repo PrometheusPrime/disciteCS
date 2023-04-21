@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointers</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Pointers</h1>
+    <p>
+        A variable is used to store and retrieve data in computer memory. To get a memory address of a value, prefix that variable with the <strong>Reference
+            operator (&amp;)</strong>.</p>
+    <pre class="codeBlock prettyprint">
+int i = 5;
+cout &lt;&lt; &amp;i &lt;&lt;endl;
+</pre>
+    <p>A <strong>Pointer</strong> is a variable used to store a memory address. Pointers are declared like any other
+        variable, except that an asterisk (*) is placed between the data type and the pointer’s name.</p>
+    <pre class="codeBlock prettyprint">
+int* ptr;
+</pre>
+    Using the reference operator, we can retrieve a memory address of a variable and assign it to a pointer.
+    <pre class="codeBlock prettyprint">
+int i = 5;
+int* ptr = &amp;i;
+cout &lt;&lt; ptr &lt;&lt;endl;
+</pre>
+    A Pointer can only point to a variable of the same type as the pointer.
+    <p>To obtain the actual value stored in that address the pointer must be prefixed with the <strong>Dereference
+            operator (*)</strong>.
+    </p>
+    <pre class="codeBlock prettyprint">
+int i = 5;
+int* ptr = &amp;i;
+cout &lt;&lt; *ptr &lt;&lt;endl;
+</pre>
+    Using the dereference operator you can not only access the value, but also change it.
+    <pre class="codeBlock prettyprint">
+int i = 5;
+int* ptr = &amp;i;
+*ptr = 20;
+cout &lt;&lt; i &lt;&lt;endl;
+</pre>
+    <h3>Pointing to a Pointer</h3>
+    <p>Sometimes it can be useful to have a pointer that can point to another pointer. This is done by declaring a
+        pointer with two asterisks and then assigning it the address of the pointer that it will reference.</p>
+    <h2>void pointer</h2>
+    A void pointer can hold a memory address of any type.
+    <pre class="codeBlock prettyprint">
+void* ptr;
+</pre>
+A void can not be dereferenced directly. cast it to a type.
+    <pre class="codeBlock prettyprint">
+void* ptr;
+(int*)ptr;
+</pre>
+<h3>Dynamic Allocation</h3>
+    <p>One uses of pointers is to allocate memory at program run-time .The new operator takes either a primitive data type or an object as its argument,and it will return a pointer to the allocated memory.</p>
+    <pre class="codeBlock prettyprint">int* d = new int;</pre>
+    <pre class="codeBlock prettyprint">
+int* myPtr;
+myPtr = (int*) malloc(amount * sizeOf(int));
+</pre>
+You have to manually release allocated memory with the <code class="kwd">delete</code> keyword otherwise that memory will stay allocated until the program shuts down.
+<pre class="codeBlock prettyprint">delete myPtr;</pre>
+    <h3>Null Pointer</h3>
+    A pointer should be set to zero when it is not assigned to a valid address. Such a pointer is called a null pointer
+    <!-- ---References (aliasing)
+    References allow a programmer to create a new name for a variable.A reference is declared in the same way as a
+    regular variable, except that an ampersand is
+    appended between the data type and the variable name. Furthermore, at the same time as the
+    reference is declared it must be initialized with a variable of the specified type.
+    ----Rvalue Reference -->
+    <pre class="codeBlock prettyprint"></pre>
+    pointer operator
+    <h2>Smart Pointers</h2>
+Memory reserved with Smart Pointers will automatically be reallocated when it's no longer in use.
+    <pre class="codeBlock prettyprint">
+#include &lt;memory&gt;
+unique_ptr&lt;type[]&gt; myPtr(new type(amount));
+</pre>
+<h3>Arrays and Pointers</h3>
+An array identifier is a pointer to it's values.
+<pre class="codeBlock prettyprint">
+int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int j = size(arr);
+
+for(int i = 0; i &lt; j; i++) {
+    cout &lt;&lt;(arr + i)&lt;&lt; endl;
+}
+</pre>
+<pre class="codeBlock prettyprint">
+for(int i = 0; i &lt; j; i++) {
+    cout &lt;&lt;*(arr + i)&lt;&lt; endl;
+}
+</pre>
+<h4>Dynamic Arrays</h4>
+<p>Arrays that are made up of static (non-dynamic) memory, their size must be determined before execution. Therefore, their size is a constant.</p>
+<p>In order to create an array with a size that is not known until run-time you need to use dynamic memory, which is allocated with the new keyword and must be assigned to a pointer or reference.</p>
+<pre class="codeBlock prettyprint">
+int size;
+cout&lt;&lt;"How many numbers do you want to sum"&lt;&lt; endl;
+cin &gt;&gt; size;
+int* numArr = new int[size];
+cout&lt;&lt;"Enter the numbers you want to sum"&lt;&lt; endl;
+for(int i =0; i &lt; size;i++){
+    cin &gt;&gt; numArr[i];
+}
+int sum;
+ for(int &i : numArr){
+ sum+= numArr[i];
+}
+ cout&lt;&lt;sum&lt;&lt; endl;
+</pre>
+When you are done using a dynamic array you must remember to delete it. 
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

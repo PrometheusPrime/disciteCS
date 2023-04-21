@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Matrix in R</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Matrix</h1>
+	A matrix is a two-dimensional data set. values are stored in rows and columns
+use the <code class="code prettyprint">matrix ()</code> function to create a matrix
+	<pre class="codeBlock prettyprint">
+myMet &lt;&hyphen; matrix(2...4,ncol=,nrow=)
+</pre>
+	or
+	<pre class="codeBlock prettyprint">
+my.Mtrx &lt;&hyphen; matrix(vector,ncol=,nrow=)
+</pre>
+nrow - number of rows<br/>
+ncol - number of columns<br/>
+	use the byrow argument to fill the row first
+	<pre class="codeBlock prettyprint">
+my.Mtrx &lt;&hyphen; matrix(vector,ncol=,nrow=,byrow=T)
+</pre>
+	can also create a matrix by combining vectors using the <code class="code prettyprint">rbind()</code> function.
+	<pre class="codeBlock prettyprint">
+my.mtrx &lt;&hyphen; rbind(1:6,7:12)
+</pre>
+	<code class="code prettyprint">dim()</code> function to get the dimension of the matrix
+	<pre class="codeBlock prettyprint">
+dim(my.mtrx)
+</pre>
+	indexing
+	<pre class="codeBlock prettyprint">
+myMet[row,column]
+</pre>
+	<pre class="codeBlock prettyprint">
+myMet[1,] #first row
+</pre>
+	<pre class="codeBlock prettyprint">
+myMet[,1] #first column
+</pre>
+	<pre class="codeBlock prettyprint">
+myMet[1,1] #first row,first column
+</pre>
+	change a value
+	<pre class="codeBlock prettyprint">
+my.mtrx[row,col] &lt;&hyphen; new value
+</pre>
+	change entire row
+	<pre class="codeBlock prettyprint">
+my.mtrx[row,] &lt;&hyphen; vector
+</pre>
+	change entire column
+	<pre class="codeBlock prettyprint">
+my.mtrx[,col] &lt;&hyphen; vector
+</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

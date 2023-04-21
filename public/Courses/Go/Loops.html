@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loops</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Loop</h1>
+  <p>Loops are used to repeatedly execute a block of code if a certain condition or an expression is <code class="prettyprint">true</code>. In Go there's
+    only one looping structure, the <code class="prettyprint">for</code> loop.</p>
+  <pre class="codeBlock prettyprint">
+for expression {
+  //block of code to execute
+}
+</pre>
+  <pre class="codeBlock prettyprint">var num = 1
+for num &lt;= 10 {
+  fmt.Println(num)
+}
+</pre>
+  <p>If the condition does not evaluate to False, the Loop runs indefinitely (infinite Loop). Press <kbd>Ctrl + C</kbd>
+    to stop execution.A condition or an expression can be updated inside the Loop so that it eventually evaluates to
+    False. </p>
+  <pre class="codeBlock prettyprint">
+var num = 1
+for num &lt;= 10 {
+  fmt.Println(num)
+  num++
+}
+</pre>
+  <p>You can easily create an infinite loop by omiting an expression.</p>
+  <pre class="codeBlock prettyprint">
+var num = 1
+for{
+  fmt.Println(num)
+  num++
+}
+</pre>
+You can add the iteration variable, boolean expression and updation in the same line.
+  <pre class="codeBlock prettyprint">
+for initialisation;expression;updation {
+  //block of code to execute
+}
+</pre>
+First the iteration variable is initialised once before the first iteration. The condition or expression is evaluated before every iteration, if it evaluates to <code class="prettyprint">true</code>, the body of the loop is executed. The updation is executed after the body of the loop is executed.
+  <pre class="codeBlock prettyprint">
+for i := 1;i &lt;= 10 ;i++ {
+  fmt.Println(i*2)
+}
+</pre>
+<p>You can not access the iteration variable outside of the loop.</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

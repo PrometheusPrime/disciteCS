@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Variables and Data Types in Dart</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Variables and Data Types</h1>
+	<p>A variables is a container for storing data in computer memory. Dart is statically typed,this means that a
+		variable's declared type can not change.</p>
+	<pre class="codeBlock prettyprint">
+int age = 19;
+</pre>
+
+	You can also create a variable using the <code class="prettyprint">var</code> keyword, it's type will be inferred
+	from the value assigned to it.
+	<pre class="codeBlock prettyprint">
+var height = 5.7;
+</pre>
+	<p>You can also declare a variable and assign it a value later</p>
+	<pre class="codeBlock prettyprint">
+var characterName;
+int age;
+characterName = 11;
+age = 14;
+</pre>
+	If you just declare a variables with <code class="prettyprint">var</code>, it will be a <code
+		class="prettyprint">dynamic</code> variable until it's assigned a value. A variable can not be used before it it
+	initialised(given a value).
+	<p>Although Dart is statically typed, you can define <code class="prettyprint">dynamic</code> variables. A <code
+			class="prettyprint">dynamic</code> variable can be reasigned a value of a different type.</p>
+	<pre class="codeBlock prettyprint">
+dynamic characterName = "Mike";
+characterName = 11;
+characterName = "Vecna";
+</pre>
+
+	<p>A variable's value can not be <code class="prettyprint">null</code>.</p>
+	<h3>Constants</h3>
+	Constants are defined with the <code class="prettyprint">final</code> and <code class="prettyprint">const</code> keywords. A constant can not be reassigned new value.
+	<p>A value of a constant variable defined with <code class="prettyprint">final</code> can be determined at run time.</p>
+	<pre class="codeBlock prettyprint">
+final  pi = 3.141592;
+final currentDateAndTime = DateTime.now();</pre>
+	<p><code class="prettyprint">const</code> makes an object constant at compile time. A <code class="prettyprint">const</code> variable's value must be known at compile time, so it can not be for example a call to a function.</p>
+	<pre class="codeBlock prettyprint">
+const piX2 = 3.141592 * 2;
+const goldenRatio = 1.618033988749894;</pre>
+	<h2>Data Types</h2>
+	<p>Everything in dart is an object</p>
+	<h4>Numbers</h4>
+	Dart supports the following numeric type:
+	<p>An integer is a negative or positive whole number. Integers are defined with the <code class="prettyprint">int</code> keyword.</p>
+	<pre class="codeBlock prettyprint">
+int annualSalary = 125000;</pre>
+
+	<p>A <code class="prettyprint">double</code> is a 64bit floating point number.</p>
+	<pre class="codeBlock prettyprint">
+double weight = 67.8;
+</pre>
+	The <code class="prettyprint">num</code> keyword is used to define a generic numeric variable. The variable will be converted to the appropriate numeric type, inferred from the value.
+	<pre class="codeBlock prettyprint">
+num x;
+x = 6;
+num pi = 3.1415;	
+</pre>
+A variable defined with <code class="prettyprint">num</code> can hold any numeric type.
+<pre class="codeBlock prettyprint">
+num x;
+x = 6;
+x = 3.1415;	
+</pre>
+	<h4>String</h4>
+	<p>A string is a sequence of characters. Strings in dart are delimited by single or double quotes.</p>
+	<pre class="codeBlock prettyprint">
+String capitalCity = 'Lusaka';
+</pre>
+	<h4>Boolean</h4>
+	<p>A boolean is either <code class="prettyprint">true</code> or <code class="prettyprint">false</code>. A boolean  is defined with the <code class="prettyprint">bool</code> keyword.</p>
+	<pre class="codeBlock prettyprint">
+bool isTall = false;
+</pre>
+	<h4>List</h4>
+	<p>A list is an ordered collection of objects.</p>
+	<pre class="codeBlock prettyprint">
+var evenNums = [2, 4, 6, 8, 10];</pre>
+	<h4>Map</h4>
+	<p>A map is a collection of values in key-value pairs.</p>
+	<pre class="codeBlock prettyprint">
+var nums = {
+    0: 'Zero',
+    1: 'One',
+    2: 'Two',
+    3: 'Three',
+    4: 'Four',
+    5: 'Five',
+    6: 'Six',
+    7: 'Seven',
+    8: 'Eight',
+    9: 'Nine'
+};</pre> <p>Strings, Maps and Lists will be discussed in details later.</p>
+	<h2>Type conversion</h2>
+	check data typethe runtime type of the object.
+	<pre class="codeBlock prettyprint">
+num height = 5.7;
+print(height.runtimeType);
+</pre>
+	convert to string
+	<pre class="codeBlock prettyprint">numVar.toString()</pre>
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

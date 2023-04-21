@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Functions</h1>
+    <p>A <strong>Functions</strong> is a block of statement(s) that perform a specific Task and or returns a Value.The
+        <code class="kwd">def</code> keyword is used to define a function. 
+    </p>
+    <p>To create a function; write <code
+        class="kwd">def</code>, function name followed
+    by parentheses and then a colon. Python uses identation to delimit a block of code. Use equal indentation for
+    every line of code in the function body. Add an empty line to signal the end of a block of code.</p>
+    <pre class="codeBlock prettyprint">
+def function_name():
+    #function body
+</pre>
+    <p>The body of a function can not be left empty .If you're going to implement the function later use the
+        <em><code class="prettyprint">pass</code></em> keyword otherwise you'll get an error.
+    </p>
+    <pre class="codeBlock prettyprint">
+def greet():
+    pass
+</pre>
+    <p>A function is executed by calling it. To call a function, write the function name followed by parenthesis. Functions can be called as many times as needed.</p>
+    <pre class="codeBlock prettyprint">
+def greet():
+    print('Hello there')
+
+#calling a function
+greet()
+</pre>
+    <p>The <code class="prettyprint">return</code> keyword is used to return a Value from a function. Statements after the <code class="prettyprint">return</code>
+        statement will not be executed.</p>
+    <pre class="codeBlock prettyprint">
+def greet():
+    return'Hi there'
+
+print(greet())
+</pre>
+A Function returns a default value <code class="prettyprint">none</code>, even if it doesn't have the <code class="prettyprint">return</code> keyword.
+    <h3>Parameters and Arguments</h3>
+    <p>Functions can accept data .
+    <p>A <i><b>Parameter</b></i> is a Variable defined in the parenthesis when defining the
+        function.</p>
+    <p><i><b>Arguments</b></i> are actual data passed into a function when calling it. Arguments are usually shortened
+        to <em>args</em></p>
+    <pre class="codeBlock prettyprint">
+def greet(first_name):
+    print(f'Hello {first_name}')
+            
+greet('John')
+</pre>
+    <pre class="codeBlock prettyprint">
+def sqrd(x):
+    return x ** 2
+                
+print(sqrd(2))
+</pre>
+    A function can take any number of Parameters, comma seperate the parameters. A function must be called with the
+    number of arguments it expects.
+    <pre class="codeBlock prettyprint">
+def greet(first_name,last_name):
+    print(f'Hello {first_name} {last_name}')
+
+greet('John','Doe')</pre>
+    <h4>positional and keyword args</h4>
+    <pre class="codeBlock prettyprint">
+def greet(first_name,last_name):
+    print(f'Hello {first_name} {last_name}')
+
+greet('Doe','John')</pre>
+    when using keyword argument, the position doesn't matter...
+    <pre class="codeBlock prettyprint">
+def greet(first_name,last_name):
+    print(f'Hello {first_name} {last_name}')
+
+greet(last_name = 'Doe',first_name = 'John')</pre>
+    you can call a function with both positional and keyword arguments. Positional arguments can notcome after keyword
+    arguments.
+    <p>default args must be defined at the end</p>
+    <pre class="codeBlock prettyprint">
+def greet(first_name,last_name = 'Doe'):
+    print(f'Hello {first_name} {last_name}')
+    
+greet('John')</pre>
+    <p><em><strong>*args</strong></em> can pass any number of positional arguments, <em><strong>**kwargs</strong></em>
+        can pass any number of keyword arguments,<em><strong>*,</strong></em>all args after must be keyword arguments
+    </p>
+    unpacking
+    <pre class="codeBlock prettyprint">
+def greet(first_name,last_name = 'Doe'):
+    print(f'Hello {first_name} {last_name}')
+
+a_list  = ['John','Doe']   
+greet(*a_list)</pre>
+    same name as parameters, same number of keys and parameters
+    <pre class="codeBlock prettyprint">
+def greet(first_name,last_name = 'Doe'):
+    print(f'Hello {first_name} {last_name}')
+    
+a_list  = [first_name = 'John',last_name ='Doe']   
+greet(**a_dict)</pre>
+    <h3>Methods</h3>
+    <p><em><strong>Methods</strong></em> are Functions defined in a class, that are called on a <em>Class</em> or its
+        <em>instance</em> with the <em><strong>.</strong></em> operator .
+    </p>
+    <h4>Variable scope</h4> access a variable from outside but can not modify it.
+    <p>Local</p>
+    <p>Enclosing</p>
+    <p>Global are variables created declared outside a function can be accessed anywhere inside a function or block of
+        code </p>
+    <p>Non Local</p>
+    <h2>Recursion</h2>
+    a function can call itself in its body as a part of function declaration
+    <h3>lambda functions</h3>
+    <p><strong><em>Lambda Functions</em></strong></p>
+    <pre class="codeBlock prettyprint">
+lambda arg(s) : expr
+</pre>
+    <pre class="codeBlock prettyprint">
+sqrd = lambda x : x ** 2
+print(sqrd(5))
+</pre>
+    <pre class="codeBlock prettyprint">
+greet = lambda name,surname : f'Hello {name} {surname}'
+print(greet('John','Doe'))
+</pre>
+<!-- <p>Primitive are called by value and data structures are called by reference</p>
+<p>In call by value, the copied value is the one being modified.</p>
+<p>access something indirectly through it's address.</p> -->
+    <h3>Generator functions</h3>
+    <h3>Docstrings</h3>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

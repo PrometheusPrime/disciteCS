@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables and Data Types</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Variables and Data Types</h1>
+  <h2>Variables</h2>
+  <p>A <strong>Variable</strong> is a placeholder for a value (data) in computer memory. Variables in Kotlin can be
+    defined with the <code class="prettyprint">var</code> and <code class="prettyprint">val</code> keywords. Kotlin is
+    statically typed, that means a variable's data type can not change.</p>
+    <p>Variables defined with <code class="prettyprint">var</code> can be modified (reasigned a different value)
+    while Variables defined with <code class="prettyprint">val</code> are immutable (read only).</p>
+  <p> To create a variable, write <code class="prettyprint">var</code> or <code class="prettyprint">val</code>, the name of the variable. Followed by a colon, type of data the variable will hold, assignment operator (=) and the value. Assignment is evaluated from right to left.</p>
+  <pre class="codeBlock prettyprint">
+val length: Int = 15
+</pre>
+  <p>Kotlin has Type Inference, the compiler can figure out the data type of a variable based on the value assigned to
+    it.
+  <pre class="codeBlock prettyprint">
+var length  = 15
+</pre>
+  You can declare a variable and assign it a value later. Type must be specified if the variable is not initialised.
+  <pre class="codeBlock prettyprint">
+val nextPresident: String
+</pre>
+<p>A top-level variable is a variable defined out side a block ()</p>
+  </p>
+  <h2>Primitive Data Types</h2>
+  <p>
+Kotlin supports the following Primitive Data Types :
+  </p>
+  <h3>Numbers</h3>
+  <p>A <strong>Byte</strong> can store integers from -128 to 127 and uses 1 byte in memory.</p>
+  <pre class="codeBlock prettyprint">
+val daysInAWeek : Byte = 7
+</pre>
+<p>A <strong>Short</strong> can store integers from -32768 to 32767 and uses 2 bytes in memory .</p>
+  <pre class="codeBlock prettyprint">
+val studentAge : Short = 16
+</pre>
+  <p>
+   An <strong>Integer</strong> can hold a value ranging from -2147483648 to 2147483647 and uses 4 bytes in memory.</p>
+  <pre class="codeBlock prettyprint">
+val secondsInAYear : Int = 31536000
+</pre>
+  <p>
+
+    A <strong>Long </strong> can hold a integer values from -9223372036854775808 to 9223372036854775807 . A <strong>Long </strong> uses 8 bytes in memory.</p>
+  <pre class="codeBlock prettyprint">
+// a long
+val milliSecondsInAYear : Long = 31536000000
+</pre>
+
+  <p>
+    <strong>Floating Point (Floats) </strong> are Real Numbers with a Decimal Point. Floats are less precise. Append an f to a value otherwise it will be infered as <strong>Double</strong>.
+  <pre class="codeBlock prettyprint">
+// a float
+val student_height : Float = 6.24f
+</pre>
+</p>
+  <p>
+    <strong>Double</strong> are Real Numbers with a Decimal Point. Doubles are more precise than floats.
+  <pre class="codeBlock prettyprint">
+// a double
+val studentWeight : = 56.789
+</pre>
+  </p>
+  <h3>Boolean</h3>
+    <p><strong>Boolean</strong> variables can have either <code class="prettyprint">true</code> or <code
+      class="prettyprint">false</code> as values..</p>
+  <pre class="codeBlock prettyprint">
+// boolean
+val isRaining = true
+val isSunny = false
+</pre>
+<h3>Character</h3>
+  <p>
+    <strong>Char</strong> character single quotes</p>
+  <pre class="codeBlock prettyprint">
+// a character
+val grade = 'A'
+</pre>
+Top level variables, are variables declared in a Kotlin file outside a block of code.
+  <h2>Type Conversion</h2>
+  <p>Numbers can not be implicitly converted, you have to cast them.</p>
+  <pre class="codeBlock prettyprint">
+var pi = 3.14159
+var piToInt = pi.toInt()
+var piToLong = pi.toLong()
+var piToChar = pi.toInt().toChar()
+</pre>
+  Note that you can call methods on numbers like they are objects even though they are primitive data types.
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

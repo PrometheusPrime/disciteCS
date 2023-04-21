@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margin</title>
+    <link
+      rel="stylesheet"
+      href="../../Styles/prettify-small/google-code-prettify/prettify.css"
+    />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+  </head>
+  <body onload="PR.prettyPrint()">
+    <h1>Margin</h1>
+        <p>The <code class="prettyprint">margin</code> property is used to set margin around an element.</p>
+    <pre class="codeBlock prettyprint">
+</pre>
+    If you provide a single value, that amount of margin is applied to all sides of the element.
+    <img src="" alt="example">
+    <p>When a two values are given, the first value is set to the and , the second value is set to the and .</p>
+    <pre class="codeBlock prettyprint">
+</pre>
+    <p>If three values are given,  the first value is set to the and , the second value is set to the and and then third is applied to.</p>
+    <pre class="codeBlock prettyprint">
+</pre>
+    And if four values are given , they are applied in the following order;
+    <pre class="codeBlock prettyprint">
+</pre>
+    <p>You can also set margin on each side of an element independently.</p>
+    <pre class="codeBlock prettyprint">
+{   
+    margin-top:;
+    margin-bottom:;
+    margin-left:;
+    margin-right:;
+}</pre>
+<h2>Margin Collapse</h2>
+<p>Margins between elements will collapse into a single margin. If the margins are of different sizes, the larger of the two will be applied and the smaller margin becomes zero.</p>
+<pre class="codeBlock prettyprint"></pre>
+<pre class="codeBlock prettyprint">
+{   
+    
+}</pre>
+<h2>Centering an Element</h2>
+<p>Margin can be used to horizontally center an element in their container, set the left and right margin to <code class="prettyprint">auto</code>.</p>
+<pre class="codeBlock prettyprint"></pre>
+If an element doesn't have a fixed width, it will shrink or expand to fill the available space while remaining centered.
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js">
+    </script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+  </body>
+</html>

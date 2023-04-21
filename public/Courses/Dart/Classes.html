@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../../Styles/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Class</h1>
+
+<pre class="codeBlock prettyprint">
+class Person{
+  string firstName
+  string lastName
+  int age
+
+  Person(this.firstName,this.lastName,this.age){
+  
+  }
+}
+</pre>
+optional properties, values can be left out when instantiating
+<pre class="codeBlock prettyprint">Person({this.firstName,this.lastName,this.age}){
+  
+  }</pre>
+  <pre class="codeBlock prettyprint">var p2 = new Person(firstName: "",lastName:"",age:21)</pre>
+  add an underscore to a property to make it private
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

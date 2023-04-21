@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Higher Order Functions</title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+	<h1>Higher Order Functions</h1>
+	A higher Order function accepts or returns other Function(s).
+	<pre class="codeBlock prettyprint">
+fun aFunc(num: type):(type) -> type = {varN -> varN * something}
+val myFunc = aFunc(3)
+myFunc(9)
+</pre>
+	<h2>Collection Operators</h2>
+	<p><code>reduce{}</code></p>
+	<pre class="codeBlock prettyprint"></pre>
+<p><code>fold{}</code></p>
+<pre class="codeBlock prettyprint"></pre>
+<p><code>alt{}</code></p>
+<pre class="codeBlock prettyprint"></pre>
+<p><code>map{}</code></p>
+<pre class="codeBlock prettyprint"></pre>
+<p><code>any{}</code></p>
+<pre class="codeBlock prettyprint"></pre>
+<p><code>filter{}</code></p>
+<pre class="codeBlock prettyprint">
+val numList = listOf{0,1,2,3,4,5,6,7,8,9,10}
+println(numList.filter{it % 2 ==0})
+</pre>
+
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

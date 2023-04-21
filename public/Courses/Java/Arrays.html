@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Arrays</h1>
+    <p><strong><em>Array</em></strong> is an ordered collection of values of the same data type,referred by a single identifier. An array has a Fixed size.  the first element is at index( or position) 0.</p>
+    <pre class="codeBlock prettyprint">
+type[] arrName = new type[numberOfElements];
+</pre>
+Declaring an empty array.
+    <pre class="codeBlock prettyprint">
+short[] arr = new short[4];
+</pre>
+    <p>To add an element in an Array, write the name of the array followed by the index( position) in square brackets then equals sign followed by the value.</p>
+    <pre class="codeBlock prettyprint">
+arr[0] = 3;
+arr[1] = 1;
+arr[2] = 4;
+arr[3] = 2;
+</pre>
+<p>An Array in Java cannot be printed directly, first convert it to a string using the <code class="prettyprint">.toString()</code> method in the <code class="prettyprint">Arrays</code> class.</p>
+<pre class="codeBlock prettyprint">
+System.out.println(Arrays.toString(arr));
+</pre>
+<p>To access an element in an Array, write the name of the array followed by the index( position) in square brackets.</p>
+<pre class="codeBlock prettyprint">
+System.out.println(arr[2]);
+</pre>
+    <h2>Array literal</h2>
+    <p>To create and add elements to an array, place the values in cury bracket, separated by commas.</p>
+    <pre class="codeBlock prettyprint">
+String[] movies = {
+    "The Sixth",
+    "The Visit",
+    "Split"
+ };
+</pre>
+    <h2>Multidimensional Arrays</h2>
+    <p>A multidimensional array is an array containing arrays. All the nested arrays must be of the same type</p>
+    <pre class="codeBlock prettyprint">
+int[][] numsArray = new int[4][3];
+numsArray[0][0] = 2;
+numsArray[0][1] = 4;
+numsArray[0][2] = 6;
+numsArray[1][0] = 3;
+numsArray[1][1] = 9;
+numsArray[1][2] = 12;
+numsArray[2][0] = 4; 
+numsArray[2][1] = 16;
+numsArray[2][2]= 64;
+numsArray[3][0] = 5;
+numsArray[3][1] = 25;
+numsArray[3][2] = 125;
+</pre>
+The first square brackets are for the position of the inner array , the second square brackets are for the position of an element in that array.
+<p>Use <code class="prettyprint">.deepToString()</code> to convert a multidimensional array to string.</p>
+<pre class="codeBlock prettyprint">
+System.out.println(Arrays.deepToString(numsArray));
+</pre>
+Multidimensional Array literal
+    <pre class="codeBlock prettyprint">
+int[][] numsArray = {
+    {2,4,6},
+    {3,9,12},
+    {4,16,64},
+    {5,25,125} 
+};
+
+System.out.println(numsArray[1][2]);
+</pre>
+    
+    <h2>Array properties and methods</h2>
+    <p>The <code class="prettyprint">length</code> property stores the number of elements in an Array.</p>
+    <pre class="codeBlock prettyprint">
+System.out.println(movies.length);
+</pre>
+<p>The <code class="prettyprint">.fill()</code> method in the <code class="prettyprint">Arrays</code> class fills available space in an Array with a single value.</p>
+<pre class="codeBlock prettyprint">
+int[] evenNums = new int[5];
+Arrays.fill(evenNums, 2);
+System.out.println(Arrays.toString(evenNums));
+</pre>
+<!-- <pre class="codeBlock prettyprint">
+int[] evenNums = new int[5];
+Arrays.fill(evenNums,startIndex,stopIndex, 2);
+System.out.println(Arrays.toString(evenNums));
+</pre> -->
+<p>Copy an array by using the <code class="prettyprint">.copyOf()</code> method, pass the array and number of elements you wish to copy as arguements.</p>
+<pre class="codeBlock prettyprint">
+String[] watchList = Arrays.copyOf(movies, 3);</pre>
+<p>Compare arrays</p>
+<pre class="codeBlock prettyprint">
+String[] watchList = Arrays.copyOf(movies, 3);
+System.out.println(Arrrays.equals(movies,watchList));</pre>
+<p>Sort arrays using the <code class="prettyprint">.sort()</code> method.</p>
+<pre class="codeBlock prettyprint">
+int[] evenNums = { 2, 4, 10, 6, 14, 12, 16, 8 };
+Arrays.sort(evenNums);
+System.out.println(Arrays.toString(evenNums));
+</pre>
+You can specify where to start and stop sorting.
+<pre class="codeBlock prettyprint">
+int[] evenNums = { 2, 4, 10, 6, 14, 12, 16, 8 };
+Arrays.sort(evenNums, 2, evenNums.length);
+System.out.println(Arrays.toString(evenNums));</pre>
+<p>Binary Search an array for an element using the <code class="prettyprint">binarySearch()</code> method in the <code class="prettyprint">Arrays</code> class. It returns the index of value if it is found. If the value is not in the array, a negative number is returned. For this to work, the array must be sorted.</p>
+<pre class="codeBlock prettyprint">
+String[] students = {
+    "Grace",
+    "Charles",
+    "Elizabeth",
+    "Joyce",
+    "Catherine",
+    "Moses",
+    "Charity",
+    "James",
+    "Emmanuel"
+};
+
+Arrays.sort(students);
+System.out.println(Arrays.toString(students));
+System.out.println(Arrays.binarySearch(students, "Emmanuel"));
+</pre>
+You can specify where to start and stop searching.
+<pre class="codeBlock prettyprint">
+Arrays.binarySearch(students, 3, 5, "Emmanuel");</pre>
+    <h3>Loop through Arrays</h3>
+    <p>We can loop through an array using the simple <code class="prettyprint">for</code> loop. </p>
+    <pre class="codeBlock prettyprint">
+for (int index = 0; index &lt; movies.length; index++) {
+    System.out.println(movies[index]);
+}   
+</pre>
+    <p>The best looping structure for iterating through a one dimensional array's elements, is the <strong>Enhanced for loop</strong>.</p>
+    <pre class="codeBlock prettyprint">
+for(String movie : movies){
+    System.out.println(movie);
+}
+</pre>
+For a multidimensional array , we use nested for loops.
+<pre class="codeBlock prettyprint">
+int[][] numsArray = {
+    {2, 4, 8},
+    {3, 9, 27},
+    {4, 16, 64},
+    {5, 25, 125}
+};
+for (int i = 0; i &lt;= 3; i++) {
+    for (int j = 0; j &lt; 3; j++) {
+
+        System.out.print(numsArray[i][j]);
+    }
+    System.out.println();
+}
+</pre>
+In our two dimensional array example, the first loop selects an inner array and the second loop transverses through all the elements in that array.
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

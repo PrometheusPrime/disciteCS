@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    <p><strong>Loops</strong> are used to repeatedly execute code if a certain condition or an expression is True.</p>
+    <h2>While Loop</h2>
+    <p>The <strong>While Loop </strong>is used to repeatedly execute code while the condition is True. it checks the
+        condition first, if it is <code class="prettyprint">True</code>, it's block will executed. go back and check the
+        looping condition and will keep on doing so until the condition becomes <code class="prettyprint">False</code>.
+    </p>
+    <pre class="codeBlock prettyprint">
+while condition:
+    code to be executed repeatedly
+</pre>
+    <pre class="codeBlock prettyprint">
+numbers = 0
+while numbers &lt; 16:
+    print(numbers)
+</pre>
+    If the condition does not evaluate to <code class="prettyprint">False</code>, the Loop runs indefinitely
+    (<em><strong>infinite Loop</strong></em>). Press
+    <kbd>Ctrl + C</kbd> to stop execution.A condition or an expression can be updated inside the Loop so that it
+    eventually evaluates to <code class="prettyprint">False</code>.
+    <pre class="codeBlock prettyprint">
+numbers = 0
+while numbers &lt; 16: 
+    print(numbers)
+    numbers += 1
+</pre>
+    <h2>For Loop</h2>
+    <p>The <strong>For Loop </strong> loops through all individual elements in an Iterable or a Collection, stops
+        execution when it reaches the last one. An Iterable is an Object that can return it's elements one at a time.
+    </p>
+    <pre class="codeBlock prettyprint">
+for everything in something:
+    #do something
+</pre>
+    <pre class="codeBlock prettyprint">
+greeting ="Hello World"
+for character in greeting:
+    print(character)
+</pre>
+<p>
+<code>range()</code> generates a sequence of numbers.
+</p>
+    <pre class="codeBlock prettyprint">
+for numbers in range(16):
+    print(numbers)
+</pre>
+the range function takes optional start and step 
+    <pre class="codeBlock prettyprint">
+for something in range(start,stop,step):
+    do something
+</pre>
+It will generate numbers from the start, skip the specified step before printing the next number.
+<pre class="codeBlock prettyprint">
+for numbers in range(0,101,10):
+    print(numbers)
+</pre>
+    <pre class="codeBlock prettyprint">
+for 
+else
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

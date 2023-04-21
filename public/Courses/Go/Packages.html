@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Packages</h1>
+    <p>Import packages with the <code class="prettyprint">import</code> keyword. If an imported package is not used, you'll get an error.</p>
+    <pre class="codeBlock prettyprint">import "math"</pre>
+Import multiple packages must be in seperate lines.
+    <pre class="codeBlock prettyprint">import (
+        "fmt"
+        "math"
+        "os"
+)</pre>
+    <p>
+        Go to <a href="https://golang.org/pkg/">https://golang.org/pkg/"</a> for a list of go packages
+    </p>
+    <p>To get imformation on something run <kbd>godoc package something</kbd> in the terminal, for example to get imformation on the <code class="kwd">Print</code> function in the <code>fmt</code> package
+        <kbd>godoc fmt Print()</kbd>. </p>
+  <pre class="codeBlock prettyprint">import ()</pre>
+    <p>own package- create a folder ,in write the go file, its package is the folder name</p>
+    <p>Capitalisation is used to control accessibility. If something's first letter is capitalised, it can be accessed anywhere the package it's in is imported.</p>
+    <pre class="codeBlock prettyprint">package folderName</pre>
+    to import it
+    <pre class="codeBlock prettyprint">package main
+import "pathToPackage/package"</main></pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

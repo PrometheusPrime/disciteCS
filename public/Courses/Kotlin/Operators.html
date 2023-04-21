@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Operators</h1>
+    <h2>Arithmetic Operators</h2>
+    Arithematic Operators are used in basic arithematic calculations.
+    <p><em><strong>Addition Operator (+)</strong></em> : adds the operands.</p>
+    <pre class="codeBlock prettyprint">
+val x = 6
+val y = 8
+println(x + y)
+</pre>
+    <p><em><strong>Subtraction Operator (-)</strong></em> : subtracts one operand from another.</p>
+    <pre class="codeBlock prettyprint">
+val x = 5
+val y = 2.5
+println(x - y)
+</pre>
+    <p><em><strong>Multiplication Operator (*)</strong></em> : multiplies the operands.</p>
+    <pre class="codeBlock prettyprint">
+val x = 9
+val y = 25
+println(x * y)
+</pre>
+    <p><em><strong>Division Operator (/)</strong></em> : divides the operands. Dividing integers returns an integer, any
+        remainder is discarded.</p>
+    <pre class="codeBlock prettyprint">
+val x = 29
+val y = 2
+println(x / y)
+</pre>
+Change one of the operands to float to get a float
+<pre class="codeBlock prettyprint">
+val x = 29
+val y = 2.0
+println(x / y)
+</pre>
+    <p><em><strong>Modulus or Remainder Operator (%)</strong></em> : returns the remainder of dividing the given
+        operands.</p>
+    <pre class="codeBlock prettyprint">
+val x = 5
+val y = 3
+println(x % y)
+</pre>
+    <h2>Unary Operators</h2>
+    <p>Unary Operator perform various operations on one operand.</p>
+    <p><em><strong>Increment Operator (++)</strong></em> increments a variable by 1 </p>
+    <pre class="codeBlock prettyprint">
+var x = 5
+x ++
+println(x)
+</pre>
+    <p><em><strong>Decrement Operator (--)</strong></em> decrements a variable by 1</p>
+    <pre class="codeBlock prettyprint">var x = 5
+x --
+println(x)</pre>
+    prefix vs postfix
+    <pre class="codeBlock prettyprint">
+var x = 5
+var y = 5
+println(++x)
+println(y++)</pre>
+    <h2>Compound Assignment Operators</h2>
+
+    <p><em><strong> Operator (+=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+var x = 8
+x+= 5  //same as x = x + 5
+println(x)
+</pre>
+    <p><em><strong> Operator (-=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+var x = 8
+x-= 5  //same as x = x - 5
+println(x)
+</pre>
+    <p><em><strong> Operator (*=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+var x = 8
+x*= 5  //same as x = x * 5
+println(x)
+</pre>
+    <p><em><strong> Operator (/=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+var x = 8
+x/= 5  //same as x = x / 5
+println(x)
+</pre>
+    <p><em><strong> Operator (%=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+var x = 8
+x%= 5  //same as x = x % 5
+println(x)
+</pre>
+    <h2>Comparison Operators</h2>
+    <p>Comparison Operators are used to compare given Variables, they return a Boolean value.</p>
+    <p><em><strong>Greater Than Operator (>)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+val x = 8
+val y = 5
+println(x &gt; y)
+</pre>
+    <p><em><strong>Less Than Operator (&lt;)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+val x = 8
+val y = 5
+println(x &lt; y)
+</pre>
+    <p><em><strong>Equality Operator (==)</strong></em> : compares whether the Operands are Equal.</p>
+    <pre class="codeBlock prettyprint">
+val x = 8
+val y = 5
+println(x == y)
+</pre>
+    <p><em><strong>Greater Than or Equal To Operator (>=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+val x = 8
+val y = 5
+println(x &gt;= y)
+</pre>
+    <p><em><strong>Less Than or Equal To Operator (&lt;=)</strong></em> </p>
+    <pre class="codeBlock prettyprint">
+val x = 8
+val y = 5
+println(x &lt;= y)
+</pre>
+    <p><em><strong>Inequality Operator (!=)</strong></em> : checks whether the Operands are Not Equal.Returns True if
+        they are not equal.</p>
+    <pre class="codeBlock prettyprint">
+val x = 8
+val y = 5
+println(x != y)
+</pre>
+    <h2>Logical Operator</h2>
+    <p>Logical Operators are used to chain Boolean Variables, they return a boolean value.</p>
+    <p><em><strong> And Operators (&&)</strong></em> : Returns true if all the variables are true.</p>
+    <pre class="codeBlock prettyprint">
+val isRaining = true
+val isSunny = false
+println(isRaining && isSunny)
+</pre>
+    <p><em><strong>Or Operator (||)</strong></em> : Returns True if one of the conditions is true.</p>
+    <pre class="codeBlock prettyprint">
+val isRaining = true
+val isSunny = false
+println(isRaining || isSunny)
+</pre>
+    <p><em><strong>Not Operator (!)</strong></em> : inverts a boolean value . If it was True , it becomes False.</p>
+    <pre class="codeBlock prettyprint">
+val isRaining = true
+println(!isRaining)
+</pre>
+    <p>Logical Operators can be chained and are evaluated according to Their order of precedence.</p>
+    <h2>Ternary operator (?)</h2>
+    <p><em><strong>Ternary operator (?)</strong></em>
+    <pre class="codeBlock prettyprint">
+val x =  4 > 5 ? "4 is greater than 5":"4 is less than 5"
+println(x)
+</pre>
+    instanceof classes and objects
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Loops</h1>
+    <p><em><strong>Loops</strong></em> are used to repeatedly execute a block of code.</p>
+    <h2>While Loop</h2>
+    <p>The while loop is used to continually execute a block of statement(s) while a particular
+        condition is <code class="prettyprint">true</code>.</p>
+    <pre class="codeBlock prettyprint">
+while(condition/expression){
+    //TODO
+}</pre>
+    The expression will be checked, if it evaluates to true; the statements in the while block will be executed.The
+    while statement will continue checking the expression and executing its block of statements until the expression
+    evaluates to false
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15){
+    System.out.println(num);
+}
+</pre>
+    If the condition does not evaluate to <code class="prettyprint">false</code>, the Loop runs indefinitely (infinite Loop). Press Ctrl + C to stop execution. A condition can be updated inside the Loop so that it eventually evaluates to false.
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (num &lt; 15){
+    System.out.println(num);
+    num++;
+}
+</pre>
+    explicitly create an infinte loop
+    <pre class="codeBlock prettyprint">
+int num = 0;
+while (true){
+    System.out.println(num);
+    num++;
+}
+</pre>
+<h2>Do... While Loop</h2>
+    <p>The <code class="prettyprint">do... while</code> loop works the same way as the while loop, except the condition is checked after the block is executed. This means it's block is executed at least once, even is the expression is <code class="prettyprint">false</code>.</p>
+    <pre class="codeBlock prettyprint">
+do{
+    System.out.println("1 is greater than 5");
+} while (1 > 5);
+</pre>
+    <h2>For Loop</h2>
+    <p>The <code class="prettyprint">for</code> loop</p>
+    <pre class="codeBlock prettyprint">
+for (initialisation; condition; updatation){
+ //TODO
+}
+</pre>
+    first the iteration variable will be initialised,then the expression is checked, if it evaluates to <code class="prettyprint">true</code> the body of the loop is executed and then the iteration variable is updated. The
+    iteration variable is created once.
+    <pre class="codeBlock prettyprint">
+for (int num = 0;num &lt;= 10;num++){
+    System.out.println(num);
+}
+</pre>
+<h3>Jump Statements</h3>
+    <p><code class="prettyprint">continue</code> skips the rest of the statements in a loop, restart execution from the begining.</p>
+    <pre class="codeBlock prettyprint">
+for (int num = 0;num &lt;= 10;num++){
+    if (num == 6){
+        continue;
+    }
+    System.out.println(num);
+}
+</pre>
+    <p><code class="prettyprint">break</code> exits the loop and execution goes to the first statement after the loop.</p>
+    <pre class="codeBlock prettyprint">
+for (int num = 0;num &lt;= 10;num++){
+    if (num == 6){
+        break;
+  }
+    System.out.println(num);
+}
+</pre>
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

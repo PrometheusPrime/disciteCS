@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numpy - Arrays</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Array</h1>
+  <p></p>
+  collection ordered, same data types, can be changed, can contain duplicate value
+  <ul>
+    <li>ordered</li>
+    <li>mutable</li>
+    <li> elements are of the same data types</li>
+    <li>can contain duplicate value </li>
+  </ul>
+  <h2>NumPy</h2>
+  <p>Python doesnt have Array data type,the closest thing to an Array in Python is a List. use Arrays in Python by
+    importing the <strong><em>NumPy (Numerical Python)</em></strong> Library. NumPy is an Open Source project created by
+    Travis Oliphant in 2005.</p>
+  <pre class="codeBlock prettyprint">
+pip install numpy
+</pre>
+  import numpy using the import keyword can give numpy an alias( alternate name ) when importing it with the as keyword.
+  <pre class="codeBlock prettyprint">
+import numpy as alias
+</pre>
+  <p>create an array using the array() function in numpy. Pass a list or a tuple in the array function.</p>
+  using a List
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(['Spam','Eggs','Spam'])
+print(arr)  
+</pre>
+  using a Tuple
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(('Spam','Eggs','Spam'))
+print(arr)  
+</pre>
+  <h2>Array Operations</h2>
+  <p>len() function is used to count the number of elements in a Tuple</p>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(['Spam','Eggs','Spam'])
+print(len(arr))  
+</pre>
+  <p>accessing elements/negative</p>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(['Spam','Eggs','Spam'])
+print(arr[1])  
+</pre>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array((1,2,3,4,5))
+print(arr[-1])  
+</pre>
+  <h2>Multi Dimensional Arrays</h2>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(((1,2,3),(1,4,9)))
+print(arr)  
+</pre>
+  <p>check array dimension with the <strong><em>ndim</em> </strong> attribute</p>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(((1,2,3),(1,4,9)))
+print(arr.ndim)  
+</pre>
+  <h2>changing value at index</h2>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr = npy.array(['Spam','Eggs','Spam'])
+arr[-1] = 'Pie'
+print(arr)  
+</pre>
+  <h2>concatenation</h2>
+  <pre class="codeBlock prettyprint">
+import numpy as npy
+arr1 = npy.array(['Spam','Spam','Spam'])
+arr2 = npy.array(['Eggs','Eggs','Eggs'])
+arr3 = npy.concatenate((arr1,arr2))
+print(arr3)    
+</pre>
+  <p>reverse()</p>
+  <p>slicing</p>
+  <p>looping through</p>
+  <p>insert()</p>
+  <p>append()</p>
+  <p>extend()</p>
+  <p>remove()</p>
+  <p>pop()</p>
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

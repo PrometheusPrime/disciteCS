@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates and Generics</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Templates and Generics</h1>
+    <h2>Templates</h2>
+    <p></p>
+    <h3>Template Functions</h3>
+    <pre class="codeBlock prettyprint">Template&lt;typename T&gt; or Template&lt;class Type&gt;
+</pre>
+    <pre class="codeBlock prettyprint">
+void sum(T var, T var){
+
+}
+sum(var,var)
+sum&lt;float&gt;();
+</pre>
+<pre class="codeBlock prettyprint">
+template &lt;typename T&gt;
+T myFunc(T arg){
+    
+}
+</pre>
+<h3>Template Classes</h3>
+<pre class="codeBlock prettyprint">
+template &lt;typename T,typename U,typename V&gt;
+class ClassName{
+  public:
+  T name
+  T height
+  V age
+  U DoB
+  ClassName(T name, T height, V age, U DoB){
+    name = name;
+    heigh = theight;
+    age = age;
+    DoB = DoB;
+  }       
+}
+</pre>
+<h2>Generics</h2>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

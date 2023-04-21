@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+	<link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Methods</h1>
+  <p>A <strong>method</strong> is a group of statements that perform a single operation. Methods are defined in a class</p> To create a method, write the type of value that will be returned follow by name of the method and parenthesis. The name of a method is usually capitalised in C#.
+  <pre class="codeBlock prettyprint">
+// in class Program, outside Main method
+static void Sum(){
+    Console.WriteLine(5 + 5);
+}
+</pre>
+We've used <code class="prettyprint">void</code> as the return type because the method does not return a value. 
+<p>To execute a method, you have to call it. To call a method, write the name of the method followed by parenthesis() and a semicolon. Methods can be called as many times as needed.</p>
+<pre class="codeBlock prettyprint">
+// in Main method
+Sum();
+</pre>
+<h2>Return values from a Method</h2>
+<p>Return a value from a method with the <code class="prettyprint">return</code> keyword. Make sure the returned value matches the return type of the method.</p>
+  <pre class="codeBlock prettyprint">
+// in class Program, outside Main method
+static int Sum(){
+    return 5 + 5;
+}
+</pre>
+We can assign a value returned from a method to a variable to use it.
+<pre class="codeBlock prettyprint">
+// in Main method
+int total = Sum();
+Console.WriteLine(total);
+</pre>
+<h2>Parameters and Arguments</h2>
+A method can take data to work with called Parameters. Parameters are defined in parenthesis when defining the Method. If a method takes multiple Parameters, comma seperate them. 
+<pre class="codeBlock prettyprint">
+static int Sum(int a, int b){
+    return a + b;
+}
+</pre>
+Arguments are actual data passed into a function when calling it. A method must be called with the number and type of arguments it expects.
+<pre class="codeBlock prettyprint">
+Sum(4,5);
+</pre>
+<h4>Pass arguments in any order</h4>
+<p>Arguments are passed into a method in the order it's parameters are defined.</p>
+<pre class="codeBlock prettyprint">
+static void Info(string firstName, string lastName)
+{
+    Console.WriteLine($"Name : {firstName}\nSurname : {lastName}");
+}
+// in Main method
+Info("Wick", "John");
+</pre>
+When calling the method, you can specify which argument you're passing.
+<pre class="codeBlock prettyprint">
+Info(lastName: "Wick", firstName: "John");
+</pre>
+<h4>Default Parameters</h4>
+<p>A parameter can be given a default value. When calling the method, passing an argument for that parameter is optional.</p>
+<pre class="codeBlock prettyprint">
+static int Sum(int a, int b = 0){
+    return a + b;
+}
+
+// in Main method
+Sum(4);
+Sum(4,8);
+</pre>
+Parameters with default values must be defined after required parameters.
+<h4>Get Unkown number of Arguments</h4>
+<p>To get a varing number of arguments, add the <code class="prettyprint">params</code> modifier before a parameter.</p>
+  <pre class="codeBlock prettyprint">
+// in class Program, outside Main method
+static int Sum(params int[] nums)
+{
+    int total = 0;
+    foreach (int num in nums)
+    {
+        total += num;
+    }
+    return total;
+}
+</pre>
+<pre class="codeBlock prettyprint">
+Console.WriteLine(Sum(1,2,3,4,5,6,7,8,9));
+Console.WriteLine(Sum(8,9));
+Console.WriteLine(Sum(9));
+Console.WriteLine(Sum());
+</pre>
+A method can have additional parameters, but they must be defined before <code class="prettyprint">params</code>, and only one <code class="prettyprint">params</code> is allowed per method.
+<h2>Method Overloading</h2>
+Method Overloading is defining a method multiple times with different number and or types of parameters.
+  <pre class="codeBlock prettyprint">
+// in class Program, outside Main method
+static void Greet()
+{
+    Console.WriteLine("Hello");
+
+}
+
+static void Greet(string name)
+{
+    Console.WriteLine($"Hello, {name}");
+
+}
+
+static void Greet(String name, string gender)
+{
+    if (gender.ToLower() == "male")
+    {
+        Console.WriteLine($"Hello, Mr {name}");
+    }
+    else if (gender.ToLower() == "female")
+    {
+        Console.WriteLine($"Hello, Ms {name}");
+    }
+    else
+    {
+        Console.WriteLine($"Hello, {name}");
+    }
+
+}
+</pre>
+<pre class="codeBlock prettyprint">
+Greet();
+Greet("Jake");
+Greet("Jane","female");</pre>
+<h2>Pass by Reference</h2>
+<p>By default arguments are passed by value to a method, that means argument's value is copied. Therefore you can not modify a variable in a method.</p>
+<pre class="codeBlock prettyprint">
+// in Main method
+int age = 9;
+IncrementByTwo(age);
+Console.WriteLine(age);
+
+// in class Program, outside Main method
+static int IncrementByTwo(int num)
+{
+    num += 2;
+    return num;
+}
+</pre>
+To pass an arguement's reference(memory location), add the <code class="code prettyprint">ref</code> modifier before the parameter's type when declaring the method and before the argument when calling the method.
+<pre class="codeBlock prettyprint">
+// in Main method
+int age = 9;
+IncrementByTwo(ref age);
+Console.WriteLine(age);
+
+// in class Program, outside Main method
+static int IncrementByTwo(ref int num)
+{
+    num += 2;
+    return num;
+}
+</pre>
+<!-- <pre class="codeBlock prettyprint"></pre>
+	Lambda expression (and lists)
+	<code class="code prettyprint"></code>
+	Anonymous methods
+	 <pre class="codeBlock prettyprint">
+ </pre>
+ delegates
+
+<h2>Out modifier</h2>
+<pre class="codeBlock prettyprint">
+//returns true if the conversion was successful
+int.TryParse(str, out intVar)
+</pre>
+<h2>LINQ</h2> -->
+	<script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+</html>

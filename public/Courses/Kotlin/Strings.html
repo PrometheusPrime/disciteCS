@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    <p>A <strong>String</strong> is an ordered collection of characters.</p>
+    <h3>String Templates</h3>
+    <p>String templates are use to interpolate a variable's value or result from an expression into a string. Add a <code class="prettyprint">$</code> before the name of the variable.</p>
+    <pre class="codeBlock prettyprint">
+val age = 18
+val myStr = "I'm $age years old"
+println(myStr)
+</pre>
+If you want to interpolate the value from an expression, add the expression in curly brackets.
+    <pre class="codeBlock prettyprint">
+println("5 * 6 = ${5 * 6}")
+</pre>
+<h3>Preformated String</h3>
+<p>To Display a string exactly the way it was formated in the code, delimit that string with three pairs of double quotes.</p>
+    <pre class="codeBlock prettyprint">
+val myStr = """Whosoever Holds This Hammer,
+If They Be Worthy,
+Shall Posses The Power Of THOR."""
+println(myStr)
+</pre>
+<h2>indexing</h2>
+    <pre class="codeBlock prettyprint">
+val str = "Whosoever Holds This Hammer, If They Be Worthy,Shall Posses The Power Of THOR."
+println(str[0])
+</pre>
+    <h2>String methods</h2>
+    <pre class="codeBlock prettyprint">val myStr = "Whosoever Holds This Hammer, If They Be Worthy,Shall Posses The Power Of THOR"</pre>
+Check if the string is an empty string
+    <pre class="codeBlock prettyprint">
+myStr.isEmpty()
+</pre>
+   Use the length property to check the length (number of characters) of a string.
+    <pre class="codeBlock prettyprint">
+myStr.length
+</pre>
+Get a character at a specified index.
+<pre class="codeBlock prettyprint">
+myStr.get(16)
+</pre>
+    The <code class="code prettyprint">substring()</code> method returns a sub string from the start index upto the stop index.
+    <pre class="codeBlock prettyprint">
+myStr.substring(0,9)
+</pre>
+    The <code class="code prettyprint">subSequence()</code> mwthod returns a sub string from the start index upto the stop index.
+    <pre class="codeBlock prettyprint">
+myStr.subSequence(0,9)
+</pre>
+   Use the  <code class="code prettyprint">equals()</code> to compare strings, returns <code class="prettyprint">true</code> if the strings are equal
+    <pre class="codeBlock prettyprint">
+val greet = "Hello"
+val str = "Hi"
+greet.equals(str)
+</pre>
+    .compareTo() compares the strings, returns 0 if they are the same, else returns negative number.
+    <pre class="codeBlock prettyprint">
+val greet = "Hello"
+val str = "Hello"
+println(greet.compareTo(str))
+</pre>
+Check if a string is a substring of a string .contains()
+    <pre class="codeBlock prettyprint">
+myStr.contains("Hammer")
+</pre>
+    <!-- change all letters in a string to upper case.
+<pre class="codeBlock prettyprint">
+myStr.toUpperCase()
+</pre> -->
+<pre class="codeBlock prettyprint">
+StringBuffer("str")
+</pre> 
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

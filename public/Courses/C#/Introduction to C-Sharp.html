@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction To C#</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>C#</h1>
+  C# is a general purpose, object oriented programming language created by Microsoft. C# is part of the .NET Framework.
+  <h2>uses</h2>
+  <ul>
+  	<li>build Desktop Applications</li>
+  	<li>ASP.NET - Web Server side</li>
+  	<li>Web Applications</li>
+  	<li>Mobile Applications (Android,iOS)</li>
+  	<li>Web Dev Server side</li>
+  	<li>Game Development</li>
+  	<li>Xamarin - Cross platform Applications</li>
+  	<li>Machine Learning</li>
+  </ul>
+  <h2>How to write and run C# programs</h2>
+  Here is a simple <code>Hello world</code> program in C#. Remember to replace <code class="prettyprint">namespace</code> with your project folder.
+    <pre class="codeBlock prettyprint">
+namespace IntroToCSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+        }
+    }
+}
+</pre>
+There are several ways you can write and run C# programs
+  <h3>Using any code Editor</h3>
+  <p>First install the <code>.NET</code> Framework, to do that go to <span class="link">https://dotnet.microsoft.com/download</span> and download a <code>.NET SDK</code> for the <abbr title="Operating System">OS</abbr> you're using and install it.</p>
+  To check if <code>.NET</code> was installed correctly,open a new terminal window and run <br/><code>dotnet --version</code>
+  <img src="images/check dotnet installation.png" alt="">
+  <p>
+    Create a folder for your project, open a new terminal window in the project directory and run <code>dotnet new console</code> to create a new C# project. 
+  </p>
+  <img src="images/create new project.png" alt="create new project.">
+<p>Some files and folders will be generated, open <code>Program.cs</code> in a code editor of your choice, it is where we'll be writing most of the code in this course.</p>
+In the following examples , I'm using Visual Studio Code.
+<img src="images/vs code open in project folder.png" alt="">
+  <p>To run our console application, in a terminal run <code>dotnet run</code>. The output of our program is shown in the terminal.</p>
+  <img src="images/run project.png" alt="">
+  <h3>Using Visual Studio</h3>
+<p>
+  Download a Visual Studio installer for Visual Studio Community Edition. Install it and open it, then select <samp>.NET Desktop Development</samp>.
+</p>
+<img src="images/create new project vs.png" alt="">
+<p>Open Visual Studio, select <samp>Create a new project</samp>, select <samp>Console app c#</samp> and click Next</p>
+<img src="images/select project template vs.png" alt="">
+<p>Select the .Net Framework to use and click <samp>Create</samp>.</p>
+<img src="images/select dotnet vs.png" alt="">
+<!-- <img src="images/program file open vs.png" alt=""> -->
+<p>To run the program ,click <kbd>Ctrl + F5</kbd> or the play button.</p>
+<img src="images/program output vs.png" alt="">
+<h3></h3>
+  <p>Another way of develop C# projects on Windows, Linux or MacOS is to use the Mono Project and xamarin. Search online on how to setup.</p>
+<!-- <p></p>
+
+Your project folder is the <code class="prettyprint">namespace</code>
+<br/>
+  <code class="code prettyprint">class</code><br/>
+  <code class="code prettyprint">{}</code> a block of code is delimited by cury brackets.<br/>
+  <code class="code prettyprint">//</code> single line Comments<br /><code class="code prettyprint">/*****/</code> multi
+  line Comments<br/><code class="code prettyprint">static</code> is called on the class itself, instead of it's instances<br/><code class="code prettyprint">void</code> doesn't return a value.<br/>
+  <code class="code prettyprint">main{}</code> <br/>
+  <code class="code prettyprint">Console.WriteLine()</code> <code class="code prettyprint">;</code> -->
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

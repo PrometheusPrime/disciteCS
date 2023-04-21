@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Input</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+<h1>Get Input</h1>
+    <p>The <code class="prettyprint">readLine()</code> function is used to get input from the user.</p>
+    <pre class="codeBlock prettyprint">
+readLine()
+</pre>
+    <p>To use the input from the user, you'll have to assign it to a variable.</p>
+    <pre class="codeBlock prettyprint">
+val name = readLine()
+println('Your name is ' , name)        
+</pre>
+    <p>By default the readLine() function returns a string...</p>
+    <pre class="codeBlock prettyprint">
+val num1 = readLine()
+val num2 = readLine()
+println('''&dollar;{num1} + &dollar;{num2} = &dollar;{num1 + num2}''')
+</pre>
+    In the example above, all the inputs are strings and are simply concatenated.
+    <p>Convert numbers entered by the user to numbers(ints,double) , to use them as numbers.</p>
+    <pre class="codeBlock prettyprint">
+val num1 = readLine()!!.toInt()
+val num2 = readLine()!!.toInt()
+println('''{num1} + {num2} = {num1 + num2}''')
+</pre>
+    The <em>!! (not-null assertion operator)</em> the expression on its left is not null. it is required.
+
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

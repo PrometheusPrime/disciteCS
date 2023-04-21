@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Github Flavoured Markdown</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>Github Flavoured Markdown</h1>
+
+  <p>
+    <strong>Github Flavoured Markdown (GFM)</strong> was released in 2017 by
+    Github, it is based on CommonMark with added extentions.
+  </p>
+  <h2>Task List</h2>
+  <p> </p>
+  <h2>Code Block with Syntax Highlighting</h2>
+  <pre class="codeBlock">
+```java
+//in class
+static int sum(int...args){
+  int sum = 0;
+  for(int i: args){
+    sum += i;
+  }
+  return sum;
+}
+//in main method
+System.out.println(sum(3,2,1));
+System.out.println(sum(10,9,8,7,6,5,4,3,2,1));
+```
+</pre>
+<h2>Tables</h2>
+<pre class="codeBlock prettyprint">
+| a | b | c | d | e | f |
+|---|---|---|---|---|---|
+| 1 | 2 | 3 | 4 | 5 | 6 |
+| 2 | 3 | 4 | 5 | 6 | 7 |
+| 3 | 4 | 5 | 6 | 7 | 8 |
+| 4 | 5 | 6 | 7 | 8 | 9 |
+</pre>
+<pre class="codeBlock prettyprint">
+Country|Independence Day
+-------|----------------
+Angola|11/11/1975
+Botswana|30/09/1966
+Zambia|24/10/1964
+Zimbabwe|18/04/1980
+</pre>
+ 
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

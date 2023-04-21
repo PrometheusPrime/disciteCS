@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scalable Vector Graphics (SVG)</title>
+  <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+  <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+  <h1>SVG</h1>
+  <p>
+    <strong><em>SVG</em></strong> (<em>Scalable Vector Graphics</em>) is used to define vector-based graphics for the
+    Web in <abbr title="eXtensible Markup Language">XML</abbr> format. SVG is not pixel based, so SVG graphics can be
+    scaled without loss of quality. An SVG image can be added to an html document with the image tag.
+  </p>
+  <pre class="codeBlock prettyprint ">
+&lt;img src="image.svg" height="" width = "" alt = ""&gt;
+&lt;/img&gt;
+</pre>
+  <p>
+    The <code class="prettyprint ">&lt;svg&gt;</code> element is used to directly draw shapes. The <em>width</em> and
+    <em>height</em> attributes are required. Since SVG is based on <abbr title="eXtensible Markup Language">XML</abbr>,
+    all elements must be properly closed.
+  </p>
+  <pre class="codeBlock prettyprint ">
+&lt;svg height="" width = ""&gt;
+&lt;/svg&gt;
+</pre>
+  <h2>Circle</h2>
+  <p>The <code class="prettyprint">&lt;circle&gt;</code> element is used to draw a circle, <code
+      class="prettyprint">cx</code> and <code class="prettyprint">cy</code> attributes define the X and Y coordinates of
+    the center of the circle. If they are not specified, the circle's center is set to (0, 0).The <code
+      class="prettyprint">r</code> attribute defines the radius of the circle. The <code class="prettyprint">fill</code>
+    attribute refers to the color inside the circle. <code class="prettyprint">stroke</code> and <code
+      class="prettyprint">stroke-width</code> attributes control how the outline of a shape appears.</p>
+  <pre class="codeBlock prettyprint ">
+&lt;svg width = "" height=""&gt;
+  &lt;circle&gt;
+  &lt;/circle&gt;
+&lt;/svg&gt;</pre>
+  <h2>Ellipse</h2>
+  <p>The <code class="prettyprint">&lt;ellipse&gt;</code> element is used to draw an ellipse. An ellipse is related to a
+    circle. The difference is that an ellipse has an x and a y radius. The rx attribute defines the horizontal radius.
+    The ry attribute defines the vertical radius.</p>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <h2>Line</h2>
+  <p>The <code class="prettyprint">&lt;line&gt;</code> element is used to draw a line,The x1 attribute defines the start
+    of the line on the x-axis. The y1 attribute defines the start of the line on the y-axis. The x2 attribute defines
+    the end of the line on the x-axis. The y2 attribute defines the end of the line on the y-axis.
+  </p>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <h2>Path</h2>
+  <p>The <code class="prettyprint">&lt;path&gt;</code> element is used to draw a path,The following commands are
+    available for path data:</p>
+  <ul>
+    <li>A = elliptical Arc</li>
+    <li> C = curveto</li>
+    <li> H = horizontal lineto</li>
+    <li> L = lineto</li>
+    <li> M = moveto</li>
+    <li> Q = quadratic Bézier curve </li>
+    <li> S = smooth curveto</li>
+    <li>T = smooth quadratic Bézier curveto</li>
+    <li> V = vertical lineto</li>
+    <li> Z = closepath</li>
+    All of the commands can also be expressed with lower letters. Capital letters means absolutely positioned,
+    lowercases means relatively positioned.
+  </ul>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <h2>Polygon</h2>
+  <p>The <code class="prettyprint">&lt;polygon&gt;</code> element is used to draw a polygon,The points attribute defines
+    the x and y coordinates for each corner of the polygonfill-rule property to "evenodd"</p>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <h2>Polyline</h2>
+  <p>The <code class="prettyprint">&lt;polyline&gt;</code> element is used to draw a polyline,shape that consists of
+    only straight lines, points attribute</p>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <h2>Rectangle</h2>
+  <p>The <code class="prettyprint">&lt;rect&gt;</code> element is used to draw a Rectangle,The width and height
+    attributes of the &lt;rect&gt; element define the height and the width of the rectangle. The x attribute defines the
+    position of the rectangle from the left margin. The y attribute defines the position of the rectangle from the top
+    margin. The style attribute is used to define CSS properties for the rectangle. The CSS fill property defines the
+    fill color of the rectangle. The CSS fill-opacity property defines the opacity of the fill color (from 0 to 1). The
+    CSS stroke-width property defines the width of the border of the rectangle. The CSS stroke property defines the
+    color of the border of the rectangle. The CSS stroke-opacity property defines the opacity of the stroke color (from
+    0 to 1).
+  </p>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <h2>Text</h2>
+  <p>The <code class="prettyprint">&lt;text&gt;</code> element is used to draw a text, transform attribute, element can
+    be arranged in any number of sub-groups with the &lt;tspan&gt; element. Each &lt;tspan&gt; element can contain
+    different formatting and position.</p>
+  <pre class="codeBlock prettyprint ">&lt;svg&gt;&lt;/svg&gt;</pre>
+  <!-- <p>SVG Stroke Properties
+
+    SVG offers a wide range of stroke properties. In this chapter we will look at the following:
+    stroke,stroke-width,stroke-linecap,stroke-dasharray.
+  </p>
+  The available filter elements in SVG are:
+
+  &lt;feBlend> - filter for combining images
+  &lt;feColorMatrix> - filter for color transforms
+  &lt;feComponentTransfer>
+  &lt;feComposite>
+  &lt;feConvolveMatrix>
+  &lt;feDiffuseLighting>
+  &lt;feDisplacementMap>
+  &lt;feFlood>
+  &lt;feGaussianBlur>
+  &lt;feImage>
+  &lt;feMerge>
+  &lt;feMorphology>
+  &lt;feOffset> - filter for drop shadows
+  &lt;feSpecularLighting>
+  &lt;feTile>
+  &lt;feTurbulence>
+  &lt;feDistantLight> - filter for lighting
+  &lt;fePointLight> - filter for lighting
+  &lt;feSpotLight> - filter for lighting -->
+  <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

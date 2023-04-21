@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointers and Memory Management in C</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h2>Pointers</h2>
+    <p>A variable is used to store and retrieve data in computer memory. To get a memory address of a value, prefix that
+        variable with the <strong>Reference operator (&amp;)</strong>. The memory address is a Hexadecimal number.</p>
+    <pre class="codeBlock prettyprint">
+int i = 5;
+printf("%x",&amp;i);
+</pre>
+Everytime the program is run, the memory address changes.
+    <p>A <strong>Pointer</strong> is a variable that stores the memory address of another variable. Pointers are declared like any other variable, except that an asterisk (*) is placed between the data type and the identifier.</p>
+    <pre class="codeBlock prettyprint">
+int *pointer;
+</pre>
+    <p>A Pointer can only point to a variable of the same type.</p>
+
+    <pre class="codeBlock prettyprint">
+int *ptr = &amp;i;
+</pre>
+    Referencing the pointer will retrieve this address.
+    <pre class="codeBlock prettyprint">
+printf("%x",ptr);
+</pre>
+    To obtain the actual value using a pointer, prefix it with an asterisk, known as the <strong>Dereference operator (*)</strong>.
+    <pre class="codeBlock prettyprint">
+printf("%i",*ptr);
+</pre>
+When writing to the pointer, the same method is used. Without the asterisk the pointer is assigned a new memory address, and with the asterisk the actual value of the variable pointed to will be updated.
+    <pre class="codeBlock prettyprint">
+p = &amp;i;
+*p = 20;
+</pre>
+    <h3>Pointing to a Pointer</h3>
+    Sometimes it can be useful to have a pointer that can point to another pointer. This is done by declaring a pointer with two asterisks and then assigning it the address of the pointer that it will referenced.
+    <pre class="codeBlock prettyprint"></pre>
+    <h3>Void Pointer</h3>
+    <pre class="codeBlock prettyprint"></pre>
+    <h3>Null Pointer</h3>
+    <p> A pointer should be set to <code class="prettyprint">NULL</code> when it is not assigned to a valid address. Such a pointer is called a <strong>Null Pointer</strong></p>
+  <h2>Memory Management</h2>
+  <p>One of the main usages of pointers is to allocate memory during run-time known as <em>Dynamic
+    Memory Allocation</em>.</p>
+    <p>Import the standard library (<code>stdlib.h</code>) which has memory management functions</p>
+    <h4>Memory Allocation (malloc)</h4>
+  <p>The <code>malloc()</code> function reserves a block of memory and returns a pointer to it. It takes the size of memory to reserve in <code>bytes</code> and returns a <code class="prettyprint">void</code> pointer. If <code>malloc()</code> fails to allocate the requested memory, a <code class="prettyprint">null</code> pointer is returned.</p>
+  <pre class="codeBlock prettyprint">
+#include &lt;stdlib.h&gt;
+char *name = (char*)malloc(10);
+printf("Enter your name");
+scanf("%s",name);
+printf("Hello, %s",name);
+</pre>
+<h4>Contiguous Allocation (calloc)</h4>
+and it will return a pointer to the allocated memory. <code>calloc()</code> also returns a <code class="prettyprint">null</code> pointer if it fails to allocate the requested memory.
+  <pre class="codeBlock prettyprint">
+#include &lt;stdlib.h&gt;
+calloc();
+</pre>
+<h4>Reallocation (realloc)</h4>
+The <code class="prettyprint">realloc()</code> function is used to resize previously allocated memory.
+<pre class="codeBlock prettyprint">
+#include &lt;stdlib.h&gt;
+char *name = (char*)malloc(10);
+printf("Enter your name\n");
+scanf("%s",name);
+printf("Do you want your last name? (y/n)\n");
+if(getchar() == 'Y' | 'y'){
+    printf("Hello, %s",name);
+}
+realloc();
+</pre>
+<h4>Free Memory</h4>
+If the allocated memory is not released, it will stay allocated until the program shuts down. The <code class="prettyprint">free()</code> function is used to manually release previously allocated memory.
+<pre class="codeBlock prettyprint">
+#include &lt;stdlib.h&gt;
+free(pointer);
+</pre>
+    <pre class="codeBlock prettyprint">
+</pre>
+    <pre class="codeBlock prettyprint"></pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+<h1>Conditional Statements</h1>
+Control Statements are used to run code if certain conditions
+    <h2>The If statement</h2>
+    <p>The <code class="prettyprint">if</code> statement is used to execcute a block of statements if the given condition is <code class="prettyprint">true</code>. The condition is either a boolean variable or expression that returns a boolean</p>
+    <pre class="codeBlock prettyprint">
+val age = 25;
+if(age &gt; 18){
+    print("You're more than 18 years of age")
+}
+</pre>
+    <p>If You want to execute some code if multiple conditions are <code class="prettyprint">true</code>, place it in nested <code class="prettyprint">if</code> statements.</p>
+    <pre class="codeBlock prettyprint">
+val isCloudy = true
+val isRaining = true
+if(isCloudy){
+    if(isRaining){
+      println("It is croudy and raining ,You need an Amburrella")     
+    }
+}
+</pre>
+Use Logical Operators to chain conditions instead of nesting <code class="prettyprint">if</code> statements.
+<pre class="codeBlock prettyprint">
+val isCloudy = true
+val isSunny = false
+if(isCloudy || isRaining){
+    println("It is either croudy and raining")     
+}
+</pre>
+<pre class="codeBlock prettyprint">
+val isCloudy = true
+val isRaining = true
+if(isCloudy &amp;&amp; isRaining){
+    println("It is croudy and raining")     
+}
+</pre>
+    <h2>The Else statement</h2>
+    <p>The <code class="prettyprint">else</code> statement defines an alternate block of code to execute if the condition in the <code class="prettyprint">if</code> statement is <code class="prettyprint">false</code>.</p>
+
+<pre class="codeBlock prettyprint">
+val isRaining = false
+if(isRaining){
+    println("It is raining")     
+}
+else{
+    println("It is not raining")
+}
+</pre>
+    <h2>If Else statement</h2>
+    The else if statement is used to check for additional conditions.
+    <pre class="codeBlock prettyprint">
+if(condition){
+
+}else if(condition){
+
+}
+</pre>
+<p>An if can have any number of elif statements, but only one optional else statement that will handle any situations not handled by the preceding statements. </p>
+if multiple conditions are true, only the first true statement will be executed other statements will be skipped.
+<h3>Conditional Assignment</h3>
+    <p>The <code class="prettyprint">if</code> and <code class="prettyprint">else</code> statements can be used to assign a value to a variable based on a condition.</p>
+    <pre class="codeBlock prettyprint">
+val myVar = if(4 > 5) "4 &gt; 5" else "4 &lt; 5"
+</pre>
+    <h2>The When statement</h2>
+    <p>The <code class="prettyprint">when</code> statement is used we want to do different operations depending on a particular value of a variable.</p>
+    <pre class="codeBlock prettyprint">
+val trafficLight = "Green"
+when(trafficLight){
+  "Red" -&gt; println("Stop !")
+  "Green" -&gt; println("Drive")
+  else -&gt; println("Drive, if it is safe to do")
+
+}
+</pre>
+    <p>The  <code class="prettyprint">when</code> statement returns the last <code class="prettyprint">true</code> expression, thus does not require a <code class="prettyprint">break</code> statement. The <code class="prettyprint">else</code> case is executed if non of the cases matched. </p>
+<p>Since the <code class="prettyprint">when</code> statement returns the last <code class="prettyprint">true</code> case, it can be used as an expression .</p>
+    <pre class="codeBlock prettyprint">
+val temperature = 35
+val isCold = when(temperature){
+    in -5..15 &hyphen;&gt; true
+    else &hyphen;&gt; false
+}
+println(isCold)
+</pre>
+Multiple cases can execute a single block, coma- separate the cases.
+<pre class="codeBlock prettyprint">
+val num = 4;
+when(num){
+  5,4,3 &hyphen;&gt; println("num is either 5, 4 or 3")
+  2 &hyphen;&gt; println("num is 2 ")
+  1 &hyphen;&gt; println("num is 1")
+  else &hyphen;&gt; println("num is neither 5,4 nor 3")
+
+}
+</pre>
+If a case executes multiple statements, add them in curly brackets.
+<pre class="codeBlock prettyprint">
+when(){
+    &hyphen;&gt; {
+
+  }
+    &hyphen;&gt; {
+
+  }
+    &hyphen;&gt; {
+
+  }
+    else &hyphen;&gt; {
+
+  }
+}</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

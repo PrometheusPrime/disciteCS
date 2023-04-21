@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Conditional Statements</h1>
+    <p><strong>Control Statements </strong>are used to run code under certain conditions</p>
+    <p><strong><em>if statement</em></strong></p>
+    <pre class="codeBlock prettyprint">
+if(expression){
+    //TODO
+}</pre>
+    <pre class="codeBlock prettyprint">
+if(4 &lt; 5){
+    println!("4 is less than 5\n");
+}</pre>
+    <p><strong>Nested if statements</strong></p>
+    <pre class="codeBlock prettyprint">
+let age = 22;
+if(age > 18){
+  if(age &lt;= 25){
+    println!("You're between 18 and 25 years of age\n");
+  }
+}</pre>
+    <pre class="codeBlock prettyprint">
+let age = 22;
+if (age > 18 && age &lt;= 25){
+    println!("You're between 18 and 25 years of age\n");
+}
+</pre>
+    <p><strong><em>if...else statement</em></strong></p>
+    <pre class="codeBlock prettyprint">
+if(expression){
+    //TODO
+}else{
+    //TODO
+}</pre>
+    <pre class="codeBlock prettyprint">
+if(4 &gt; 5){
+    println!("4 is greater than 5\n");
+}else{
+    println!("4 is less than 5\n");
+}</pre>
+    <p><strong>Nested if...else statement</strong></p>
+    <p><strong><em>else if statement</em></strong>To test for other conditions,</p>
+    <pre class="codeBlock prettyprint">
+if(expression){
+    //TODO
+}else if (expression){
+    //TODO
+}else{
+    //TODO
+}</pre>
+    <pre class="codeBlock prettyprint">
+let isRed = false;
+let isGreen = true;
+
+if (isRed){
+    println!("Stop !\n");
+}else if(expr){
+    println!("Drive\n");
+}else{
+    println!("Drive, if it is safe to do\n");
+}
+</pre>
+    <pre class="codeBlock prettyprint">
+if (expr){
+    println!("Stop !\n");
+}else if(expr){
+    println!("Drive\n");
+}else{
+    println!("Drive, if it is safe to do\n");
+}
+</pre>
+<p>
+    Assign a value to a variable based on a condition.
+</p>
+    <pre class="codeBlock prettyprint">
+let myVar = if 4 > 5  {'4 > 5'} else {'4 < 5'}
+println!(myVar)
+</pre>
+<pre class="codeBlock prettyprint">match varX{
+    }</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>

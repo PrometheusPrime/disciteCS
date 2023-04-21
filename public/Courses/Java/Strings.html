@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+    <link rel="stylesheet" href="../../Styles/prettify-small/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
+</head>
+
+<body onload="PR.prettyPrint()">
+    <h1>Strings</h1>
+    <p><strong>String</strong> are immutable sequence (or Arrays) of characters. Unlike chars, strings are delimited by Double quotes(""). A string in Java is not a primitive type, it is an objects.</p>
+    <pre class="codeBlock prettyprint">
+String greet = "Hello, World";
+System.out.println(greet);
+</pre>
+You can also create a string object with the <code class="prettyprint">new</code> keyword.
+<pre class="codeBlock prettyprint">
+String sayHello = new String("Hello, World");</pre>
+    <p>The addition operator is used to join strings</p>
+    <pre class="codeBlock prettyprint">
+String firstName = "John" ;
+String lastName = "Wick";
+String fullName = firstName + " " + lastName;
+System.out.println(fullName);</pre>
+You can concatenate a string and a number, the number will be implicitly converted to a string.
+    <!-- <p> we can get individual characters by writing the the name of a string followed by the position of the character in square brackets</p>
+    <pre class="codeBlock prettyprint"></pre>
+    <pre class="codeBlock prettyprint"></pre>
+    the characters from the start index upto the end of the string will be returned. 
+    <pre class="codeBlock prettyprint"></pre>
+    the characters from the start of the string upto the end index will be returned
+    <pre class="codeBlock prettyprint"></pre> -->
+    <h3>String Methods</h3>
+<pre class="codeBlock prettyprint">
+String phrase = "Whosoever Holds This Hammer, If They Be Worthy,Shall Posses The Power Of THOR";</pre>
+<p></p>
+<pre class="codeBlock prettyprint">
+System.out.println(phrase.isEmpty());
+</pre>
+<p>Use the <code class="prettyprint">length()</code> method to check the length (number of characters) of a string.</p> 
+<pre class="codeBlock prettyprint">
+System.out.println(phrase.length());
+</pre>
+Get a character at a specified index. 
+<pre class="codeBlock prettyprint">
+phrase.charAt(70);
+</pre>
+The <code class="prettyprint">indexOf()</code> method returns the index of a character or start index of a substring. It returns <code class="prettyprint">-1</code> if a character or string is not found.
+<pre class="codeBlock prettyprint">
+phrase.indexOf('X');
+phrase.indexOf("THOR");
+</pre>
+The <code class="prettyprint">contains()</code> method checks if a string is a substring of the string, it returns a boolean. 
+    <pre class="codeBlock prettyprint">
+phrase.contains("Worth");
+</pre>
+The <code class="prettyprint">toUpperCase()</code> method return a new string with all the letters converted to uppercase. 
+<pre class="codeBlock prettyprint">
+phrase.toUpperCase();
+</pre>
+The <code class="prettyprint">toLowerCase()</code> method return a new string with all the letters converted to lowercase. 
+<pre class="codeBlock prettyprint">
+phrase.toLowerCase();
+</pre>
+Use the <code class="code prettyprint">equals()</code> to compare strings instead of the equality operator. It returns <code class="prettyprint">true</code> if the strings are exactly the same. 
+<pre class="codeBlock prettyprint">
+String anotherStr = phrase.toUpperCase();
+phrase.equals(anotherStr);
+</pre>
+Even if they are the same, the <code class="code prettyprint">equals()</code> method will return <code class="code prettyprint">false</code> if the strings you're comparing are in different Cases.
+<pre class="codeBlock prettyprint">
+String anotherStr = phrase.toUpperCase();
+phrase.equalsIgnoreCase(anotherStr)
+</pre>
+<pre class="codeBlock prettyprint">
+String anotherStr = phrase.toUpperCase();
+phrase.compareTo(anotherStr)
+</pre>
+<p>Replace a character or substring in the string with the <code class="prettyprint">replace()</code> method.  It returns a new string.</p>
+<pre class="codeBlock prettyprint">
+String anotherStr = phrase.replace("Hammer", "Axe");
+</pre>
+<p>The <code class="code prettyprint">substring()</code> returns a substring from specified index upto the end of a string. You can pass an optional end index as a second arguement. </p>
+<pre class="codeBlock prettyprint">
+String character = phrase.substring(73);
+String weapon = phrase.substring(21,27);
+</pre>
+<p>The <code class="prettyprint">trim()</code> removes whitespace from the beginning and / the end of a string.</p>
+<pre class="codeBlock prettyprint">
+phrase.trim()
+</pre>
+<pre class="codeBlock prettyprint">
+String myStr = "One Two Three Four Five Six Seven Eight Nine Ten";
+String[] myArray = myStr.split();
+</pre>
+<pre class="codeBlock prettyprint">
+String name = "Jane Doe";
+String gender = "Female";
+int age = 20;
+String personalIfo = String.format("%s, %s, %d years old",name,gender,age);
+System.out.println(personalIfo);</pre>
+    <h2>String Classes</h2>
+    <h3>StringBuilder</h3>
+    use StringBuilder if you're going to make changes to a string and don't care about thread safety.
+    <pre class="codeBlock prettyprint">
+StringBuilder name = new StringBuilder("John");
+System.out.println(name);
+</pre>
+<pre class="codeBlock prettyprint">
+name.append(" Smith");
+System.out.println(name);</pre>
+<pre class="codeBlock prettyprint">
+name.replace(5, 10, "Wick");
+System.out.println(name);
+</pre>
+<pre class="codeBlock prettyprint">
+name.insert(index, something);
+System.out.println(name);
+</pre>
+The <code class="prettyprint">capacity()</code> method returns the number of characters(including already written characters) that can be stored in a StringBuilder string.
+<pre class="codeBlock prettyprint">
+System.out.println(name.capacity());
+</pre>
+<pre class="codeBlock prettyprint">
+name.delete()
+System.out.println(name);
+</pre>
+
+    <h3>StringBuffer</h3>
+    <h2>Convert strings to other types</h2>
+    From double to string
+    <pre class="codeBlock prettyprint">
+String mytsr = Double.toString(doublNum)
+</pre>
+from string to double
+<pre class="codeBlock prettyprint">
+int doubleVar = Double.parseDouble(str)
+</pre>
+From integer to string
+<pre class="codeBlock prettyprint">
+int intVar = Integer.parseInt(str)
+</pre>
+    <script type="text/javascript" src="../../Styles/prettify-small/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="../../JavaScript/app.js"></script>
+</body>
+
+</html>
